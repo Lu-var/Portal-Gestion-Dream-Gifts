@@ -152,7 +152,7 @@ public class Login extends javax.swing.JFrame {
 
     private void BotonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEntrarActionPerformed
         // login con validaciones
-        String usuario = JUsuario.getName();
+        String usuario = JUsuario.getText();
         String contraseña = JContraseña.getText();
         
         if(usuario.isEmpty() || contraseña.isEmpty()){
