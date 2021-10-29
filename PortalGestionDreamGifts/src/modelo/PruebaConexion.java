@@ -1,5 +1,4 @@
 package modelo;
-import java.awt.HeadlessException;
 import java.sql.*;
 import java.lang.*;
 import javax.swing.JOptionPane;
@@ -13,7 +12,7 @@ public class PruebaConexion{
     
     Connection conectar=null; 
     
-    public Connection conexion(){
+    public void conexion(){
         String address = null;
         String database = null;
         String user = null;
@@ -43,7 +42,16 @@ public class PruebaConexion{
         }catch(Exception e){
           JOptionPane.showMessageDialog(null,"Error Conexion: \n"+e.getMessage());  
         }
-        return conectar;
+        try{
+            Statement request = conectar.createStatement();
+            int resultado;
+            resultado = request.executeUpdate("INSERT INTO `DreamGifts_db`.`Cliente` (`RUT`, `Nombre`, `Fecha Nacimiento`, `Celular`, `Email`, `Direccion`) VALUES ('19.892.711-K', 'Lucas Vargas', '1998/06/20', '+56 9 95897686', 'mail.com', 'La Llaveria Norte 5404');");
+            
+            
+        } catch(Exception e){
+            JOptionPane.showMessageDialog(null,"Error: \n"+e.getMessage());
+        }
+        
     }
     public static void main(String [] arg){
         PruebaConexion con = new PruebaConexion();
