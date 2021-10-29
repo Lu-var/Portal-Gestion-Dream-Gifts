@@ -4,6 +4,7 @@
  */
 package vista;
 import javax.swing.JOptionPane;
+import modelo.*;
 /**
  *
  * @author PC
@@ -34,9 +35,9 @@ public class Login extends javax.swing.JFrame {
         BotonSalir = new javax.swing.JButton();
         BotonEntrar = new javax.swing.JButton();
         JUsuario = new javax.swing.JTextField();
-        JContraseña = new javax.swing.JPasswordField();
+        JContrasena = new javax.swing.JPasswordField();
         LUsuario = new javax.swing.JLabel();
-        LContraseña = new javax.swing.JLabel();
+        LContrasena = new javax.swing.JLabel();
         LDreamGifts = new javax.swing.JLabel();
         LIngresar = new javax.swing.JLabel();
 
@@ -64,15 +65,15 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        JContraseña.addActionListener(new java.awt.event.ActionListener() {
+        JContrasena.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JContraseñaActionPerformed(evt);
+                JContrasenaActionPerformed(evt);
             }
         });
 
         LUsuario.setText("Usuario :");
 
-        LContraseña.setText("Contraseña :");
+        LContrasena.setText("Contraseña :");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -82,13 +83,13 @@ public class Login extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(LUsuario)
-                    .addComponent(LContraseña))
+                    .addComponent(LContrasena))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(BotonSalir, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(BotonEntrar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(JContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(101, Short.MAX_VALUE))
         );
@@ -104,8 +105,8 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(JUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(LContraseña)
-                    .addComponent(JContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(LContrasena)
+                    .addComponent(JContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BotonEntrar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -152,26 +153,28 @@ public class Login extends javax.swing.JFrame {
 
     private void BotonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEntrarActionPerformed
         // login con validaciones
-        String usuario = JUsuario.getText();
-        String contraseña = JContraseña.getText();
+        PruebaConexion con = new PruebaConexion();
+        con.conexion();
         
-        if(usuario.isEmpty() || contraseña.isEmpty()){
-            JOptionPane.showMessageDialog(null,"Algún campo esta vacio");
-        }
-        else{
-            if(usuario.equals("admin") && contraseña.equals("1234")){
-                Principal principal = new Principal();
-                principal.setVisible(true);
-            }
-            else{
-                JOptionPane.showMessageDialog(null,"usuario o contraseña incorrecta");
-            }
-        }
+        String contrasena = new String(JContrasena.getPassword());
+        
+        //if(con.conexion(JUsuario.getText(), contrasena)==1){
+        // Aqui en el boton solo recibes la data del usuario, es decir,, lo que escribe en el formulario
+        // Y aqui solo debes validar que los campos no esten vacios
+        //Algo asi como
+        //usuario.empty()
+            //Si = indique usuario por favor
+            
+        //contra.empty()   
+            //Si = indique contra por favor
+           
+        //Si ambos campos tienen data
+        //funcionDelControlador(usuario, contra); que devuelva true o false        
     }//GEN-LAST:event_BotonEntrarActionPerformed
 
-    private void JContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JContraseñaActionPerformed
+    private void JContrasenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JContrasenaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JContraseñaActionPerformed
+    }//GEN-LAST:event_JContrasenaActionPerformed
 
     private void BotonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSalirActionPerformed
         // Boton salir
@@ -217,9 +220,9 @@ public class Login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonEntrar;
     private javax.swing.JButton BotonSalir;
-    private javax.swing.JPasswordField JContraseña;
+    private javax.swing.JPasswordField JContrasena;
     private javax.swing.JTextField JUsuario;
-    private javax.swing.JLabel LContraseña;
+    private javax.swing.JLabel LContrasena;
     private javax.swing.JLabel LDreamGifts;
     private javax.swing.JLabel LIngresar;
     private javax.swing.JLabel LUsuario;

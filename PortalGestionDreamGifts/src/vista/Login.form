@@ -65,7 +65,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="LUsuario" min="-2" max="-2" attributes="0"/>
-                      <Component id="LContraseña" min="-2" max="-2" attributes="0"/>
+                      <Component id="LContrasena" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -73,7 +73,7 @@
                           <Component id="BotonSalir" alignment="0" max="32767" attributes="0"/>
                           <Component id="BotonEntrar" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <Component id="JContraseña" alignment="0" min="-2" pref="119" max="-2" attributes="0"/>
+                      <Component id="JContrasena" alignment="0" min="-2" pref="119" max="-2" attributes="0"/>
                       <Component id="JUsuario" min="-2" pref="119" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="101" max="32767" attributes="0"/>
@@ -95,8 +95,8 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="LContraseña" min="-2" max="-2" attributes="0"/>
-                      <Component id="JContraseña" min="-2" max="-2" attributes="0"/>
+                      <Component id="LContrasena" min="-2" max="-2" attributes="0"/>
+                      <Component id="JContrasena" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="BotonEntrar" min="-2" max="-2" attributes="0"/>
@@ -129,9 +129,9 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JUsuarioActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="JContrase&#xf1;a">
+        <Component class="javax.swing.JPasswordField" name="JContrasena">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JContrase&#xf1;aActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="JContrasenaActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="LUsuario">
@@ -139,7 +139,7 @@
             <Property name="text" type="java.lang.String" value="Usuario :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="LContrase&#xf1;a">
+        <Component class="javax.swing.JLabel" name="LContrasena">
           <Properties>
             <Property name="text" type="java.lang.String" value="Contrase&#xf1;a :"/>
           </Properties>
