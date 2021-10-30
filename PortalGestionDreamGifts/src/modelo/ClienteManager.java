@@ -14,8 +14,16 @@ public class ClienteManager {
     ConexionRequest intentoConexion = new ConexionRequest();
     Connection conexion = intentoConexion.conectar();
     
-    public void AgregarCliente(String RUT, String Nombre, String FechaNacimiento){
-        
+    public void AgregarCliente(String RUT, String nombre, String fechaNacimiento, String celular, String email, String direccion){
+        Statement stm = null;
+        int resultado = -1;
+        try{
+            stm = conexion.createStatement();
+            
+            resultado = stm.executeUpdate("INSERT INTO Cliente VALUES " + String.format("%s,%s,%s,%s,%s,%s",RUT,nombre,fechaNacimiento,celular,email,direccion));
+        } catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }  
     }
     
     
