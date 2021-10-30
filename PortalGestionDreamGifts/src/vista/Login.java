@@ -4,7 +4,7 @@
  */
 package vista;
 import javax.swing.JOptionPane;
-import modelo.*;
+import controlador.LoginController;
 /**
  *
  * @author PC
@@ -32,10 +32,10 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        BotonSalir = new javax.swing.JButton();
-        BotonEntrar = new javax.swing.JButton();
-        JUsuario = new javax.swing.JTextField();
-        JContrasena = new javax.swing.JPasswordField();
+        btnSalir = new javax.swing.JButton();
+        btnEntrar = new javax.swing.JButton();
+        txtUsuario = new javax.swing.JTextField();
+        txtContrasena = new javax.swing.JPasswordField();
         LUsuario = new javax.swing.JLabel();
         LContrasena = new javax.swing.JLabel();
         LDreamGifts = new javax.swing.JLabel();
@@ -45,29 +45,31 @@ public class Login extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        BotonSalir.setText("SALIR");
-        BotonSalir.addActionListener(new java.awt.event.ActionListener() {
+        btnSalir.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnSalir.setText("SALIR");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonSalirActionPerformed(evt);
+                btnSalirActionPerformed(evt);
             }
         });
 
-        BotonEntrar.setText("ENTRAR");
-        BotonEntrar.addActionListener(new java.awt.event.ActionListener() {
+        btnEntrar.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnEntrar.setText("ENTRAR");
+        btnEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonEntrarActionPerformed(evt);
+                btnEntrarActionPerformed(evt);
             }
         });
 
-        JUsuario.addActionListener(new java.awt.event.ActionListener() {
+        txtUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JUsuarioActionPerformed(evt);
+                txtUsuarioActionPerformed(evt);
             }
         });
 
-        JContrasena.addActionListener(new java.awt.event.ActionListener() {
+        txtContrasena.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JContrasenaActionPerformed(evt);
+                txtContrasenaActionPerformed(evt);
             }
         });
 
@@ -85,12 +87,11 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(LUsuario)
                     .addComponent(LContrasena))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(BotonSalir, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(BotonEntrar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(JContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtContrasena, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+                    .addComponent(txtUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+                    .addComponent(btnEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(101, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -102,15 +103,15 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(LUsuario))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(JUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(LContrasena)
-                    .addComponent(JContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BotonEntrar)
+                .addComponent(btnEntrar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BotonSalir)
+                .addComponent(btnSalir)
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
@@ -137,7 +138,7 @@ public class Login extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(LDreamGifts)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addComponent(LIngresar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -147,18 +148,19 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void JUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JUsuarioActionPerformed
+    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JUsuarioActionPerformed
+    }//GEN-LAST:event_txtUsuarioActionPerformed
 
-    private void BotonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEntrarActionPerformed
+    private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
         // login con validaciones
-        PruebaConexion con = new PruebaConexion();
-        con.conexion();
         
-        String contrasena = new String(JContrasena.getPassword());
+        String contrasena = new String(txtContrasena.getPassword());
+        String usuario = txtUsuario.getText();
+        LoginController login = new LoginController();
+         login.ingreso(usuario, contrasena);
         
-        //if(con.conexion(JUsuario.getText(), contrasena)==1){
+        //if(con.conexion(txtUsuario.getText(), contrasena)==1){
         // Aqui en el boton solo recibes la data del usuario, es decir,, lo que escribe en el formulario
         // Y aqui solo debes validar que los campos no esten vacios
         //Algo asi como
@@ -170,16 +172,16 @@ public class Login extends javax.swing.JFrame {
            
         //Si ambos campos tienen data
         //funcionDelControlador(usuario, contra); que devuelva true o false        
-    }//GEN-LAST:event_BotonEntrarActionPerformed
+    }//GEN-LAST:event_btnEntrarActionPerformed
 
-    private void JContrasenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JContrasenaActionPerformed
+    private void txtContrasenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContrasenaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_JContrasenaActionPerformed
+    }//GEN-LAST:event_txtContrasenaActionPerformed
 
-    private void BotonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSalirActionPerformed
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         // Boton salir
         System.exit(0);
-    }//GEN-LAST:event_BotonSalirActionPerformed
+    }//GEN-LAST:event_btnSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -218,14 +220,30 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotonEntrar;
-    private javax.swing.JButton BotonSalir;
-    private javax.swing.JPasswordField JContrasena;
-    private javax.swing.JTextField JUsuario;
     private javax.swing.JLabel LContrasena;
     private javax.swing.JLabel LDreamGifts;
     private javax.swing.JLabel LIngresar;
     private javax.swing.JLabel LUsuario;
+    private javax.swing.JButton btnEntrar;
+    private javax.swing.JButton btnSalir;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPasswordField txtContrasena;
+    private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
+
+    public javax.swing.JPasswordField getTxtContrasena() {
+        return txtContrasena;
+    }
+
+    public void setTxtContrasena(javax.swing.JPasswordField txtContrasena) {
+        this.txtContrasena = txtContrasena;
+    }
+
+    public javax.swing.JTextField getTxtUsuario() {
+        return txtUsuario;
+    }
+
+    public void setTxtUsuario(javax.swing.JTextField txtUsuario) {
+        this.txtUsuario = txtUsuario;
+    }
 }
