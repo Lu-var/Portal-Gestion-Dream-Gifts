@@ -1,11 +1,13 @@
 
 package controlador;
 import vista.Login;
-import modelo.Conexion;
+import bd.Conexion;
+import bd.Consulta;
+import java.sql.Connection;
 import java.sql.ResultSet;
 /**
  *
- * @author PC
+ * @author StarxCrow
  */
 public class LoginController {
     public static Login login = new Login();
@@ -23,8 +25,8 @@ public class LoginController {
         
         try{
             
-                   Conexion con = new Conexion();
-       con.conexion();   
+        Consulta con = new Consulta();
+        
        
        String query = "SELECT `idUsuario`, `Nombre`, `Password` FROM `usuarios` WHERE  `Nombre` = '" + usuario + "' AND `Password` = '" + password + "'";
         //System.out.println(query);
@@ -45,6 +47,8 @@ public class LoginController {
             }else{
                 System.out.println("no puede entrar");
             }
+            
+            Conexion.cerrar();
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
