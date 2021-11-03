@@ -2,16 +2,16 @@
 package controlador;
 
 import vista.ADM;
-import vista.login;
+import vista.loginOld;
 
 /**
  *
  * @author Usuario
  */
 public class controlarLogin {
-    //Instancia login
+    //Instancia loginOld
     
-    login v  = new login();
+    loginOld v  = new loginOld();
     
     String user = "todos";
     String clave = "clave";
