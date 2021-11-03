@@ -15,16 +15,24 @@ public class ClienteManager {
     Connection conexion = intentoConexion.conectar();
     
     public void AgregarCliente(String RUT, String nombre, String fechaNacimiento, String celular, String email, String direccion){
-        Statement stm = null;
-        int resultado = -1;
+        PreparedStatement stm = null;
+        boolean resultado;
         try{
-            stm = conexion.createStatement();
+            stm = conexion.prepareStatement("INSERT INTO Cliente VALUES (?,?,?,?,?,?)");
+            stm.setString(1, RUT);
+            stm.setString(2, nombre);
+            stm.setString(3, fechaNacimiento);
+            stm.setString(4, celular);
+            stm.setString(5, email);
+            stm.setString(6, direccion);
             
-            resultado = stm.executeUpdate("INSERT INTO Cliente (`RUT`, `Nombre`, `Fecha Nacimiento`, `Celular`, `Email`, `Direccion`) VALUES " + String.format("(%s,%s,%s,%s,%s,%s)",RUT,nombre,fechaNacimiento,celular,email,direccion));
+            resultado = stm.execute();
+            
         } catch(Exception ex){
             System.out.println(ex.getMessage());
         }  
     }
+
     
     public ResultSet SeleccionarClientes(){
         Statement stm = null;
@@ -59,10 +67,10 @@ public class ClienteManager {
         }
     }
     
-//    public static void main(String[] args) {
-//        ClienteManager clientemngr = new ClienteManager();
-//        ResultSet cliente = clientemngr.SeleccionarClientes();
-//        clientemngr.InfoClientes(cliente);
-//        clientemngr.AgregarCliente("21.432.654-4", "Lolardo", "1920/10/23", "2312321", "mimail@mail.com", "Calle Nueva 123");
-//    }
+    public static void main(String[] args) {
+        ClienteManager clientemngr = new ClienteManager();
+        ResultSet cliente = clientemngr.SeleccionarClientes();
+        clientemngr.InfoClientes(cliente);
+        clientemngr.AgregarCliente("4.432.654-4", "Bernardo", "1920/10/09", "2312321", "mimail@mail.com", "Calle Nueva 1234");
+    }
 }
