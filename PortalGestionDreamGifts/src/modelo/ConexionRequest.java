@@ -39,19 +39,10 @@ public class ConexionRequest {
         }
         try {
 
-            connect = DriverManager.getConnection("jdbc:mysql://localhost/DreamGifts_db", "root", "HelloWorld");
+            connect = DriverManager.getConnection("jdbc:mysql://localhost/DreamGifts_db", "root", "Hello.World@5");
 
             JOptionPane.showMessageDialog(null, "Conexion Establecida OK.");
 
-//            try{
-//            Statement request = conectar.createStatement();
-//            
-//            int solicitud = request.executeUpdate("INSERT INTO `DreamGifts_db`.`Cliente` (`RUT`, `Nombre`, `Fecha Nacimiento`, `Celular`, `Email`, `Direccion`) VALUES ('3.892.711-K', 'Lucas Vargas', '1998/06/20', '+56 9 95897686', 'mail.com', 'La Llaveria Norte 5404');");
-//            System.out.println(solicitud);
-//            
-//            } catch(Exception e){
-//            JOptionPane.showMessageDialog(null,"Error Solicitud: \n"+e.getMessage());
-//            }
         } catch (Exception e) {
 
             JOptionPane.showMessageDialog(null, "Error Conexion: \n" + e.getMessage());
