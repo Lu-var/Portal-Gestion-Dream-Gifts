@@ -4,6 +4,7 @@
  */
 package modelo;
 import java.sql.*;
+import javax.swing.JOptionPane;
         
 /**
  *
@@ -15,37 +16,37 @@ public class ClienteManager {
     Connection conexion = intentoConexion.conectar();
     
     public void AgregarCliente(String RUT, String nombre, String fechaNacimiento, String celular, String email, String direccion){
-        PreparedStatement stm = null;
+        PreparedStatement comando = null;
         boolean resultado;
         try{
-            stm = conexion.prepareStatement("INSERT INTO Cliente VALUES (?,?,?,?,?,?)");
-            stm.setString(1, RUT);
-            stm.setString(2, nombre);
-            stm.setString(3, fechaNacimiento);
-            stm.setString(4, celular);
-            stm.setString(5, email);
-            stm.setString(6, direccion);
+            comando = conexion.prepareStatement("INSERT INTO Cliente VALUES (?,?,?,?,?,?)");
+            comando.setString(1, RUT);
+            comando.setString(2, nombre);
+            comando.setString(3, fechaNacimiento);
+            comando.setString(4, celular);
+            comando.setString(5, email);
+            comando.setString(6, direccion);
             
-            resultado = stm.execute();
+            resultado = comando.execute();
             
         } catch(Exception ex){
-            System.out.println(ex.getMessage());
+            JOptionPane.showMessageDialog(null,ex);
         }  
     }
 
     
     public ResultSet SeleccionarClientes(){
-        Statement stm = null;
+        PreparedStatement comando = null;
         ResultSet resultado = null;
         try{
-            stm = conexion.createStatement();
+            comando = conexion.prepareStatement("SELECT * FROM Cliente"); 
+            resultado = comando.executeQuery();
             
-            resultado = stm.executeQuery("SELECT * FROM Cliente");
         } catch(Exception ex){
-            System.out.println(ex.getMessage());
+            JOptionPane.showMessageDialog(null,ex);
         }
         
-        return resultado;
+          return resultado;
     }
     
     // Funcion debug
@@ -62,8 +63,8 @@ public class ClienteManager {
                 System.out.println("\n");
             }
             
-        } catch(Exception e){
-            System.out.println(e.getMessage());
+        } catch(Exception ex){
+            System.out.println(ex.getMessage());
         }
     }
     
