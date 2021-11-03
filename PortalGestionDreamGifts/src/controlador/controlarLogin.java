@@ -2,7 +2,6 @@
 package controlador;
 
 import vista.ADM;
-import vista.loginOld;
 
 /**
  *
@@ -11,12 +10,12 @@ import vista.loginOld;
 public class controlarLogin {
     //Instancia loginOld
     
-    loginOld v  = new loginOld();
+    //loginOld v  = new loginOld();
     
     String user = "todos";
     String clave = "clave";
-    String usuario  = v.getTxtUsuario().getText();
-    String pass = new String(v.getTxtClave().getPassword()); 
+//    String usuario  = v.getTxtUsuario().getText();
+//    String pass = new String(v.getTxtClave().getPassword()); 
 
  
     
@@ -24,7 +23,7 @@ public class controlarLogin {
               
                 ADM a = new ADM();
                  a.setVisible(true);
-                 v.dispose();   
+//                 v.dispose();   
            
     }
     
