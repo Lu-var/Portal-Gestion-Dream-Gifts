@@ -70,7 +70,7 @@ public class Actualización_Despacho extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                Login.lang.Integer.class, Login.lang.String.class, Login.lang.String.class, Login.lang.String.class, Login.lang.String.class, Login.lang.String.class, Login.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -85,11 +85,11 @@ public class Actualización_Despacho extends javax.swing.JFrame {
         getContentPane().add(botonBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 317, -1, -1));
         getContentPane().add(buscarFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(486, 111, 137, -1));
 
-        jLab_Desp_Act_Desp.setFont(new Login.awt.Font("Ubuntu", 0, 18)); // NOI18N
+        jLab_Desp_Act_Desp.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jLab_Desp_Act_Desp.setText("Despacho");
         getContentPane().add(jLab_Desp_Act_Desp, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 12, -1, -1));
 
-        jLab_Act_Est_Desp.setFont(new Login.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        jLab_Act_Est_Desp.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
         jLab_Act_Est_Desp.setText("Actualización Estado Despacho");
         getContentPane().add(jLab_Act_Est_Desp, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 54, -1, -1));
 
@@ -113,13 +113,13 @@ public class Actualización_Despacho extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            Login.util.logging.Logger.getLogger(Actualización_Despacho.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Actualización_Despacho.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            Login.util.logging.Logger.getLogger(Actualización_Despacho.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Actualización_Despacho.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            Login.util.logging.Logger.getLogger(Actualización_Despacho.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Actualización_Despacho.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            Login.util.logging.Logger.getLogger(Actualización_Despacho.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Actualización_Despacho.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -379,7 +379,7 @@ public class Actualización_Despacho extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        Login.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Actualización_Despacho().setVisible(true);
             }

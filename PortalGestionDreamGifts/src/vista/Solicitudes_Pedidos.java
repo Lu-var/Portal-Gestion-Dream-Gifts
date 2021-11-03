@@ -1,19 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.Login to edit this template
- */
 package Vista;
 
 /**
  *
  * @author jav
  */
-public class Solicitudes_Pedido extends javax.swing.JFrame {
+public class Solicitudes_Pedidos extends javax.swing.JFrame {
 
     /**
      * Creates new form clientes
      */
-    public Solicitudes_Pedido() {
+    public Solicitudes_Pedidos() {
         initComponents();
     }
 
@@ -92,7 +88,7 @@ public class Solicitudes_Pedido extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                Login.lang.Integer.class, Login.lang.String.class, Login.lang.Integer.class, Login.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -138,11 +134,11 @@ public class Solicitudes_Pedido extends javax.swing.JFrame {
         jBut_Edit_Sol_Ped.setText("Editar");
         getContentPane().add(jBut_Edit_Sol_Ped, new org.netbeans.lib.awtextra.AbsoluteConstraints(248, 539, -1, -1));
 
-        jLab_Sol_Ped.setFont(new Login.awt.Font("Ubuntu", 0, 18)); // NOI18N
+        jLab_Sol_Ped.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jLab_Sol_Ped.setText("Solicitudes de Pedido");
         getContentPane().add(jLab_Sol_Ped, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 12, -1, -1));
 
-        jLab_Det_Ped.setFont(new Login.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        jLab_Det_Ped.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
         jLab_Det_Ped.setText("Detalle de Pedidos realizados");
         getContentPane().add(jLab_Det_Ped, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, -1, -1));
 
@@ -166,14 +162,30 @@ public class Solicitudes_Pedido extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            Login.util.logging.Logger.getLogger(Solicitudes_Pedido.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Solicitudes_Pedidos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            Login.util.logging.Logger.getLogger(Solicitudes_Pedido.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Solicitudes_Pedidos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            Login.util.logging.Logger.getLogger(Solicitudes_Pedido.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Solicitudes_Pedidos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            Login.util.logging.Logger.getLogger(Solicitudes_Pedido.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Solicitudes_Pedidos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -192,9 +204,9 @@ public class Solicitudes_Pedido extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        Login.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Solicitudes_Pedido().setVisible(true);
+                new Solicitudes_Pedidos().setVisible(true);
             }
         });
     }

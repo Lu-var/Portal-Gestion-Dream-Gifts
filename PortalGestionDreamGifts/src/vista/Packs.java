@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.Login to edit this template
- */
 package Vista;
 
 /**
@@ -60,8 +56,8 @@ public class Packs extends javax.swing.JFrame {
         getContentPane().add(jLab_Pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(188, 109, -1, -1));
         getContentPane().add(jTxt_Nom_Pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 23, 136, -1));
 
-        jTxt_Unid_Pack.addActionListener(new Login.awt.event.ActionListener() {
-            public void actionPerformed(Login.awt.event.ActionEvent evt) {
+        jTxt_Unid_Pack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTxt_Unid_PackActionPerformed(evt);
             }
         });
@@ -96,7 +92,7 @@ public class Packs extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                Login.lang.String.class, Login.lang.String.class, Login.lang.Integer.class, Login.lang.Integer.class, Login.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -127,8 +123,8 @@ public class Packs extends javax.swing.JFrame {
         getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(326, 71, 221, 119));
 
         jBut_add_Art_Pack.setText(">");
-        jBut_add_Art_Pack.addActionListener(new Login.awt.event.ActionListener() {
-            public void actionPerformed(Login.awt.event.ActionEvent evt) {
+        jBut_add_Art_Pack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBut_add_Art_PackActionPerformed(evt);
             }
         });
@@ -137,7 +133,7 @@ public class Packs extends javax.swing.JFrame {
         jBut_sust_Art_Pack.setText("<");
         getContentPane().add(jBut_sust_Art_Pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(272, 141, -1, -1));
 
-        jLab_List_Pack.setFont(new Login.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        jLab_List_Pack.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
         jLab_List_Pack.setText("Tabla Packs");
         getContentPane().add(jLab_List_Pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 261, -1, -1));
 
@@ -176,14 +172,38 @@ public class Packs extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            Login.util.logging.Logger.getLogger(Packs.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Packs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            Login.util.logging.Logger.getLogger(Packs.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Packs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            Login.util.logging.Logger.getLogger(Packs.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Packs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            Login.util.logging.Logger.getLogger(Packs.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Packs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -194,7 +214,7 @@ public class Packs extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        Login.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Packs().setVisible(true);
             }

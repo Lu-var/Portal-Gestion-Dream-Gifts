@@ -1,19 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.Login to edit this template
- */
 package Vista;
 
 /**
  *
  * @author jav
  */
-public class Confirmación extends javax.swing.JFrame {
+public class Confirmaciones extends javax.swing.JFrame {
 
     /**
      * Creates new form clientes
      */
-    public Confirmación() {
+    public Confirmaciones() {
         initComponents();
     }
 
@@ -94,7 +90,7 @@ public class Confirmación extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                Login.lang.Integer.class, Login.lang.String.class, Login.lang.Integer.class, Login.lang.String.class, Login.lang.String.class, Login.lang.String.class, Login.lang.String.class, Login.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -115,11 +111,11 @@ public class Confirmación extends javax.swing.JFrame {
         jBut_Buscar_Conf.setText("Buscar");
         getContentPane().add(jBut_Buscar_Conf, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 175, -1, -1));
 
-        jLab_List_Vent_Pend_pag.setFont(new Login.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        jLab_List_Vent_Pend_pag.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
         jLab_List_Vent_Pend_pag.setText("Ventas Pendiente de Pago");
         getContentPane().add(jLab_List_Vent_Pend_pag, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 241, -1, -1));
 
-        jLab_Conf_Pag_Client.setFont(new Login.awt.Font("Ubuntu", 0, 18)); // NOI18N
+        jLab_Conf_Pag_Client.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jLab_Conf_Pag_Client.setText("Confirma Pago Cliente");
         getContentPane().add(jLab_Conf_Pag_Client, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 12, -1, -1));
 
@@ -143,21 +139,23 @@ public class Confirmación extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            Login.util.logging.Logger.getLogger(Confirmación.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Confirmaciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            Login.util.logging.Logger.getLogger(Confirmación.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Confirmaciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            Login.util.logging.Logger.getLogger(Confirmación.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Confirmaciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            Login.util.logging.Logger.getLogger(Confirmación.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Confirmaciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
-        Login.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Confirmación().setVisible(true);
+                new Confirmaciones().setVisible(true);
             }
         });
     }

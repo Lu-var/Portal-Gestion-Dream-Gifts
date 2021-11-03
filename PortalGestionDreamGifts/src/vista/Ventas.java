@@ -1,19 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.Login to edit this template
- */
 package Vista;
 
 /**
  *
  * @author jav
  */
-public class Venta extends javax.swing.JFrame {
+public class Ventas extends javax.swing.JFrame {
 
     /**
      * Creates new form clientes
      */
-    public Venta() {
+    public Ventas() {
         initComponents();
     }
 
@@ -88,8 +84,8 @@ public class Venta extends javax.swing.JFrame {
         getContentPane().add(jLab_Nom_Dest_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 306, -1, -1));
         getContentPane().add(jTxt_Rut_Cliente_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(383, 65, 137, -1));
 
-        jTxt_Telf_Cliente_Venta.addActionListener(new Login.awt.event.ActionListener() {
-            public void actionPerformed(Login.awt.event.ActionEvent evt) {
+        jTxt_Telf_Cliente_Venta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTxt_Telf_Cliente_VentaActionPerformed(evt);
             }
         });
@@ -104,8 +100,8 @@ public class Venta extends javax.swing.JFrame {
         getContentPane().add(jBut_Venta_Guard, new org.netbeans.lib.awtextra.AbsoluteConstraints(436, 187, -1, -1));
 
         jBut_Guard_Dir_Venta.setText("Guardar");
-        jBut_Guard_Dir_Venta.addActionListener(new Login.awt.event.ActionListener() {
-            public void actionPerformed(Login.awt.event.ActionEvent evt) {
+        jBut_Guard_Dir_Venta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBut_Guard_Dir_VentaActionPerformed(evt);
             }
         });
@@ -165,11 +161,11 @@ public class Venta extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 443, -1, -1));
 
-        jLab_Dat_Client_Sol.setFont(new Login.awt.Font("Ubuntu", 0, 18)); // NOI18N
+        jLab_Dat_Client_Sol.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jLab_Dat_Client_Sol.setText("Datos Cliente Solicitante");
         getContentPane().add(jLab_Dat_Client_Sol, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 12, -1, -1));
 
-        jLab_Dat_Client_Sol1.setFont(new Login.awt.Font("Ubuntu", 0, 18)); // NOI18N
+        jLab_Dat_Client_Sol1.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jLab_Dat_Client_Sol1.setText("Datos Destinatario");
         getContentPane().add(jLab_Dat_Client_Sol1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 246, -1, -1));
 
@@ -201,23 +197,27 @@ public class Venta extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            Login.util.logging.Logger.getLogger(Venta.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ventas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            Login.util.logging.Logger.getLogger(Venta.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ventas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            Login.util.logging.Logger.getLogger(Venta.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ventas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            Login.util.logging.Logger.getLogger(Venta.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ventas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
-        Login.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Venta().setVisible(true);
+                new Ventas().setVisible(true);
             }
         });
     }
