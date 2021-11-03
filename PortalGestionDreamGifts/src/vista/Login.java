@@ -1,17 +1,22 @@
 package vista;
 
+import javax.swing.JTextField;
+import controlador.ControladorLogin;
+
 /**
  *
  * @author jav
  */
 public class Login extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form java
      */
+    
     public Login() {
         initComponents();
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -94,7 +99,6 @@ public class Login extends javax.swing.JFrame {
 
     private void botonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonLoginActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
         ControladorLogin loginCtrl = new ControladorLogin();
         loginCtrl.login(this);
     }//GEN-LAST:event_botonLoginActionPerformed
@@ -142,4 +146,23 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField textoClave;
     private javax.swing.JTextField textoUsuario;
     // End of variables declaration//GEN-END:variables
+
+    public String getTextoClave() {
+        return textoClave.getText();
+    }
+
+    public void setTextoClave(JTextField textoClave) {
+        this.textoClave = textoClave;
+    }
+
+    public String getTextoUsuario() {
+        return textoUsuario.getText();
+    }
+
+    public void setTextoUsuario(JTextField textoUsuario) {
+        this.textoUsuario = textoUsuario;
+    }
+
+
+
 }
