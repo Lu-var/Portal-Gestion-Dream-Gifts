@@ -301,6 +301,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Art&#xed;culos"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="Art&#xed;culos_jLab_List_Art"/>
+      </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="284" y="254" width="-1" height="-1"/>

@@ -1,19 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.Login to edit this template
- */
 package Vista;
 
 /**
  *
  * @author jav
  */
-public class Informe_Inventario extends javax.swing.JFrame {
+public class Informes_Inventario extends javax.swing.JFrame {
 
     /**
      * Creates new form clientes
      */
-    public Informe_Inventario() {
+    public Informes_Inventario() {
         initComponents();
     }
 
@@ -53,8 +49,8 @@ public class Informe_Inventario extends javax.swing.JFrame {
         jLab_Cat_Art_Inf_Inv.setToolTipText("");
         getContentPane().add(jLab_Cat_Art_Inf_Inv, new org.netbeans.lib.awtextra.AbsoluteConstraints(277, 36, -1, -1));
 
-        jTxt_F_Ini_Inf_Inv.addActionListener(new Login.awt.event.ActionListener() {
-            public void actionPerformed(Login.awt.event.ActionEvent evt) {
+        jTxt_F_Ini_Inf_Inv.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTxt_F_Ini_Inf_InvActionPerformed(evt);
             }
         });
@@ -69,8 +65,8 @@ public class Informe_Inventario extends javax.swing.JFrame {
         getContentPane().add(jBut_Busc_Inf_Inv, new org.netbeans.lib.awtextra.AbsoluteConstraints(487, 123, -1, -1));
 
         jBut_Desc_Inf_Inv.setText("Descargar");
-        jBut_Desc_Inf_Inv.addActionListener(new Login.awt.event.ActionListener() {
-            public void actionPerformed(Login.awt.event.ActionEvent evt) {
+        jBut_Desc_Inf_Inv.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBut_Desc_Inf_InvActionPerformed(evt);
             }
         });
@@ -90,7 +86,7 @@ public class Informe_Inventario extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                Login.lang.Integer.class, Login.lang.String.class, Login.lang.Integer.class, Login.lang.String.class, Login.lang.Integer.class, Login.lang.String.class, Login.lang.Integer.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -101,7 +97,7 @@ public class Informe_Inventario extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 220, 631, 159));
 
-        jLab_Det_Inv_Inf_Inv.setFont(new Login.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        jLab_Det_Inv_Inf_Inv.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
         jLab_Det_Inv_Inf_Inv.setText("Detalle de Inventario");
         jLab_Det_Inv_Inf_Inv.setToolTipText("");
         getContentPane().add(jLab_Det_Inv_Inf_Inv, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 175, -1, -1));
@@ -120,7 +116,7 @@ public class Informe_Inventario extends javax.swing.JFrame {
         jComb_Cat_Art_Inf_Inv1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Accesorios", "Bebestibles", "Comestibles" }));
         getContentPane().add(jComb_Cat_Art_Inf_Inv1, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 103, -1, -1));
 
-        jLab_Inf_Inv.setFont(new Login.awt.Font("Ubuntu", 0, 18)); // NOI18N
+        jLab_Inf_Inv.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jLab_Inf_Inv.setText("Informe Inventario");
         getContentPane().add(jLab_Inf_Inv, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 12, -1, -1));
 
@@ -152,14 +148,78 @@ public class Informe_Inventario extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            Login.util.logging.Logger.getLogger(Informe_Inventario.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Informes_Inventario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            Login.util.logging.Logger.getLogger(Informe_Inventario.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Informes_Inventario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            Login.util.logging.Logger.getLogger(Informe_Inventario.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Informes_Inventario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            Login.util.logging.Logger.getLogger(Informe_Inventario.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Informes_Inventario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -226,9 +286,9 @@ public class Informe_Inventario extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        Login.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Informe_Inventario().setVisible(true);
+                new Informes_Inventario().setVisible(true);
             }
         });
     }

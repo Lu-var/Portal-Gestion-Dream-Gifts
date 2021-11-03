@@ -1,6 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.Login to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Vista;
 
@@ -103,7 +103,7 @@ public class Artículos extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                Login.lang.String.class, Login.lang.String.class, Login.lang.Integer.class, Login.lang.String.class, Login.lang.String.class, Login.lang.String.class, Login.lang.String.class, Login.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -126,7 +126,7 @@ public class Artículos extends javax.swing.JFrame {
         getContentPane().add(jLab_Cod_Art, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 149, -1, -1));
         getContentPane().add(jTxt_Cod_Art, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 146, 136, -1));
 
-        jLab_List_Art.setFont(new Login.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        jLab_List_Art.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
         jLab_List_Art.setText("Artículos");
         getContentPane().add(jLab_List_Art, new org.netbeans.lib.awtextra.AbsoluteConstraints(284, 254, -1, -1));
 
@@ -157,13 +157,13 @@ public class Artículos extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            Login.util.logging.Logger.getLogger(Artículos.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Artículos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            Login.util.logging.Logger.getLogger(Artículos.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Artículos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            Login.util.logging.Logger.getLogger(Artículos.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Artículos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            Login.util.logging.Logger.getLogger(Artículos.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Artículos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -171,7 +171,7 @@ public class Artículos extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        Login.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Artículos().setVisible(true);
             }

@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.Login to edit this template
- */
 package Vista;
 
 /**
@@ -111,7 +107,7 @@ public class Registro_Compras extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                Login.lang.Integer.class, Login.lang.String.class, Login.lang.Integer.class, Login.lang.Integer.class, Login.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -125,7 +121,7 @@ public class Registro_Compras extends javax.swing.JFrame {
         jBut_Buscar_Reg_Comp.setText("Buscar");
         getContentPane().add(jBut_Buscar_Reg_Comp, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 142, -1, -1));
 
-        jLab_Reg_Det_Fact_Reg_Comp.setFont(new Login.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        jLab_Reg_Det_Fact_Reg_Comp.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
         jLab_Reg_Det_Fact_Reg_Comp.setText("Registro del Detalle de Factura");
         jLab_Reg_Det_Fact_Reg_Comp.setToolTipText("");
         getContentPane().add(jLab_Reg_Det_Fact_Reg_Comp, new org.netbeans.lib.awtextra.AbsoluteConstraints(176, 195, -1, -1));
@@ -159,11 +155,11 @@ public class Registro_Compras extends javax.swing.JFrame {
         jBut_Elim_Det_Fact_Reg_Comp.setText("Eliminar");
         getContentPane().add(jBut_Elim_Det_Fact_Reg_Comp, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 620, -1, -1));
 
-        jLab_Reg_Fact_Prov_Reg_Comp.setFont(new Login.awt.Font("Ubuntu", 0, 18)); // NOI18N
+        jLab_Reg_Fact_Prov_Reg_Comp.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jLab_Reg_Fact_Prov_Reg_Comp.setText("Registro factura de Proveedores");
         getContentPane().add(jLab_Reg_Fact_Prov_Reg_Comp, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 12, -1, -1));
 
-        jLab_Det_Fact_Reg_Comp.setFont(new Login.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        jLab_Det_Fact_Reg_Comp.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
         jLab_Det_Fact_Reg_Comp.setText(" Detalle de Factura");
         jLab_Det_Fact_Reg_Comp.setToolTipText("");
         getContentPane().add(jLab_Det_Fact_Reg_Comp, new org.netbeans.lib.awtextra.AbsoluteConstraints(227, 398, -1, -1));
@@ -188,14 +184,38 @@ public class Registro_Compras extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            Login.util.logging.Logger.getLogger(Registro_Compras.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Registro_Compras.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            Login.util.logging.Logger.getLogger(Registro_Compras.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Registro_Compras.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            Login.util.logging.Logger.getLogger(Registro_Compras.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Registro_Compras.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            Login.util.logging.Logger.getLogger(Registro_Compras.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Registro_Compras.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -206,7 +226,7 @@ public class Registro_Compras extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        Login.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Registro_Compras().setVisible(true);
             }

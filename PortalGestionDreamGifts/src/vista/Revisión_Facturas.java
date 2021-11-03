@@ -1,19 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.Login to edit this template
- */
 package Vista;
 
 /**
  *
  * @author jav
  */
-public class Revisión_Factura extends javax.swing.JFrame {
+public class Revisión_Facturas extends javax.swing.JFrame {
 
     /**
      * Creates new form clientes
      */
-    public Revisión_Factura() {
+    public Revisión_Facturas() {
         initComponents();
     }
 
@@ -83,7 +79,7 @@ public class Revisión_Factura extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                Login.lang.Integer.class, Login.lang.String.class, Login.lang.Integer.class, Login.lang.Integer.class, Login.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -97,7 +93,7 @@ public class Revisión_Factura extends javax.swing.JFrame {
         jBut_Buscar_Rev_Fact.setText("Buscar");
         getContentPane().add(jBut_Buscar_Rev_Fact, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 137, -1, -1));
 
-        jLab_Det_Fact_Rev_Fact.setFont(new Login.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        jLab_Det_Fact_Rev_Fact.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
         jLab_Det_Fact_Rev_Fact.setText("Detalle de Facturas");
         jLab_Det_Fact_Rev_Fact.setToolTipText("");
         getContentPane().add(jLab_Det_Fact_Rev_Fact, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 486, -1, -1));
@@ -127,7 +123,7 @@ public class Revisión_Factura extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                Login.lang.Integer.class, Login.lang.String.class, Login.lang.String.class, Login.lang.Integer.class, Login.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -138,7 +134,7 @@ public class Revisión_Factura extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 268, 631, 159));
 
-        jLab_Fact_Comp_Rev_Fact1.setFont(new Login.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        jLab_Fact_Comp_Rev_Fact1.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
         jLab_Fact_Comp_Rev_Fact1.setText("Facturas de Compra Inventariadas");
         jLab_Fact_Comp_Rev_Fact1.setToolTipText("");
         getContentPane().add(jLab_Fact_Comp_Rev_Fact1, new org.netbeans.lib.awtextra.AbsoluteConstraints(128, 204, -1, -1));
@@ -166,14 +162,30 @@ public class Revisión_Factura extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            Login.util.logging.Logger.getLogger(Revisión_Factura.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Revisión_Facturas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            Login.util.logging.Logger.getLogger(Revisión_Factura.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Revisión_Facturas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            Login.util.logging.Logger.getLogger(Revisión_Factura.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Revisión_Facturas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            Login.util.logging.Logger.getLogger(Revisión_Factura.class.getName()).log(Login.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Revisión_Facturas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -192,9 +204,9 @@ public class Revisión_Factura extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        Login.awt.EventQueue.invokeLater(new Runnable() {
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Revisión_Factura().setVisible(true);
+                new Revisión_Facturas().setVisible(true);
             }
         });
     }
