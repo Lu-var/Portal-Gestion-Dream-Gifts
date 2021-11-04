@@ -21,88 +21,91 @@
     <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,6,0,0,2,-123"/>
   </AuxValues>
 
-  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
-    <Property name="useNullLayout" type="boolean" value="false"/>
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jScrollPane3" min="-2" pref="645" max="-2" attributes="0"/>
+          <Component id="jTxt_Unid_Pack" min="-2" pref="645" max="-2" attributes="0"/>
+          <Component id="jLab_List_Pack" min="-2" pref="645" max="-2" attributes="0"/>
+          <Component id="jLab_Nom_Packs" min="-2" pref="645" max="-2" attributes="0"/>
+          <Component id="jTxt_Nom_Pack" min="-2" pref="645" max="-2" attributes="0"/>
+          <Component id="jBut_Buscar_Pack" min="-2" pref="645" max="-2" attributes="0"/>
+          <Component id="jLab_Prec_Pack" min="-2" pref="645" max="-2" attributes="0"/>
+          <Component id="jBut_sust_Art_Pack" min="-2" pref="645" max="-2" attributes="0"/>
+          <Component id="jBut_Ed_Pack" min="-2" pref="645" max="-2" attributes="0"/>
+          <Component id="jScrollPane1" min="-2" pref="645" max="-2" attributes="0"/>
+          <Component id="jBut_Guard_Pack" min="-2" pref="645" max="-2" attributes="0"/>
+          <Component id="jBut_Des_Pack" min="-2" pref="645" max="-2" attributes="0"/>
+          <Component id="jLab_Pack" min="-2" pref="645" max="-2" attributes="0"/>
+          <Component id="jBut_add_Art_Pack" min="-2" pref="645" max="-2" attributes="0"/>
+          <Component id="jScrollPane4" min="-2" pref="645" max="-2" attributes="0"/>
+          <Component id="jTxt_Prec_Pack" min="-2" pref="645" max="-2" attributes="0"/>
+          <Component id="jBut_Cancel_Pack" min="-2" pref="645" max="-2" attributes="0"/>
+          <Component id="jScrollPane2" min="-2" pref="645" max="-2" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jScrollPane3" min="-2" pref="518" max="-2" attributes="0"/>
+          <Component id="jTxt_Unid_Pack" min="-2" pref="518" max="-2" attributes="0"/>
+          <Component id="jLab_List_Pack" min="-2" pref="518" max="-2" attributes="0"/>
+          <Component id="jLab_Nom_Packs" min="-2" pref="518" max="-2" attributes="0"/>
+          <Component id="jTxt_Nom_Pack" min="-2" pref="518" max="-2" attributes="0"/>
+          <Component id="jBut_Buscar_Pack" min="-2" pref="518" max="-2" attributes="0"/>
+          <Component id="jLab_Prec_Pack" min="-2" pref="518" max="-2" attributes="0"/>
+          <Component id="jBut_sust_Art_Pack" min="-2" pref="518" max="-2" attributes="0"/>
+          <Component id="jBut_Ed_Pack" min="-2" pref="518" max="-2" attributes="0"/>
+          <Component id="jScrollPane1" min="-2" pref="518" max="-2" attributes="0"/>
+          <Component id="jBut_Guard_Pack" min="-2" pref="518" max="-2" attributes="0"/>
+          <Component id="jBut_Des_Pack" min="-2" pref="518" max="-2" attributes="0"/>
+          <Component id="jLab_Pack" min="-2" pref="518" max="-2" attributes="0"/>
+          <Component id="jBut_add_Art_Pack" min="-2" pref="518" max="-2" attributes="0"/>
+          <Component id="jScrollPane4" min="-2" pref="518" max="-2" attributes="0"/>
+          <Component id="jTxt_Prec_Pack" min="-2" pref="518" max="-2" attributes="0"/>
+          <Component id="jBut_Cancel_Pack" min="-2" pref="518" max="-2" attributes="0"/>
+          <Component id="jScrollPane2" min="-2" pref="518" max="-2" attributes="0"/>
+      </Group>
+    </DimensionLayout>
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLab_Nom_Packs">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nombre Packs"/>
       </Properties>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="12" y="26" width="-1" height="-1"/>
-        </Constraint>
-      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLab_Pack">
       <Properties>
         <Property name="text" type="java.lang.String" value="Unidades"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="188" y="109" width="-1" height="-1"/>
-        </Constraint>
-      </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="jTxt_Nom_Pack">
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="130" y="23" width="136" height="-1"/>
-        </Constraint>
-      </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="jTxt_Unid_Pack">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTxt_Unid_PackActionPerformed"/>
       </Events>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="276" y="106" width="-1" height="-1"/>
-        </Constraint>
-      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLab_Prec_Pack">
       <Properties>
         <Property name="text" type="java.lang.String" value="Precio Pack"/>
       </Properties>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="312" y="26" width="-1" height="-1"/>
-        </Constraint>
-      </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="jBut_Cancel_Pack">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cancelar"/>
       </Properties>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="335" y="208" width="-1" height="-1"/>
-        </Constraint>
-      </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="jBut_Guard_Pack">
       <Properties>
         <Property name="text" type="java.lang.String" value="Guardar"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="485" y="208" width="-1" height="-1"/>
-        </Constraint>
-      </Constraints>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane2">
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="649" y="249" width="22" height="-1"/>
-        </Constraint>
-      </Constraints>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
@@ -122,11 +125,6 @@
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="12" y="307" width="631" height="159"/>
-        </Constraint>
-      </Constraints>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
@@ -181,28 +179,13 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Buscar"/>
       </Properties>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="12" y="208" width="-1" height="-1"/>
-        </Constraint>
-      </Constraints>
     </Component>
     <Component class="javax.swing.JTextField" name="jTxt_Prec_Pack">
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="410" y="23" width="137" height="-1"/>
-        </Constraint>
-      </Constraints>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane3">
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="12" y="68" width="164" height="115"/>
-        </Constraint>
-      </Constraints>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
@@ -228,11 +211,6 @@
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="326" y="71" width="221" height="119"/>
-        </Constraint>
-      </Constraints>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
@@ -251,21 +229,11 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBut_add_Art_PackActionPerformed"/>
       </Events>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="272" y="62" width="-1" height="-1"/>
-        </Constraint>
-      </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="jBut_sust_Art_Pack">
       <Properties>
         <Property name="text" type="java.lang.String" value="&lt;"/>
       </Properties>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="272" y="141" width="-1" height="-1"/>
-        </Constraint>
-      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="jLab_List_Pack">
       <Properties>
@@ -274,32 +242,17 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Tabla Packs"/>
       </Properties>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="261" y="261" width="-1" height="-1"/>
-        </Constraint>
-      </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="jBut_Ed_Pack">
       <Properties>
         <Property name="text" type="java.lang.String" value="Editar"/>
       </Properties>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="333" y="472" width="-1" height="-1"/>
-        </Constraint>
-      </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="jBut_Des_Pack">
       <Properties>
         <Property name="text" type="java.lang.String" value="Desactivar"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="483" y="472" width="-1" height="-1"/>
-        </Constraint>
-      </Constraints>
     </Component>
   </SubComponents>
 </Form>

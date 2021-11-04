@@ -4,12 +4,12 @@ package vista;
  *
  * @author jav
  */
-public class Packs extends javax.swing.JFrame {
+public class PacksAlt extends javax.swing.JFrame {
 
     /**
      * Creates new form clientes
      */
-    public Packs() {
+    public PacksAlt() {
         initComponents();
     }
 
@@ -46,37 +46,27 @@ public class Packs extends javax.swing.JFrame {
         jBut_Des_Pack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLab_Nom_Packs.setText("Nombre Packs");
-        getContentPane().add(jLab_Nom_Packs, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 26, -1, -1));
 
         jLab_Pack.setText("Unidades");
         jLab_Pack.setToolTipText("");
-        getContentPane().add(jLab_Pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(188, 109, -1, -1));
-        getContentPane().add(jTxt_Nom_Pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 23, 136, -1));
 
         jTxt_Unid_Pack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTxt_Unid_PackActionPerformed(evt);
             }
         });
-        getContentPane().add(jTxt_Unid_Pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(276, 106, -1, -1));
 
         jLab_Prec_Pack.setText("Precio Pack");
-        getContentPane().add(jLab_Prec_Pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 26, -1, -1));
 
         jBut_Cancel_Pack.setText("Cancelar");
-        getContentPane().add(jBut_Cancel_Pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(335, 208, -1, -1));
 
         jBut_Guard_Pack.setText("Guardar");
         jBut_Guard_Pack.setToolTipText("");
-        getContentPane().add(jBut_Guard_Pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(485, 208, -1, -1));
 
         jTable1.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(jTable1);
-
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(649, 249, 22, -1));
 
         jTable_List_Pack.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -101,11 +91,7 @@ public class Packs extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable_List_Pack);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 307, 631, 159));
-
         jBut_Buscar_Pack.setText("Buscar");
-        getContentPane().add(jBut_Buscar_Pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 208, -1, -1));
-        getContentPane().add(jTxt_Prec_Pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 23, 137, -1));
 
         jList_Pack.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -114,13 +100,9 @@ public class Packs extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(jList_Pack);
 
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 68, 164, 115));
-
         jTxt_Pack.setColumns(20);
         jTxt_Pack.setRows(5);
         jScrollPane4.setViewportView(jTxt_Pack);
-
-        getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(326, 71, 221, 119));
 
         jBut_add_Art_Pack.setText(">");
         jBut_add_Art_Pack.addActionListener(new java.awt.event.ActionListener() {
@@ -128,21 +110,61 @@ public class Packs extends javax.swing.JFrame {
                 jBut_add_Art_PackActionPerformed(evt);
             }
         });
-        getContentPane().add(jBut_add_Art_Pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(272, 62, -1, -1));
 
         jBut_sust_Art_Pack.setText("<");
-        getContentPane().add(jBut_sust_Art_Pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(272, 141, -1, -1));
 
         jLab_List_Pack.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
         jLab_List_Pack.setText("Tabla Packs");
-        getContentPane().add(jLab_List_Pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 261, -1, -1));
 
         jBut_Ed_Pack.setText("Editar");
-        getContentPane().add(jBut_Ed_Pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(333, 472, -1, -1));
 
         jBut_Des_Pack.setText("Desactivar");
         jBut_Des_Pack.setToolTipText("");
-        getContentPane().add(jBut_Des_Pack, new org.netbeans.lib.awtextra.AbsoluteConstraints(483, 472, -1, -1));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jTxt_Unid_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jLab_List_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jLab_Nom_Packs, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jTxt_Nom_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jBut_Buscar_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jLab_Prec_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jBut_sust_Art_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jBut_Ed_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jBut_Guard_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jBut_Des_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jLab_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jBut_add_Art_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jTxt_Prec_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jBut_Cancel_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jTxt_Unid_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jLab_List_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jLab_Nom_Packs, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jTxt_Nom_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jBut_Buscar_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jLab_Prec_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jBut_sust_Art_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jBut_Ed_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jBut_Guard_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jBut_Des_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jLab_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jBut_add_Art_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jTxt_Prec_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jBut_Cancel_Pack, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -172,14 +194,46 @@ public class Packs extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Packs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PacksAlt.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Packs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PacksAlt.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Packs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PacksAlt.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Packs.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PacksAlt.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -216,7 +270,7 @@ public class Packs extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Packs().setVisible(true);
+                new PacksAlt().setVisible(true);
             }
         });
     }
