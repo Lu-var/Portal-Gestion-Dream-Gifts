@@ -3,7 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package modelo;
-
+import bd.Consulta;
+import java.sql.ResultSet;
 /**
  *
  * @author PC
@@ -50,5 +51,19 @@ public class Banco {
 
     public void setEnabled(int enabled) {
         this.enabled = enabled;
+    }
+    
+    public void agregarBanco(){
+        try{
+            Consulta con = new Consulta();
+            
+            
+            String query = "INSERT INTO `banco`(`Nombre`) VALUES ('"+nombre+"'";
+            
+            ResultSet rs = con.insert(query);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        
     }
 }

@@ -22,30 +22,28 @@ public class Bancos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLab_Banco = new javax.swing.JLabel();
-        jLab_Cod_Banco = new javax.swing.JLabel();
-        jBut_Cancel_Bancos = new javax.swing.JButton();
-        jBut_Guard_Bancos = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jLab_Banco = new javax.swing.JLabel();
+        jBut_Cancel_Bancos = new javax.swing.JButton();
+        jBut_Guard_Bancos = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable_List_Bancos = new javax.swing.JTable();
         jBut_Buscar_Bancos = new javax.swing.JButton();
-        jTxt_Cod_Banco = new javax.swing.JTextField();
-        jComb_Banco = new javax.swing.JComboBox<>();
         jLab_List_Bancos = new javax.swing.JLabel();
         jBut_Ed_Bancos = new javax.swing.JButton();
         jBut_Des_Bancos = new javax.swing.JButton();
+        txtBanco = new javax.swing.JTextField();
+
+        jTable1.getTableHeader().setReorderingAllowed(false);
+        jScrollPane2.setViewportView(jTable1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLab_Banco.setText("Banco");
         jLab_Banco.setAutoscrolls(true);
-        getContentPane().add(jLab_Banco, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 26, -1, -1));
-
-        jLab_Cod_Banco.setText("Código Banco");
-        getContentPane().add(jLab_Cod_Banco, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 26, -1, -1));
+        getContentPane().add(jLab_Banco, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 40, -1, -1));
 
         jBut_Cancel_Bancos.setText("Cancelar");
         jBut_Cancel_Bancos.addActionListener(new java.awt.event.ActionListener() {
@@ -58,11 +56,6 @@ public class Bancos extends javax.swing.JFrame {
         jBut_Guard_Bancos.setText("Guardar");
         jBut_Guard_Bancos.setToolTipText("");
         getContentPane().add(jBut_Guard_Bancos, new org.netbeans.lib.awtextra.AbsoluteConstraints(522, 99, -1, -1));
-
-        jTable1.getTableHeader().setReorderingAllowed(false);
-        jScrollPane2.setViewportView(jTable1);
-
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(611, 52, 44, -1));
 
         jTable_List_Bancos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -91,10 +84,6 @@ public class Bancos extends javax.swing.JFrame {
 
         jBut_Buscar_Bancos.setText("Buscar");
         getContentPane().add(jBut_Buscar_Bancos, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 99, -1, -1));
-        getContentPane().add(jTxt_Cod_Banco, new org.netbeans.lib.awtextra.AbsoluteConstraints(424, 23, 137, -1));
-
-        jComb_Banco.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Banco Estado", "Banco Santander", "Itaú" }));
-        getContentPane().add(jComb_Banco, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 23, 141, -1));
 
         jLab_List_Bancos.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
         jLab_List_Bancos.setText("Bancos");
@@ -111,6 +100,7 @@ public class Bancos extends javax.swing.JFrame {
         jBut_Des_Bancos.setText("Desactivar");
         jBut_Des_Bancos.setToolTipText("");
         getContentPane().add(jBut_Des_Bancos, new org.netbeans.lib.awtextra.AbsoluteConstraints(504, 375, -1, -1));
+        getContentPane().add(txtBanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 30, 140, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -166,14 +156,12 @@ public class Bancos extends javax.swing.JFrame {
     private javax.swing.JButton jBut_Des_Bancos;
     private javax.swing.JButton jBut_Ed_Bancos;
     private javax.swing.JButton jBut_Guard_Bancos;
-    private javax.swing.JComboBox<String> jComb_Banco;
     private javax.swing.JLabel jLab_Banco;
-    private javax.swing.JLabel jLab_Cod_Banco;
     private javax.swing.JLabel jLab_List_Bancos;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable_List_Bancos;
-    private javax.swing.JTextField jTxt_Cod_Banco;
+    private javax.swing.JTextField txtBanco;
     // End of variables declaration//GEN-END:variables
 }
