@@ -1,16 +1,22 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
 package vista;
 
 /**
  *
- * @author jav
+ * @author PC
  */
 public class Ventas extends javax.swing.JFrame {
 
     /**
-     * Creates new form clientes
+     * Creates new form Ventas
      */
     public Ventas() {
         initComponents();
+        
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -22,163 +28,151 @@ public class Ventas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLab_Num_Ped_Venta = new javax.swing.JLabel();
-        jLab_Nom_Cliente_Venta = new javax.swing.JLabel();
-        jLab_Email_Cliente_Venta = new javax.swing.JLabel();
-        jTxt_Num_Ped_Venta = new javax.swing.JTextField();
-        jTxt_Nom_Cliente_Venta = new javax.swing.JTextField();
-        jTxt_Email_Cliente_Venta = new javax.swing.JTextField();
-        jLab_Rut_Cliente_Venta = new javax.swing.JLabel();
-        jLab_Telf_Cliente_Venta = new javax.swing.JLabel();
-        jLab_Nom_Dest_Venta = new javax.swing.JLabel();
-        jTxt_Rut_Cliente_Venta = new javax.swing.JTextField();
-        jTxt_Telf_Cliente_Venta = new javax.swing.JTextField();
-        jTxt_Dir_Ent_Venta = new javax.swing.JTextField();
-        jBut_Venta_Cancel = new javax.swing.JButton();
-        jBut_Venta_Guard = new javax.swing.JButton();
-        jBut_Guard_Dir_Venta = new javax.swing.JButton();
-        jBut_Canc_Dir_Venta = new javax.swing.JButton();
-        jLab_Pack_Venta = new javax.swing.JLabel();
-        jComb_Com_Dir_Venta = new javax.swing.JComboBox<>();
-        jLab_Fec_Ent_Venta = new javax.swing.JLabel();
-        jLab_Dir_Ent_Venta = new javax.swing.JLabel();
-        jLab_Com_Dir_Venta = new javax.swing.JLabel();
-        jLab_Sal_Dir_Venta = new javax.swing.JLabel();
-        jTxt_Nom_Dest_Venta1 = new javax.swing.JTextField();
-        jTxt_Fec_Ent_Venta = new javax.swing.JTextField();
-        jComb_Pack_Venta1 = new javax.swing.JComboBox<>();
-        jLab_Hora_Ini_Venta = new javax.swing.JLabel();
-        jComb_Hora_Ini_Venta = new javax.swing.JComboBox<>();
-        jLab_Hora_Fin_Venta = new javax.swing.JLabel();
-        jComb_Hora_Fin_Venta = new javax.swing.JComboBox<>();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTxt_Sal_Dir_Venta = new javax.swing.JTextArea();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTxt_Total_Venta = new javax.swing.JTextArea();
-        jLab_Dat_Client_Sol = new javax.swing.JLabel();
-        jLab_Dat_Client_Sol1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jButton4 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLab_Num_Ped_Venta.setText("Número Pedido");
-        getContentPane().add(jLab_Num_Ped_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 65, -1, -1));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLab_Nom_Cliente_Venta.setText("Nombre Cliente");
-        jLab_Nom_Cliente_Venta.setToolTipText("");
-        getContentPane().add(jLab_Nom_Cliente_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 103, -1, -1));
-
-        jLab_Email_Cliente_Venta.setText("Email");
-        getContentPane().add(jLab_Email_Cliente_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 138, -1, -1));
-        getContentPane().add(jTxt_Num_Ped_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 65, 136, -1));
-        getContentPane().add(jTxt_Nom_Cliente_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 136, -1));
-        getContentPane().add(jTxt_Email_Cliente_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 137, 136, -1));
-
-        jLab_Rut_Cliente_Venta.setText("Rut Cliente");
-        getContentPane().add(jLab_Rut_Cliente_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(307, 68, -1, -1));
-
-        jLab_Telf_Cliente_Venta.setText("Teléfono");
-        getContentPane().add(jLab_Telf_Cliente_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(307, 111, -1, -1));
-
-        jLab_Nom_Dest_Venta.setText("Nombre Destinatario");
-        getContentPane().add(jLab_Nom_Dest_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 306, -1, -1));
-        getContentPane().add(jTxt_Rut_Cliente_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(383, 65, 137, -1));
-
-        jTxt_Telf_Cliente_Venta.addActionListener(new java.awt.event.ActionListener() {
+        jButton4.setText("VENTAS");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTxt_Telf_Cliente_VentaActionPerformed(evt);
+                jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTxt_Telf_Cliente_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(383, 108, 137, -1));
-        getContentPane().add(jTxt_Dir_Ent_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(175, 373, 137, -1));
 
-        jBut_Venta_Cancel.setText("Cancelar");
-        getContentPane().add(jBut_Venta_Cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 187, -1, -1));
+        jButton3.setText("COMPRAS");
 
-        jBut_Venta_Guard.setText("Guardar");
-        jBut_Venta_Guard.setToolTipText("");
-        getContentPane().add(jBut_Venta_Guard, new org.netbeans.lib.awtextra.AbsoluteConstraints(436, 187, -1, -1));
+        jButton2.setText("INFORMES");
 
-        jBut_Guard_Dir_Venta.setText("Guardar");
-        jBut_Guard_Dir_Venta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBut_Guard_Dir_VentaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jBut_Guard_Dir_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(496, 566, -1, -1));
+        jButton1.setText("MAESTRO");
 
-        jBut_Canc_Dir_Venta.setText("Cancelar");
-        jBut_Canc_Dir_Venta.setToolTipText("");
-        getContentPane().add(jBut_Canc_Dir_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(342, 568, -1, -1));
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(24, Short.MAX_VALUE)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
-        jLab_Pack_Venta.setText("Pack");
-        jLab_Pack_Venta.setToolTipText("");
-        getContentPane().add(jLab_Pack_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(342, 306, -1, -1));
+        jLabel1.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel1.setText("   DREAM GIFTS");
 
-        jComb_Com_Dir_Venta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Santiago", "Maipú", "Cerrillos", "Vitacura", "Las Condes", "San Joaquin", "San Miguel", "La Cisterna", "Ñuñoa", "Macul", "Puente Alto", "Estación Central", "Quinta Normal" }));
-        getContentPane().add(jComb_Com_Dir_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(175, 408, 137, -1));
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 665, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 222, Short.MAX_VALUE)
+        );
 
-        jLab_Fec_Ent_Venta.setText("Fecha Entrega");
-        getContentPane().add(jLab_Fec_Ent_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 341, -1, -1));
+        jTabbedPane2.addTab("VENTA", jPanel2);
 
-        jLab_Dir_Ent_Venta.setText("Dirección");
-        getContentPane().add(jLab_Dir_Ent_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 376, -1, -1));
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 665, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 222, Short.MAX_VALUE)
+        );
 
-        jLab_Com_Dir_Venta.setText("Comuna");
-        getContentPane().add(jLab_Com_Dir_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 411, -1, -1));
+        jTabbedPane2.addTab("CONFIRMACION", jPanel3);
 
-        jLab_Sal_Dir_Venta.setText("Saludo");
-        getContentPane().add(jLab_Sal_Dir_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 443, -1, -1));
-        getContentPane().add(jTxt_Nom_Dest_Venta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(175, 303, 137, -1));
-        getContentPane().add(jTxt_Fec_Ent_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(175, 338, 137, -1));
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 665, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 222, Short.MAX_VALUE)
+        );
 
-        jComb_Pack_Venta1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cumpleaños", "Día de Enamorados", "Aniversarios‌‌ de‌‌ pololos‌ ‌", "Día‌‌ de‌‌ novios‌ ‌", "Matrimonios‌‌ o‌‌ citas‌‌ románticas‌ ‌", "Desayunos‌ ‌" }));
-        getContentPane().add(jComb_Pack_Venta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(491, 303, 137, -1));
+        jTabbedPane2.addTab("LISTA", jPanel4);
 
-        jLab_Hora_Ini_Venta.setText("Hora Inicio Entrega");
-        jLab_Hora_Ini_Venta.setToolTipText("");
-        getContentPane().add(jLab_Hora_Ini_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(342, 341, -1, -1));
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 665, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 222, Short.MAX_VALUE)
+        );
 
-        jComb_Hora_Ini_Venta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30" }));
-        getContentPane().add(jComb_Hora_Ini_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(491, 338, 137, -1));
+        jTabbedPane2.addTab("DESPACHO", jPanel5);
 
-        jLab_Hora_Fin_Venta.setText("Hora Fin Entrega");
-        jLab_Hora_Fin_Venta.setToolTipText("");
-        getContentPane().add(jLab_Hora_Fin_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(342, 376, -1, -1));
-
-        jComb_Hora_Fin_Venta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30" }));
-        getContentPane().add(jComb_Hora_Fin_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(491, 373, 137, -1));
-
-        jTxt_Sal_Dir_Venta.setColumns(20);
-        jTxt_Sal_Dir_Venta.setRows(5);
-        jScrollPane1.setViewportView(jTxt_Sal_Dir_Venta);
-
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(71, 443, -1, -1));
-
-        jTxt_Total_Venta.setColumns(20);
-        jTxt_Total_Venta.setRows(5);
-        jScrollPane3.setViewportView(jTxt_Total_Venta);
-
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 443, -1, -1));
-
-        jLab_Dat_Client_Sol.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
-        jLab_Dat_Client_Sol.setText("Datos Cliente Solicitante");
-        getContentPane().add(jLab_Dat_Client_Sol, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 12, -1, -1));
-
-        jLab_Dat_Client_Sol1.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
-        jLab_Dat_Client_Sol1.setText("Datos Destinatario");
-        getContentPane().add(jLab_Dat_Client_Sol1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 246, -1, -1));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44)
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(69, Short.MAX_VALUE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTxt_Telf_Cliente_VentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxt_Telf_Cliente_VentaActionPerformed
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTxt_Telf_Cliente_VentaActionPerformed
-
-    private void jBut_Guard_Dir_VentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBut_Guard_Dir_VentaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBut_Guard_Dir_VentaActionPerformed
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -207,12 +201,6 @@ public class Ventas extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -223,40 +211,16 @@ public class Ventas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBut_Canc_Dir_Venta;
-    private javax.swing.JButton jBut_Guard_Dir_Venta;
-    private javax.swing.JButton jBut_Venta_Cancel;
-    private javax.swing.JButton jBut_Venta_Guard;
-    private javax.swing.JComboBox<String> jComb_Com_Dir_Venta;
-    private javax.swing.JComboBox<String> jComb_Hora_Fin_Venta;
-    private javax.swing.JComboBox<String> jComb_Hora_Ini_Venta;
-    private javax.swing.JComboBox<String> jComb_Pack_Venta1;
-    private javax.swing.JLabel jLab_Com_Dir_Venta;
-    private javax.swing.JLabel jLab_Dat_Client_Sol;
-    private javax.swing.JLabel jLab_Dat_Client_Sol1;
-    private javax.swing.JLabel jLab_Dir_Ent_Venta;
-    private javax.swing.JLabel jLab_Email_Cliente_Venta;
-    private javax.swing.JLabel jLab_Fec_Ent_Venta;
-    private javax.swing.JLabel jLab_Hora_Fin_Venta;
-    private javax.swing.JLabel jLab_Hora_Ini_Venta;
-    private javax.swing.JLabel jLab_Nom_Cliente_Venta;
-    private javax.swing.JLabel jLab_Nom_Dest_Venta;
-    private javax.swing.JLabel jLab_Num_Ped_Venta;
-    private javax.swing.JLabel jLab_Pack_Venta;
-    private javax.swing.JLabel jLab_Rut_Cliente_Venta;
-    private javax.swing.JLabel jLab_Sal_Dir_Venta;
-    private javax.swing.JLabel jLab_Telf_Cliente_Venta;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextField jTxt_Dir_Ent_Venta;
-    private javax.swing.JTextField jTxt_Email_Cliente_Venta;
-    private javax.swing.JTextField jTxt_Fec_Ent_Venta;
-    private javax.swing.JTextField jTxt_Nom_Cliente_Venta;
-    private javax.swing.JTextField jTxt_Nom_Dest_Venta1;
-    private javax.swing.JTextField jTxt_Num_Ped_Venta;
-    private javax.swing.JTextField jTxt_Rut_Cliente_Venta;
-    private javax.swing.JTextArea jTxt_Sal_Dir_Venta;
-    private javax.swing.JTextField jTxt_Telf_Cliente_Venta;
-    private javax.swing.JTextArea jTxt_Total_Venta;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JTabbedPane jTabbedPane2;
     // End of variables declaration//GEN-END:variables
 }
