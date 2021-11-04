@@ -1,5 +1,6 @@
 package modelo;
 
+import bd.Log;
 import java.sql.*;
 import java.lang.*;
 import javax.swing.JOptionPane;
@@ -41,11 +42,11 @@ public class ConexionRequest {
 
             connect = DriverManager.getConnection("jdbc:mysql://localhost/DreamGifts_db", "root", "Hello.World@5");
 
-            JOptionPane.showMessageDialog(null, "Conexion Establecida OK.");
+            Log.seguir("Conexion Establecida OK.");
 
         } catch (Exception e) {
 
-            JOptionPane.showMessageDialog(null, "Error Conexion: \n" + e.getMessage());
+            Log.seguir("Error Conexion: \n" + e.getMessage());
         }
 
         return connect;
