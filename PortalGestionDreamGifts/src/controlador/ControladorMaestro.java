@@ -4,8 +4,6 @@
  */
 package controlador;
 
-import modelo.UsuarioManager;
-import vista.Login;
 import vista.Maestro;
 import vista.Ventas;
 
