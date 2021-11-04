@@ -9,12 +9,12 @@ import controlador.ControladorMaestro;
  *
  * @author PC
  */
-public class Ventas extends javax.swing.JFrame {
+public class Compras extends javax.swing.JFrame {
 
     /**
      * Creates new form Ventas
      */
-    public Ventas() {
+    public Compras() {
         initComponents();
         
         this.setLocationRelativeTo(null);
@@ -39,7 +39,6 @@ public class Ventas extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -53,11 +52,6 @@ public class Ventas extends javax.swing.JFrame {
         });
 
         btnCompras.setText("COMPRAS");
-        btnCompras.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnComprasActionPerformed(evt);
-            }
-        });
 
         btnInformes.setText("INFORMES");
         btnInformes.addActionListener(new java.awt.event.ActionListener() {
@@ -115,7 +109,7 @@ public class Ventas extends javax.swing.JFrame {
             .addGap(0, 222, Short.MAX_VALUE)
         );
 
-        jTabbedPane2.addTab("VENTA", jPanel2);
+        jTabbedPane2.addTab("Solicitudes Pedido", jPanel2);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -128,7 +122,7 @@ public class Ventas extends javax.swing.JFrame {
             .addGap(0, 222, Short.MAX_VALUE)
         );
 
-        jTabbedPane2.addTab("CONFIRMACION", jPanel3);
+        jTabbedPane2.addTab("Registro Compra", jPanel3);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -141,20 +135,7 @@ public class Ventas extends javax.swing.JFrame {
             .addGap(0, 222, Short.MAX_VALUE)
         );
 
-        jTabbedPane2.addTab("LISTA", jPanel4);
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 665, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 222, Short.MAX_VALUE)
-        );
-
-        jTabbedPane2.addTab("DESPACHO", jPanel5);
+        jTabbedPane2.addTab("Revisión Factura", jPanel4);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -188,6 +169,8 @@ public class Ventas extends javax.swing.JFrame {
 
     private void btnVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasActionPerformed
         // TODO add your handling code here:
+        ControladorMaestro maestro = new ControladorMaestro();
+        maestro.openVentas(this);
     }//GEN-LAST:event_btnVentasActionPerformed
 
     private void btnMaestroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMaestroActionPerformed
@@ -201,12 +184,6 @@ public class Ventas extends javax.swing.JFrame {
         ControladorMaestro maestro = new ControladorMaestro();
         maestro.openInformes(this);
     }//GEN-LAST:event_btnInformesActionPerformed
-
-    private void btnComprasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprasActionPerformed
-        // TODO add your handling code here:
-        ControladorMaestro maestro = new ControladorMaestro();
-        maestro.openCompras(this);
-    }//GEN-LAST:event_btnComprasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -225,21 +202,23 @@ public class Ventas extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Ventas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Compras.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Ventas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Compras.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Ventas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Compras.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Ventas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Compras.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Ventas().setVisible(true);
+                new Compras().setVisible(true);
             }
         });
     }
@@ -254,7 +233,6 @@ public class Ventas extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JTabbedPane jTabbedPane2;
     // End of variables declaration//GEN-END:variables
 }

@@ -120,8 +120,18 @@ public class Maestro extends javax.swing.JFrame {
         });
 
         btnCompras.setText("COMPRAS");
+        btnCompras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnComprasActionPerformed(evt);
+            }
+        });
 
         btnInformes.setText("INFORMES");
+        btnInformes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInformesActionPerformed(evt);
+            }
+        });
 
         btnMaestro.setText("MAESTRO");
 
@@ -866,6 +876,18 @@ public class Maestro extends javax.swing.JFrame {
     private void txtBuscarPkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBuscarPkActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtBuscarPkActionPerformed
+
+    private void btnComprasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprasActionPerformed
+        // TODO add your handling code here:
+        ControladorMaestro maestroCtrl = new ControladorMaestro();
+        maestroCtrl.openCompras(this);
+    }//GEN-LAST:event_btnComprasActionPerformed
+
+    private void btnInformesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInformesActionPerformed
+        // TODO add your handling code here:
+        ControladorMaestro maestroCtrl = new ControladorMaestro();
+        maestroCtrl.openInformes(this);
+    }//GEN-LAST:event_btnInformesActionPerformed
 
     /**
      * @param args the command line arguments

@@ -9,12 +9,12 @@ import controlador.ControladorMaestro;
  *
  * @author PC
  */
-public class Ventas extends javax.swing.JFrame {
+public class Informes extends javax.swing.JFrame {
 
     /**
      * Creates new form Ventas
      */
-    public Ventas() {
+    public Informes() {
         initComponents();
         
         this.setLocationRelativeTo(null);
@@ -60,11 +60,6 @@ public class Ventas extends javax.swing.JFrame {
         });
 
         btnInformes.setText("INFORMES");
-        btnInformes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnInformesActionPerformed(evt);
-            }
-        });
 
         btnMaestro.setText("MAESTRO");
         btnMaestro.addActionListener(new java.awt.event.ActionListener() {
@@ -115,7 +110,7 @@ public class Ventas extends javax.swing.JFrame {
             .addGap(0, 222, Short.MAX_VALUE)
         );
 
-        jTabbedPane2.addTab("VENTA", jPanel2);
+        jTabbedPane2.addTab("Informe Ventas", jPanel2);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -128,7 +123,7 @@ public class Ventas extends javax.swing.JFrame {
             .addGap(0, 222, Short.MAX_VALUE)
         );
 
-        jTabbedPane2.addTab("CONFIRMACION", jPanel3);
+        jTabbedPane2.addTab("Informe Inventario", jPanel3);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -141,7 +136,7 @@ public class Ventas extends javax.swing.JFrame {
             .addGap(0, 222, Short.MAX_VALUE)
         );
 
-        jTabbedPane2.addTab("LISTA", jPanel4);
+        jTabbedPane2.addTab("Informe Clientes", jPanel4);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -154,7 +149,7 @@ public class Ventas extends javax.swing.JFrame {
             .addGap(0, 222, Short.MAX_VALUE)
         );
 
-        jTabbedPane2.addTab("DESPACHO", jPanel5);
+        jTabbedPane2.addTab("Informe Dev y Cambios", jPanel5);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -188,6 +183,8 @@ public class Ventas extends javax.swing.JFrame {
 
     private void btnVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasActionPerformed
         // TODO add your handling code here:
+        ControladorMaestro maestro = new ControladorMaestro();
+        maestro.openVentas(this);
     }//GEN-LAST:event_btnVentasActionPerformed
 
     private void btnMaestroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMaestroActionPerformed
@@ -195,12 +192,6 @@ public class Ventas extends javax.swing.JFrame {
         ControladorMaestro maestro = new ControladorMaestro();
         maestro.openMaestro(this);
     }//GEN-LAST:event_btnMaestroActionPerformed
-
-    private void btnInformesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInformesActionPerformed
-        // TODO add your handling code here:
-        ControladorMaestro maestro = new ControladorMaestro();
-        maestro.openInformes(this);
-    }//GEN-LAST:event_btnInformesActionPerformed
 
     private void btnComprasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprasActionPerformed
         // TODO add your handling code here:
@@ -225,21 +216,27 @@ public class Ventas extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Ventas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Informes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Ventas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Informes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Ventas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Informes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Ventas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Informes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Ventas().setVisible(true);
+                new Informes().setVisible(true);
             }
         });
     }

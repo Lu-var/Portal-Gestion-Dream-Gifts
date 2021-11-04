@@ -107,9 +107,6 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="COMPRAS"/>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnComprasActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnInformes">
           <Properties>
@@ -147,8 +144,8 @@
         <Container class="javax.swing.JPanel" name="jPanel2">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="VENTA">
-                <Property name="tabTitle" type="java.lang.String" value="VENTA"/>
+              <JTabbedPaneConstraints tabName="Solicitudes Pedido">
+                <Property name="tabTitle" type="java.lang.String" value="Solicitudes Pedido"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -169,8 +166,8 @@
         <Container class="javax.swing.JPanel" name="jPanel3">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="CONFIRMACION">
-                <Property name="tabTitle" type="java.lang.String" value="CONFIRMACION"/>
+              <JTabbedPaneConstraints tabName="Registro Compra">
+                <Property name="tabTitle" type="java.lang.String" value="Registro Compra"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -191,30 +188,8 @@
         <Container class="javax.swing.JPanel" name="jPanel4">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="LISTA">
-                <Property name="tabTitle" type="java.lang.String" value="LISTA"/>
-              </JTabbedPaneConstraints>
-            </Constraint>
-          </Constraints>
-
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="665" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="222" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-          </Layout>
-        </Container>
-        <Container class="javax.swing.JPanel" name="jPanel5">
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="DESPACHO">
-                <Property name="tabTitle" type="java.lang.String" value="DESPACHO"/>
+              <JTabbedPaneConstraints tabName="Revisi&#xf3;n Factura">
+                <Property name="tabTitle" type="java.lang.String" value="Revisi&#xf3;n Factura"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
