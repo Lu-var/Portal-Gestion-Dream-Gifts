@@ -22,26 +22,19 @@ public class UsuarioManager {
     
     public boolean loginCheck(String usuario, String clave){
         try{
-            comando = conexion.prepareStatement("SELECT Nombre FROM Usuarios WHERE Nombre = ?");
+            comando = conexion.prepareStatement("SELECT Nombre,Password FROM Usuarios WHERE Nombre = ? AND Password = ?");
             comando.setString(1, usuario);
+            comando.setString(2, clave);
             resultadoSet = comando.executeQuery();
             
             if(!resultadoSet.isBeforeFirst()){
-                throw new Exception("No existe ese usuario.");
-            }
-            
-            comando = conexion.prepareStatement("SELECT Password FROM Usuarios WHERE Password = ?");
-            comando.setString(1, clave);
-            resultadoSet = comando.executeQuery();
-            
-            if(!resultadoSet.isBeforeFirst()){
-                throw new Exception("Contraseña Incorrecta");
+                JOptionPane.showMessageDialog(null, "Whoops! Credenciales incorrectas.");
             } else{
                 return true;
             }
             
         } catch(Exception ex){
-            JOptionPane.showMessageDialog(null,ex);
+            JOptionPane.showMessageDialog(null,"Error: "+ex);
         }
         
         return false;
