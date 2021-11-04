@@ -26,16 +26,16 @@ public class ControladorLogin {
         try{
             boolean auth = check.loginCheck(usuario, clave);
             if(auth){
+                usuario = null;
+                clave = null;
                 ocultar(vistaLogin);
                 menu();
-                clave = null;
             }
             
         } catch(Exception ex){
-            System.out.println(ex.getMessage());
+            usuario = null;
             clave = null;
+            System.out.println(ex.getMessage());
         }
-        clave = null;
-        
     }
 }
