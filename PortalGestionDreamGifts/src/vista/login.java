@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package vista;
+import controlador.ControladorLogin;
 import javax.swing.JOptionPane;
 import controlador.LoginController;
 /**
@@ -153,12 +154,16 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_txtUsuarioActionPerformed
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
+        
+        ControladorLogin loginCtrl = new ControladorLogin();
+        loginCtrl.login(this);
+
         // login con validaciones
         
-        String contrasena = new String(txtContrasena.getPassword());
-        String usuario = txtUsuario.getText();
-        LoginController login = new LoginController();
-         login.ingreso(usuario, contrasena);
+        //        String contrasena = new String(txtContrasena.getPassword());
+        //        String usuario = txtUsuario.getText();
+        //        LoginController login = new LoginController();
+        //        login.ingreso(usuario, contrasena);
         
         //if(con.conexion(txtUsuario.getText(), contrasena)==1){
         // Aqui en el boton solo recibes la data del usuario, es decir,, lo que escribe en el formulario
@@ -231,8 +236,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 
-    public javax.swing.JPasswordField getTxtContrasena() {
-        return txtContrasena;
+    public char[] getTxtContrasena() {
+        return txtContrasena.getPassword();
     }
 
     public void setTxtContrasena(javax.swing.JPasswordField txtContrasena) {
