@@ -13,6 +13,8 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;  
+import java.util.Date;
 
 /**
  *
@@ -20,9 +22,12 @@ import java.io.PrintWriter;
  */
 public class Log {
     public static void seguir(String msg) {
-        try(FileWriter fw = new FileWriter("C:\\Users\\PC\\Desktop/myfile.txt", true);
+        try(FileWriter fw = new FileWriter("C:\\logs\\log.txt", true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter out = new PrintWriter(bw)){
+            SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+            Date fecha = new Date();
+            msg = formato.format(fecha) +": " +msg;
             out.println(msg);
         }catch (IOException e) {
             System.out.println(e);
