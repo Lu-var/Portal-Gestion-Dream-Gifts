@@ -1,22 +1,26 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
 package vista;
-
-import javax.swing.JTextField;
-import controlador.ControladorLogin;
-
+import javax.swing.JOptionPane;
+import controlador.LoginController;
 /**
  *
- * @author jav
+ * @author PC
  */
 public class Login extends javax.swing.JFrame {
-    
+
     /**
-     * Creates new form java
+     * Creates new form NewJFrame
      */
-    
     public Login() {
         initComponents();
+        //tamaño ventana
+        this.setSize(380,360);
+        //centrar
+        this.setLocationRelativeTo(null);
     }
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,81 +31,157 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        botonLogin = new javax.swing.JButton();
-        textoUsuario = new javax.swing.JTextField();
-        textoClave = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        btnSalir = new javax.swing.JButton();
+        btnEntrar = new javax.swing.JButton();
+        txtUsuario = new javax.swing.JTextField();
+        txtContrasena = new javax.swing.JPasswordField();
+        LUsuario = new javax.swing.JLabel();
+        LContrasena = new javax.swing.JLabel();
+        LDreamGifts = new javax.swing.JLabel();
+        LIngresar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        botonLogin.setText("Ingresar");
-        botonLogin.addActionListener(new java.awt.event.ActionListener() {
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        btnSalir.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnSalir.setText("SALIR");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonLoginActionPerformed(evt);
+                btnSalirActionPerformed(evt);
             }
         });
 
-        textoUsuario.addActionListener(new java.awt.event.ActionListener() {
+        btnEntrar.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        btnEntrar.setText("ENTRAR");
+        btnEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textoUsuarioActionPerformed(evt);
+                btnEntrarActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("Usuario");
+        txtUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUsuarioActionPerformed(evt);
+            }
+        });
 
-        jLabel2.setText("Clave");
+        txtContrasena.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtContrasenaActionPerformed(evt);
+            }
+        });
+
+        LUsuario.setText("Usuario :");
+
+        LContrasena.setText("Contraseña :");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(LUsuario)
+                    .addComponent(LContrasena))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtContrasena, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+                    .addComponent(txtUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 119, Short.MAX_VALUE)
+                    .addComponent(btnEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(101, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(LUsuario))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(LContrasena)
+                    .addComponent(txtContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnEntrar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnSalir)
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+
+        LDreamGifts.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
+        LDreamGifts.setForeground(new java.awt.Color(153, 204, 255));
+        LDreamGifts.setText("Dream Gifts");
+
+        LIngresar.setText("INGRESAR");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(133, 133, 133)
-                        .addComponent(botonLogin))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(155, 155, 155)
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(textoClave, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(150, 150, 150)
-                        .addComponent(jLabel1)))
-                .addContainerGap(102, Short.MAX_VALUE))
+                    .addComponent(LIngresar)
+                    .addComponent(LDreamGifts)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(60, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addGap(19, 19, 19)
+                .addComponent(LDreamGifts)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addComponent(LIngresar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(textoClave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51)
-                .addComponent(botonLogin)
-                .addGap(39, 39, 39))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void textoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoUsuarioActionPerformed
+    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textoUsuarioActionPerformed
+    }//GEN-LAST:event_txtUsuarioActionPerformed
 
-    private void botonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonLoginActionPerformed
+    private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
+        // login con validaciones
+        
+        String contrasena = new String(txtContrasena.getPassword());
+        String usuario = txtUsuario.getText();
+        LoginController login = new LoginController();
+         login.ingreso(usuario, contrasena);
+        
+        //if(con.conexion(txtUsuario.getText(), contrasena)==1){
+        // Aqui en el boton solo recibes la data del usuario, es decir,, lo que escribe en el formulario
+        // Y aqui solo debes validar que los campos no esten vacios
+        //Algo asi como
+        //usuario.empty()
+            //Si = indique usuario por favor
+            
+        //contra.empty()   
+            //Si = indique contra por favor
+           
+        //Si ambos campos tienen data
+        //funcionDelControlador(usuario, contra); que devuelva true o false        
+    }//GEN-LAST:event_btnEntrarActionPerformed
+
+    private void txtContrasenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContrasenaActionPerformed
         // TODO add your handling code here:
-        ControladorLogin loginCtrl = new ControladorLogin();
-        loginCtrl.login(this);
-    }//GEN-LAST:event_botonLoginActionPerformed
+    }//GEN-LAST:event_txtContrasenaActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        // Boton salir
+        System.exit(0);
+    }//GEN-LAST:event_btnSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -140,29 +220,30 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botonLogin;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField textoClave;
-    private javax.swing.JTextField textoUsuario;
+    private javax.swing.JLabel LContrasena;
+    private javax.swing.JLabel LDreamGifts;
+    private javax.swing.JLabel LIngresar;
+    private javax.swing.JLabel LUsuario;
+    private javax.swing.JButton btnEntrar;
+    private javax.swing.JButton btnSalir;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPasswordField txtContrasena;
+    private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 
-    public String getTextoClave() {
-        return textoClave.getText();
+    public javax.swing.JPasswordField getTxtContrasena() {
+        return txtContrasena;
     }
 
-    public void setTextoClave(JTextField textoClave) {
-        this.textoClave = textoClave;
+    public void setTxtContrasena(javax.swing.JPasswordField txtContrasena) {
+        this.txtContrasena = txtContrasena;
     }
 
-    public String getTextoUsuario() {
-        return textoUsuario.getText();
+    public javax.swing.JTextField getTxtUsuario() {
+        return txtUsuario;
     }
 
-    public void setTextoUsuario(JTextField textoUsuario) {
-        this.textoUsuario = textoUsuario;
+    public void setTxtUsuario(javax.swing.JTextField txtUsuario) {
+        this.txtUsuario = txtUsuario;
     }
-
-
-
 }
