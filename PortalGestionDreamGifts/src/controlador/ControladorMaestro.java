@@ -4,6 +4,9 @@
  */
 package controlador;
 
+import javax.swing.JFrame;
+import vista.Compras;
+import vista.Informes;
 import vista.Maestro;
 import vista.Ventas;
 
@@ -13,9 +16,29 @@ import vista.Ventas;
  */
 public class ControladorMaestro {
     
-    public void openVentas(Maestro vistaMaestro){
+    public void openVentas(JFrame vista){
         Ventas ventas = new Ventas();
-        vistaMaestro.dispose();
+        vista.dispose();
         ventas.setVisible(true);
     }
+    
+    public void openCompras(JFrame vista){
+        Compras compras = new Compras();
+        vista.dispose();
+        compras.setVisible(true);
+    }
+    
+    public void openInformes(JFrame vista){
+        Informes informes = new Informes();
+        vista.dispose();
+        informes.setVisible(true);
+    }
+    
+    public void openMaestro(JFrame vista){
+        Maestro maestro = new Maestro();
+        vista.dispose();
+        maestro.setVisible(true);
+    }
+    
+    
 }
