@@ -18,8 +18,8 @@ public class ControladorLogin {
     }
     
     public void login(Login vistaLogin){
-        String usuario = vistaLogin.getTextoUsuario().toString();
-        String clave = vistaLogin.getTextoClave().toString();
+        String usuario = vistaLogin.getTxtUsuario().toString();
+        String clave = vistaLogin.getTxtContrasena().toString();
         
         UsuarioManager check = new UsuarioManager();
         try{
