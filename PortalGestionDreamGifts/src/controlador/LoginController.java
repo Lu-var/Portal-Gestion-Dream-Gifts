@@ -42,7 +42,7 @@ public class LoginController {
                 //System.out.println("desde nombreBd" + nombreBd);
                 //System.out.println("desde passwordBd" + passwordBd);
                 System.out.println("bienvenido");
-                PrincipalController.mostrar();
+                //PrincipalController.mostrar();
                 LoginController.ocultar();
             }else{
                 System.out.println("no puede entrar");
