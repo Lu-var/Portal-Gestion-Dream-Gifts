@@ -68,10 +68,10 @@ public class ClienteManager {
         }
     }
     
-    public static void main(String[] args) {
-        ClienteManager clientemngr = new ClienteManager();
-        ResultSet cliente = clientemngr.SeleccionarClientes();
-        clientemngr.InfoClientes(cliente);
-        clientemngr.AgregarCliente("4.432.654-4", "Bernardo", "1920/10/09", "2312321", "mimail@mail.com", "Calle Nueva 1234");
-    }
+//    public static void main(String[] args) {
+//        ClienteManager clientemngr = new ClienteManager();
+//        ResultSet cliente = clientemngr.SeleccionarClientes();
+//        clientemngr.InfoClientes(cliente);
+//        clientemngr.AgregarCliente("4.432.654-4", "Bernardo", "1920/10/09", "2312321", "mimail@mail.com", "Calle Nueva 1234");
+//    }
 }
