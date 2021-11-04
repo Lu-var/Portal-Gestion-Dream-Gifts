@@ -24,9 +24,21 @@ public class Consulta {
         return null;
     }
     
+    public ResultSet insert(String query) throws SQLException{
+        try{
+            Statement sentencia = Conexion.abrir().createStatement();
+            ResultSet resultado = sentencia.executeQuery(query);
+            return resultado;
+        }catch(SQLException e){
+            Log.seguir("error al agregar " + e.getMessage());
+        }
+       return null; 
+    }    
     /*
         insert
         update
         delete
     */
+
+    
 }
