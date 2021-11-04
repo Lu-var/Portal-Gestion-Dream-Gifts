@@ -12,7 +12,10 @@
             </test-roots>
         </data>
         <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+            <word>cliente</word>
             <word>clientes</word>
+            <word>Venta</word>
+            <word>Ventas</word>
         </spellchecker-wordlist>
     </configuration>
 </project>
