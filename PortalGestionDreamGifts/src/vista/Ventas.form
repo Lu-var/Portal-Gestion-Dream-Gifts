@@ -74,7 +74,7 @@
                   <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                   <Component id="jButton2" min="-2" pref="115" max="-2" attributes="0"/>
                   <EmptySpace pref="42" max="32767" attributes="0"/>
-                  <Component id="jButton1" min="-2" pref="115" max="-2" attributes="0"/>
+                  <Component id="btnMaestro" min="-2" pref="115" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -87,7 +87,7 @@
                       <Component id="jButton3" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="jButton4" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="jButton2" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
-                      <Component id="jButton1" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="btnMaestro" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -113,10 +113,13 @@
             <Property name="text" type="java.lang.String" value="INFORMES"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="btnMaestro">
           <Properties>
             <Property name="text" type="java.lang.String" value="MAESTRO"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMaestroActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
