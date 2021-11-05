@@ -24,7 +24,7 @@ public class Consulta {
         return null;
     }
     
-    public ResultSet insert(String query) throws SQLException{
+    /*public ResultSet insert(String query) throws SQLException{
         try{
             Statement sentencia = Conexion.abrir().createStatement();
             ResultSet resultado = sentencia.executeQuery(query);
@@ -39,6 +39,17 @@ public class Consulta {
         update
         delete
     */
-
+     public boolean insert(String query)
+    {
+        Log.seguir("PASE POR insert");
+        try {
+            Statement sentencia = Conexion.abrir().createStatement();
+            sentencia.executeUpdate(query);
+            return true;
+        } catch (SQLException ex) {
+            Log.seguir("me cai ejecutar"+ex.getMessage());
+        }
+        return false;
+    }
     
 }

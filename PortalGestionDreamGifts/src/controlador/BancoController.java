@@ -15,18 +15,16 @@ import bd.Log;
  */
 public class BancoController {
     
-    public void agregar(String nombre){
+    public boolean agregar(String nombre){
         
         try{
-            Consulta con = new Consulta();
-            Banco agregar = new Banco();
-            
-            ResultSet rs = agregar.agregarBanco(nombre);
-            Log.seguir("adsadsad");
+            Banco banco = new Banco();
+            //banco.agregarBanco(nombre);
+            return banco.agregarBanco(nombre);
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
-        
+        return false;
         
     }
 }

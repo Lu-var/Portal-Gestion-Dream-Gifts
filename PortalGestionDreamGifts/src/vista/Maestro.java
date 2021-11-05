@@ -4,9 +4,11 @@
  */
 package vista;
 
+import bd.Log;
 import com.toedter.calendar.JDateChooser;
 import controlador.*;
 import javax.swing.JTextField;
+import modelo.Banco;
 
 /**
  *
@@ -978,6 +980,9 @@ public class Maestro extends javax.swing.JFrame {
 
         String nombre = txtBanco.getText();
         BancoController banco = new BancoController();
+        //Banco banco = new Banco(nombre);
+        banco.agregar(nombre);
+        Log.seguir("boton");
     }//GEN-LAST:event_btngGuardarActionPerformed
 
     /**
