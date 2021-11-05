@@ -4,6 +4,7 @@
  */
 package modelo;
 import java.sql.*;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -40,4 +41,67 @@ public class UsuarioManager {
         return false;
     }
     
+        public ArrayList<ArrayList<Object>> usuarioSelectAll(){
+        ArrayList<ArrayList<Object>> matriz = new ArrayList<ArrayList<Object>>();
+        try{
+            comando = conexion.prepareStatement("SELECT * FROM Usuario");
+            resultadoSet = comando.executeQuery();
+
+            while(resultadoSet.next()){
+                ArrayList<Object> fila = new ArrayList<Object>();
+
+                int id = resultadoSet.getInt("idUsuario");
+                String nombre = resultadoSet.getString("Nombre");
+                String pass = resultadoSet.getString("Password");
+                int status = resultadoSet.getInt("Enabled");
+
+                switch(status){
+                    case 0:
+                        resultadoBool = false;
+                    case 1:
+                        resultadoBool = true;
+
+                    default:
+                        break;
+                }
+
+                fila.add(id);
+                fila.add(nombre);
+                fila.add(pass);
+                fila.add(resultadoBool);
+                
+                matriz.add(fila);
+            }
+            
+        } catch(Exception ex){
+            JOptionPane.showMessageDialog(null,"Error: "+ex);
+        }
+        
+        return matriz;
+    }
+
+    public boolean agregarUsuarioSQL(String nombre, String pass){
+        PreparedStatement comando = null;
+        if(nombre.equals("")){
+            return false;
+        }
+        
+        if(pass.equals("")){
+            return false;
+        }
+
+        try{
+            comando = conexion.prepareStatement("INSERT INTO Usuario (Nombre,Password) VALUES (?,?)");
+            comando.setString(1, nombre);
+            comando.setString(2, pass);
+            comando.execute();
+            
+
+        } catch(SQLException ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }
+        
+        return true;
+    }
+
 }
