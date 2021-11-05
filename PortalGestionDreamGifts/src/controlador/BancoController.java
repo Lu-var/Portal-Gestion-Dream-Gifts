@@ -9,7 +9,6 @@ import vista.Maestro;
 import java.sql.ResultSet;
 import bd.Log;
 
-
 /**
  *
  * @author PC
@@ -26,5 +25,6 @@ public class BancoController {
             System.out.println(e.getMessage());
         }
         return false; 
+
     }
 }

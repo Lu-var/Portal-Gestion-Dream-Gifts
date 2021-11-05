@@ -7,6 +7,7 @@ package vista;
 import bd.Log;
 import com.toedter.calendar.JDateChooser;
 import controlador.*;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 import modelo.Banco;
 
@@ -15,6 +16,8 @@ import modelo.Banco;
  * @author Crow
  */
 public class Maestro extends javax.swing.JFrame {
+    
+    CatArtController catArt = new CatArtController();
 
     /**
      * Creates new form Maestro
@@ -24,6 +27,9 @@ public class Maestro extends javax.swing.JFrame {
        
         this.setLocationRelativeTo(null);
         this.setSize(910,580 );
+        
+        catArt.showCategorias(this);
+        
 
     }
 
@@ -42,7 +48,7 @@ public class Maestro extends javax.swing.JFrame {
         btnInformes = new javax.swing.JButton();
         btnMaestro = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        PanelBanco = new javax.swing.JTabbedPane();
+        PanelPrincipal = new javax.swing.JTabbedPane();
         PanelClientes = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
         txtRutCliente = new javax.swing.JTextField();
@@ -115,6 +121,14 @@ public class Maestro extends javax.swing.JFrame {
         PanelCatVenta = new javax.swing.JPanel();
         PanelUsuarios = new javax.swing.JPanel();
         PanelCatArt = new javax.swing.JPanel();
+        LCatArt = new javax.swing.JLabel();
+        txtCatArt = new javax.swing.JTextField();
+        btnCatArtGuardar = new javax.swing.JButton();
+        btnCatArtCancelar = new javax.swing.JButton();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        tablaCatArt = new javax.swing.JTable();
+        btnCatArtEditar = new javax.swing.JButton();
+        btnCatArtDesactivar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -176,7 +190,17 @@ public class Maestro extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(153, 204, 255));
         jLabel1.setText("   DREAM GIFTS");
 
-        PanelBanco.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        PanelPrincipal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        PanelPrincipal.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                PanelPrincipalStateChanged(evt);
+            }
+        });
+        PanelPrincipal.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                PanelPrincipalComponentShown(evt);
+            }
+        });
 
         jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Clientes"));
 
@@ -354,10 +378,10 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton7)
                     .addComponent(jButton8))
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(153, Short.MAX_VALUE))
         );
 
-        PanelBanco.addTab("Clientes", PanelClientes);
+        PanelPrincipal.addTab("Clientes", PanelClientes);
 
         jPanel14.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Proveedores"));
 
@@ -547,20 +571,20 @@ public class Maestro extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        PanelBanco.addTab("Proveedores", PanelProveedores);
+        PanelPrincipal.addTab("Proveedores", PanelProveedores);
 
         javax.swing.GroupLayout PanelArticulosLayout = new javax.swing.GroupLayout(PanelArticulos);
         PanelArticulos.setLayout(PanelArticulosLayout);
         PanelArticulosLayout.setHorizontalGroup(
             PanelArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 748, Short.MAX_VALUE)
+            .addGap(0, 919, Short.MAX_VALUE)
         );
         PanelArticulosLayout.setVerticalGroup(
             PanelArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 441, Short.MAX_VALUE)
         );
 
-        PanelBanco.addTab("Articulos", PanelArticulos);
+        PanelPrincipal.addTab("Articulos", PanelArticulos);
 
         jPanel15.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Packs"));
         jPanel15.setToolTipText("");
@@ -739,33 +763,33 @@ public class Maestro extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        PanelBanco.addTab("Packs", PanelPacks);
+        PanelPrincipal.addTab("Packs", PanelPacks);
 
         javax.swing.GroupLayout PanelRRSSLayout = new javax.swing.GroupLayout(PanelRRSS);
         PanelRRSS.setLayout(PanelRRSSLayout);
         PanelRRSSLayout.setHorizontalGroup(
             PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 746, Short.MAX_VALUE)
+            .addGap(0, 919, Short.MAX_VALUE)
         );
         PanelRRSSLayout.setVerticalGroup(
             PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 441, Short.MAX_VALUE)
         );
 
-        PanelBanco.addTab("RRSS", PanelRRSS);
+        PanelPrincipal.addTab("RRSS", PanelRRSS);
 
         javax.swing.GroupLayout PanelComunasLayout = new javax.swing.GroupLayout(PanelComunas);
         PanelComunas.setLayout(PanelComunasLayout);
         PanelComunasLayout.setHorizontalGroup(
             PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 746, Short.MAX_VALUE)
+            .addGap(0, 919, Short.MAX_VALUE)
         );
         PanelComunasLayout.setVerticalGroup(
             PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 441, Short.MAX_VALUE)
         );
 
-        PanelBanco.addTab("Comuna", PanelComunas);
+        PanelPrincipal.addTab("Comuna", PanelComunas);
 
         LBanco.setText("Banco :");
 
@@ -823,7 +847,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btngGuardar)
                     .addComponent(txtBanco, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(201, Short.MAX_VALUE))
+                .addContainerGap(376, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBancosLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -852,49 +876,152 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEditar)
                     .addComponent(btnDesactivar))
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
 
-        PanelBanco.addTab("Bancos", PanelBancos);
+        PanelPrincipal.addTab("Bancos", PanelBancos);
 
         javax.swing.GroupLayout PanelCatVentaLayout = new javax.swing.GroupLayout(PanelCatVenta);
         PanelCatVenta.setLayout(PanelCatVentaLayout);
         PanelCatVentaLayout.setHorizontalGroup(
             PanelCatVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 746, Short.MAX_VALUE)
+            .addGap(0, 919, Short.MAX_VALUE)
         );
         PanelCatVentaLayout.setVerticalGroup(
             PanelCatVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 441, Short.MAX_VALUE)
         );
 
-        PanelBanco.addTab("Categoría Venta", PanelCatVenta);
-
+        PanelPrincipal.addTab("Categoría Venta", PanelCatVenta);
         javax.swing.GroupLayout PanelUsuariosLayout = new javax.swing.GroupLayout(PanelUsuarios);
         PanelUsuarios.setLayout(PanelUsuariosLayout);
         PanelUsuariosLayout.setHorizontalGroup(
             PanelUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 746, Short.MAX_VALUE)
+            .addGap(0, 919, Short.MAX_VALUE)
         );
         PanelUsuariosLayout.setVerticalGroup(
             PanelUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 441, Short.MAX_VALUE)
         );
 
-        PanelBanco.addTab("Usuarios", PanelUsuarios);
+        PanelPrincipal.addTab("Usuarios", PanelUsuarios);
+
+        PanelCatArt.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                PanelCatArtComponentShown(evt);
+            }
+        });
+
+        LCatArt.setText("Categoria Articulo:");
+
+        txtCatArt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCatArtActionPerformed(evt);
+            }
+        });
+
+        btnCatArtGuardar.setText("GUARDAR");
+        btnCatArtGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCatArtGuardarActionPerformed(evt);
+            }
+        });
+
+        btnCatArtCancelar.setText("CANCELAR");
+
+        tablaCatArt.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Categoría", "Activado"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.Boolean.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        tablaCatArt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tablaCatArtMouseClicked(evt);
+            }
+        });
+        tablaCatArt.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                tablaCatArtComponentShown(evt);
+            }
+        });
+        jScrollPane5.setViewportView(tablaCatArt);
+        if (tablaCatArt.getColumnModel().getColumnCount() > 0) {
+            tablaCatArt.getColumnModel().getColumn(0).setResizable(false);
+            tablaCatArt.getColumnModel().getColumn(1).setResizable(false);
+            tablaCatArt.getColumnModel().getColumn(2).setResizable(false);
+        }
+
+        btnCatArtEditar.setText("EDITAR");
+        btnCatArtEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCatArtEditarActionPerformed(evt);
+            }
+        });
+
+        btnCatArtDesactivar.setText("DESACTIVAR");
+
 
         javax.swing.GroupLayout PanelCatArtLayout = new javax.swing.GroupLayout(PanelCatArt);
         PanelCatArt.setLayout(PanelCatArtLayout);
         PanelCatArtLayout.setHorizontalGroup(
             PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 746, Short.MAX_VALUE)
+            .addGroup(PanelCatArtLayout.createSequentialGroup()
+                .addGap(258, 258, 258)
+                .addGroup(PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCatArtLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnCatArtEditar)
+                        .addGap(65, 65, 65)
+                        .addComponent(btnCatArtDesactivar)
+                        .addGap(167, 167, 167))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCatArtLayout.createSequentialGroup()
+                        .addGap(0, 87, Short.MAX_VALUE)
+                        .addComponent(LCatArt)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtCatArt, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(183, 183, 183))
+                    .addGroup(PanelCatArtLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PanelCatArtLayout.createSequentialGroup()
+                                .addComponent(btnCatArtCancelar)
+                                .addGap(103, 103, 103)
+                                .addComponent(btnCatArtGuardar))
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         PanelCatArtLayout.setVerticalGroup(
             PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 441, Short.MAX_VALUE)
+            .addGroup(PanelCatArtLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addGroup(PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LCatArt)
+                    .addComponent(txtCatArt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCatArtGuardar)
+                    .addComponent(btnCatArtCancelar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addGroup(PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCatArtEditar)
+                    .addComponent(btnCatArtDesactivar))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
 
-        PanelBanco.addTab("Categoría Articulos", PanelCatArt);
+        PanelPrincipal.addTab("Categoría Articulos", null, PanelCatArt, "");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -909,7 +1036,7 @@ public class Maestro extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(PanelBanco, javax.swing.GroupLayout.PREFERRED_SIZE, 750, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(PanelPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 750, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 37, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -921,11 +1048,11 @@ public class Maestro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(PanelBanco)
+                .addComponent(PanelPrincipal)
                 .addContainerGap())
         );
 
-        PanelBanco.getAccessibleContext().setAccessibleDescription("");
+        PanelPrincipal.getAccessibleContext().setAccessibleDescription("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -980,6 +1107,41 @@ public class Maestro extends javax.swing.JFrame {
 
         String nombre = txtBanco.getText();
         BancoController banco = new BancoController();
+    }//GEN-LAST:event_btngGuardarActionPerformed
+
+    private void btnCatArtGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCatArtGuardarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCatArtGuardarActionPerformed
+
+    private void txtCatArtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCatArtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCatArtActionPerformed
+
+    private void PanelPrincipalStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_PanelPrincipalStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PanelPrincipalStateChanged
+
+    private void tablaCatArtComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_tablaCatArtComponentShown
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tablaCatArtComponentShown
+
+    private void tablaCatArtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaCatArtMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_tablaCatArtMouseClicked
+
+    private void btnCatArtEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCatArtEditarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCatArtEditarActionPerformed
+
+    private void PanelPrincipalComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_PanelPrincipalComponentShown
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PanelPrincipalComponentShown
+
+    private void PanelCatArtComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_PanelCatArtComponentShown
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_PanelCatArtComponentShown
 
         //Banco banco = new Banco(nombre);
         banco.agregar(nombre);
@@ -1012,8 +1174,11 @@ public class Maestro extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Maestro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
+        
+        
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Maestro().setVisible(true);
@@ -1023,6 +1188,7 @@ public class Maestro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LBanco;
+    private javax.swing.JLabel LCatArt;
     private javax.swing.JPanel PanelArticulos;
     private javax.swing.JTabbedPane PanelBanco;
     private javax.swing.JPanel PanelBancos;
@@ -1031,11 +1197,16 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JPanel PanelClientes;
     private javax.swing.JPanel PanelComunas;
     private javax.swing.JPanel PanelPacks;
+    private javax.swing.JTabbedPane PanelPrincipal;
     private javax.swing.JPanel PanelProveedores;
     private javax.swing.JPanel PanelRRSS;
     private javax.swing.JPanel PanelUsuarios;
     private javax.swing.JComboBox<String> boxSocialCliente;
     private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnCatArtCancelar;
+    private javax.swing.JButton btnCatArtDesactivar;
+    private javax.swing.JButton btnCatArtEditar;
+    private javax.swing.JButton btnCatArtGuardar;
     private javax.swing.JButton btnCompras;
     private javax.swing.JButton btnDesactivar;
     private javax.swing.JButton btnEditar;
@@ -1079,6 +1250,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
@@ -1087,8 +1259,10 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JTable jTable6;
     private javax.swing.JScrollPane scrollArticulos;
     private javax.swing.JScrollPane scrollSelected;
+    private javax.swing.JTable tablaCatArt;
     private javax.swing.JTextField txtBanco;
     private javax.swing.JTextField txtBuscarPk;
+    private javax.swing.JTextField txtCatArt;
     private javax.swing.JTextField txtCelularCliente;
     private javax.swing.JTextField txtDirProv;
     private javax.swing.JTextField txtFonoProv;
@@ -1103,6 +1277,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JTextField txtRutProv;
     // End of variables declaration//GEN-END:variables
 
+    
     public JDateChooser getDateNacCliente() {
         return dateNacCliente;
     }
@@ -1213,6 +1388,14 @@ public class Maestro extends javax.swing.JFrame {
 
     public void setTxtRutProv(JTextField txtRutProv) {
         this.txtRutProv = txtRutProv;
+    }
+
+    public JTable getTablaCatArt() {
+        return tablaCatArt;
+    }
+
+    public void setTablaCatArt(JTable tablaCatArt) {
+        this.tablaCatArt = tablaCatArt;
     }
 
 

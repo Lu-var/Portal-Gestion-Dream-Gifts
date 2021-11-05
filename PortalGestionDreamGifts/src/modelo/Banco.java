@@ -4,7 +4,6 @@
  */
 package modelo;
 import bd.Consulta;
-
 import bd.Log;
 import java.sql.ResultSet;
 /**
@@ -53,7 +52,6 @@ public class Banco {
     public void setEnabled(int enabled) {
         this.enabled = enabled;
     }
-    
 
     public boolean agregarBanco(String nombre){
         //try{
