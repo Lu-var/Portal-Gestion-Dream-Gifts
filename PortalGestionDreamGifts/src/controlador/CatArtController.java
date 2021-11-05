@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package controlador;
-import modelo.CategoriaArticulo;
+import modelo.CatArticuloManager;
 import java.util.ArrayList;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -16,9 +16,9 @@ import vista.Maestro;
 public class CatArtController {
 
     
-    public void showCategorias(Maestro master){
+    public void showAll(Maestro master){
         
-        CategoriaArticulo mngr = new CategoriaArticulo(); 
+        CatArticuloManager mngr = new CatArticuloManager(); 
         
         JTable tabla = master.getTablaCatArt();
         ArrayList<ArrayList<Object>> lista = mngr.categoriaSelectAll();
