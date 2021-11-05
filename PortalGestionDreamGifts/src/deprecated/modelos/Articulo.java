@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package modelo;
+package deprecated.modelos;
 import java.util.Date;
 
 /**
@@ -16,23 +16,21 @@ public class Articulo {
     private Date fechaVencimiento;
     private int stock;
     private int precio;
-    private CategoriaArticulo idCategoriaArticulo;
 
     public Articulo() {
     }
 
-    public Articulo(int idArticulo, String nombre, Date fechaVencimiento, int stock, int precio, CategoriaArticulo idCategoriaArticulo) {
+    public Articulo(int idArticulo, String nombre, Date fechaVencimiento, int stock, int precio) {
         this.idArticulo = idArticulo;
         this.nombre = nombre;
         this.fechaVencimiento = fechaVencimiento;
         this.stock = stock;
         this.precio = precio;
-        this.idCategoriaArticulo = idCategoriaArticulo;
     }
 
     @Override
     public String toString() {
-        return "Articulo{" + "idArticulo=" + idArticulo + ", nombre=" + nombre + ", fechaVencimiento=" + fechaVencimiento + ", stock=" + stock + ", precio=" + precio + ", idCategoriaArticulo=" + idCategoriaArticulo + '}';
+        return "Articulo{" + "idArticulo=" + idArticulo + ", nombre=" + nombre + ", fechaVencimiento=" + fechaVencimiento + ", stock=" + stock + ", precio=" + precio + '}';
     }
 
     public int getIdArticulo() {
@@ -73,14 +71,6 @@ public class Articulo {
 
     public void setPrecio(int precio) {
         this.precio = precio;
-    }
-
-    public CategoriaArticulo getIdCategoriaArticulo() {
-        return idCategoriaArticulo;
-    }
-
-    public void setIdCategoriaArticulo(CategoriaArticulo idCategoriaArticulo) {
-        this.idCategoriaArticulo = idCategoriaArticulo;
     }
     
     

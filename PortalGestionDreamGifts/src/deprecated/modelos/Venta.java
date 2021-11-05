@@ -2,7 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package modelo;
+package deprecated.modelos;
+import deprecated.modelos.Banco;
+import deprecated.modelos.Status;
+import deprecated.modelos.Pack;
+import deprecated.modelos.Comuna;
+import deprecated.modelos.Cliente;
+import deprecated.modelos.StatusDespacho;
+import deprecated.modelos.RRSS;
 import java.util.Date;
 
 /**
