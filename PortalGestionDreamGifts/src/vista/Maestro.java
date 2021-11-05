@@ -28,7 +28,6 @@ public class Maestro extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         this.setSize(910,580 );
         
-        catArt.showCategorias(this);
         
 
     }
@@ -1143,10 +1142,9 @@ public class Maestro extends javax.swing.JFrame {
         
     }//GEN-LAST:event_PanelCatArtComponentShown
 
-        //Banco banco = new Banco(nombre);
-        banco.agregar(nombre);
-        Log.seguir("boton");
-    }//GEN-LAST:event_btngGuardarActionPerformed
+//        Banco banco = new Banco(nombre);
+//        banco.agregar(nombre);
+//        Log.seguir("boton");                                           
 
     /**
      * @param args the command line arguments
@@ -1397,8 +1395,4 @@ public class Maestro extends javax.swing.JFrame {
     public void setTablaCatArt(JTable tablaCatArt) {
         this.tablaCatArt = tablaCatArt;
     }
-
-
-
-
 }
