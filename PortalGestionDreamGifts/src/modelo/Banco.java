@@ -4,7 +4,9 @@
  */
 package modelo;
 import bd.Consulta;
+
 import bd.Log;
+import java.sql.ResultSet;
 /**
  *
  * @author PC
@@ -52,6 +54,7 @@ public class Banco {
         this.enabled = enabled;
     }
     
+
     public boolean agregarBanco(String nombre){
         //try{
         Consulta con = new Consulta();

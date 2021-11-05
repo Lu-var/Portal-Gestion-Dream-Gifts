@@ -980,6 +980,7 @@ public class Maestro extends javax.swing.JFrame {
 
         String nombre = txtBanco.getText();
         BancoController banco = new BancoController();
+
         //Banco banco = new Banco(nombre);
         banco.agregar(nombre);
         Log.seguir("boton");

@@ -4,6 +4,11 @@
  */
 package controlador;
 import modelo.Banco;
+import bd.Consulta;
+import vista.Maestro;
+import java.sql.ResultSet;
+import bd.Log;
+
 
 /**
  *
@@ -20,7 +25,6 @@ public class BancoController {
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
-        return false;
-        
+        return false; 
     }
 }
