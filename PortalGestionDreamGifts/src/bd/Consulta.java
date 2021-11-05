@@ -39,7 +39,7 @@ public class Consulta {
         update
         delete
     */
-     public boolean insert(String query)
+     public boolean ejecutar(String query)
     {
         Log.seguir("PASE POR insert");
         try {
