@@ -1,15 +1,15 @@
-package vista;
+package deprecated.vistas;
 
 /**
  *
  * @author jav
  */
-public class Categorias_Articulos extends javax.swing.JFrame {
+public class RRSS extends javax.swing.JFrame {
 
     /**
      * Creates new form clientes
      */
-    public Categorias_Articulos() {
+    public RRSS() {
         initComponents();
     }
 
@@ -22,42 +22,42 @@ public class Categorias_Articulos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLab_Cat_Art = new javax.swing.JLabel();
-        jLab_Cod_Cat_Art = new javax.swing.JLabel();
-        jBut_Cancel_Cat_Art = new javax.swing.JButton();
-        jBut_Guard_Cat_Art = new javax.swing.JButton();
+        jLab_Nom_RRSS = new javax.swing.JLabel();
+        jLab_Cod_RRSS = new javax.swing.JLabel();
+        jBut_Cancel_RRSS = new javax.swing.JButton();
+        jBut_Guard_RRSS = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable_List_Cat_Art = new javax.swing.JTable();
-        jBut_Buscar_Cat_Art = new javax.swing.JButton();
-        jTxt_Cod_Cat_Art = new javax.swing.JTextField();
-        jComb_Cat_Art = new javax.swing.JComboBox<>();
-        jBut_ed_Cat_Art = new javax.swing.JButton();
-        jBut_Des_Cat_Art = new javax.swing.JButton();
+        jTable_List_RRSS = new javax.swing.JTable();
+        jBut_Buscar_RRSS = new javax.swing.JButton();
+        jTxt_Cod_RRSS = new javax.swing.JTextField();
+        jComb_Nom_RRSS = new javax.swing.JComboBox<>();
+        jBut_Ed_RRSS = new javax.swing.JButton();
+        jBut_Des_RRSS = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLab_Cat_Art.setText("Categoría Artículo");
-        getContentPane().add(jLab_Cat_Art, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 26, -1, -1));
+        jLab_Nom_RRSS.setText("Nombre RRSS");
+        getContentPane().add(jLab_Nom_RRSS, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 26, -1, -1));
 
-        jLab_Cod_Cat_Art.setText("Código Categoría Artículo");
-        getContentPane().add(jLab_Cod_Cat_Art, new org.netbeans.lib.awtextra.AbsoluteConstraints(333, 26, -1, -1));
+        jLab_Cod_RRSS.setText("Código RRSS");
+        getContentPane().add(jLab_Cod_RRSS, new org.netbeans.lib.awtextra.AbsoluteConstraints(389, 26, -1, -1));
 
-        jBut_Cancel_Cat_Art.setText("Cancelar");
-        getContentPane().add(jBut_Cancel_Cat_Art, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 99, -1, -1));
+        jBut_Cancel_RRSS.setText("Cancelar");
+        getContentPane().add(jBut_Cancel_RRSS, new org.netbeans.lib.awtextra.AbsoluteConstraints(334, 99, -1, -1));
 
-        jBut_Guard_Cat_Art.setText("Guardar");
-        jBut_Guard_Cat_Art.setToolTipText("");
-        getContentPane().add(jBut_Guard_Cat_Art, new org.netbeans.lib.awtextra.AbsoluteConstraints(516, 99, -1, -1));
+        jBut_Guard_RRSS.setText("Guardar");
+        jBut_Guard_RRSS.setToolTipText("");
+        getContentPane().add(jBut_Guard_RRSS, new org.netbeans.lib.awtextra.AbsoluteConstraints(544, 99, -1, -1));
 
         jTable1.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(649, 52, 22, -1));
 
-        jTable_List_Cat_Art.setModel(new javax.swing.table.DefaultTableModel(
+        jTable_List_RRSS.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -67,7 +67,7 @@ public class Categorias_Articulos extends javax.swing.JFrame {
                 {null, null, null}
             },
             new String [] {
-                "Código Categoría Artículo", "Categoría Artículo", "Estado"
+                "Nombre RRSS", "Código RRSS", "Estado"
             }
         ) {
             Class[] types = new Class [] {
@@ -78,35 +78,26 @@ public class Categorias_Articulos extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable_List_Cat_Art);
+        jScrollPane1.setViewportView(jTable_List_RRSS);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 152, 631, 159));
 
-        jBut_Buscar_Cat_Art.setText("Buscar");
-        getContentPane().add(jBut_Buscar_Cat_Art, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 99, -1, -1));
-        getContentPane().add(jTxt_Cod_Cat_Art, new org.netbeans.lib.awtextra.AbsoluteConstraints(516, 23, 137, -1));
+        jBut_Buscar_RRSS.setText("Buscar");
+        getContentPane().add(jBut_Buscar_RRSS, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 99, -1, -1));
+        getContentPane().add(jTxt_Cod_RRSS, new org.netbeans.lib.awtextra.AbsoluteConstraints(491, 23, 137, -1));
 
-        jComb_Cat_Art.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Accesorios", "Bebestibles", "Comestibles" }));
-        getContentPane().add(jComb_Cat_Art, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 23, 141, -1));
+        jComb_Nom_RRSS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Whatsapp", "Facebook", "Instangram", "Teléfono" }));
+        getContentPane().add(jComb_Nom_RRSS, new org.netbeans.lib.awtextra.AbsoluteConstraints(127, 23, 141, -1));
 
-        jBut_ed_Cat_Art.setText("Editar");
-        getContentPane().add(jBut_ed_Cat_Art, new org.netbeans.lib.awtextra.AbsoluteConstraints(301, 317, -1, -1));
+        jBut_Ed_RRSS.setText("Editar");
+        getContentPane().add(jBut_Ed_RRSS, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 317, -1, -1));
 
-        jBut_Des_Cat_Art.setText("Desactivar");
-        jBut_Des_Cat_Art.setToolTipText("");
-        jBut_Des_Cat_Art.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBut_Des_Cat_ArtActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jBut_Des_Cat_Art, new org.netbeans.lib.awtextra.AbsoluteConstraints(489, 317, -1, -1));
+        jBut_Des_RRSS.setText("Desactivar");
+        jBut_Des_RRSS.setToolTipText("");
+        getContentPane().add(jBut_Des_RRSS, new org.netbeans.lib.awtextra.AbsoluteConstraints(529, 317, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jBut_Des_Cat_ArtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBut_Des_Cat_ArtActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBut_Des_Cat_ArtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -125,13 +116,13 @@ public class Categorias_Articulos extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Categorias_Articulos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RRSS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Categorias_Articulos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RRSS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Categorias_Articulos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RRSS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Categorias_Articulos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RRSS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -201,24 +192,24 @@ public class Categorias_Articulos extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Categorias_Articulos().setVisible(true);
+                new RRSS().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBut_Buscar_Cat_Art;
-    private javax.swing.JButton jBut_Cancel_Cat_Art;
-    private javax.swing.JButton jBut_Des_Cat_Art;
-    private javax.swing.JButton jBut_Guard_Cat_Art;
-    private javax.swing.JButton jBut_ed_Cat_Art;
-    private javax.swing.JComboBox<String> jComb_Cat_Art;
-    private javax.swing.JLabel jLab_Cat_Art;
-    private javax.swing.JLabel jLab_Cod_Cat_Art;
+    private javax.swing.JButton jBut_Buscar_RRSS;
+    private javax.swing.JButton jBut_Cancel_RRSS;
+    private javax.swing.JButton jBut_Des_RRSS;
+    private javax.swing.JButton jBut_Ed_RRSS;
+    private javax.swing.JButton jBut_Guard_RRSS;
+    private javax.swing.JComboBox<String> jComb_Nom_RRSS;
+    private javax.swing.JLabel jLab_Cod_RRSS;
+    private javax.swing.JLabel jLab_Nom_RRSS;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable_List_Cat_Art;
-    private javax.swing.JTextField jTxt_Cod_Cat_Art;
+    private javax.swing.JTable jTable_List_RRSS;
+    private javax.swing.JTextField jTxt_Cod_RRSS;
     // End of variables declaration//GEN-END:variables
 }

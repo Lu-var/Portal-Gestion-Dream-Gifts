@@ -1,15 +1,15 @@
-package vista;
+package deprecated.vistas;
 
 /**
  *
  * @author jav
  */
-public class Categorias_Ventas extends javax.swing.JFrame {
+public class Usuarios extends javax.swing.JFrame {
 
     /**
      * Creates new form clientes
      */
-    public Categorias_Ventas() {
+    public Usuarios() {
         initComponents();
     }
 
@@ -22,96 +22,103 @@ public class Categorias_Ventas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLab_Cat_Venta = new javax.swing.JLabel();
-        jLab_Cod_Cat_Venta = new javax.swing.JLabel();
-        jBut_Cancel_Ventas = new javax.swing.JButton();
-        jBut_Guard_Ventas = new javax.swing.JButton();
+        jLab_Nom_Usuario = new javax.swing.JLabel();
+        jLab_Usuario_Clave = new javax.swing.JLabel();
+        jBut_Cancel_Usuario = new javax.swing.JButton();
+        jBut_Guard_Usuario = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable_List_Cat_Ventas = new javax.swing.JTable();
-        jBut_Buscar_Ventas = new javax.swing.JButton();
-        jTxt_Cod_Cat_Venta = new javax.swing.JTextField();
-        jComb_Cat_Ventas = new javax.swing.JComboBox<>();
-        jBut_ed_Ventas = new javax.swing.JButton();
-        jBut_Des_Ventas = new javax.swing.JButton();
-        jLab_List_Cat_Venta = new javax.swing.JLabel();
+        jTable_List_Usuario = new javax.swing.JTable();
+        jBut_Buscar_Usuario = new javax.swing.JButton();
+        jLab_Est_Usuario = new javax.swing.JLabel();
+        jComb_Est_Usuario = new javax.swing.JComboBox<>();
+        jComb_Nom_Usuario = new javax.swing.JComboBox<>();
+        jPass_Usuario = new javax.swing.JPasswordField();
+        jLab_Usuario_Ver_Clave = new javax.swing.JLabel();
+        jPass_Usuario1 = new javax.swing.JPasswordField();
+        jLab_List_Usu_Reg = new javax.swing.JLabel();
+        jBut_ed_Usuario = new javax.swing.JButton();
+        jBut_Des_Usuario = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLab_Cat_Venta.setText("Categoría Venta");
-        getContentPane().add(jLab_Cat_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 26, -1, -1));
+        jLab_Nom_Usuario.setText("Nombre Usuario");
+        getContentPane().add(jLab_Nom_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 26, -1, -1));
 
-        jLab_Cod_Cat_Venta.setText("Código Categoría Venta");
-        getContentPane().add(jLab_Cod_Cat_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(318, 26, -1, -1));
+        jLab_Usuario_Clave.setText("Ingrese Clave");
+        getContentPane().add(jLab_Usuario_Clave, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 61, -1, -1));
 
-        jBut_Cancel_Ventas.setText("Cancelar");
-        getContentPane().add(jBut_Cancel_Ventas, new org.netbeans.lib.awtextra.AbsoluteConstraints(355, 99, -1, -1));
+        jBut_Cancel_Usuario.setText("Cancelar");
+        getContentPane().add(jBut_Cancel_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 99, -1, -1));
 
-        jBut_Guard_Ventas.setText("Guardar");
-        jBut_Guard_Ventas.setToolTipText("");
-        getContentPane().add(jBut_Guard_Ventas, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 99, -1, -1));
+        jBut_Guard_Usuario.setText("Guardar");
+        jBut_Guard_Usuario.setToolTipText("");
+        getContentPane().add(jBut_Guard_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(528, 99, -1, -1));
 
         jTable1.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(645, 52, 22, -1));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(645, 140, 0, -1));
 
-        jTable_List_Cat_Ventas.setModel(new javax.swing.table.DefaultTableModel(
+        jTable_List_Usuario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
-                "Código Categoría Venta", "Categoría Venta", "Estado"
+                "Nombre Usuario", "Estado"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable_List_Cat_Ventas);
+        jScrollPane1.setViewportView(jTable_List_Usuario);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 216, 631, 159));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 631, 159));
 
-        jBut_Buscar_Ventas.setText("Buscar");
-        getContentPane().add(jBut_Buscar_Ventas, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 99, -1, -1));
-        getContentPane().add(jTxt_Cod_Cat_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(482, 23, 137, -1));
+        jBut_Buscar_Usuario.setText("Buscar");
+        getContentPane().add(jBut_Buscar_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 99, -1, -1));
 
-        jComb_Cat_Ventas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Accesorios", "Bebestibles", "Comestibles" }));
-        getContentPane().add(jComb_Cat_Ventas, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 23, 141, -1));
+        jLab_Est_Usuario.setText("Estado");
+        jLab_Est_Usuario.setToolTipText("");
+        getContentPane().add(jLab_Est_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(344, 26, -1, -1));
 
-        jBut_ed_Ventas.setText("Editar");
-        getContentPane().add(jBut_ed_Ventas, new org.netbeans.lib.awtextra.AbsoluteConstraints(366, 381, -1, -1));
+        jComb_Est_Usuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Activado", "Desactivado" }));
+        getContentPane().add(jComb_Est_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(471, 23, 141, -1));
 
-        jBut_Des_Ventas.setText("Desactivar");
-        jBut_Des_Ventas.setToolTipText("");
-        jBut_Des_Ventas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBut_Des_VentasActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jBut_Des_Ventas, new org.netbeans.lib.awtextra.AbsoluteConstraints(526, 381, -1, -1));
+        jComb_Nom_Usuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Maestro", "Diseñador de Pack", "Vendedor", "Bodeguero" }));
+        getContentPane().add(jComb_Nom_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 23, 141, -1));
+        getContentPane().add(jPass_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 58, 123, -1));
 
-        jLab_List_Cat_Venta.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
-        jLab_List_Cat_Venta.setText("Categoría de Venta");
-        getContentPane().add(jLab_List_Cat_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 161, -1, -1));
+        jLab_Usuario_Ver_Clave.setText("Verifique Clave");
+        getContentPane().add(jLab_Usuario_Ver_Clave, new org.netbeans.lib.awtextra.AbsoluteConstraints(344, 61, -1, -1));
+        getContentPane().add(jPass_Usuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(471, 58, 123, -1));
+
+        jLab_List_Usu_Reg.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        jLab_List_Usu_Reg.setText("Usuarios Registrados");
+        getContentPane().add(jLab_List_Usu_Reg, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 162, -1, -1));
+
+        jBut_ed_Usuario.setText("Editar");
+        getContentPane().add(jBut_ed_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(318, 383, -1, -1));
+
+        jBut_Des_Usuario.setText("Desactivar");
+        jBut_Des_Usuario.setToolTipText("");
+        getContentPane().add(jBut_Des_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(514, 383, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jBut_Des_VentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBut_Des_VentasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jBut_Des_VentasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,13 +137,13 @@ public class Categorias_Ventas extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Categorias_Ventas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Categorias_Ventas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Categorias_Ventas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Categorias_Ventas.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -270,25 +277,29 @@ public class Categorias_Ventas extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Categorias_Ventas().setVisible(true);
+                new Usuarios().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBut_Buscar_Ventas;
-    private javax.swing.JButton jBut_Cancel_Ventas;
-    private javax.swing.JButton jBut_Des_Ventas;
-    private javax.swing.JButton jBut_Guard_Ventas;
-    private javax.swing.JButton jBut_ed_Ventas;
-    private javax.swing.JComboBox<String> jComb_Cat_Ventas;
-    private javax.swing.JLabel jLab_Cat_Venta;
-    private javax.swing.JLabel jLab_Cod_Cat_Venta;
-    private javax.swing.JLabel jLab_List_Cat_Venta;
+    private javax.swing.JButton jBut_Buscar_Usuario;
+    private javax.swing.JButton jBut_Cancel_Usuario;
+    private javax.swing.JButton jBut_Des_Usuario;
+    private javax.swing.JButton jBut_Guard_Usuario;
+    private javax.swing.JButton jBut_ed_Usuario;
+    private javax.swing.JComboBox<String> jComb_Est_Usuario;
+    private javax.swing.JComboBox<String> jComb_Nom_Usuario;
+    private javax.swing.JLabel jLab_Est_Usuario;
+    private javax.swing.JLabel jLab_List_Usu_Reg;
+    private javax.swing.JLabel jLab_Nom_Usuario;
+    private javax.swing.JLabel jLab_Usuario_Clave;
+    private javax.swing.JLabel jLab_Usuario_Ver_Clave;
+    private javax.swing.JPasswordField jPass_Usuario;
+    private javax.swing.JPasswordField jPass_Usuario1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable_List_Cat_Ventas;
-    private javax.swing.JTextField jTxt_Cod_Cat_Venta;
+    private javax.swing.JTable jTable_List_Usuario;
     // End of variables declaration//GEN-END:variables
 }
