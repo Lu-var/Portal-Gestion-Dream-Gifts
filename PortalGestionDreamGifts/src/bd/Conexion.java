@@ -12,10 +12,10 @@ import java.sql.*;
 public class Conexion{
     
     private static Connection conexion=null; 
-    private static String servidor = "localhost";
-    private static String baseDatos = "dreamgifts_db";
+    private static String servidor = "190.22.34.2:65535";
+    private static String baseDatos = "DreamGifts_db";
     private static String usuario = "root";
-    private static String contrasena = "";
+    private static String contrasena = "Hello.World@5";
     
     
     public static Connection abrir() throws SQLException{
