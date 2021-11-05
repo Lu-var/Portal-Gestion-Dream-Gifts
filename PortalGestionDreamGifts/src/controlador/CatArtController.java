@@ -23,7 +23,14 @@ public class CatArtController {
         JTable tabla = master.getTablaCatArt();
         ArrayList<ArrayList<Object>> lista = mngr.categoriaSelectAll();
         DefaultTableModel model =  (DefaultTableModel)tabla.getModel();
-        Object[] listaAux;
+        
+        int i = 0;
+        
+        while(i<lista.size()){
+            model.addRow(lista.get(i).toArray());
+            i++;
+        }
+        
         
     }
     

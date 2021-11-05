@@ -14,6 +14,8 @@ import javax.swing.JTextField;
  * @author Crow
  */
 public class Maestro extends javax.swing.JFrame {
+    
+    CatArtController catArt = new CatArtController();
 
     /**
      * Creates new form Maestro
@@ -23,6 +25,9 @@ public class Maestro extends javax.swing.JFrame {
        
         this.setLocationRelativeTo(null);
         this.setSize(910,580 );
+        
+        catArt.showCategorias(this);
+        
 
     }
 
@@ -41,7 +46,7 @@ public class Maestro extends javax.swing.JFrame {
         btnInformes = new javax.swing.JButton();
         btnMaestro = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        PanelBanco = new javax.swing.JTabbedPane();
+        PanelPrincipal = new javax.swing.JTabbedPane();
         PanelClientes = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
         txtRutCliente = new javax.swing.JTextField();
@@ -183,10 +188,15 @@ public class Maestro extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(153, 204, 255));
         jLabel1.setText("   DREAM GIFTS");
 
-        PanelBanco.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        PanelBanco.addChangeListener(new javax.swing.event.ChangeListener() {
+        PanelPrincipal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        PanelPrincipal.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                PanelBancoStateChanged(evt);
+                PanelPrincipalStateChanged(evt);
+            }
+        });
+        PanelPrincipal.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                PanelPrincipalComponentShown(evt);
             }
         });
 
@@ -369,7 +379,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addContainerGap(153, Short.MAX_VALUE))
         );
 
-        PanelBanco.addTab("Clientes", PanelClientes);
+        PanelPrincipal.addTab("Clientes", PanelClientes);
 
         jPanel14.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Proveedores"));
 
@@ -559,7 +569,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        PanelBanco.addTab("Proveedores", PanelProveedores);
+        PanelPrincipal.addTab("Proveedores", PanelProveedores);
 
         javax.swing.GroupLayout PanelArticulosLayout = new javax.swing.GroupLayout(PanelArticulos);
         PanelArticulos.setLayout(PanelArticulosLayout);
@@ -572,7 +582,7 @@ public class Maestro extends javax.swing.JFrame {
             .addGap(0, 441, Short.MAX_VALUE)
         );
 
-        PanelBanco.addTab("Articulos", PanelArticulos);
+        PanelPrincipal.addTab("Articulos", PanelArticulos);
 
         jPanel15.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Packs"));
         jPanel15.setToolTipText("");
@@ -751,7 +761,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        PanelBanco.addTab("Packs", PanelPacks);
+        PanelPrincipal.addTab("Packs", PanelPacks);
 
         javax.swing.GroupLayout PanelRRSSLayout = new javax.swing.GroupLayout(PanelRRSS);
         PanelRRSS.setLayout(PanelRRSSLayout);
@@ -764,7 +774,7 @@ public class Maestro extends javax.swing.JFrame {
             .addGap(0, 441, Short.MAX_VALUE)
         );
 
-        PanelBanco.addTab("RRSS", PanelRRSS);
+        PanelPrincipal.addTab("RRSS", PanelRRSS);
 
         javax.swing.GroupLayout PanelComunasLayout = new javax.swing.GroupLayout(PanelComunas);
         PanelComunas.setLayout(PanelComunasLayout);
@@ -777,7 +787,7 @@ public class Maestro extends javax.swing.JFrame {
             .addGap(0, 441, Short.MAX_VALUE)
         );
 
-        PanelBanco.addTab("Comuna", PanelComunas);
+        PanelPrincipal.addTab("Comuna", PanelComunas);
 
         LBanco.setText("Banco :");
 
@@ -867,7 +877,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addContainerGap(138, Short.MAX_VALUE))
         );
 
-        PanelBanco.addTab("Bancos", PanelBancos);
+        PanelPrincipal.addTab("Bancos", PanelBancos);
 
         javax.swing.GroupLayout PanelCatVentaLayout = new javax.swing.GroupLayout(PanelCatVenta);
         PanelCatVenta.setLayout(PanelCatVentaLayout);
@@ -880,7 +890,7 @@ public class Maestro extends javax.swing.JFrame {
             .addGap(0, 441, Short.MAX_VALUE)
         );
 
-        PanelBanco.addTab("Categoría Venta", PanelCatVenta);
+        PanelPrincipal.addTab("Categoría Venta", PanelCatVenta);
 
         javax.swing.GroupLayout PanelUsuariosLayout = new javax.swing.GroupLayout(PanelUsuarios);
         PanelUsuarios.setLayout(PanelUsuariosLayout);
@@ -893,7 +903,13 @@ public class Maestro extends javax.swing.JFrame {
             .addGap(0, 441, Short.MAX_VALUE)
         );
 
-        PanelBanco.addTab("Usuarios", PanelUsuarios);
+        PanelPrincipal.addTab("Usuarios", PanelUsuarios);
+
+        PanelCatArt.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                PanelCatArtComponentShown(evt);
+            }
+        });
 
         LCatArt.setText("Categoria Articulo:");
 
@@ -914,10 +930,7 @@ public class Maestro extends javax.swing.JFrame {
 
         tablaCatArt.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
                 "ID", "Categoría", "Activado"
@@ -1006,7 +1019,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addContainerGap(138, Short.MAX_VALUE))
         );
 
-        PanelBanco.addTab("Categoría Articulos", null, PanelCatArt, "");
+        PanelPrincipal.addTab("Categoría Articulos", null, PanelCatArt, "");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1021,7 +1034,7 @@ public class Maestro extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(PanelBanco, javax.swing.GroupLayout.PREFERRED_SIZE, 750, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(PanelPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 750, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 37, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -1033,11 +1046,11 @@ public class Maestro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(PanelBanco)
+                .addComponent(PanelPrincipal)
                 .addContainerGap())
         );
 
-        PanelBanco.getAccessibleContext().setAccessibleDescription("");
+        PanelPrincipal.getAccessibleContext().setAccessibleDescription("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1102,9 +1115,9 @@ public class Maestro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCatArtActionPerformed
 
-    private void PanelBancoStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_PanelBancoStateChanged
+    private void PanelPrincipalStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_PanelPrincipalStateChanged
         // TODO add your handling code here:
-    }//GEN-LAST:event_PanelBancoStateChanged
+    }//GEN-LAST:event_PanelPrincipalStateChanged
 
     private void tablaCatArtComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_tablaCatArtComponentShown
         // TODO add your handling code here:
@@ -1117,9 +1130,16 @@ public class Maestro extends javax.swing.JFrame {
 
     private void btnCatArtEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCatArtEditarActionPerformed
         // TODO add your handling code here:
-        CatArtController catArt = new CatArtController();
-        catArt.showCategorias(this);
     }//GEN-LAST:event_btnCatArtEditarActionPerformed
+
+    private void PanelPrincipalComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_PanelPrincipalComponentShown
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PanelPrincipalComponentShown
+
+    private void PanelCatArtComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_PanelCatArtComponentShown
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_PanelCatArtComponentShown
 
     /**
      * @param args the command line arguments
@@ -1147,8 +1167,11 @@ public class Maestro extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Maestro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
+        
+        
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Maestro().setVisible(true);
@@ -1160,13 +1183,13 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JLabel LBanco;
     private javax.swing.JLabel LCatArt;
     private javax.swing.JPanel PanelArticulos;
-    private javax.swing.JTabbedPane PanelBanco;
     private javax.swing.JPanel PanelBancos;
     private javax.swing.JPanel PanelCatArt;
     private javax.swing.JPanel PanelCatVenta;
     private javax.swing.JPanel PanelClientes;
     private javax.swing.JPanel PanelComunas;
     private javax.swing.JPanel PanelPacks;
+    private javax.swing.JTabbedPane PanelPrincipal;
     private javax.swing.JPanel PanelProveedores;
     private javax.swing.JPanel PanelRRSS;
     private javax.swing.JPanel PanelUsuarios;
@@ -1246,6 +1269,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JTextField txtRutProv;
     // End of variables declaration//GEN-END:variables
 
+    
     public JDateChooser getDateNacCliente() {
         return dateNacCliente;
     }
