@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package deprecated.modelos;
-import deprecated.modelos.Banco;
 import deprecated.modelos.Status;
 import deprecated.modelos.Pack;
 import deprecated.modelos.Comuna;
@@ -21,7 +20,6 @@ public class Venta {
     private Cliente rutCliente;
     private Status idStatus;
     private RRSS idRRSS;
-    private Banco idBanco;
     private Pack idPack;
     private String textoPack;
     private int valorTotal;
@@ -41,12 +39,11 @@ public class Venta {
     public Venta() {
     }
 
-    public Venta(int idVenta, Cliente rutCliente, Status idStatus, RRSS idRRSS, Banco idBanco, Pack idPack, String textoPack, int valorTotal, int codigoTansf, Date fechaIngreso, Date fechaAprobada, Date fechaDespacho, String nombreTarget, String celularTarget, String direccionTarget, Comuna idComunaTarget, Date fechaEntrega, String horaDespachoIni, String horaDespachoFin, StatusDespacho idStatusDespacho) {
+    public Venta(int idVenta, Cliente rutCliente, Status idStatus, RRSS idRRSS, Pack idPack, String textoPack, int valorTotal, int codigoTansf, Date fechaIngreso, Date fechaAprobada, Date fechaDespacho, String nombreTarget, String celularTarget, String direccionTarget, Comuna idComunaTarget, Date fechaEntrega, String horaDespachoIni, String horaDespachoFin, StatusDespacho idStatusDespacho) {
         this.idVenta = idVenta;
         this.rutCliente = rutCliente;
         this.idStatus = idStatus;
         this.idRRSS = idRRSS;
-        this.idBanco = idBanco;
         this.idPack = idPack;
         this.textoPack = textoPack;
         this.valorTotal = valorTotal;
@@ -66,7 +63,7 @@ public class Venta {
 
     @Override
     public String toString() {
-        return "Venta{" + "idVenta=" + idVenta + ", rutCliente=" + rutCliente + ", idStatus=" + idStatus + ", idRRSS=" + idRRSS + ", idBanco=" + idBanco + ", idPack=" + idPack + ", textoPack=" + textoPack + ", valorTotal=" + valorTotal + ", codigoTansf=" + codigoTansf + ", fechaIngreso=" + fechaIngreso + ", fechaAprobada=" + fechaAprobada + ", fechaDespacho=" + fechaDespacho + ", nombreTarget=" + nombreTarget + ", celularTarget=" + celularTarget + ", direccionTarget=" + direccionTarget + ", idComunaTarget=" + idComunaTarget + ", fechaEntrega=" + fechaEntrega + ", horaDespachoIni=" + horaDespachoIni + ", horaDespachoFin=" + horaDespachoFin + ", idStatusDespacho=" + idStatusDespacho + '}';
+        return "Venta{" + "idVenta=" + idVenta + ", rutCliente=" + rutCliente + ", idStatus=" + idStatus + ", idRRSS=" + idRRSS + ", idPack=" + idPack + ", textoPack=" + textoPack + ", valorTotal=" + valorTotal + ", codigoTansf=" + codigoTansf + ", fechaIngreso=" + fechaIngreso + ", fechaAprobada=" + fechaAprobada + ", fechaDespacho=" + fechaDespacho + ", nombreTarget=" + nombreTarget + ", celularTarget=" + celularTarget + ", direccionTarget=" + direccionTarget + ", idComunaTarget=" + idComunaTarget + ", fechaEntrega=" + fechaEntrega + ", horaDespachoIni=" + horaDespachoIni + ", horaDespachoFin=" + horaDespachoFin + ", idStatusDespacho=" + idStatusDespacho + '}';
     }
 
     public int getIdVenta() {
@@ -99,14 +96,6 @@ public class Venta {
 
     public void setIdRRSS(RRSS idRRSS) {
         this.idRRSS = idRRSS;
-    }
-
-    public Banco getIdBanco() {
-        return idBanco;
-    }
-
-    public void setIdBanco(Banco idBanco) {
-        this.idBanco = idBanco;
     }
 
     public Pack getIdPack() {
