@@ -4,10 +4,12 @@
  */
 package vista;
 
+import bd.Log;
 import com.toedter.calendar.JDateChooser;
 import controlador.*;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import modelo.Banco;
 
 /**
  *
@@ -891,7 +893,6 @@ public class Maestro extends javax.swing.JFrame {
         );
 
         PanelPrincipal.addTab("Categoría Venta", PanelCatVenta);
-
         javax.swing.GroupLayout PanelUsuariosLayout = new javax.swing.GroupLayout(PanelUsuarios);
         PanelUsuarios.setLayout(PanelUsuariosLayout);
         PanelUsuariosLayout.setHorizontalGroup(
@@ -969,6 +970,7 @@ public class Maestro extends javax.swing.JFrame {
         });
 
         btnCatArtDesactivar.setText("DESACTIVAR");
+
 
         javax.swing.GroupLayout PanelCatArtLayout = new javax.swing.GroupLayout(PanelCatArt);
         PanelCatArt.setLayout(PanelCatArtLayout);
@@ -1141,6 +1143,11 @@ public class Maestro extends javax.swing.JFrame {
         
     }//GEN-LAST:event_PanelCatArtComponentShown
 
+        //Banco banco = new Banco(nombre);
+        banco.agregar(nombre);
+        Log.seguir("boton");
+    }//GEN-LAST:event_btngGuardarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1183,6 +1190,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JLabel LBanco;
     private javax.swing.JLabel LCatArt;
     private javax.swing.JPanel PanelArticulos;
+    private javax.swing.JTabbedPane PanelBanco;
     private javax.swing.JPanel PanelBancos;
     private javax.swing.JPanel PanelCatArt;
     private javax.swing.JPanel PanelCatVenta;
