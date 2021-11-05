@@ -36,7 +36,7 @@ public class ConexionRequest {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Whoops! Error: " + e.getMessage());
+            Log.seguir("Error: " + e.getMessage());
         }
         try {
 
@@ -46,7 +46,7 @@ public class ConexionRequest {
 
         } catch (Exception e) {
 
-            Log.seguir("Error Conexion: \n" + e.getMessage());
+            Log.seguir("Error Conexion: " + e.getMessage());
         }
 
         return connect;
