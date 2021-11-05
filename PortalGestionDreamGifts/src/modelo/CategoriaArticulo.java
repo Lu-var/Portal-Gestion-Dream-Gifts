@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
+import java.util.ArrayList;
 
 /**
  *
@@ -22,32 +23,61 @@ public class CategoriaArticulo {
     boolean resultadoBool;
     ResultSet resultadoSet = null;
 
-        public boolean categoriaSelectAll(){
+        public ArrayList<ArrayList<Object>> categoriaSelectAll(){
+            ArrayList<Object> fila = new ArrayList<Object>();
+            ArrayList<ArrayList<Object>> columna = new ArrayList<ArrayList<Object>>();
             try{
                 comando = conexion.prepareStatement("SELECT * FROM CategoriaArticulo");
                 resultadoSet = comando.executeQuery();
                 
+                int id;
+                int status;
+                String desc;
+                
                 while(resultadoSet.next()){
-                    String status;
-                    if(resultadoSet.getInt("Enabled") == 1){
-                        status = "Si";
+                    
+                    fila.clear();
+                    String statusStr;
+                    id = resultadoSet.getInt("idCategoriaArticulo");
+                    status = resultadoSet.getInt("Enabled");
+                    desc = resultadoSet.getString("Descripcion");
+                    
+                    switch(status){
+                        case 0:
+                            resultadoBool = false;
+                        case 1:
+                            resultadoBool = true;
+                            
+                        default:
+                            break;
+                    }
+                    
+                    fila.add(id);
+                    fila.add(desc);
+                    fila.add(resultadoBool);
+                    
+                    columna.add(fila);
+                    System.out.println(columna);
+
+                    if(status == 1){
+                        statusStr = "Si";
                     } else 
-                        status = "No";
+                        statusStr = "No";
                     
                     String msg = String.format("ID Categoria: %d | Descripcion: %s | Activo: %s",
-                           resultadoSet.getInt("idCategoriaArticulo"),resultadoSet.getString("Descripcion"),status);
+                           id,desc,statusStr);
                     
                     System.out.println(msg);
                     System.out.println("\n==========================================\n");
                 }
                 
-                return true;
+                
                 
             } catch(Exception ex){
                 JOptionPane.showMessageDialog(null,"Error: "+ex);
             }
 
-            return false;
+            return columna;
         }
         
         public void AgregarCategoria(){
@@ -70,10 +100,10 @@ public class CategoriaArticulo {
             }  
         }
     
-    public static void main(String[] args) {
-       CategoriaArticulo catArt = new CategoriaArticulo();
-       catArt.categoriaSelectAll();
-       catArt.AgregarCategoria();
-       catArt.categoriaSelectAll();
-    }
+//    public static void main(String[] args) {
+//       CategoriaArticulo catArt = new CategoriaArticulo();
+//       catArt.categoriaSelectAll();
+//       catArt.AgregarCategoria();
+//       catArt.categoriaSelectAll();
+//    }
 }
