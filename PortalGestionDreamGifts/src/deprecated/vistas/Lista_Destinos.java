@@ -1,15 +1,15 @@
-package vista;
+package deprecated.vistas;
 
 /**
  *
  * @author jav
  */
-public class Informes_Dev_Cambios extends javax.swing.JFrame {
+public class Lista_Destinos extends javax.swing.JFrame {
 
     /**
      * Creates new form clientes
      */
-    public Informes_Dev_Cambios() {
+    public Lista_Destinos() {
         initComponents();
     }
 
@@ -22,98 +22,74 @@ public class Informes_Dev_Cambios extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLab_F_Ini_Inf_Dev = new javax.swing.JLabel();
-        jLab_Busc_Rut_Inf_Dev = new javax.swing.JLabel();
-        jTxt_F_Ini_Inf_Dev = new javax.swing.JTextField();
-        jLab_F_Fin_Inf_Dev = new javax.swing.JLabel();
-        jTxt_Busc_Rut_Inf_Dev = new javax.swing.JTextField();
+        jLab_Buscar_List_Dest = new javax.swing.JLabel();
+        jBut_Desc_List_Dest = new javax.swing.JButton();
+        jBut_Imp_List_Dest = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jBut_Busc_Rut_Inf_Dev = new javax.swing.JButton();
-        jBut_Desc_Inf_Dev = new javax.swing.JButton();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTable_Det_Vent_Inf_Dev = new javax.swing.JTable();
-        jLab_Det_Inf_Dev = new javax.swing.JLabel();
-        jTxt_F_Fin_Inf_Dev = new javax.swing.JTextField();
-        jBut_Sel_Inf_Dev = new javax.swing.JButton();
-        jLab_Bq_Inf_Dev = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable_List_Dest = new javax.swing.JTable();
+        jBut_Buscar_List_Dest = new javax.swing.JButton();
+        jTxt_Busc_Dest = new javax.swing.JTextField();
+        jLab_Desp = new javax.swing.JLabel();
+        jLab_List_Dest_Desp = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLab_F_Ini_Inf_Dev.setText("Desde");
-        getContentPane().add(jLab_F_Ini_Inf_Dev, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 80, -1, -1));
+        jLab_Buscar_List_Dest.setText("Buscar Fecha");
+        getContentPane().add(jLab_Buscar_List_Dest, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 72, -1, -1));
 
-        jLab_Busc_Rut_Inf_Dev.setText("Búsqueda Rut");
-        jLab_Busc_Rut_Inf_Dev.setToolTipText("");
-        getContentPane().add(jLab_Busc_Rut_Inf_Dev, new org.netbeans.lib.awtextra.AbsoluteConstraints(233, 80, -1, -1));
-        getContentPane().add(jTxt_F_Ini_Inf_Dev, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 77, 136, -1));
+        jBut_Desc_List_Dest.setText("Descargar");
+        getContentPane().add(jBut_Desc_List_Dest, new org.netbeans.lib.awtextra.AbsoluteConstraints(403, 275, -1, -1));
 
-        jLab_F_Fin_Inf_Dev.setText("Hasta");
-        getContentPane().add(jLab_F_Fin_Inf_Dev, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 115, -1, -1));
-        getContentPane().add(jTxt_Busc_Rut_Inf_Dev, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 77, 137, -1));
+        jBut_Imp_List_Dest.setText("Imprimir");
+        jBut_Imp_List_Dest.setToolTipText("");
+        getContentPane().add(jBut_Imp_List_Dest, new org.netbeans.lib.awtextra.AbsoluteConstraints(559, 275, -1, -1));
 
         jTable1.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(jTable1);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(574, 463, 57, -1));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(696, 316, 22, -1));
 
-        jBut_Busc_Rut_Inf_Dev.setText("Buscar");
-        getContentPane().add(jBut_Busc_Rut_Inf_Dev, new org.netbeans.lib.awtextra.AbsoluteConstraints(402, 146, -1, -1));
-
-        jBut_Desc_Inf_Dev.setText("Descargar");
-        getContentPane().add(jBut_Desc_Inf_Dev, new org.netbeans.lib.awtextra.AbsoluteConstraints(365, 422, -1, -1));
-
-        jTable_Det_Vent_Inf_Dev.setModel(new javax.swing.table.DefaultTableModel(
+        jTable_List_Dest.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Registro Venta", "Pack", "Destinatario", "Fecha Entrega", "Comuna", "Hora Entrega", "Devolución", "Ver"
+                "Registro Venta", "Pack", "Destinatario", "Fecha Entrega", "Comuna", "Dirección", "Hora Entrega"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
         });
-        jScrollPane3.setViewportView(jTable_Det_Vent_Inf_Dev);
+        jScrollPane1.setViewportView(jTable_List_Dest);
 
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 257, 631, 159));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 110, 631, 159));
 
-        jLab_Det_Inf_Dev.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
-        jLab_Det_Inf_Dev.setText("Detalle de Devoluciones y Cambios");
-        jLab_Det_Inf_Dev.setToolTipText("");
-        getContentPane().add(jLab_Det_Inf_Dev, new org.netbeans.lib.awtextra.AbsoluteConstraints(123, 199, -1, -1));
+        jBut_Buscar_List_Dest.setText("Buscar");
+        getContentPane().add(jBut_Buscar_List_Dest, new org.netbeans.lib.awtextra.AbsoluteConstraints(267, 275, -1, -1));
+        getContentPane().add(jTxt_Busc_Dest, new org.netbeans.lib.awtextra.AbsoluteConstraints(498, 69, 137, -1));
 
-        jTxt_F_Fin_Inf_Dev.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTxt_F_Fin_Inf_DevActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jTxt_F_Fin_Inf_Dev, new org.netbeans.lib.awtextra.AbsoluteConstraints(79, 112, 137, -1));
+        jLab_Desp.setText("Despacho");
+        getContentPane().add(jLab_Desp, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 12, -1, -1));
 
-        jBut_Sel_Inf_Dev.setText("Seleccionar");
-        getContentPane().add(jBut_Sel_Inf_Dev, new org.netbeans.lib.awtextra.AbsoluteConstraints(534, 422, -1, -1));
-
-        jLab_Bq_Inf_Dev.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
-        jLab_Bq_Inf_Dev.setText("Búsqueda Ventas");
-        getContentPane().add(jLab_Bq_Inf_Dev, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 12, -1, -1));
+        jLab_List_Dest_Desp.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        jLab_List_Dest_Desp.setText("Lista destino para Despacho por día");
+        getContentPane().add(jLab_List_Dest_Desp, new org.netbeans.lib.awtextra.AbsoluteConstraints(132, 35, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTxt_F_Fin_Inf_DevActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxt_F_Fin_Inf_DevActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTxt_F_Fin_Inf_DevActionPerformed
 
     /**
      * @param args the command line arguments
@@ -132,13 +108,13 @@ public class Informes_Dev_Cambios extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Informes_Dev_Cambios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Lista_Destinos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Informes_Dev_Cambios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Lista_Destinos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Informes_Dev_Cambios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Lista_Destinos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Informes_Dev_Cambios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Lista_Destinos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -656,26 +632,22 @@ public class Informes_Dev_Cambios extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Informes_Dev_Cambios().setVisible(true);
+                new Lista_Destinos().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBut_Busc_Rut_Inf_Dev;
-    private javax.swing.JButton jBut_Desc_Inf_Dev;
-    private javax.swing.JButton jBut_Sel_Inf_Dev;
-    private javax.swing.JLabel jLab_Bq_Inf_Dev;
-    private javax.swing.JLabel jLab_Busc_Rut_Inf_Dev;
-    private javax.swing.JLabel jLab_Det_Inf_Dev;
-    private javax.swing.JLabel jLab_F_Fin_Inf_Dev;
-    private javax.swing.JLabel jLab_F_Ini_Inf_Dev;
+    private javax.swing.JButton jBut_Buscar_List_Dest;
+    private javax.swing.JButton jBut_Desc_List_Dest;
+    private javax.swing.JButton jBut_Imp_List_Dest;
+    private javax.swing.JLabel jLab_Buscar_List_Dest;
+    private javax.swing.JLabel jLab_Desp;
+    private javax.swing.JLabel jLab_List_Dest_Desp;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable_Det_Vent_Inf_Dev;
-    private javax.swing.JTextField jTxt_Busc_Rut_Inf_Dev;
-    private javax.swing.JTextField jTxt_F_Fin_Inf_Dev;
-    private javax.swing.JTextField jTxt_F_Ini_Inf_Dev;
+    private javax.swing.JTable jTable_List_Dest;
+    private javax.swing.JTextField jTxt_Busc_Dest;
     // End of variables declaration//GEN-END:variables
 }
