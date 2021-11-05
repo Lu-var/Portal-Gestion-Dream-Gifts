@@ -10,49 +10,8 @@ import java.sql.ResultSet;
  *
  * @author PC
  */
-public class Banco {
+public class BancoManager {
     
-    private int idBanco;
-    private String nombre;
-    private int enabled;
-
-    public Banco() {
-    }
-    public Banco(String nombre) {
-       
-        this.nombre = nombre;
-        
-    }
-
-    @Override
-    public String toString() {
-        return "Banco{" + "idBanco=" + idBanco + ", nombre=" + nombre + ", enabled=" + enabled + '}';
-    }
-
-    public int getIdBanco() {
-        return idBanco;
-    }
-
-    public void setIdBanco(int idBanco) {
-        this.idBanco = idBanco;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public int getEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(int enabled) {
-        this.enabled = enabled;
-    }
-
     public boolean agregarBanco(String nombre){
         //try{
         Consulta con = new Consulta();

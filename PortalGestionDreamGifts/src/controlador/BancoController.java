@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package controlador;
-import modelo.Banco;
+import modelo.BancoManager;
 import bd.Consulta;
 import vista.Maestro;
 import java.sql.ResultSet;
@@ -18,7 +18,7 @@ public class BancoController {
     public boolean agregar(String nombre){
         
         try{
-            Banco banco = new Banco();
+            BancoManager banco = new BancoManager();
             //banco.agregarBanco(nombre);
             return banco.agregarBanco(nombre);
         }catch(Exception e){
