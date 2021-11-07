@@ -1301,7 +1301,10 @@ public class Maestro extends javax.swing.JFrame {
     }//GEN-LAST:event_btngGuardarActionPerformed
 
     private void btnCatArtGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCatArtGuardarActionPerformed
-        // TODO add your handling code here:
+
+        catArtCtrl.agregarCategoria(this);
+        catArtCtrl.clearAll(this);
+        catArtCtrl.showAll(this);
     }//GEN-LAST:event_btnCatArtGuardarActionPerformed
 
     private void txtCatArtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCatArtActionPerformed
@@ -1337,6 +1340,8 @@ public class Maestro extends javax.swing.JFrame {
     private void btnSavComunaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSavComunaActionPerformed
         // TODO add your handling code here:
         comunaCtrl.agregarComuna(this);
+        comunaCtrl.clearAll(this);
+        comunaCtrl.showAll(this);
     }//GEN-LAST:event_btnSavComunaActionPerformed
 
     private void txtComunaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtComunaActionPerformed
@@ -1351,6 +1356,8 @@ public class Maestro extends javax.swing.JFrame {
     private void btnSavUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSavUsuarioActionPerformed
         // TODO add your handling code here:
         usuarioCtrl.agregarUsuario(this);
+        usuarioCtrl.clearAll(this);
+        usuarioCtrl.showAll(this);
     }//GEN-LAST:event_btnSavUsuarioActionPerformed
 
 //        BancoManager banco = new BancoManager(nombre);
