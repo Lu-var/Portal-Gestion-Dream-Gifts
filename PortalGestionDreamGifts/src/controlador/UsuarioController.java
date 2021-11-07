@@ -38,6 +38,12 @@ public class UsuarioController {
         }
         
         
+    }
+
+    public void clearAll(Maestro master){
+        JTable tabla = master.getTablaUsuario();
+        DefaultTableModel model = (DefaultTableModel) tabla.getModel();
+        model.setRowCount(0);
     }        
     
 }
