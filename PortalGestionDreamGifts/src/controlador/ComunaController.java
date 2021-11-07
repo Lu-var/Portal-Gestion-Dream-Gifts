@@ -22,10 +22,8 @@ public class ComunaController {
     
     public void showAll(Maestro master){
         
-        ComunaManager mngr = new ComunaManager(); 
-        
         JTable tabla = master.getTablaComuna();
-        ArrayList<ArrayList<Object>> lista = mngr.comunaSelectAll();
+        ArrayList<ArrayList<Object>> lista = manager.comunaSelectAll();
         DefaultTableModel model =  (DefaultTableModel)tabla.getModel();
         
         int i = 0;
@@ -33,8 +31,13 @@ public class ComunaController {
         while(i<lista.size()){
             model.addRow(lista.get(i).toArray());
             i++;
-        }
-        
-        
-    }    
+        }       
+    }  
+    
+    public void clearAll(Maestro master){
+        JTable tabla = master.getTablaComuna();
+        DefaultTableModel model = (DefaultTableModel) tabla.getModel();
+        model.setRowCount(0);
+    }
+    
 }
