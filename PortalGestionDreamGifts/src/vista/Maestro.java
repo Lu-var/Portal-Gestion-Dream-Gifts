@@ -340,22 +340,13 @@ public class Maestro extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setHeaderValue("Title 1");
-            jTable1.getColumnModel().getColumn(1).setHeaderValue("Title 2");
-            jTable1.getColumnModel().getColumn(2).setHeaderValue("Title 3");
-            jTable1.getColumnModel().getColumn(3).setHeaderValue("Title 4");
-        }
 
         jButton7.setText("guardar");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -399,7 +390,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton7)
                     .addComponent(jButton8))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Clientes", PanelClientes);
@@ -515,22 +506,13 @@ public class Maestro extends javax.swing.JFrame {
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
         jScrollPane2.setViewportView(jTable2);
-        if (jTable2.getColumnModel().getColumnCount() > 0) {
-            jTable2.getColumnModel().getColumn(0).setHeaderValue("Title 1");
-            jTable2.getColumnModel().getColumn(1).setHeaderValue("Title 2");
-            jTable2.getColumnModel().getColumn(2).setHeaderValue("Title 3");
-            jTable2.getColumnModel().getColumn(3).setHeaderValue("Title 4");
-        }
 
         jButton11.setText("jButton7");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
@@ -621,7 +603,7 @@ public class Maestro extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(txtNombreArt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 282, Short.MAX_VALUE)
                         .addComponent(comboArtCat, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(138, 138, 138))))
         );
@@ -675,7 +657,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel18)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -697,10 +679,7 @@ public class Maestro extends javax.swing.JFrame {
 
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null},
-                {null},
-                {null},
-                {null}
+
             },
             new String [] {
                 "Title 1"
@@ -710,10 +689,7 @@ public class Maestro extends javax.swing.JFrame {
 
         jTable4.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+
             },
             new String [] {
                 "Cantidad", "Articulo"
@@ -783,11 +759,7 @@ public class Maestro extends javax.swing.JFrame {
 
         jTable5.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "Codigo Pack", "Nombre Pack", "Stock", "Estado"
@@ -868,7 +840,7 @@ public class Maestro extends javax.swing.JFrame {
         );
         PanelRRSSLayout.setVerticalGroup(
             PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 315, Short.MAX_VALUE)
+            .addGap(0, 426, Short.MAX_VALUE)
         );
 
         PanelPrincipal.addTab("RRSS", PanelRRSS);
@@ -963,7 +935,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEditarComuna)
                     .addComponent(btnDisableComuna))
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Comunas", PanelComunas);
@@ -981,10 +953,7 @@ public class Maestro extends javax.swing.JFrame {
 
         jTable6.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
                 "ID", "Nombre", "Accion"
@@ -1055,7 +1024,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEditar)
                     .addComponent(btnDesactivar))
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Bancos", PanelBancos);
@@ -1068,7 +1037,7 @@ public class Maestro extends javax.swing.JFrame {
         );
         PanelCatVentaLayout.setVerticalGroup(
             PanelCatVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 315, Short.MAX_VALUE)
+            .addGap(0, 426, Short.MAX_VALUE)
         );
 
         PanelPrincipal.addTab("Categoría Venta", PanelCatVenta);
@@ -1186,7 +1155,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCatArtEditar)
                     .addComponent(btnCatArtDesactivar))
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Categoría Articulos", null, PanelCatArt, "");
@@ -1268,7 +1237,7 @@ public class Maestro extends javax.swing.JFrame {
                     .addComponent(btnSavUsuario)
                     .addComponent(txtPass, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)
                     .addComponent(txtUsuario))
-                .addContainerGap(198, Short.MAX_VALUE))
+                .addContainerGap(369, Short.MAX_VALUE))
         );
         PanelUsuariosLayout.setVerticalGroup(
             PanelUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1291,7 +1260,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEditarUsuario)
                     .addComponent(btnDisableUsuario))
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Usuarios", PanelUsuarios);
@@ -1322,7 +1291,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(PanelPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         PanelPrincipal.getAccessibleContext().setAccessibleDescription("");
