@@ -66,18 +66,15 @@ public class CatArticuloManager {
         return matriz;
     }
 
-    public void agregarCategoriaSQL(){
+    public void agregarCategoriaSQL(String descripcion){
         PreparedStatement comando = null;
-        int status = 1;
-        String descripcion = JOptionPane.showInputDialog("Descripcion: ");
         if(descripcion.equals("")){
             return;
         }
 
         try{
-            comando = conexion.prepareStatement("INSERT INTO CategoriaArticulo (Descripcion,Enabled) VALUES (?,?)");
+            comando = conexion.prepareStatement("INSERT INTO CategoriaArticulo (Descripcion) VALUES (?)");
             comando.setString(1, descripcion);
-            comando.setInt(2, status);
             comando.execute();
             
 
