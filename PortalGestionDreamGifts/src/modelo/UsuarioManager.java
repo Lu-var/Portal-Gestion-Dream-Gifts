@@ -23,7 +23,7 @@ public class UsuarioManager {
     
     public boolean loginCheck(String usuario, String clave){
         try{
-            comando = conexion.prepareStatement("SELECT Nombre,Password FROM Usuarios WHERE Nombre = ? AND Password = ?");
+            comando = conexion.prepareStatement("SELECT Nombre,Password FROM Usuario WHERE Nombre = ? AND Password = ?");
             comando.setString(1, usuario);
             comando.setString(2, clave);
             resultadoSet = comando.executeQuery();
