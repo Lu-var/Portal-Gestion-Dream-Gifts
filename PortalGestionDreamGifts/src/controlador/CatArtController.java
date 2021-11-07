@@ -14,14 +14,19 @@ import vista.Maestro;
  * @author luvar
  */
 public class CatArtController {
+    
+    CatArticuloManager manager = new CatArticuloManager(); 
+    
+    public void agregarCategoria(Maestro vista){
+        String nombre = vista.getTxtCatArt().getText();
+        manager.agregarCategoriaSQL(nombre);
+    }
 
     
     public void showAll(Maestro master){
         
-        CatArticuloManager mngr = new CatArticuloManager(); 
-        
         JTable tabla = master.getTablaCatArt();
-        ArrayList<ArrayList<Object>> lista = mngr.categoriaSelectAll();
+        ArrayList<ArrayList<Object>> lista = manager.categoriaSelectAll();
         DefaultTableModel model =  (DefaultTableModel)tabla.getModel();
         
         int i = 0;
@@ -32,6 +37,12 @@ public class CatArtController {
         }
         
         
+    }
+    
+    public void clearAll(Maestro master){
+        JTable tabla = master.getTablaCatArt();
+        DefaultTableModel model = (DefaultTableModel) tabla.getModel();
+        model.setRowCount(0);
     }
     
 }
