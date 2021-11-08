@@ -6,7 +6,10 @@ package vista;
 
 import com.toedter.calendar.JDateChooser;
 import controlador.*;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class Maestro extends javax.swing.JFrame {
@@ -106,6 +109,7 @@ public class Maestro extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         dateFechaArt = new com.toedter.calendar.JDateChooser();
+        btnSaveArt = new javax.swing.JButton();
         jScrollPane6 = new javax.swing.JScrollPane();
         tablaArticulos = new javax.swing.JTable();
         jLabel18 = new javax.swing.JLabel();
@@ -608,6 +612,13 @@ public class Maestro extends javax.swing.JFrame {
 
         dateFechaArt.setDateFormatString("dd/MM/yyyy");
 
+        btnSaveArt.setText("Guardar");
+        btnSaveArt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSaveArtActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -631,7 +642,10 @@ public class Maestro extends javax.swing.JFrame {
                                 .addComponent(comboArtCat, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
                                 .addComponent(dateFechaArt, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addComponent(txtUnidadesArt, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(txtUnidadesArt, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnSaveArt)))
                 .addGap(35, 35, 35))
         );
         jPanel2Layout.setVerticalGroup(
@@ -643,15 +657,18 @@ public class Maestro extends javax.swing.JFrame {
                     .addComponent(jLabel19)
                     .addComponent(jLabel22))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(comboArtCat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(3, 3, 3)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtUnidadesArt, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel21)))
-                    .addComponent(dateFechaArt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                            .addComponent(jLabel21))
+                        .addContainerGap())
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(dateFechaArt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnSaveArt))))
         );
 
         tablaArticulos.setModel(new javax.swing.table.DefaultTableModel(
@@ -659,7 +676,7 @@ public class Maestro extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Código", "Articulo", "Categoria", "Unidades", "Estado", "Fecha Vencimiento"
+                "Código", "Articulo", "Categoria", "Unidades", "Fecha Vencimiento", "Estado"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -1459,6 +1476,10 @@ public class Maestro extends javax.swing.JFrame {
         usuarioCtrl.showAll(this);
     }//GEN-LAST:event_btnSavUsuarioActionPerformed
 
+    private void btnSaveArtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveArtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSaveArtActionPerformed
+
 //        BancoManager banco = new BancoManager(nombre);
 //        banco.agregar(nombre);
 //        Log.seguir("boton");
@@ -1535,6 +1556,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JButton btnMaestro;
     private javax.swing.JButton btnSavComuna;
     private javax.swing.JButton btnSavUsuario;
+    private javax.swing.JButton btnSaveArt;
     private javax.swing.JButton btnSaveCliente;
     private javax.swing.JButton btnSaveProv;
     private javax.swing.JButton btnVentas;
@@ -1796,6 +1818,47 @@ public class Maestro extends javax.swing.JFrame {
     public void setTxtUsuario(JTextField txtUsuario) {
         this.txtUsuario = txtUsuario;
     }
+
+    public JButton getBtnSaveArt() {
+        return btnSaveArt;
+    }
+
+    public void setBtnSaveArt(JButton btnSaveArt) {
+        this.btnSaveArt = btnSaveArt;
+    }
+
+    public JComboBox<String> getComboArtCat() {
+        return comboArtCat;
+    }
+
+    public void setComboArtCat(JComboBox<String> comboArtCat) {
+        this.comboArtCat = comboArtCat;
+    }
+
+    public JTable getTablaArticulos() {
+        return tablaArticulos;
+    }
+
+    public void setTablaArticulos(JTable tablaArticulos) {
+        this.tablaArticulos = tablaArticulos;
+    }
+
+    public JTextArea getTxtNombreArt() {
+        return txtNombreArt;
+    }
+
+    public void setTxtNombreArt(JTextArea txtNombreArt) {
+        this.txtNombreArt = txtNombreArt;
+    }
+
+    public JTextArea getTxtUnidadesArt() {
+        return txtUnidadesArt;
+    }
+
+    public void setTxtUnidadesArt(JTextArea txtUnidadesArt) {
+        this.txtUnidadesArt = txtUnidadesArt;
+    }
+    
     
     
 }
