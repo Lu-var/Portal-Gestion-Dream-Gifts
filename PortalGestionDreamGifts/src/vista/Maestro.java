@@ -14,13 +14,25 @@ public class Maestro extends javax.swing.JFrame {
     CatArtController catArtCtrl = new CatArtController();
     ComunaController comunaCtrl = new ComunaController();
     UsuarioController usuarioCtrl = new UsuarioController();
+    int i = 1;
+    
+    public void clearAll(){
+        
+        usuarioCtrl.clearAll(this);
+        comunaCtrl.clearAll(this);
+        catArtCtrl.clearAll(this);
+    }
+    
+    public void showAll(){
+        usuarioCtrl.showAll(this);
+        comunaCtrl.showAll(this);
+        catArtCtrl.showAll(this);
+    }
 
     public Maestro() {
         initComponents();
         
-        comunaCtrl.showAll(this);
-        catArtCtrl.showAll(this);
-        usuarioCtrl.showAll(this);
+        showAll();
         
        
         this.setLocationRelativeTo(null);
@@ -89,8 +101,11 @@ public class Maestro extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         txtNombreArt = new javax.swing.JTextArea();
         txtUnidadesArt = new javax.swing.JTextArea();
-        txtMarcaArt = new javax.swing.JTextArea();
         comboArtCat = new javax.swing.JComboBox<>();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jScrollPane6 = new javax.swing.JScrollPane();
         tablaArticulos = new javax.swing.JTable();
         jLabel18 = new javax.swing.JLabel();
@@ -212,6 +227,7 @@ public class Maestro extends javax.swing.JFrame {
         jLabel1.setText("   DREAM GIFTS");
 
         PanelPrincipal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        PanelPrincipal.setDebugGraphicsOptions(javax.swing.DebugGraphics.NONE_OPTION);
         PanelPrincipal.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 PanelPrincipalStateChanged(evt);
@@ -390,7 +406,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton7)
                     .addComponent(jButton8))
-                .addContainerGap(138, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Clientes", PanelClientes);
@@ -584,41 +600,58 @@ public class Maestro extends javax.swing.JFrame {
         txtUnidadesArt.setColumns(20);
         txtUnidadesArt.setRows(5);
 
-        txtMarcaArt.setColumns(20);
-        txtMarcaArt.setRows(5);
+        jLabel19.setText("Nombre :");
 
-        comboArtCat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jLabel21.setText("Stock");
+
+        jLabel22.setText("Categoria Articulo");
+
+        jDateChooser1.setDateFormatString("dd/MM/yyyy");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(105, 105, 105)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel19)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel21)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtMarcaArt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtUnidadesArt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(txtNombreArt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 282, Short.MAX_VALUE)
-                        .addComponent(comboArtCat, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(138, 138, 138))))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(79, 79, 79)
+                                .addComponent(jLabel22))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(52, 52, 52)
+                                .addComponent(comboArtCat, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                                .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(txtUnidadesArt, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(8, 8, 8)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtNombreArt, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(comboArtCat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtUnidadesArt, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtMarcaArt, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(126, 126, 126))
+                    .addComponent(txtNombreArt, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel19)
+                    .addComponent(jLabel22))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(comboArtCat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(3, 3, 3)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtUnidadesArt, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel21)))
+                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         tablaArticulos.setModel(new javax.swing.table.DefaultTableModel(
@@ -626,9 +659,17 @@ public class Maestro extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Código", "Articulo", "Tipo Articulo", "Unidades", "Marca", "Estado"
+                "Código", "Articulo", "Categoria", "Unidades", "Estado", "Fecha Vencimiento"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane6.setViewportView(tablaArticulos);
 
         jLabel18.setText("Articulos");
@@ -639,13 +680,12 @@ public class Maestro extends javax.swing.JFrame {
             PanelArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelArticulosLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelArticulosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane6)
+                .addGroup(PanelArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane6)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(PanelArticulosLayout.createSequentialGroup()
-                .addGap(326, 326, 326)
+                .addGap(347, 347, 347)
                 .addComponent(jLabel18)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -653,11 +693,11 @@ public class Maestro extends javax.swing.JFrame {
             PanelArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelArticulosLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel18)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -840,7 +880,7 @@ public class Maestro extends javax.swing.JFrame {
         );
         PanelRRSSLayout.setVerticalGroup(
             PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 426, Short.MAX_VALUE)
+            .addGap(0, 315, Short.MAX_VALUE)
         );
 
         PanelPrincipal.addTab("RRSS", PanelRRSS);
@@ -935,7 +975,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEditarComuna)
                     .addComponent(btnDisableComuna))
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Comunas", PanelComunas);
@@ -1024,7 +1064,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEditar)
                     .addComponent(btnDesactivar))
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Bancos", PanelBancos);
@@ -1037,7 +1077,7 @@ public class Maestro extends javax.swing.JFrame {
         );
         PanelCatVentaLayout.setVerticalGroup(
             PanelCatVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 426, Short.MAX_VALUE)
+            .addGap(0, 315, Short.MAX_VALUE)
         );
 
         PanelPrincipal.addTab("Categoría Venta", PanelCatVenta);
@@ -1155,7 +1195,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCatArtEditar)
                     .addComponent(btnCatArtDesactivar))
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Categoría Articulos", null, PanelCatArt, "");
@@ -1260,7 +1300,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEditarUsuario)
                     .addComponent(btnDisableUsuario))
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Usuarios", PanelUsuarios);
@@ -1270,16 +1310,16 @@ public class Maestro extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(44, Short.MAX_VALUE)
+                .addContainerGap(49, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 750, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(PanelPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 750, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 37, Short.MAX_VALUE)))
+                        .addGap(0, 0, 0)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -1353,6 +1393,7 @@ public class Maestro extends javax.swing.JFrame {
 
     private void btnCatArtGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCatArtGuardarActionPerformed
 
+        System.out.println("Categoria Guardada");
         catArtCtrl.agregarCategoria(this);
         catArtCtrl.clearAll(this);
         catArtCtrl.showAll(this);
@@ -1363,7 +1404,14 @@ public class Maestro extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCatArtActionPerformed
 
     private void PanelPrincipalStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_PanelPrincipalStateChanged
-        // TODO add your handling code here:
+        System.out.println("Changed Tabs: "+i);
+        i++;
+        clearAll();
+        showAll();
+//        comunaCtrl.showAll(this);
+//        catArtCtrl.showAll(this);
+//        usuarioCtrl.showAll(this);
+        
     }//GEN-LAST:event_PanelPrincipalStateChanged
 
     private void tablaCatArtComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_tablaCatArtComponentShown
@@ -1413,8 +1461,8 @@ public class Maestro extends javax.swing.JFrame {
 
 //        BancoManager banco = new BancoManager(nombre);
 //        banco.agregar(nombre);
-//        Log.seguir("boton");                                           
-
+//        Log.seguir("boton");
+    
     /**
      * @param args the command line arguments
      */
@@ -1501,6 +1549,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1511,8 +1560,11 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1555,7 +1607,6 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JTextField txtFonoProv;
     private javax.swing.JTextField txtMailCliente;
     private javax.swing.JTextField txtMailProv;
-    private javax.swing.JTextArea txtMarcaArt;
     private javax.swing.JTextArea txtNombreArt;
     private javax.swing.JTextField txtNombreCliente;
     private javax.swing.JTextField txtNombrePack;
