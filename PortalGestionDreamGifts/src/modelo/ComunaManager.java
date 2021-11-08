@@ -4,6 +4,7 @@
  */
 package modelo;
 import bd.Consulta;
+import bd.Log;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -24,9 +25,14 @@ public class ComunaManager {
     ResultSet resultadoSet = null;
      
     public boolean agregarComunaSQL(String nombre){
-        Consulta cmd = new Consulta();
-        boolean result = cmd.ejecutar(String.format("INSERT INTO Comuna (Nombre) VALUES ('%s')", nombre));
-        return result;
+        try{
+            comando = conexion.prepareStatement("INSERT INTO Comuna (Nombre) VALUES (?)");
+            comando.setString(1, nombre);
+            comando.execute();
+            
+        } catch(Exception ex) { Log.seguir(ex.getMessage());}
+        
+        return false;        
     }
     
     public ArrayList<ArrayList<Object>> comunaSelectAll(){
