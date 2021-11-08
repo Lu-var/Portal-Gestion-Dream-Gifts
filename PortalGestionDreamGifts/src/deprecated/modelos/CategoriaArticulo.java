@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package modelo;
+package deprecated.modelos;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 import java.util.ArrayList;
 import java.util.List;
+import modelo.ConexionRequest;
 
 
 /**
