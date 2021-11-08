@@ -148,7 +148,6 @@ public class Maestro extends javax.swing.JFrame {
         jTable6 = new javax.swing.JTable();
         btnEditar = new javax.swing.JButton();
         btnDesactivar = new javax.swing.JButton();
-        PanelCatVenta = new javax.swing.JPanel();
         PanelCatArt = new javax.swing.JPanel();
         LCatArt = new javax.swing.JLabel();
         txtCatArt = new javax.swing.JTextField();
@@ -169,6 +168,15 @@ public class Maestro extends javax.swing.JFrame {
         txtUsuario = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
+        PanelCatVenta = new javax.swing.JPanel();
+        LCatArt1 = new javax.swing.JLabel();
+        txtCatVenta = new javax.swing.JTextField();
+        btnGuardarCatVenta = new javax.swing.JButton();
+        btnCancelarCatVenta = new javax.swing.JButton();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        tablaCatVenta = new javax.swing.JTable();
+        btnEditarCatVenta = new javax.swing.JButton();
+        btnDisableCatVenta = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -1086,19 +1094,6 @@ public class Maestro extends javax.swing.JFrame {
 
         PanelPrincipal.addTab("Bancos", PanelBancos);
 
-        javax.swing.GroupLayout PanelCatVentaLayout = new javax.swing.GroupLayout(PanelCatVenta);
-        PanelCatVenta.setLayout(PanelCatVentaLayout);
-        PanelCatVentaLayout.setHorizontalGroup(
-            PanelCatVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 919, Short.MAX_VALUE)
-        );
-        PanelCatVentaLayout.setVerticalGroup(
-            PanelCatVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 315, Short.MAX_VALUE)
-        );
-
-        PanelPrincipal.addTab("Categoría Venta", PanelCatVenta);
-
         PanelCatArt.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
                 PanelCatArtComponentShown(evt);
@@ -1322,6 +1317,124 @@ public class Maestro extends javax.swing.JFrame {
 
         PanelPrincipal.addTab("Usuarios", PanelUsuarios);
 
+        PanelCatVenta.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                PanelCatVentaComponentShown(evt);
+            }
+        });
+
+        LCatArt1.setText("Categoria Venta :");
+
+        txtCatVenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCatVentaActionPerformed(evt);
+            }
+        });
+
+        btnGuardarCatVenta.setText("GUARDAR");
+        btnGuardarCatVenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarCatVentaActionPerformed(evt);
+            }
+        });
+
+        btnCancelarCatVenta.setText("CANCELAR");
+
+        tablaCatVenta.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Categoría", "Activado"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.Boolean.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tablaCatVenta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tablaCatVentaMouseClicked(evt);
+            }
+        });
+        tablaCatVenta.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                tablaCatVentaComponentShown(evt);
+            }
+        });
+        jScrollPane10.setViewportView(tablaCatVenta);
+
+        btnEditarCatVenta.setText("EDITAR");
+        btnEditarCatVenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarCatVentaActionPerformed(evt);
+            }
+        });
+
+        btnDisableCatVenta.setText("DESACTIVAR");
+
+        javax.swing.GroupLayout PanelCatVentaLayout = new javax.swing.GroupLayout(PanelCatVenta);
+        PanelCatVenta.setLayout(PanelCatVentaLayout);
+        PanelCatVentaLayout.setHorizontalGroup(
+            PanelCatVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelCatVentaLayout.createSequentialGroup()
+                .addGap(258, 258, 258)
+                .addGroup(PanelCatVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCatVentaLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnEditarCatVenta)
+                        .addGap(65, 65, 65)
+                        .addComponent(btnDisableCatVenta)
+                        .addGap(167, 167, 167))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCatVentaLayout.createSequentialGroup()
+                        .addGap(0, 87, Short.MAX_VALUE)
+                        .addComponent(LCatArt1)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtCatVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(183, 183, 183))
+                    .addGroup(PanelCatVentaLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(PanelCatVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PanelCatVentaLayout.createSequentialGroup()
+                                .addComponent(btnCancelarCatVenta)
+                                .addGap(103, 103, 103)
+                                .addComponent(btnGuardarCatVenta))
+                            .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        PanelCatVentaLayout.setVerticalGroup(
+            PanelCatVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelCatVentaLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addGroup(PanelCatVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LCatArt1)
+                    .addComponent(txtCatVenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(PanelCatVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnGuardarCatVenta)
+                    .addComponent(btnCancelarCatVenta))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addGroup(PanelCatVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnEditarCatVenta)
+                    .addComponent(btnDisableCatVenta))
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        PanelPrincipal.addTab("Categoría Ventas", null, PanelCatVenta, "");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -1332,11 +1445,8 @@ public class Maestro extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 750, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(PanelPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 750, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, 0)))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PanelPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 750, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -1480,6 +1590,30 @@ public class Maestro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnSaveArtActionPerformed
 
+    private void txtCatVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCatVentaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCatVentaActionPerformed
+
+    private void btnGuardarCatVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarCatVentaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnGuardarCatVentaActionPerformed
+
+    private void tablaCatVentaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaCatVentaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tablaCatVentaMouseClicked
+
+    private void tablaCatVentaComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_tablaCatVentaComponentShown
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tablaCatVentaComponentShown
+
+    private void btnEditarCatVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarCatVentaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEditarCatVentaActionPerformed
+
+    private void PanelCatVentaComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_PanelCatVentaComponentShown
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PanelCatVentaComponentShown
+
 //        BancoManager banco = new BancoManager(nombre);
 //        banco.agregar(nombre);
 //        Log.seguir("boton");
@@ -1525,6 +1659,7 @@ public class Maestro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LBanco;
     private javax.swing.JLabel LCatArt;
+    private javax.swing.JLabel LCatArt1;
     private javax.swing.JLabel LComuna;
     private javax.swing.JPanel PanelArticulos;
     private javax.swing.JPanel PanelBancos;
@@ -1541,17 +1676,21 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JButton btnCancelComuna;
     private javax.swing.JButton btnCancelUsuario;
     private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnCancelarCatVenta;
     private javax.swing.JButton btnCatArtCancelar;
     private javax.swing.JButton btnCatArtDesactivar;
     private javax.swing.JButton btnCatArtEditar;
     private javax.swing.JButton btnCatArtGuardar;
     private javax.swing.JButton btnCompras;
     private javax.swing.JButton btnDesactivar;
+    private javax.swing.JButton btnDisableCatVenta;
     private javax.swing.JButton btnDisableComuna;
     private javax.swing.JButton btnDisableUsuario;
     private javax.swing.JButton btnEditar;
+    private javax.swing.JButton btnEditarCatVenta;
     private javax.swing.JButton btnEditarComuna;
     private javax.swing.JButton btnEditarUsuario;
+    private javax.swing.JButton btnGuardarCatVenta;
     private javax.swing.JButton btnInformes;
     private javax.swing.JButton btnMaestro;
     private javax.swing.JButton btnSavComuna;
@@ -1601,6 +1740,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -1618,11 +1758,13 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JScrollPane scrollSelected;
     private javax.swing.JTable tablaArticulos;
     private javax.swing.JTable tablaCatArt;
+    private javax.swing.JTable tablaCatVenta;
     private javax.swing.JTable tablaComuna;
     private javax.swing.JTable tablaUsuario;
     private javax.swing.JTextField txtBanco;
     private javax.swing.JTextField txtBuscarPk;
     private javax.swing.JTextField txtCatArt;
+    private javax.swing.JTextField txtCatVenta;
     private javax.swing.JTextField txtCelularCliente;
     private javax.swing.JTextField txtComuna;
     private javax.swing.JTextField txtDirProv;
