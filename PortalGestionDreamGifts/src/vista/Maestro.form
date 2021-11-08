@@ -1644,6 +1644,7 @@
             </Component>
           </SubComponents>
         </Container>
+
         <Container class="javax.swing.JPanel" name="PanelCatArt">
           <Events>
             <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="PanelCatArtComponentShown"/>

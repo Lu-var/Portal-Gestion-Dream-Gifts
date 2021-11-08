@@ -17,7 +17,9 @@ public class Maestro extends javax.swing.JFrame {
     CatArtController catArtCtrl = new CatArtController();
     ComunaController comunaCtrl = new ComunaController();
     UsuarioController usuarioCtrl = new UsuarioController();
+
     CatVentasController catVentasCtrl = new CatVentasController();
+
     int i = 1;
     
     public void clearAll(){
@@ -26,6 +28,7 @@ public class Maestro extends javax.swing.JFrame {
         comunaCtrl.clearAll(this);
         catArtCtrl.clearAll(this);
         catVentasCtrl.clearAll(this);
+
     }
     
     public void showAll(){
@@ -616,11 +619,9 @@ public class Maestro extends javax.swing.JFrame {
         txtUnidadesArt.setRows(5);
 
         jLabel19.setText("Nombre :");
-
         jLabel21.setText("Stock");
 
         jLabel22.setText("Categoria Articulo");
-
         dateFechaArt.setDateFormatString("dd/MM/yyyy");
 
         btnSaveArt.setText("Guardar");
@@ -1097,6 +1098,7 @@ public class Maestro extends javax.swing.JFrame {
 
         PanelPrincipal.addTab("Bancos", PanelBancos);
 
+
         PanelCatArt.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
                 PanelCatArtComponentShown(evt);
@@ -1448,8 +1450,10 @@ public class Maestro extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 750, Short.MAX_VALUE))
+
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PanelPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 750, javax.swing.GroupLayout.PREFERRED_SIZE))
+
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -2045,8 +2049,6 @@ public class Maestro extends javax.swing.JFrame {
     public void setTxtCatVenta(JTextField txtCatVenta) {
         this.txtCatVenta = txtCatVenta;
     }
-    
-    
     
 }
 
