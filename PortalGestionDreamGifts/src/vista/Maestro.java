@@ -17,6 +17,7 @@ public class Maestro extends javax.swing.JFrame {
     CatArtController catArtCtrl = new CatArtController();
     ComunaController comunaCtrl = new ComunaController();
     UsuarioController usuarioCtrl = new UsuarioController();
+    CatVentasController catVentasCtrl = new CatVentasController();
     int i = 1;
     
     public void clearAll(){
@@ -24,12 +25,14 @@ public class Maestro extends javax.swing.JFrame {
         usuarioCtrl.clearAll(this);
         comunaCtrl.clearAll(this);
         catArtCtrl.clearAll(this);
+        catVentasCtrl.clearAll(this);
     }
     
     public void showAll(){
         usuarioCtrl.showAll(this);
         comunaCtrl.showAll(this);
         catArtCtrl.showAll(this);
+        catVentasCtrl.showAll(this);
     }
 
     public Maestro() {
@@ -1595,7 +1598,9 @@ public class Maestro extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCatVentaActionPerformed
 
     private void btnGuardarCatVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarCatVentaActionPerformed
-        // TODO add your handling code here:
+        catVentasCtrl.agregarCategoria(this);
+        catVentasCtrl.clearAll(this);
+        catVentasCtrl.showAll(this);
     }//GEN-LAST:event_btnGuardarCatVentaActionPerformed
 
     private void tablaCatVentaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaCatVentaMouseClicked
@@ -1999,6 +2004,46 @@ public class Maestro extends javax.swing.JFrame {
 
     public void setTxtUnidadesArt(JTextArea txtUnidadesArt) {
         this.txtUnidadesArt = txtUnidadesArt;
+    }
+
+    public JButton getBtnDisableCatVenta() {
+        return btnDisableCatVenta;
+    }
+
+    public void setBtnDisableCatVenta(JButton btnDisableCatVenta) {
+        this.btnDisableCatVenta = btnDisableCatVenta;
+    }
+
+    public JButton getBtnEditarCatVenta() {
+        return btnEditarCatVenta;
+    }
+
+    public void setBtnEditarCatVenta(JButton btnEditarCatVenta) {
+        this.btnEditarCatVenta = btnEditarCatVenta;
+    }
+
+    public JButton getBtnGuardarCatVenta() {
+        return btnGuardarCatVenta;
+    }
+
+    public void setBtnGuardarCatVenta(JButton btnGuardarCatVenta) {
+        this.btnGuardarCatVenta = btnGuardarCatVenta;
+    }
+
+    public JTable getTablaCatVenta() {
+        return tablaCatVenta;
+    }
+
+    public void setTablaCatVenta(JTable tablaCatVenta) {
+        this.tablaCatVenta = tablaCatVenta;
+    }
+
+    public JTextField getTxtCatVenta() {
+        return txtCatVenta;
+    }
+
+    public void setTxtCatVenta(JTextField txtCatVenta) {
+        this.txtCatVenta = txtCatVenta;
     }
     
     
