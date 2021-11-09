@@ -3,9 +3,6 @@ package modelo;
 import bd.Log;
 import java.sql.*;
 import java.lang.*;
-import javax.swing.JOptionPane;
-import javax.swing.JPasswordField;
-import javax.swing.SpringLayout;
 
 /**
  *
