@@ -6,14 +6,14 @@ package controlador;
 import java.util.ArrayList;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-import modelo.RRSSManager;
+import modelo.RedSocialManager;
 import vista.Maestro;
 /**
  *
  * @author luvar
  */
-public class RRSSController {
-    RRSSManager manager = new RRSSManager();
+public class RedSocialController {
+    RedSocialManager manager = new RedSocialManager();
     
     public void agregarRRSS(Maestro vista){
         String nombre = vista.getTxtRRSS().getText();

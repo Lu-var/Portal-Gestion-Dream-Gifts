@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
  *
  * @author PC
  */
-public class RRSSManager {
+public class RedSocialManager {
 
     ConexionRequest intentoConexion = new ConexionRequest();
     Connection conexion = intentoConexion.conectar();
