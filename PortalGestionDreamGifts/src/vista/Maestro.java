@@ -19,11 +19,9 @@ public class Maestro extends javax.swing.JFrame {
     UsuarioController usuarioCtrl = new UsuarioController();
 
     CatVentasController catVentasCtrl = new CatVentasController();
-<<<<<<< Updated upstream
 
-=======
     BancoControllerAlt bancoCtrl = new BancoControllerAlt();
->>>>>>> Stashed changes
+
     int i = 1;
     
     public void clearAll(){
@@ -32,11 +30,9 @@ public class Maestro extends javax.swing.JFrame {
         comunaCtrl.clearAll(this);
         catArtCtrl.clearAll(this);
         catVentasCtrl.clearAll(this);
-<<<<<<< Updated upstream
 
-=======
         bancoCtrl.clearAll(this);
->>>>>>> Stashed changes
+
     }
     
     public void showAll(){

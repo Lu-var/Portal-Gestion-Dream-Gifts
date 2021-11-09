@@ -1,8 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package deprecated.modelos;
+
+import bd.Consulta;
+import bd.Log;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -42,5 +47,40 @@ public class Status {
         this.descripcionEstado = descripcionEstado;
     }
     
+    public boolean agregarStatus(String descripcionEstado)
+    {
+        Consulta con = new Consulta();
+        
+        String query = "INSERT INTO `status`(`DescripcionEstado`) VALUES ('"+descripcionEstado+"')";
+        Log.seguir("estoy en insert"+query);
+        return con.ejecutar(query);
+    }
     
+    public boolean borrarStatus(String descripcionEstado)
+    {
+        Consulta con = new Consulta();
+        
+        String query = String.format("Delete from 'status' " + "where descripcionEstado= '%s'",descripcionEstado);
+        Log.seguir("estoy en delete"+query);
+        return con.ejecutar(query);
+    }
+    
+    public static List<Status> listarRRSS() throws SQLException
+    {
+        List<Status> lista =new ArrayList<>();
+          String query = String.format("select * from Status");
+        Log.seguir("termine de listar");
+        ResultSet curSta= bd.Consulta.getInstance().select(query);
+        try {
+            while(curSta.next())
+            {
+                Status status =new Status(curSta.getInt("idStatus"), curSta.getString("descripcionEstado"));
+                lista.add(status);    
+            }
+            return lista;
+        } catch (SQLException ex) {
+            Logger.getLogger(Status.class.getName()).log(Level.SEVERE, null, ex);
+            return null;
+        }
+    }
 }
