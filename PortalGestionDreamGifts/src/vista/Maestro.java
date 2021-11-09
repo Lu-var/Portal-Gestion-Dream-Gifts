@@ -17,10 +17,9 @@ public class Maestro extends javax.swing.JFrame {
     CatArtController catArtCtrl = new CatArtController();
     ComunaController comunaCtrl = new ComunaController();
     UsuarioController usuarioCtrl = new UsuarioController();
-
     CatVentasController catVentasCtrl = new CatVentasController();
-
     BancoControllerAlt bancoCtrl = new BancoControllerAlt();
+    RRSSController rrssCtrl = new RRSSController();
 
     int i = 1;
     
@@ -30,8 +29,8 @@ public class Maestro extends javax.swing.JFrame {
         comunaCtrl.clearAll(this);
         catArtCtrl.clearAll(this);
         catVentasCtrl.clearAll(this);
-
         bancoCtrl.clearAll(this);
+        rrssCtrl.clearAll(this);
 
     }
     
@@ -41,6 +40,7 @@ public class Maestro extends javax.swing.JFrame {
         catArtCtrl.showAll(this);
         catVentasCtrl.showAll(this);
         bancoCtrl.showAll(this);
+        rrssCtrl.showAll(this);
     }
 
     public Maestro() {
@@ -141,6 +141,14 @@ public class Maestro extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         PanelRRSS = new javax.swing.JPanel();
+        btnDisableRRSS = new javax.swing.JButton();
+        btnEditarRRSS = new javax.swing.JButton();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        tablaRRSS = new javax.swing.JTable();
+        btnCancelRRSS = new javax.swing.JButton();
+        btnSavRRSS = new javax.swing.JButton();
+        txtRRSS = new javax.swing.JTextField();
+        LRRSS = new javax.swing.JLabel();
         PanelComunas = new javax.swing.JPanel();
         LComuna = new javax.swing.JLabel();
         txtComuna = new javax.swing.JTextField();
@@ -908,15 +916,97 @@ public class Maestro extends javax.swing.JFrame {
 
         PanelPrincipal.addTab("Packs", PanelPacks);
 
+        btnDisableRRSS.setText("DESACTIVAR");
+
+        btnEditarRRSS.setText("EDITAR");
+
+        tablaRRSS.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Nombre", "Activo"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane9.setViewportView(tablaRRSS);
+
+        btnCancelRRSS.setText("CANCELAR");
+
+        btnSavRRSS.setText("GUARDAR");
+        btnSavRRSS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSavRRSSActionPerformed(evt);
+            }
+        });
+
+        txtRRSS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtRRSSActionPerformed(evt);
+            }
+        });
+
+        LRRSS.setText("Red Social :");
+
         javax.swing.GroupLayout PanelRRSSLayout = new javax.swing.GroupLayout(PanelRRSS);
         PanelRRSS.setLayout(PanelRRSSLayout);
         PanelRRSSLayout.setHorizontalGroup(
             PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 919, Short.MAX_VALUE)
+            .addGroup(PanelRRSSLayout.createSequentialGroup()
+                .addGap(258, 258, 258)
+                .addGroup(PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCancelRRSS)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRRSSLayout.createSequentialGroup()
+                        .addComponent(LRRSS)
+                        .addGap(13, 13, 13)))
+                .addGap(90, 90, 90)
+                .addGroup(PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSavRRSS)
+                    .addComponent(txtRRSS, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(205, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRRSSLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRRSSLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnEditarRRSS)
+                .addGap(65, 65, 65)
+                .addComponent(btnDisableRRSS)
+                .addGap(167, 167, 167))
         );
         PanelRRSSLayout.setVerticalGroup(
             PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 315, Short.MAX_VALUE)
+            .addGroup(PanelRRSSLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addGroup(PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LRRSS)
+                    .addComponent(txtRRSS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSavRRSS)
+                    .addComponent(btnCancelRRSS))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addGroup(PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnEditarRRSS)
+                    .addComponent(btnDisableRRSS))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("RRSS", PanelRRSS);
@@ -1628,6 +1718,16 @@ public class Maestro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_PanelCatVentaComponentShown
 
+    private void btnSavRRSSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSavRRSSActionPerformed
+        rrssCtrl.agregarRRSS(this);
+        rrssCtrl.clearAll(this);
+        rrssCtrl.showAll(this);
+    }//GEN-LAST:event_btnSavRRSSActionPerformed
+
+    private void txtRRSSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRRSSActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtRRSSActionPerformed
+
 //        BancoManager banco = new BancoManager(nombre);
 //        banco.agregar(nombre);
 //        Log.seguir("boton");
@@ -1675,6 +1775,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JLabel LCatArt;
     private javax.swing.JLabel LCatArt1;
     private javax.swing.JLabel LComuna;
+    private javax.swing.JLabel LRRSS;
     private javax.swing.JPanel PanelArticulos;
     private javax.swing.JPanel PanelBancos;
     private javax.swing.JPanel PanelCatArt;
@@ -1688,6 +1789,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JPanel PanelUsuarios;
     private javax.swing.JComboBox<String> boxSocialCliente;
     private javax.swing.JButton btnCancelComuna;
+    private javax.swing.JButton btnCancelRRSS;
     private javax.swing.JButton btnCancelUsuario;
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnCancelarCatVenta;
@@ -1699,15 +1801,18 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JButton btnDesactivar;
     private javax.swing.JButton btnDisableCatVenta;
     private javax.swing.JButton btnDisableComuna;
+    private javax.swing.JButton btnDisableRRSS;
     private javax.swing.JButton btnDisableUsuario;
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnEditarCatVenta;
     private javax.swing.JButton btnEditarComuna;
+    private javax.swing.JButton btnEditarRRSS;
     private javax.swing.JButton btnEditarUsuario;
     private javax.swing.JButton btnGuardarCatVenta;
     private javax.swing.JButton btnInformes;
     private javax.swing.JButton btnMaestro;
     private javax.swing.JButton btnSavComuna;
+    private javax.swing.JButton btnSavRRSS;
     private javax.swing.JButton btnSavUsuario;
     private javax.swing.JButton btnSaveArt;
     private javax.swing.JButton btnSaveCliente;
@@ -1762,6 +1867,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
@@ -1774,6 +1880,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JTable tablaCatArt;
     private javax.swing.JTable tablaCatVenta;
     private javax.swing.JTable tablaComuna;
+    private javax.swing.JTable tablaRRSS;
     private javax.swing.JTable tablaUsuario;
     private javax.swing.JTextField txtBanco;
     private javax.swing.JTextField txtBuscarPk;
@@ -1791,6 +1898,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JTextField txtNombreProv;
     private javax.swing.JTextField txtPass;
     private javax.swing.JTextField txtPrecioPack;
+    private javax.swing.JTextField txtRRSS;
     private javax.swing.JTextField txtRsocialProv;
     private javax.swing.JTextField txtRutCliente;
     private javax.swing.JTextField txtRutProv;
@@ -2062,6 +2170,24 @@ public class Maestro extends javax.swing.JFrame {
     public void setTablaBanco(JTable tablaBanco) {
         this.tablaBanco = tablaBanco;
     }
+
+    public JTable getTablaRRSS() {
+        return tablaRRSS;
+    }
+
+    public void setTablaRRSS(JTable tablaRRSS) {
+        this.tablaRRSS = tablaRRSS;
+    }
+
+    public JTextField getTxtRRSS() {
+        return txtRRSS;
+    }
+
+    public void setTxtRRSS(JTextField txtRRSS) {
+        this.txtRRSS = txtRRSS;
+    }
+    
+    
     
 }
 
