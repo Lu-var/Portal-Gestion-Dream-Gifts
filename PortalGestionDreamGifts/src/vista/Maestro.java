@@ -20,6 +20,8 @@ public class Maestro extends javax.swing.JFrame {
 
     CatVentasController catVentasCtrl = new CatVentasController();
 
+    BancoControllerAlt bancoCtrl = new BancoControllerAlt();
+
     int i = 1;
     
     public void clearAll(){
@@ -29,6 +31,8 @@ public class Maestro extends javax.swing.JFrame {
         catArtCtrl.clearAll(this);
         catVentasCtrl.clearAll(this);
 
+        bancoCtrl.clearAll(this);
+
     }
     
     public void showAll(){
@@ -36,6 +40,7 @@ public class Maestro extends javax.swing.JFrame {
         comunaCtrl.showAll(this);
         catArtCtrl.showAll(this);
         catVentasCtrl.showAll(this);
+        bancoCtrl.showAll(this);
     }
 
     public Maestro() {
@@ -151,7 +156,7 @@ public class Maestro extends javax.swing.JFrame {
         btngGuardar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTable6 = new javax.swing.JTable();
+        tablaBanco = new javax.swing.JTable();
         btnEditar = new javax.swing.JButton();
         btnDesactivar = new javax.swing.JButton();
         PanelCatArt = new javax.swing.JPanel();
@@ -1020,7 +1025,7 @@ public class Maestro extends javax.swing.JFrame {
 
         btnCancelar.setText("CANCELAR");
 
-        jTable6.setModel(new javax.swing.table.DefaultTableModel(
+        tablaBanco.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -1043,7 +1048,7 @@ public class Maestro extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane4.setViewportView(jTable6);
+        jScrollPane4.setViewportView(tablaBanco);
 
         btnEditar.setText("EDITAR");
 
@@ -1521,8 +1526,9 @@ public class Maestro extends javax.swing.JFrame {
 
     private void btngGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngGuardarActionPerformed
 
-        String nombre = txtBanco.getText();
-        BancoController banco = new BancoController();
+        bancoCtrl.agregarBanco(this);
+        bancoCtrl.clearAll(this);
+        bancoCtrl.showAll(this);
     }//GEN-LAST:event_btngGuardarActionPerformed
 
     private void btnCatArtGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCatArtGuardarActionPerformed
@@ -1762,10 +1768,10 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable4;
     private javax.swing.JTable jTable5;
-    private javax.swing.JTable jTable6;
     private javax.swing.JScrollPane scrollArticulos;
     private javax.swing.JScrollPane scrollSelected;
     private javax.swing.JTable tablaArticulos;
+    private javax.swing.JTable tablaBanco;
     private javax.swing.JTable tablaCatArt;
     private javax.swing.JTable tablaCatVenta;
     private javax.swing.JTable tablaComuna;
@@ -2048,6 +2054,14 @@ public class Maestro extends javax.swing.JFrame {
 
     public void setTxtCatVenta(JTextField txtCatVenta) {
         this.txtCatVenta = txtCatVenta;
+    }
+
+    public JTable getTablaBanco() {
+        return tablaBanco;
+    }
+
+    public void setTablaBanco(JTable tablaBanco) {
+        this.tablaBanco = tablaBanco;
     }
     
 }

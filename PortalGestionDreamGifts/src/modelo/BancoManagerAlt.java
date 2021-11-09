@@ -4,43 +4,51 @@
  */
 package modelo;
 
+import bd.Log;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import javax.swing.JOptionPane;
 import java.util.ArrayList;
-
+import javax.swing.JOptionPane;
 
 /**
  *
- * @author PC
+ * @author luvar
  */
-public class CatArticuloManager {
-
+public class BancoManagerAlt {
     ConexionRequest intentoConexion = new ConexionRequest();
     Connection conexion = intentoConexion.conectar();
 
     PreparedStatement comando = null;
     boolean resultadoBool;
     ResultSet resultadoSet = null;
+     
+    public boolean agregarBancoSQL(String nombre){
+        try{
+            comando = conexion.prepareStatement("INSERT INTO Banco (Nombre) VALUES (?)");
+            comando.setString(1, nombre);
+            comando.execute();
+            
+        } catch(Exception ex) { Log.seguir(ex.getMessage());}
+        
+        return false;        
+    }
     
-
-    public ArrayList<ArrayList<Object>> categoriaSelectAll(){
+    public ArrayList<ArrayList<Object>> bancoSelectAll(){
         ArrayList<ArrayList<Object>> matriz = new ArrayList<ArrayList<Object>>();
         try{
-            comando = conexion.prepareStatement("SELECT * FROM CategoriaArticulo");
+            comando = conexion.prepareStatement("SELECT * FROM Banco");
             resultadoSet = comando.executeQuery();
 
             int id;
             int status;
-            String desc;
+            String nombre;
             while(resultadoSet.next()){
                 ArrayList<Object> fila = new ArrayList<Object>();
 
-                id = resultadoSet.getInt("idCategoriaArticulo");
+                id = resultadoSet.getInt("idBanco");
                 status = resultadoSet.getInt("Enabled");
-                desc = resultadoSet.getString("Descripcion");
+                nombre = resultadoSet.getString("Nombre");
 
                 switch(status){
                     case 0:
@@ -53,7 +61,7 @@ public class CatArticuloManager {
                 }
 
                 fila.add(id);
-                fila.add(desc);
+                fila.add(nombre);
                 fila.add(resultadoBool);
                 
                 matriz.add(fila);
@@ -64,26 +72,5 @@ public class CatArticuloManager {
         }
         
         return matriz;
-    }
-
-    public void agregarCategoriaSQL(String descripcion){
-        PreparedStatement comando = null;
-
-        try{
-            comando = conexion.prepareStatement("INSERT INTO CategoriaArticulo (Descripcion) VALUES (?)");
-            comando.setString(1, descripcion);
-            comando.execute();
-            
-
-        } catch(SQLException ex){
-            JOptionPane.showMessageDialog(null,ex);
-        }  
-    }
-    
-//    public static void main(String[] args) {
-//       CatArticuloManager catArt = new CatArticuloManager();
-//       catArt.categoriaSelectAll();
-//       catArt.agregarCategoriaSQL();
-//       catArt.categoriaSelectAll();
-//    }
+    } 
 }
