@@ -68,9 +68,6 @@ public class CatArticuloManager {
 
     public void agregarCategoriaSQL(String descripcion){
         PreparedStatement comando = null;
-        if(descripcion.equals("")){
-            return;
-        }
 
         try{
             comando = conexion.prepareStatement("INSERT INTO CategoriaArticulo (Descripcion) VALUES (?)");
