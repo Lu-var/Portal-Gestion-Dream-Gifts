@@ -3,7 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package modelo;
+import bd.Log;
 import java.sql.*;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
         
 /**
@@ -15,19 +17,17 @@ public class ClienteManager {
     ConexionRequest intentoConexion = new ConexionRequest();
     Connection conexion = intentoConexion.conectar();
     
-    public void AgregarCliente(String RUT, String nombre, String fechaNacimiento, String celular, String email, String direccion){
+    public void agregarClienteSQL(String RUT, String nombre, String fechaNacimiento, String celular, String email){
         PreparedStatement comando = null;
-        boolean resultado;
         try{
-            comando = conexion.prepareStatement("INSERT INTO Cliente VALUES (?,?,?,?,?,?)");
+            comando = conexion.prepareStatement("INSERT INTO Cliente VALUES (?,?,?,?,?)");
             comando.setString(1, RUT);
             comando.setString(2, nombre);
             comando.setString(3, fechaNacimiento);
             comando.setString(4, celular);
             comando.setString(5, email);
-            comando.setString(6, direccion);
             
-            resultado = comando.execute();
+            comando.execute();
             
         } catch(Exception ex){
             JOptionPane.showMessageDialog(null,ex);
@@ -35,18 +35,40 @@ public class ClienteManager {
     }
 
     
-    public ResultSet SeleccionarClientes(){
+    public ArrayList<ArrayList<Object>> clientesSelectAllSQL(){
+        
         PreparedStatement comando = null;
         ResultSet resultado = null;
+        ArrayList<ArrayList<Object>> matriz = new ArrayList<>();
+        ArrayList<Object> lista = new ArrayList<>();
+        
         try{
             comando = conexion.prepareStatement("SELECT * FROM Cliente"); 
             resultado = comando.executeQuery();
             
+            while(resultado.next()){
+                String RUT = resultado.getString("RUT");
+                String nombre = resultado.getString("Nombre");
+                String fecha = resultado.getString("Fecha Nacimiento");
+                String celular = resultado.getString("Celular");
+                String email = resultado.getString("Email");
+                
+                lista.add(RUT);
+                lista.add(nombre);
+                lista.add(fecha);
+                lista.add(celular);
+                lista.add(email);
+                
+                matriz.add(lista);
+                }
+            
+                
+            
         } catch(Exception ex){
-            JOptionPane.showMessageDialog(null,ex);
+                JOptionPane.showMessageDialog(null,ex);
         }
         
-          return resultado;
+        return matriz;
     }
     
     // Funcion debug
