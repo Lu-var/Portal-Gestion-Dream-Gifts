@@ -16,7 +16,7 @@ import java.util.ArrayList;
  *
  * @author PC
  */
-public class CatVentasManager {
+public class EstadoVentasManager {
 
     ConexionRequest intentoConexion = new ConexionRequest();
     Connection conexion = intentoConexion.conectar();
@@ -26,7 +26,7 @@ public class CatVentasManager {
     ResultSet resultadoSet = null;
     
 
-    public ArrayList<ArrayList<Object>> categoriaSelectAll(){
+    public ArrayList<ArrayList<Object>> estadoSelectAll(){
         ArrayList<ArrayList<Object>> matriz = new ArrayList<ArrayList<Object>>();
         try{
             comando = conexion.prepareStatement("SELECT * FROM Status");
@@ -66,7 +66,7 @@ public class CatVentasManager {
         return matriz;
     }
 
-    public void agregarCategoriaSQL(String descripcion){
+    public void agregarEstadoSQL(String descripcion){
         PreparedStatement comando = null;
         
         try{

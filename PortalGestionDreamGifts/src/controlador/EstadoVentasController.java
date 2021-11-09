@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package controlador;
-import modelo.CatVentasManager;
+import modelo.EstadoVentasManager;
 import java.util.ArrayList;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -13,20 +13,20 @@ import vista.Maestro;
  *
  * @author luvar
  */
-public class CatVentasController {
+public class EstadoVentasController {
     
-    CatVentasManager manager = new CatVentasManager(); 
+    EstadoVentasManager manager = new EstadoVentasManager(); 
     
-    public void agregarCategoria(Maestro vista){
-        String descripcion = vista.getTxtCatVenta().getText();
-        manager.agregarCategoriaSQL(descripcion);
+    public void agregarEstado(Maestro vista){
+        String descripcion = vista.getTxtEstadoVenta().getText();
+        manager.agregarEstadoSQL(descripcion);
     }
 
     
     public void showAll(Maestro master){
         
-        JTable tabla = master.getTablaCatVenta();
-        ArrayList<ArrayList<Object>> lista = manager.categoriaSelectAll();
+        JTable tabla = master.getTablaEstadoVenta();
+        ArrayList<ArrayList<Object>> lista = manager.estadoSelectAll();
         DefaultTableModel model =  (DefaultTableModel)tabla.getModel();
         
         int i = 0;
@@ -40,7 +40,7 @@ public class CatVentasController {
     }
     
     public void clearAll(Maestro master){
-        JTable tabla = master.getTablaCatVenta();
+        JTable tabla = master.getTablaEstadoVenta();
         DefaultTableModel model = (DefaultTableModel) tabla.getModel();
         model.setRowCount(0);
     }
