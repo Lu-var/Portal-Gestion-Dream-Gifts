@@ -13,6 +13,8 @@ import java.sql.SQLException;
  * @author PC
  */
 public class Consulta {
+    private static Consulta bd;
+    
     public ResultSet select(String query) throws SQLException{
         try{
             Statement sentencia = Conexion.abrir().createStatement();
@@ -50,6 +52,17 @@ public class Consulta {
             Log.seguir("me cai ejecutar"+ex.getMessage());
         }
         return false;
+    }
+    
+      public static Consulta getInstance()
+    {
+        System.out.println("toy en get instance");
+        if(bd == null)
+        {
+            bd = new Consulta();
+        }
+        
+        return bd;
     }
     
 }
