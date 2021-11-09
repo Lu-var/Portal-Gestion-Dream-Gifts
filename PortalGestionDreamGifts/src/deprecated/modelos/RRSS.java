@@ -1,38 +1,50 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package deprecated.modelos;
+
+import bd.Log;
+import bd.Consulta;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
- * @author PC
+ * @author Crowstone
  */
 public class RRSS {
-    private int isRRSS;
+    private int idRRSS;
     private String nombre;
     private int enabled;
 
     public RRSS() {
     }
 
-    public RRSS(int isRRSS, String nombre, int enabled) {
-        this.isRRSS = isRRSS;
+    public RRSS(int idRRSS){
+        setIdRRSS(idRRSS);
+    }
+    
+    public RRSS(String nombre){
+        setNombre(nombre);
+    }
+    
+    public RRSS(int idRRSS, String nombre) {
+        this.idRRSS = idRRSS;
         this.nombre = nombre;
-        this.enabled = enabled;
     }
 
     @Override
     public String toString() {
-        return "RRSS{" + "isRRSS=" + isRRSS + ", nombre=" + nombre + ", enabled=" + enabled + '}';
+        return "RRSS{" + "isRRSS=" + idRRSS + ", nombre=" + nombre + ", enabled=" + enabled + '}';
     }
 
-    public int getIsRRSS() {
-        return isRRSS;
+    public int getIdRRSS() {
+        return idRRSS;
     }
 
-    public void setIsRRSS(int isRRSS) {
-        this.isRRSS = isRRSS;
+    public void setIdRRSS(int idRRSS) {
+        this.idRRSS = idRRSS;
     }
 
     public String getNombre() {
@@ -50,6 +62,67 @@ public class RRSS {
     public void setEnabled(int enabled) {
         this.enabled = enabled;
     }
+   
+    public boolean agregarRRSS(String nombre)
+    {
+        Consulta con = new Consulta();
+        
+        String query = "INSERT INTO `RRSS`(`Nombre`) VALUES ('"+nombre+"')";
+        Log.seguir("estoy en insert"+query);
+        return con.ejecutar(query);
+    }
     
+    public boolean actualizarRRSS(String nombre)
+    {
+        Consulta con = new Consulta();
+        
+        String query = String.format("UPDATE `RRSS` SET =`Nombre`='"+nombre+"' WHERE 1");
+        Log.seguir("estoy en update"+query);
+        return con.ejecutar(query);
+    }
+     
+    public boolean borrarRRSS(String nombre)
+    {
+        Consulta con = new Consulta();
+        
+        String query = String.format("Delete from 'RRSS' " + "where nombre= '%s'",nombre);
+        Log.seguir("estoy en delete"+query);
+        return con.ejecutar(query);
+    }
     
+    public static List<RRSS> listarRRSS() throws SQLException
+    {
+        List<RRSS> lista =new ArrayList<>();
+          String query = String.format("select * from RRSS");
+        Log.seguir("termine de listar");
+        ResultSet curRS= bd.Consulta.getInstance().select(query);
+        try {
+            while(curRS.next())
+            {
+                RRSS rrss =new RRSS(curRS.getInt("idRRSS"), curRS.getString("nombre"));
+                lista.add(rrss);    
+            }
+            return lista;
+        } catch (SQLException ex) {
+            Logger.getLogger(RRSS.class.getName()).log(Level.SEVERE, null, ex);
+            return null;
+        }
+    }
+   
+    public static RRSS leerRRSS(int idRRSS) throws SQLException
+    {
+          String query = String.format("Select * from RRSS "+ "where idRRSS = %d",idRRSS);
+        Log.seguir("termine de listar");
+        ResultSet curRS= bd.Consulta.getInstance().select(query);
+        try {
+            if(!curRS.next() ) return null;
+            
+                RRSS rrss =new RRSS(curRS.getInt("idRRSS"));
+       
+            return rrss;
+        } catch (SQLException ex) {
+            Logger.getLogger(RRSS.class.getName()).log(Level.SEVERE, null, ex);
+            return null;
+        }
+    }
 }
