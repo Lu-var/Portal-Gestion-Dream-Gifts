@@ -90,6 +90,33 @@ public class Maestro extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        PanelBancos = new javax.swing.JPanel();
+        LBanco = new javax.swing.JLabel();
+        txtBanco = new javax.swing.JTextField();
+        btngGuardar = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        tablaBanco = new javax.swing.JTable();
+        btnEditar = new javax.swing.JButton();
+        btnDesactivar = new javax.swing.JButton();
+        PanelRRSS = new javax.swing.JPanel();
+        btnDisableRRSS = new javax.swing.JButton();
+        btnEditarRRSS = new javax.swing.JButton();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        tablaRRSS = new javax.swing.JTable();
+        btnCancelRRSS = new javax.swing.JButton();
+        btnSavRRSS = new javax.swing.JButton();
+        txtRRSS = new javax.swing.JTextField();
+        LRRSS = new javax.swing.JLabel();
+        PanelComunas = new javax.swing.JPanel();
+        LComuna = new javax.swing.JLabel();
+        txtComuna = new javax.swing.JTextField();
+        btnSavComuna = new javax.swing.JButton();
+        btnCancelComuna = new javax.swing.JButton();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        tablaComuna = new javax.swing.JTable();
+        btnEditarComuna = new javax.swing.JButton();
+        btnDisableComuna = new javax.swing.JButton();
         PanelProveedores = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
@@ -111,6 +138,15 @@ public class Maestro extends javax.swing.JFrame {
         jTable2 = new javax.swing.JTable();
         jButton11 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
+        PanelCatArt = new javax.swing.JPanel();
+        LCatArt = new javax.swing.JLabel();
+        txtCatArt = new javax.swing.JTextField();
+        btnCatArtGuardar = new javax.swing.JButton();
+        btnCatArtCancelar = new javax.swing.JButton();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        tablaCatArt = new javax.swing.JTable();
+        btnCatArtEditar = new javax.swing.JButton();
+        btnCatArtDesactivar = new javax.swing.JButton();
         PanelArticulos = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         txtNombreArt = new javax.swing.JTextArea();
@@ -124,6 +160,7 @@ public class Maestro extends javax.swing.JFrame {
         jScrollPane6 = new javax.swing.JScrollPane();
         tablaArticulos = new javax.swing.JTable();
         jLabel18 = new javax.swing.JLabel();
+        PanelCatPack = new javax.swing.JPanel();
         PanelPacks = new javax.swing.JPanel();
         jPanel15 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
@@ -140,42 +177,6 @@ public class Maestro extends javax.swing.JFrame {
         txtBuscarPk = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        PanelRRSS = new javax.swing.JPanel();
-        btnDisableRRSS = new javax.swing.JButton();
-        btnEditarRRSS = new javax.swing.JButton();
-        jScrollPane9 = new javax.swing.JScrollPane();
-        tablaRRSS = new javax.swing.JTable();
-        btnCancelRRSS = new javax.swing.JButton();
-        btnSavRRSS = new javax.swing.JButton();
-        txtRRSS = new javax.swing.JTextField();
-        LRRSS = new javax.swing.JLabel();
-        PanelComunas = new javax.swing.JPanel();
-        LComuna = new javax.swing.JLabel();
-        txtComuna = new javax.swing.JTextField();
-        btnSavComuna = new javax.swing.JButton();
-        btnCancelComuna = new javax.swing.JButton();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        tablaComuna = new javax.swing.JTable();
-        btnEditarComuna = new javax.swing.JButton();
-        btnDisableComuna = new javax.swing.JButton();
-        PanelBancos = new javax.swing.JPanel();
-        LBanco = new javax.swing.JLabel();
-        txtBanco = new javax.swing.JTextField();
-        btngGuardar = new javax.swing.JButton();
-        btnCancelar = new javax.swing.JButton();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        tablaBanco = new javax.swing.JTable();
-        btnEditar = new javax.swing.JButton();
-        btnDesactivar = new javax.swing.JButton();
-        PanelCatArt = new javax.swing.JPanel();
-        LCatArt = new javax.swing.JLabel();
-        txtCatArt = new javax.swing.JTextField();
-        btnCatArtGuardar = new javax.swing.JButton();
-        btnCatArtCancelar = new javax.swing.JButton();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        tablaCatArt = new javax.swing.JTable();
-        btnCatArtEditar = new javax.swing.JButton();
-        btnCatArtDesactivar = new javax.swing.JButton();
         PanelUsuarios = new javax.swing.JPanel();
         txtPass = new javax.swing.JTextField();
         btnSavUsuario = new javax.swing.JButton();
@@ -196,6 +197,7 @@ public class Maestro extends javax.swing.JFrame {
         tablaEstadoVenta = new javax.swing.JTable();
         btnEditarEstadoVenta = new javax.swing.JButton();
         btnDisableEstadoVenta = new javax.swing.JButton();
+        PanelEstadoDespacho = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -437,10 +439,289 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton7)
                     .addComponent(jButton8))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(138, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Clientes", PanelClientes);
+
+        LBanco.setText("Banco :");
+
+        btngGuardar.setText("GUARDAR");
+        btngGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btngGuardarActionPerformed(evt);
+            }
+        });
+
+        btnCancelar.setText("CANCELAR");
+
+        tablaBanco.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Nombre", "Accion"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane4.setViewportView(tablaBanco);
+
+        btnEditar.setText("EDITAR");
+
+        btnDesactivar.setText("DESACTIVAR");
+
+        javax.swing.GroupLayout PanelBancosLayout = new javax.swing.GroupLayout(PanelBancos);
+        PanelBancos.setLayout(PanelBancosLayout);
+        PanelBancosLayout.setHorizontalGroup(
+            PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelBancosLayout.createSequentialGroup()
+                .addGap(258, 258, 258)
+                .addGroup(PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCancelar)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBancosLayout.createSequentialGroup()
+                        .addComponent(LBanco)
+                        .addGap(13, 13, 13)))
+                .addGap(90, 90, 90)
+                .addGroup(PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btngGuardar)
+                    .addComponent(txtBanco, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(376, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBancosLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBancosLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnEditar)
+                .addGap(65, 65, 65)
+                .addComponent(btnDesactivar)
+                .addGap(167, 167, 167))
+        );
+        PanelBancosLayout.setVerticalGroup(
+            PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelBancosLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addGroup(PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LBanco)
+                    .addComponent(txtBanco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btngGuardar)
+                    .addComponent(btnCancelar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addGroup(PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnEditar)
+                    .addComponent(btnDesactivar))
+                .addContainerGap(123, Short.MAX_VALUE))
+        );
+
+        PanelPrincipal.addTab("Bancos", PanelBancos);
+
+        btnDisableRRSS.setText("DESACTIVAR");
+
+        btnEditarRRSS.setText("EDITAR");
+
+        tablaRRSS.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Nombre", "Activo"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane9.setViewportView(tablaRRSS);
+
+        btnCancelRRSS.setText("CANCELAR");
+
+        btnSavRRSS.setText("GUARDAR");
+        btnSavRRSS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSavRRSSActionPerformed(evt);
+            }
+        });
+
+        txtRRSS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtRRSSActionPerformed(evt);
+            }
+        });
+
+        LRRSS.setText("Red Social :");
+
+        javax.swing.GroupLayout PanelRRSSLayout = new javax.swing.GroupLayout(PanelRRSS);
+        PanelRRSS.setLayout(PanelRRSSLayout);
+        PanelRRSSLayout.setHorizontalGroup(
+            PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelRRSSLayout.createSequentialGroup()
+                .addGap(258, 258, 258)
+                .addGroup(PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCancelRRSS)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRRSSLayout.createSequentialGroup()
+                        .addComponent(LRRSS)
+                        .addGap(13, 13, 13)))
+                .addGap(90, 90, 90)
+                .addGroup(PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSavRRSS)
+                    .addComponent(txtRRSS, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(376, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRRSSLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRRSSLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnEditarRRSS)
+                .addGap(65, 65, 65)
+                .addComponent(btnDisableRRSS)
+                .addGap(167, 167, 167))
+        );
+        PanelRRSSLayout.setVerticalGroup(
+            PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelRRSSLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addGroup(PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LRRSS)
+                    .addComponent(txtRRSS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSavRRSS)
+                    .addComponent(btnCancelRRSS))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addGroup(PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnEditarRRSS)
+                    .addComponent(btnDisableRRSS))
+                .addContainerGap(123, Short.MAX_VALUE))
+        );
+
+        PanelPrincipal.addTab("RRSS", PanelRRSS);
+
+        LComuna.setText("Comuna :");
+
+        txtComuna.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtComunaActionPerformed(evt);
+            }
+        });
+
+        btnSavComuna.setText("GUARDAR");
+        btnSavComuna.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSavComunaActionPerformed(evt);
+            }
+        });
+
+        btnCancelComuna.setText("CANCELAR");
+
+        tablaComuna.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Nombre", "Activo"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane7.setViewportView(tablaComuna);
+
+        btnEditarComuna.setText("EDITAR");
+
+        btnDisableComuna.setText("DESACTIVAR");
+
+        javax.swing.GroupLayout PanelComunasLayout = new javax.swing.GroupLayout(PanelComunas);
+        PanelComunas.setLayout(PanelComunasLayout);
+        PanelComunasLayout.setHorizontalGroup(
+            PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelComunasLayout.createSequentialGroup()
+                .addGap(258, 258, 258)
+                .addGroup(PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCancelComuna)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelComunasLayout.createSequentialGroup()
+                        .addComponent(LComuna)
+                        .addGap(13, 13, 13)))
+                .addGap(90, 90, 90)
+                .addGroup(PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSavComuna)
+                    .addComponent(txtComuna, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(376, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelComunasLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelComunasLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnEditarComuna)
+                .addGap(65, 65, 65)
+                .addComponent(btnDisableComuna)
+                .addGap(167, 167, 167))
+        );
+        PanelComunasLayout.setVerticalGroup(
+            PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelComunasLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addGroup(PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LComuna)
+                    .addComponent(txtComuna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSavComuna)
+                    .addComponent(btnCancelComuna))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addGroup(PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnEditarComuna)
+                    .addComponent(btnDisableComuna))
+                .addContainerGap(123, Short.MAX_VALUE))
+        );
+
+        PanelPrincipal.addTab("Comunas", PanelComunas);
 
         jPanel14.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Proveedores"));
 
@@ -623,6 +904,124 @@ public class Maestro extends javax.swing.JFrame {
 
         PanelPrincipal.addTab("Proveedores", PanelProveedores);
 
+        PanelCatArt.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                PanelCatArtComponentShown(evt);
+            }
+        });
+
+        LCatArt.setText("Categoria Articulo:");
+
+        txtCatArt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCatArtActionPerformed(evt);
+            }
+        });
+
+        btnCatArtGuardar.setText("GUARDAR");
+        btnCatArtGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCatArtGuardarActionPerformed(evt);
+            }
+        });
+
+        btnCatArtCancelar.setText("CANCELAR");
+
+        tablaCatArt.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Categoría", "Activado"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.Boolean.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tablaCatArt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tablaCatArtMouseClicked(evt);
+            }
+        });
+        tablaCatArt.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                tablaCatArtComponentShown(evt);
+            }
+        });
+        jScrollPane5.setViewportView(tablaCatArt);
+
+        btnCatArtEditar.setText("EDITAR");
+        btnCatArtEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCatArtEditarActionPerformed(evt);
+            }
+        });
+
+        btnCatArtDesactivar.setText("DESACTIVAR");
+
+        javax.swing.GroupLayout PanelCatArtLayout = new javax.swing.GroupLayout(PanelCatArt);
+        PanelCatArt.setLayout(PanelCatArtLayout);
+        PanelCatArtLayout.setHorizontalGroup(
+            PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelCatArtLayout.createSequentialGroup()
+                .addGap(258, 258, 258)
+                .addGroup(PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCatArtLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnCatArtEditar)
+                        .addGap(65, 65, 65)
+                        .addComponent(btnCatArtDesactivar)
+                        .addGap(167, 167, 167))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCatArtLayout.createSequentialGroup()
+                        .addGap(0, 87, Short.MAX_VALUE)
+                        .addComponent(LCatArt)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtCatArt, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(183, 183, 183))
+                    .addGroup(PanelCatArtLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PanelCatArtLayout.createSequentialGroup()
+                                .addComponent(btnCatArtCancelar)
+                                .addGap(103, 103, 103)
+                                .addComponent(btnCatArtGuardar))
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        PanelCatArtLayout.setVerticalGroup(
+            PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelCatArtLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addGroup(PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LCatArt)
+                    .addComponent(txtCatArt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCatArtGuardar)
+                    .addComponent(btnCatArtCancelar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addGroup(PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCatArtEditar)
+                    .addComponent(btnCatArtDesactivar))
+                .addContainerGap(123, Short.MAX_VALUE))
+        );
+
+        PanelPrincipal.addTab("Categoría Articulos", null, PanelCatArt, "");
+
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Articulos"));
 
         txtNombreArt.setColumns(20);
@@ -667,7 +1066,7 @@ public class Maestro extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(52, 52, 52)
                                 .addComponent(comboArtCat, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 236, Short.MAX_VALUE)
                                 .addComponent(dateFechaArt, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(txtUnidadesArt, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -741,11 +1140,24 @@ public class Maestro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel18)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         PanelPrincipal.addTab("Articulos", PanelArticulos);
+
+        javax.swing.GroupLayout PanelCatPackLayout = new javax.swing.GroupLayout(PanelCatPack);
+        PanelCatPack.setLayout(PanelCatPackLayout);
+        PanelCatPackLayout.setHorizontalGroup(
+            PanelCatPackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 919, Short.MAX_VALUE)
+        );
+        PanelCatPackLayout.setVerticalGroup(
+            PanelCatPackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 426, Short.MAX_VALUE)
+        );
+
+        PanelPrincipal.addTab("Categoria Pack", PanelCatPack);
 
         jPanel15.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Packs"));
         jPanel15.setToolTipText("");
@@ -916,403 +1328,6 @@ public class Maestro extends javax.swing.JFrame {
 
         PanelPrincipal.addTab("Packs", PanelPacks);
 
-        btnDisableRRSS.setText("DESACTIVAR");
-
-        btnEditarRRSS.setText("EDITAR");
-
-        tablaRRSS.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID", "Nombre", "Activo"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane9.setViewportView(tablaRRSS);
-
-        btnCancelRRSS.setText("CANCELAR");
-
-        btnSavRRSS.setText("GUARDAR");
-        btnSavRRSS.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSavRRSSActionPerformed(evt);
-            }
-        });
-
-        txtRRSS.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtRRSSActionPerformed(evt);
-            }
-        });
-
-        LRRSS.setText("Red Social :");
-
-        javax.swing.GroupLayout PanelRRSSLayout = new javax.swing.GroupLayout(PanelRRSS);
-        PanelRRSS.setLayout(PanelRRSSLayout);
-        PanelRRSSLayout.setHorizontalGroup(
-            PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelRRSSLayout.createSequentialGroup()
-                .addGap(258, 258, 258)
-                .addGroup(PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCancelRRSS)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRRSSLayout.createSequentialGroup()
-                        .addComponent(LRRSS)
-                        .addGap(13, 13, 13)))
-                .addGap(90, 90, 90)
-                .addGroup(PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnSavRRSS)
-                    .addComponent(txtRRSS, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(205, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRRSSLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRRSSLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnEditarRRSS)
-                .addGap(65, 65, 65)
-                .addComponent(btnDisableRRSS)
-                .addGap(167, 167, 167))
-        );
-        PanelRRSSLayout.setVerticalGroup(
-            PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelRRSSLayout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addGroup(PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LRRSS)
-                    .addComponent(txtRRSS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSavRRSS)
-                    .addComponent(btnCancelRRSS))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addGroup(PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnEditarRRSS)
-                    .addComponent(btnDisableRRSS))
-                .addContainerGap(12, Short.MAX_VALUE))
-        );
-
-        PanelPrincipal.addTab("RRSS", PanelRRSS);
-
-        LComuna.setText("Comuna :");
-
-        txtComuna.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtComunaActionPerformed(evt);
-            }
-        });
-
-        btnSavComuna.setText("GUARDAR");
-        btnSavComuna.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSavComunaActionPerformed(evt);
-            }
-        });
-
-        btnCancelComuna.setText("CANCELAR");
-
-        tablaComuna.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID", "Nombre", "Activo"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane7.setViewportView(tablaComuna);
-
-        btnEditarComuna.setText("EDITAR");
-
-        btnDisableComuna.setText("DESACTIVAR");
-
-        javax.swing.GroupLayout PanelComunasLayout = new javax.swing.GroupLayout(PanelComunas);
-        PanelComunas.setLayout(PanelComunasLayout);
-        PanelComunasLayout.setHorizontalGroup(
-            PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelComunasLayout.createSequentialGroup()
-                .addGap(258, 258, 258)
-                .addGroup(PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCancelComuna)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelComunasLayout.createSequentialGroup()
-                        .addComponent(LComuna)
-                        .addGap(13, 13, 13)))
-                .addGap(90, 90, 90)
-                .addGroup(PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnSavComuna)
-                    .addComponent(txtComuna, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(376, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelComunasLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelComunasLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnEditarComuna)
-                .addGap(65, 65, 65)
-                .addComponent(btnDisableComuna)
-                .addGap(167, 167, 167))
-        );
-        PanelComunasLayout.setVerticalGroup(
-            PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelComunasLayout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addGroup(PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LComuna)
-                    .addComponent(txtComuna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSavComuna)
-                    .addComponent(btnCancelComuna))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addGroup(PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnEditarComuna)
-                    .addComponent(btnDisableComuna))
-                .addContainerGap(12, Short.MAX_VALUE))
-        );
-
-        PanelPrincipal.addTab("Comunas", PanelComunas);
-
-        LBanco.setText("Banco :");
-
-        btngGuardar.setText("GUARDAR");
-        btngGuardar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btngGuardarActionPerformed(evt);
-            }
-        });
-
-        btnCancelar.setText("CANCELAR");
-
-        tablaBanco.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID", "Nombre", "Accion"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.Object.class, java.lang.Boolean.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane4.setViewportView(tablaBanco);
-
-        btnEditar.setText("EDITAR");
-
-        btnDesactivar.setText("DESACTIVAR");
-
-        javax.swing.GroupLayout PanelBancosLayout = new javax.swing.GroupLayout(PanelBancos);
-        PanelBancos.setLayout(PanelBancosLayout);
-        PanelBancosLayout.setHorizontalGroup(
-            PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelBancosLayout.createSequentialGroup()
-                .addGap(258, 258, 258)
-                .addGroup(PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCancelar)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBancosLayout.createSequentialGroup()
-                        .addComponent(LBanco)
-                        .addGap(13, 13, 13)))
-                .addGap(90, 90, 90)
-                .addGroup(PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btngGuardar)
-                    .addComponent(txtBanco, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(376, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBancosLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBancosLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnEditar)
-                .addGap(65, 65, 65)
-                .addComponent(btnDesactivar)
-                .addGap(167, 167, 167))
-        );
-        PanelBancosLayout.setVerticalGroup(
-            PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelBancosLayout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addGroup(PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LBanco)
-                    .addComponent(txtBanco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btngGuardar)
-                    .addComponent(btnCancelar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addGroup(PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnEditar)
-                    .addComponent(btnDesactivar))
-                .addContainerGap(12, Short.MAX_VALUE))
-        );
-
-        PanelPrincipal.addTab("Bancos", PanelBancos);
-
-        PanelCatArt.addComponentListener(new java.awt.event.ComponentAdapter() {
-            public void componentShown(java.awt.event.ComponentEvent evt) {
-                PanelCatArtComponentShown(evt);
-            }
-        });
-
-        LCatArt.setText("Categoria Articulo:");
-
-        txtCatArt.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCatArtActionPerformed(evt);
-            }
-        });
-
-        btnCatArtGuardar.setText("GUARDAR");
-        btnCatArtGuardar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCatArtGuardarActionPerformed(evt);
-            }
-        });
-
-        btnCatArtCancelar.setText("CANCELAR");
-
-        tablaCatArt.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID", "Categoría", "Activado"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.Boolean.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        tablaCatArt.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tablaCatArtMouseClicked(evt);
-            }
-        });
-        tablaCatArt.addComponentListener(new java.awt.event.ComponentAdapter() {
-            public void componentShown(java.awt.event.ComponentEvent evt) {
-                tablaCatArtComponentShown(evt);
-            }
-        });
-        jScrollPane5.setViewportView(tablaCatArt);
-
-        btnCatArtEditar.setText("EDITAR");
-        btnCatArtEditar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCatArtEditarActionPerformed(evt);
-            }
-        });
-
-        btnCatArtDesactivar.setText("DESACTIVAR");
-
-        javax.swing.GroupLayout PanelCatArtLayout = new javax.swing.GroupLayout(PanelCatArt);
-        PanelCatArt.setLayout(PanelCatArtLayout);
-        PanelCatArtLayout.setHorizontalGroup(
-            PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelCatArtLayout.createSequentialGroup()
-                .addGap(258, 258, 258)
-                .addGroup(PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCatArtLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnCatArtEditar)
-                        .addGap(65, 65, 65)
-                        .addComponent(btnCatArtDesactivar)
-                        .addGap(167, 167, 167))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelCatArtLayout.createSequentialGroup()
-                        .addGap(0, 87, Short.MAX_VALUE)
-                        .addComponent(LCatArt)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtCatArt, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(183, 183, 183))
-                    .addGroup(PanelCatArtLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PanelCatArtLayout.createSequentialGroup()
-                                .addComponent(btnCatArtCancelar)
-                                .addGap(103, 103, 103)
-                                .addComponent(btnCatArtGuardar))
-                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
-        PanelCatArtLayout.setVerticalGroup(
-            PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelCatArtLayout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addGroup(PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LCatArt)
-                    .addComponent(txtCatArt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCatArtGuardar)
-                    .addComponent(btnCatArtCancelar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addGroup(PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCatArtEditar)
-                    .addComponent(btnCatArtDesactivar))
-                .addContainerGap(12, Short.MAX_VALUE))
-        );
-
-        PanelPrincipal.addTab("Categoría Articulos", null, PanelCatArt, "");
-
         txtPass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPassActionPerformed(evt);
@@ -1413,7 +1428,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEditarUsuario)
                     .addComponent(btnDisableUsuario))
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Usuarios", PanelUsuarios);
@@ -1499,7 +1514,7 @@ public class Maestro extends javax.swing.JFrame {
                         .addComponent(btnDisableEstadoVenta)
                         .addGap(167, 167, 167))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelEstadoVentaLayout.createSequentialGroup()
-                        .addGap(0, 87, Short.MAX_VALUE)
+                        .addGap(0, 112, Short.MAX_VALUE)
                         .addComponent(LEstadoVenta)
                         .addGap(18, 18, 18)
                         .addComponent(txtEstadoVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1531,10 +1546,23 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelEstadoVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEditarEstadoVenta)
                     .addComponent(btnDisableEstadoVenta))
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Estados Venta", null, PanelEstadoVenta, "");
+
+        javax.swing.GroupLayout PanelEstadoDespachoLayout = new javax.swing.GroupLayout(PanelEstadoDespacho);
+        PanelEstadoDespacho.setLayout(PanelEstadoDespachoLayout);
+        PanelEstadoDespachoLayout.setHorizontalGroup(
+            PanelEstadoDespachoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 919, Short.MAX_VALUE)
+        );
+        PanelEstadoDespachoLayout.setVerticalGroup(
+            PanelEstadoDespachoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 426, Short.MAX_VALUE)
+        );
+
+        PanelPrincipal.addTab("Estados Despacho", PanelEstadoDespacho);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1779,8 +1807,10 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JPanel PanelArticulos;
     private javax.swing.JPanel PanelBancos;
     private javax.swing.JPanel PanelCatArt;
+    private javax.swing.JPanel PanelCatPack;
     private javax.swing.JPanel PanelClientes;
     private javax.swing.JPanel PanelComunas;
+    private javax.swing.JPanel PanelEstadoDespacho;
     private javax.swing.JPanel PanelEstadoVenta;
     private javax.swing.JPanel PanelPacks;
     private javax.swing.JTabbedPane PanelPrincipal;
