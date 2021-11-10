@@ -14,7 +14,7 @@ import vista.Ventas;
  *
  * @author luvar
  */
-public class ControladorMaestro {
+public class MenuController {
     
     public void openVentas(JFrame vista){
         Ventas ventas = new Ventas();
