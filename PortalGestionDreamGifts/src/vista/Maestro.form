@@ -197,7 +197,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel13" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" pref="165" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" pref="261" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButton7" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -245,7 +245,7 @@
                               <Component id="txtNombreCliente" alignment="1" max="32767" attributes="0"/>
                               <Component id="txtRutCliente" alignment="0" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="139" max="32767" attributes="0"/>
+                          <EmptySpace pref="167" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
@@ -458,7 +458,7 @@
                           <Component id="btngGuardar" min="-2" max="-2" attributes="0"/>
                           <Component id="txtBanco" min="-2" pref="105" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="254" max="32767" attributes="0"/>
+                      <EmptySpace pref="282" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
@@ -494,7 +494,7 @@
                           <Component id="btnEditar" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnDesactivar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="27" max="32767" attributes="0"/>
+                      <EmptySpace pref="123" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -600,7 +600,7 @@
                           <Component id="btnSavRRSS" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="txtRRSS" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="254" max="32767" attributes="0"/>
+                      <EmptySpace pref="282" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
@@ -636,7 +636,7 @@
                           <Component id="btnEditarRRSS" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnDisableRRSS" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="27" max="32767" attributes="0"/>
+                      <EmptySpace pref="123" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -745,7 +745,7 @@
                           <Component id="btnSavComuna" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="txtComuna" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="254" max="32767" attributes="0"/>
+                      <EmptySpace pref="282" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
@@ -781,7 +781,7 @@
                           <Component id="btnEditarComuna" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnDisableComuna" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="27" max="32767" attributes="0"/>
+                      <EmptySpace pref="123" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -876,12 +876,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="797" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="825" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="330" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="426" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -1244,7 +1244,7 @@
                           <Component id="btnCatArtEditar" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnCatArtDesactivar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="27" max="32767" attributes="0"/>
+                      <EmptySpace pref="123" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1369,7 +1369,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jScrollPane6" pref="164" max="32767" attributes="0"/>
+                      <Component id="jScrollPane6" pref="260" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1412,7 +1412,7 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
                                           <Component id="comboArtCat" min="-2" pref="146" max="-2" attributes="0"/>
-                                          <EmptySpace pref="114" max="32767" attributes="0"/>
+                                          <EmptySpace pref="142" max="32767" attributes="0"/>
                                           <Component id="dateFechaArt" min="-2" pref="140" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -1643,7 +1643,7 @@
                           <Component id="btnEditarEstadoVenta" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnDisableEstadoVenta" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="27" max="32767" attributes="0"/>
+                      <EmptySpace pref="123" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1745,12 +1745,12 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="797" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="825" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="330" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="426" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -1799,7 +1799,7 @@
                           <Component id="txtPass" alignment="0" pref="105" max="32767" attributes="0"/>
                           <Component id="txtUsuario" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="247" max="32767" attributes="0"/>
+                      <EmptySpace pref="275" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1828,7 +1828,7 @@
                           <Component id="btnEditarUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnDisableUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="27" max="32767" attributes="0"/>
+                      <EmptySpace pref="123" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1959,7 +1959,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel16" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane11" pref="165" max="32767" attributes="0"/>
+                      <Component id="jScrollPane11" pref="261" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButton13" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2007,7 +2007,7 @@
                               <Component id="txtRazonProv" alignment="1" max="32767" attributes="0"/>
                               <Component id="txtRutProv" alignment="0" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="153" max="32767" attributes="0"/>
+                          <EmptySpace pref="181" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel25" alignment="1" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel26" alignment="1" min="-2" max="-2" attributes="0"/>

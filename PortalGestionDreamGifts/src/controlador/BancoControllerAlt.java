@@ -24,7 +24,7 @@ public class BancoControllerAlt {
     
     public void showAll(Maestro master){
         
-        JTable tabla = master.getTablaComuna();
+        JTable tabla = master.getTablaBanco();
         ArrayList<ArrayList<Object>> lista = manager.bancoSelectAll();
         DefaultTableModel model =  (DefaultTableModel)tabla.getModel();
         

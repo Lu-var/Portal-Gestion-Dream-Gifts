@@ -1577,8 +1577,8 @@ public class Maestro extends javax.swing.JFrame {
 
     private void btnVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasActionPerformed
         // TODO add your handling code here:
-        ControladorMaestro maestroCtrl = new ControladorMaestro();
-        maestroCtrl.openVentas(this);
+        MenuController menuCtrl = new MenuController();
+        menuCtrl.openVentas(this);
     }//GEN-LAST:event_btnVentasActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -1603,14 +1603,14 @@ public class Maestro extends javax.swing.JFrame {
 
     private void btnComprasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprasActionPerformed
         // TODO add your handling code here:
-        ControladorMaestro maestroCtrl = new ControladorMaestro();
-        maestroCtrl.openCompras(this);
+        MenuController menuCtrl = new MenuController();
+        menuCtrl.openCompras(this);
     }//GEN-LAST:event_btnComprasActionPerformed
 
     private void btnInformesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInformesActionPerformed
-        // TODO add your handling code here:
-        ControladorMaestro maestroCtrl = new ControladorMaestro();
-        maestroCtrl.openInformes(this);
+        
+        MenuController menuCtrl = new MenuController();
+        menuCtrl.openInformes(this);
     }//GEN-LAST:event_btnInformesActionPerformed
 
     private void btngGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btngGuardarActionPerformed

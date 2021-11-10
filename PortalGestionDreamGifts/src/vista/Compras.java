@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package vista;
-import controlador.ControladorMaestro;
+import controlador.MenuController;
 
 /**
  *
@@ -169,19 +169,19 @@ public class Compras extends javax.swing.JFrame {
 
     private void btnVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasActionPerformed
         // TODO add your handling code here:
-        ControladorMaestro maestro = new ControladorMaestro();
+        MenuController maestro = new MenuController();
         maestro.openVentas(this);
     }//GEN-LAST:event_btnVentasActionPerformed
 
     private void btnMaestroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMaestroActionPerformed
         // TODO add your handling code here:
-        ControladorMaestro maestro = new ControladorMaestro();
+        MenuController maestro = new MenuController();
         maestro.openMaestro(this);
     }//GEN-LAST:event_btnMaestroActionPerformed
 
     private void btnInformesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInformesActionPerformed
         // TODO add your handling code here:
-        ControladorMaestro maestro = new ControladorMaestro();
+        MenuController maestro = new MenuController();
         maestro.openInformes(this);
     }//GEN-LAST:event_btnInformesActionPerformed
 

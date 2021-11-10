@@ -40,13 +40,14 @@ public class ClienteManager {
         PreparedStatement comando = null;
         ResultSet resultado = null;
         ArrayList<ArrayList<Object>> matriz = new ArrayList<>();
-        ArrayList<Object> lista = new ArrayList<>();
         
         try{
             comando = conexion.prepareStatement("SELECT * FROM Cliente"); 
             resultado = comando.executeQuery();
             
             while(resultado.next()){
+                ArrayList<Object> lista = new ArrayList<>();
+                
                 String RUT = resultado.getString("RUT");
                 String nombre = resultado.getString("Nombre");
                 String fecha = resultado.getString("Fecha Nacimiento");
@@ -58,7 +59,6 @@ public class ClienteManager {
                 lista.add(fecha);
                 lista.add(celular);
                 lista.add(email);
-                
                 matriz.add(lista);
                 }
             

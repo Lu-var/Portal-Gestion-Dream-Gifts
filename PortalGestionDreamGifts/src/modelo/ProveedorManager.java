@@ -55,11 +55,10 @@ public class ProveedorManager {
         try{
             comando = conexion.prepareStatement("SELECT * FROM Proveedor");
             resultadoSet = comando.executeQuery();
-
-            
-            ArrayList<Object> fila = new ArrayList<>();
             
             while(resultadoSet.next()){
+                
+                ArrayList<Object> fila = new ArrayList<>();
                 
                 rut = resultadoSet.getString("RUT");
                 razon = resultadoSet.getString("RazonSocial");
@@ -94,14 +93,6 @@ public class ProveedorManager {
         }
         
         return matriz;
-    }
-    
-    public static void main(String[] args) {
-        ProveedorManager manager = new ProveedorManager();
-        ArrayList<ArrayList<Object>> lista = manager.proveedorSelectAll();
-        for (int i = 0; i < lista.size(); i++) {
-            System.out.println(lista.get(i));
-        }
     }
     
 }
