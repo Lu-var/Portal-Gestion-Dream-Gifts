@@ -12,7 +12,7 @@ import java.sql.*;
 public class Conexion{
     
     private static Connection conexion=null; 
-    private static String servidor = "190.22.34.2:65535";
+    private static String servidor = "localhost:3306";
     private static String baseDatos = "DreamGifts_db";
     private static String usuario = "root";
     private static String contrasena = "Hello.World@5";
