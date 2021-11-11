@@ -439,7 +439,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 261, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PanelClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton7)
@@ -539,7 +539,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEditar)
                     .addComponent(btnDesactivar))
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Bancos", PanelBancos);
@@ -547,6 +547,11 @@ public class Maestro extends javax.swing.JFrame {
         btnDisableRRSS.setText("DESACTIVAR");
 
         btnEditarRRSS.setText("EDITAR");
+        btnEditarRRSS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarRRSSActionPerformed(evt);
+            }
+        });
 
         tablaRRSS.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -634,7 +639,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEditarRRSS)
                     .addComponent(btnDisableRRSS))
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("RRSS", PanelRRSS);
@@ -682,6 +687,11 @@ public class Maestro extends javax.swing.JFrame {
         jScrollPane7.setViewportView(tablaComuna);
 
         btnEditarComuna.setText("EDITAR");
+        btnEditarComuna.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarComunaActionPerformed(evt);
+            }
+        });
 
         btnDisableComuna.setText("DESACTIVAR");
 
@@ -729,7 +739,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEditarComuna)
                     .addComponent(btnDisableComuna))
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Comunas", PanelComunas);
@@ -742,7 +752,7 @@ public class Maestro extends javax.swing.JFrame {
         );
         PanelCatPackLayout.setVerticalGroup(
             PanelCatPackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 426, Short.MAX_VALUE)
+            .addGap(0, 383, Short.MAX_VALUE)
         );
 
         PanelPrincipal.addTab("Categoria Pack", PanelCatPack);
@@ -807,7 +817,7 @@ public class Maestro extends javax.swing.JFrame {
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(73, Short.MAX_VALUE)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addComponent(jLabel20)
@@ -821,7 +831,7 @@ public class Maestro extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPrecioPack, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(scrollSelected, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(73, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1029,7 +1039,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCatArtEditar)
                     .addComponent(btnCatArtDesactivar))
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Categoría Articulos", null, PanelCatArt, "");
@@ -1169,7 +1179,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel18)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 217, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1288,7 +1298,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelEstadoVentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEditarEstadoVenta)
                     .addComponent(btnDisableEstadoVenta))
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Estados Venta", null, PanelEstadoVenta, "");
@@ -1400,7 +1410,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelEstadoDespachoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEditarEstadoDespacho)
                     .addComponent(btnDisableEstadoDespacho))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Estados Despacho", PanelEstadoDespacho);
@@ -1505,7 +1515,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEditarUsuario)
                     .addComponent(btnDisableUsuario))
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Usuarios", PanelUsuarios);
@@ -1665,7 +1675,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 261, Short.MAX_VALUE)
+                .addComponent(jScrollPane11, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PanelProveedoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton13)
@@ -1697,7 +1707,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(PanelPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 397, Short.MAX_VALUE)
+                .addComponent(PanelPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 450, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1909,6 +1919,14 @@ public class Maestro extends javax.swing.JFrame {
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
         bancoCtrl.edit(this);
     }//GEN-LAST:event_btnEditarActionPerformed
+
+    private void btnEditarRRSSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarRRSSActionPerformed
+        
+    }//GEN-LAST:event_btnEditarRRSSActionPerformed
+
+    private void btnEditarComunaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarComunaActionPerformed
+        comunaCtrl.edit(this);
+    }//GEN-LAST:event_btnEditarComunaActionPerformed
 
 //        BancoManager banco = new BancoManager(nombre);
 //        banco.agregar(nombre);

@@ -53,7 +53,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" pref="35" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="PanelPrincipal" pref="397" max="32767" attributes="0"/>
+              <Component id="PanelPrincipal" pref="450" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -198,7 +198,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel13" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" pref="261" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" pref="218" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButton7" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -495,7 +495,7 @@
                           <Component id="btnEditar" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnDesactivar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="123" max="32767" attributes="0"/>
+                      <EmptySpace pref="80" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -640,7 +640,7 @@
                           <Component id="btnEditarRRSS" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnDisableRRSS" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="123" max="32767" attributes="0"/>
+                      <EmptySpace pref="80" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -655,6 +655,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="EDITAR"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEditarRRSSActionPerformed"/>
+              </Events>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane9">
               <AuxValues>
@@ -785,7 +788,7 @@
                           <Component id="btnEditarComuna" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnDisableComuna" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="123" max="32767" attributes="0"/>
+                      <EmptySpace pref="80" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -860,6 +863,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="EDITAR"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEditarComunaActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btnDisableComuna">
               <Properties>
@@ -885,7 +891,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="426" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="383" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -969,7 +975,7 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="73" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Group type="102" attributes="0">
                                   <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
@@ -987,7 +993,7 @@
                               </Group>
                               <Component id="scrollSelected" pref="0" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="73" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1248,7 +1254,7 @@
                           <Component id="btnCatArtEditar" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnCatArtDesactivar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="123" max="32767" attributes="0"/>
+                      <EmptySpace pref="80" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1373,7 +1379,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jScrollPane6" pref="260" max="32767" attributes="0"/>
+                      <Component id="jScrollPane6" pref="217" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1659,7 +1665,7 @@
                           <Component id="btnEditarEstadoVenta" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnDisableEstadoVenta" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="123" max="32767" attributes="0"/>
+                      <EmptySpace pref="80" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1814,7 +1820,7 @@
                           <Component id="btnEditarEstadoDespacho" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnDisableEstadoDespacho" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="27" max="32767" attributes="0"/>
+                      <EmptySpace pref="80" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1977,7 +1983,7 @@
                           <Component id="btnEditarUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btnDisableUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="123" max="32767" attributes="0"/>
+                      <EmptySpace pref="80" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2108,7 +2114,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel16" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane11" pref="261" max="32767" attributes="0"/>
+                      <Component id="jScrollPane11" pref="218" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButton13" alignment="3" min="-2" max="-2" attributes="0"/>
