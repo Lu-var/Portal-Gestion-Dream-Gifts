@@ -10,15 +10,15 @@ import java.util.Vector;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-import modelo.BancoManagerAlt;
+import modelo.BancoManager;
 import vista.Maestro;
 
 /**
  *
  * @author luvar
  */
-public class BancoControllerAlt {
-    BancoManagerAlt manager = new BancoManagerAlt();
+public class BancoController {
+    BancoManager manager = new BancoManager();
     
     public void agregarBanco(Maestro vista){
         String nombre = vista.getTxtBanco().getText();

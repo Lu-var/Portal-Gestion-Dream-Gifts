@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
  *
  * @author luvar
  */
-public class BancoManagerAlt {
+public class BancoManager {
     ConexionRequest intentoConexion = new ConexionRequest();
     Connection conexion = intentoConexion.conectar();
 

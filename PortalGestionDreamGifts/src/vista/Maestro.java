@@ -20,7 +20,7 @@ public class Maestro extends javax.swing.JFrame {
     UsuarioController usuarioCtrl = new UsuarioController();
     EstadoVentasController estVentasCtrl = new EstadoVentasController();
     EstadoDespachoController estDespCtrl = new EstadoDespachoController();
-    BancoControllerAlt bancoCtrl = new BancoControllerAlt();
+    BancoController bancoCtrl = new BancoController();
     RedSocialController rrssCtrl = new RedSocialController();
     ClienteController clienteCtrl = new ClienteController();
     ProveedorController provCtrl = new ProveedorController();
