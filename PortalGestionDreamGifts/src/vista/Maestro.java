@@ -22,6 +22,7 @@ public class Maestro extends javax.swing.JFrame {
     RedSocialController rrssCtrl = new RedSocialController();
     ClienteController clienteCtrl = new ClienteController();
     ProveedorController provCtrl = new ProveedorController();
+    ArticuloController articuloCtrl = new ArticuloController();
 
     int i = 1;
     
@@ -43,7 +44,7 @@ public class Maestro extends javax.swing.JFrame {
         rrssCtrl.clearAll(this);
         clienteCtrl.clearAll(this);
         provCtrl.clearAll(this);
-       System.out.println("cleared everything");
+        articuloCtrl.clearAll(this);
 
     }
     
@@ -56,7 +57,8 @@ public class Maestro extends javax.swing.JFrame {
         rrssCtrl.showAll(this);
         clienteCtrl.showAll(this);
         provCtrl.showAll(this);
-        System.out.println("showed everything");
+        articuloCtrl.showAll(this);
+        articuloCtrl.showAllCat(this);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -1098,9 +1100,16 @@ public class Maestro extends javax.swing.JFrame {
                 "Código", "Articulo", "Categoria", "Unidades", "Fecha Vencimiento", "Estado"
             }
         ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Boolean.class
+            };
             boolean[] canEdit = new boolean [] {
                 false, false, false, false, false, false
             };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
@@ -1685,10 +1694,14 @@ public class Maestro extends javax.swing.JFrame {
         usuarioCtrl.agregarUsuario(this);
         usuarioCtrl.clearAll(this);
         usuarioCtrl.showAll(this);
+        
     }//GEN-LAST:event_btnSavUsuarioActionPerformed
 
     private void btnSaveArtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveArtActionPerformed
-        // TODO add your handling code here:
+        articuloCtrl.agregarArticulo(this);
+        articuloCtrl.clearAll(this);
+        articuloCtrl.showAll(this);
+        articuloCtrl.showAllCat(this);
     }//GEN-LAST:event_btnSaveArtActionPerformed
 
     private void txtEstadoVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEstadoVentaActionPerformed
@@ -2124,6 +2137,14 @@ public class Maestro extends javax.swing.JFrame {
 
     public void setTablaArticulos(JTable tablaArticulos) {
         this.tablaArticulos = tablaArticulos;
+    }
+
+    public JDateChooser getDateFechaArt() {
+        return dateFechaArt;
+    }
+
+    public void setDateFechaArt(JDateChooser dateFechaArt) {
+        this.dateFechaArt = dateFechaArt;
     }
 
     public JTextArea getTxtNombreArt() {
