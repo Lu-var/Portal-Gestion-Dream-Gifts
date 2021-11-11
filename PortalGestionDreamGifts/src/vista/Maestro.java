@@ -26,6 +26,14 @@ public class Maestro extends javax.swing.JFrame {
 
     int i = 1;
     
+    public Maestro() {
+        initComponents();
+        
+        this.setSize(910,580);
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
+    }
+    
     public void clearAll(){
         
         usuarioCtrl.clearAll(this);
@@ -52,15 +60,6 @@ public class Maestro extends javax.swing.JFrame {
         articuloCtrl.showAll(this);
         articuloCtrl.showAllCat(this);
     }
-
-    public Maestro() {
-        initComponents();
-       
-        this.setLocationRelativeTo(null);
-        this.setSize(910,580 );
-        
-    }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -205,6 +204,7 @@ public class Maestro extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setResizable(false);
         setSize(new java.awt.Dimension(1360, 768));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -1582,6 +1582,7 @@ public class Maestro extends javax.swing.JFrame {
         PanelPrincipal.getAccessibleContext().setAccessibleDescription("");
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasActionPerformed
@@ -1642,6 +1643,7 @@ public class Maestro extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCatArtActionPerformed
 
     private void PanelPrincipalStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_PanelPrincipalStateChanged
+        
         System.out.println("Changed Tabs: "+i);
         i++;
         clearAll();
