@@ -1921,7 +1921,7 @@ public class Maestro extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void btnEditarRRSSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarRRSSActionPerformed
-        
+        rrssCtrl.edit(this);
     }//GEN-LAST:event_btnEditarRRSSActionPerformed
 
     private void btnEditarComunaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarComunaActionPerformed

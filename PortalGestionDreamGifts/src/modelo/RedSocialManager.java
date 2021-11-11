@@ -73,4 +73,27 @@ public class RedSocialManager {
         
         return matriz;
     }
+    
+    public void update(int idTarget, int id, String nombre, boolean flag){
+        
+        int status;
+        if(flag){status = 1;} else{status = 0;}
+        
+        try{
+            comando = conexion.prepareStatement("UPDATE RRSS SET idRRSS = (?), Nombre = (?), Enabled = (?) WHERE idRRSS = (?)");
+            
+            comando.setInt(1, id);
+            comando.setString(2, nombre);
+            comando.setInt(3,status);
+            comando.setInt(4, idTarget);
+            
+            comando.execute();
+            
+        } catch(Exception ex){
+            Log.seguir(ex.getMessage());
+        }
+        
+        
+    }
+    
 }
