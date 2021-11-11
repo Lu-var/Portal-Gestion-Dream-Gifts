@@ -29,6 +29,7 @@ public class Log {
             Date fecha = new Date();
             msg = formato.format(fecha) +": " +msg;
             out.println(msg);
+            System.out.println(msg);
         }catch (IOException e) {
             System.out.println(e);
         }
