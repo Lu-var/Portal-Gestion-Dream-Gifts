@@ -19,6 +19,7 @@ public class Maestro extends javax.swing.JFrame {
     ComunaController comunaCtrl = new ComunaController();
     UsuarioController usuarioCtrl = new UsuarioController();
     EstadoVentasController estVentasCtrl = new EstadoVentasController();
+    EstadoDespachoController estDespCtrl = new EstadoDespachoController();
     BancoControllerAlt bancoCtrl = new BancoControllerAlt();
     RedSocialController rrssCtrl = new RedSocialController();
     ClienteController clienteCtrl = new ClienteController();
@@ -39,6 +40,7 @@ public class Maestro extends javax.swing.JFrame {
         comunaCtrl.clearAll(this);
         catArtCtrl.clearAll(this);
         estVentasCtrl.clearAll(this);
+        estDespCtrl.clearAll(this);
         bancoCtrl.clearAll(this);
         rrssCtrl.clearAll(this);
         clienteCtrl.clearAll(this);
@@ -52,6 +54,7 @@ public class Maestro extends javax.swing.JFrame {
         comunaCtrl.showAll(this);
         catArtCtrl.showAll(this);
         estVentasCtrl.showAll(this);
+        estDespCtrl.showAll(this);
         bancoCtrl.showAll(this);
         rrssCtrl.showAll(this);
         clienteCtrl.showAll(this);
@@ -170,6 +173,14 @@ public class Maestro extends javax.swing.JFrame {
         btnEditarEstadoVenta = new javax.swing.JButton();
         btnDisableEstadoVenta = new javax.swing.JButton();
         PanelEstadoDespacho = new javax.swing.JPanel();
+        LEstadoDespacho = new javax.swing.JLabel();
+        txtEstadoDespacho = new javax.swing.JTextField();
+        btnGuardarEstadoDespacho = new javax.swing.JButton();
+        btnCancelarEstadoDespacho = new javax.swing.JButton();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        tablaEstadoDespacho = new javax.swing.JTable();
+        btnEditarEstadoDespacho = new javax.swing.JButton();
+        btnDisableEstadoDespacho = new javax.swing.JButton();
         PanelUsuarios = new javax.swing.JPanel();
         txtPass = new javax.swing.JTextField();
         btnSavUsuario = new javax.swing.JButton();
@@ -1276,15 +1287,114 @@ public class Maestro extends javax.swing.JFrame {
 
         PanelPrincipal.addTab("Estados Venta", null, PanelEstadoVenta, "");
 
+        LEstadoDespacho.setText("Estado Despacho :");
+
+        txtEstadoDespacho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEstadoDespachoActionPerformed(evt);
+            }
+        });
+
+        btnGuardarEstadoDespacho.setText("GUARDAR");
+        btnGuardarEstadoDespacho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarEstadoDespachoActionPerformed(evt);
+            }
+        });
+
+        btnCancelarEstadoDespacho.setText("CANCELAR");
+
+        tablaEstadoDespacho.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Categoría", "Activado"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.Boolean.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tablaEstadoDespacho.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tablaEstadoDespachoMouseClicked(evt);
+            }
+        });
+        tablaEstadoDespacho.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                tablaEstadoDespachoComponentShown(evt);
+            }
+        });
+        jScrollPane12.setViewportView(tablaEstadoDespacho);
+
+        btnEditarEstadoDespacho.setText("EDITAR");
+        btnEditarEstadoDespacho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarEstadoDespachoActionPerformed(evt);
+            }
+        });
+
+        btnDisableEstadoDespacho.setText("DESACTIVAR");
+
         javax.swing.GroupLayout PanelEstadoDespachoLayout = new javax.swing.GroupLayout(PanelEstadoDespacho);
         PanelEstadoDespacho.setLayout(PanelEstadoDespachoLayout);
         PanelEstadoDespachoLayout.setHorizontalGroup(
             PanelEstadoDespachoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 825, Short.MAX_VALUE)
+            .addGroup(PanelEstadoDespachoLayout.createSequentialGroup()
+                .addGap(258, 258, 258)
+                .addGroup(PanelEstadoDespachoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelEstadoDespachoLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnEditarEstadoDespacho)
+                        .addGap(65, 65, 65)
+                        .addComponent(btnDisableEstadoDespacho)
+                        .addGap(167, 167, 167))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelEstadoDespachoLayout.createSequentialGroup()
+                        .addGap(0, 112, Short.MAX_VALUE)
+                        .addComponent(LEstadoDespacho)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtEstadoDespacho, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(183, 183, 183))
+                    .addGroup(PanelEstadoDespachoLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(PanelEstadoDespachoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(PanelEstadoDespachoLayout.createSequentialGroup()
+                                .addComponent(btnCancelarEstadoDespacho)
+                                .addGap(103, 103, 103)
+                                .addComponent(btnGuardarEstadoDespacho))
+                            .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         PanelEstadoDespachoLayout.setVerticalGroup(
             PanelEstadoDespachoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 426, Short.MAX_VALUE)
+            .addGroup(PanelEstadoDespachoLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addGroup(PanelEstadoDespachoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(LEstadoDespacho)
+                    .addComponent(txtEstadoDespacho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(PanelEstadoDespachoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnGuardarEstadoDespacho)
+                    .addComponent(btnCancelarEstadoDespacho))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addGroup(PanelEstadoDespachoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnEditarEstadoDespacho)
+                    .addComponent(btnDisableEstadoDespacho))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Estados Despacho", PanelEstadoDespacho);
@@ -1772,6 +1882,28 @@ public class Maestro extends javax.swing.JFrame {
         articuloCtrl.showDate(this);
     }//GEN-LAST:event_checkArticuloActionPerformed
 
+    private void txtEstadoDespachoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEstadoDespachoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEstadoDespachoActionPerformed
+
+    private void btnGuardarEstadoDespachoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarEstadoDespachoActionPerformed
+        estDespCtrl.agregarEstado(this);
+        estDespCtrl.clearAll(this);
+        estDespCtrl.showAll(this);
+    }//GEN-LAST:event_btnGuardarEstadoDespachoActionPerformed
+
+    private void tablaEstadoDespachoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaEstadoDespachoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tablaEstadoDespachoMouseClicked
+
+    private void tablaEstadoDespachoComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_tablaEstadoDespachoComponentShown
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tablaEstadoDespachoComponentShown
+
+    private void btnEditarEstadoDespachoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarEstadoDespachoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEditarEstadoDespachoActionPerformed
+
 //        BancoManager banco = new BancoManager(nombre);
 //        banco.agregar(nombre);
 //        Log.seguir("boton");
@@ -1818,6 +1950,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JLabel LBanco;
     private javax.swing.JLabel LCatArt;
     private javax.swing.JLabel LComuna;
+    private javax.swing.JLabel LEstadoDespacho;
     private javax.swing.JLabel LEstadoVenta;
     private javax.swing.JLabel LRRSS;
     private javax.swing.JPanel PanelArticulos;
@@ -1837,6 +1970,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JButton btnCancelRRSS;
     private javax.swing.JButton btnCancelUsuario;
     private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnCancelarEstadoDespacho;
     private javax.swing.JButton btnCancelarEstadoVenta;
     private javax.swing.JButton btnCatArtCancelar;
     private javax.swing.JButton btnCatArtDesactivar;
@@ -1845,14 +1979,17 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JButton btnCompras;
     private javax.swing.JButton btnDesactivar;
     private javax.swing.JButton btnDisableComuna;
+    private javax.swing.JButton btnDisableEstadoDespacho;
     private javax.swing.JButton btnDisableEstadoVenta;
     private javax.swing.JButton btnDisableRRSS;
     private javax.swing.JButton btnDisableUsuario;
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnEditarComuna;
+    private javax.swing.JButton btnEditarEstadoDespacho;
     private javax.swing.JButton btnEditarEstadoVenta;
     private javax.swing.JButton btnEditarRRSS;
     private javax.swing.JButton btnEditarUsuario;
+    private javax.swing.JButton btnGuardarEstadoDespacho;
     private javax.swing.JButton btnGuardarEstadoVenta;
     private javax.swing.JButton btnInformes;
     private javax.swing.JButton btnMaestro;
@@ -1905,6 +2042,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
+    private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
@@ -1922,6 +2060,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JTable tablaCatArt;
     private javax.swing.JTable tablaClientes;
     private javax.swing.JTable tablaComuna;
+    private javax.swing.JTable tablaEstadoDespacho;
     private javax.swing.JTable tablaEstadoVenta;
     private javax.swing.JTable tablaProveedores;
     private javax.swing.JTable tablaRRSS;
@@ -1933,6 +2072,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JTextField txtComuna;
     private javax.swing.JTextField txtDireccionProv;
     private javax.swing.JTextField txtEmailProv;
+    private javax.swing.JTextField txtEstadoDespacho;
     private javax.swing.JTextField txtEstadoVenta;
     private javax.swing.JTextField txtFonoProv;
     private javax.swing.JTextField txtMailCliente;
@@ -2280,6 +2420,30 @@ public class Maestro extends javax.swing.JFrame {
 
     public void setTxtEmailProv(JTextField txtEmailProv) {
         this.txtEmailProv = txtEmailProv;
+    }
+
+    public JButton getBtnGuardarEstadoDespacho() {
+        return btnGuardarEstadoDespacho;
+    }
+
+    public void setBtnGuardarEstadoDespacho(JButton btnGuardarEstadoDespacho) {
+        this.btnGuardarEstadoDespacho = btnGuardarEstadoDespacho;
+    }
+
+    public JTable getTablaEstadoDespacho() {
+        return tablaEstadoDespacho;
+    }
+
+    public void setTablaEstadoDespacho(JTable tablaEstadoDespacho) {
+        this.tablaEstadoDespacho = tablaEstadoDespacho;
+    }
+
+    public JTextField getTxtEstadoDespacho() {
+        return txtEstadoDespacho;
+    }
+
+    public void setTxtEstadoDespacho(JTextField txtEstadoDespacho) {
+        this.txtEstadoDespacho = txtEstadoDespacho;
     }
     
     
