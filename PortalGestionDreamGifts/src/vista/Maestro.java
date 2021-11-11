@@ -7,6 +7,7 @@ package vista;
 import com.toedter.calendar.JDateChooser;
 import controlador.*;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
@@ -155,6 +156,7 @@ public class Maestro extends javax.swing.JFrame {
         jLabel22 = new javax.swing.JLabel();
         dateFechaArt = new com.toedter.calendar.JDateChooser();
         btnSaveArt = new javax.swing.JButton();
+        checkArticulo = new javax.swing.JCheckBox();
         jScrollPane6 = new javax.swing.JScrollPane();
         tablaArticulos = new javax.swing.JTable();
         jLabel18 = new javax.swing.JLabel();
@@ -1038,6 +1040,13 @@ public class Maestro extends javax.swing.JFrame {
             }
         });
 
+        checkArticulo.setText("No Expira");
+        checkArticulo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkArticuloActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -1054,13 +1063,15 @@ public class Maestro extends javax.swing.JFrame {
                         .addComponent(txtNombreArt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(79, 79, 79)
-                                .addComponent(jLabel22))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(52, 52, 52)
-                                .addComponent(comboArtCat, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 142, Short.MAX_VALUE)
-                                .addComponent(dateFechaArt, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(comboArtCat, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(79, 79, 79)
+                                .addComponent(jLabel22)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(checkArticulo)
+                            .addComponent(dateFechaArt, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(txtUnidadesArt, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1074,7 +1085,8 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtNombreArt, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel19)
-                    .addComponent(jLabel22))
+                    .addComponent(jLabel22)
+                    .addComponent(checkArticulo))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -1756,6 +1768,10 @@ public class Maestro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton14ActionPerformed
 
+    private void checkArticuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkArticuloActionPerformed
+        articuloCtrl.showDate(this);
+    }//GEN-LAST:event_checkArticuloActionPerformed
+
 //        BancoManager banco = new BancoManager(nombre);
 //        banco.agregar(nombre);
 //        Log.seguir("boton");
@@ -1848,6 +1864,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JButton btnSaveProv;
     private javax.swing.JButton btnVentas;
     private javax.swing.JButton btngGuardar;
+    private javax.swing.JCheckBox checkArticulo;
     private javax.swing.JComboBox<String> comboArtCat;
     private com.toedter.calendar.JDateChooser dateFechaArt;
     private com.toedter.calendar.JDateChooser dateNacCliente;
@@ -2142,6 +2159,16 @@ public class Maestro extends javax.swing.JFrame {
     public void setDateFechaArt(JDateChooser dateFechaArt) {
         this.dateFechaArt = dateFechaArt;
     }
+
+    public JCheckBox getCheckArticulo() {
+        return checkArticulo;
+    }
+
+    public void setCheckArticulo(JCheckBox checkArticulo) {
+        this.checkArticulo = checkArticulo;
+    }
+    
+    
 
     public JTextArea getTxtNombreArt() {
         return txtNombreArt;

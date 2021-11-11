@@ -23,12 +23,22 @@ public class ArticuloController {
     ArticuloManager manager = new ArticuloManager();
     CatArticuloManager catArtManager = new CatArticuloManager();
     
+    public void showDate(Maestro vista){
+        if(vista.getCheckArticulo().isSelected()){
+            vista.getDateFechaArt().setEnabled(false);
+        }
+        else{vista.getDateFechaArt().setEnabled(true);}
+    }
+    
     public void agregarArticulo(Maestro vista){
         String nombre = vista.getTxtNombreArt().getText();
+        String fechaStr = "No Expira";
         
-        Date fecha = vista.getDateFechaArt().getDate();
-        DateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-        String fechaStr = formato.format(fecha);
+        if(!vista.getCheckArticulo().isSelected()){
+            Date fecha = vista.getDateFechaArt().getDate();
+            DateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+            fechaStr = formato.format(fecha);
+        } else{vista.getDateFechaArt().setEnabled(false);}
         
         int stock = Integer.parseInt(vista.getTxtUnidadesArt().getText());
         
