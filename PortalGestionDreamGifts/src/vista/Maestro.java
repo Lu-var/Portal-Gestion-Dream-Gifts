@@ -483,9 +483,15 @@ public class Maestro extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tablaBanco.getTableHeader().setReorderingAllowed(false);
         jScrollPane4.setViewportView(tablaBanco);
 
         btnEditar.setText("EDITAR");
+        btnEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarActionPerformed(evt);
+            }
+        });
 
         btnDesactivar.setText("DESACTIVAR");
 
@@ -1527,8 +1533,6 @@ public class Maestro extends javax.swing.JFrame {
 
         jLabel6.setText("Email : ");
 
-        txtEmailProv.setText("jTextField1");
-
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
@@ -1901,6 +1905,10 @@ public class Maestro extends javax.swing.JFrame {
     private void btnEditarEstadoDespachoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarEstadoDespachoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnEditarEstadoDespachoActionPerformed
+
+    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
+        bancoCtrl.edit(this);
+    }//GEN-LAST:event_btnEditarActionPerformed
 
 //        BancoManager banco = new BancoManager(nombre);
 //        banco.agregar(nombre);

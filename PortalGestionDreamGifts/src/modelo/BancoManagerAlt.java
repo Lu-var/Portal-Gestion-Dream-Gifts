@@ -72,5 +72,27 @@ public class BancoManagerAlt {
         }
         
         return matriz;
-    } 
+    }
+    
+    public void update(int idTarget, int id, String nombre, boolean flag){
+        
+        int status;
+        if(flag){status = 1;} else{status = 0;}
+        
+        try{
+            comando = conexion.prepareStatement("UPDATE Banco SET idBanco = (?), Nombre = (?), Enabled = (?) WHERE idBanco = (?)");
+            
+            comando.setInt(1, id);
+            comando.setString(2, nombre);
+            comando.setInt(3,status);
+            comando.setInt(4, idTarget);
+            
+            comando.execute();
+            
+        } catch(Exception ex){
+            Log.seguir(ex.getMessage());
+        }
+        
+        
+    }
 }
