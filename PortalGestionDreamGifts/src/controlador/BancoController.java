@@ -48,7 +48,7 @@ public class BancoController {
     public void edit(Maestro master){
         
         int id;
-        String nombre;
+        String nombre = new String();
         String status;
         boolean flagStatus;
         
@@ -79,9 +79,20 @@ public class BancoController {
 //                    return;
 //                }
 //            }
+            try {
+                input = JOptionPane.showInputDialog(null, "Nuevo Banco", fila.get(1));
+                nombre = (String)input;
+                if(nombre.isEmpty()){
+                    Log.seguir("Campo vacío.");
+                    JOptionPane.showMessageDialog(null, "Campo Vacio",null,JOptionPane.INFORMATION_MESSAGE);
+                    return;
+            }
+            } catch (java.lang.NullPointerException ex) {
+                JOptionPane.showMessageDialog(null, "Edición Cancelada", null, JOptionPane.INFORMATION_MESSAGE);
+                Log.seguir(ex.getMessage());
+                return;
+            }
 
-            input = JOptionPane.showInputDialog(null, "Nuevo Banco", fila.get(1));
-            nombre = (String)input;
 
 //            input = JOptionPane.showConfirmDialog(null,"¿Activar este Banco? ","Estado Actual: " + status, JOptionPane.YES_NO_OPTION);
 //            if((int)input == JOptionPane.CLOSED_OPTION){
