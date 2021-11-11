@@ -23,8 +23,6 @@ public class Maestro extends javax.swing.JFrame {
     ClienteController clienteCtrl = new ClienteController();
     ProveedorController provCtrl = new ProveedorController();
     ArticuloController articuloCtrl = new ArticuloController();
-
-    int i = 1;
     
     public Maestro() {
         initComponents();
@@ -1643,9 +1641,7 @@ public class Maestro extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCatArtActionPerformed
 
     private void PanelPrincipalStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_PanelPrincipalStateChanged
-        
-        System.out.println("Changed Tabs: "+i);
-        i++;
+      
         clearAll();
         showAll();
         
