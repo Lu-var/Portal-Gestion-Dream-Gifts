@@ -1525,8 +1525,6 @@ public class Maestro extends javax.swing.JFrame {
 
         jButton9.setText("CANCELAR");
 
-        txtFonoProv.setText("jTextField1");
-
         jLabel6.setText("Email : ");
 
         txtEmailProv.setText("jTextField1");

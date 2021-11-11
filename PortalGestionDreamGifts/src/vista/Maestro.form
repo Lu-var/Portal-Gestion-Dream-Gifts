@@ -2269,9 +2269,6 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtFonoProv">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel6">
                   <Properties>
