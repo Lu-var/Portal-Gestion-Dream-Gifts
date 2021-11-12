@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package modelo;
+import bd.Log;
 import java.sql.*;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -30,9 +31,8 @@ public class UsuarioManager {
             
             if(!resultadoSet.isBeforeFirst()){
                 JOptionPane.showMessageDialog(null, "Whoops! Credenciales incorrectas.");
-            } else{
-                return true;
-            }
+                
+            } else{return true;}
             
         } catch(Exception ex){
             JOptionPane.showMessageDialog(null,"Error: "+ex);
@@ -104,4 +104,26 @@ public class UsuarioManager {
         return true;
     }
 
+    public void update(int id, String nombre, String clave, boolean flag){
+        
+        int status;
+        if(flag){status = 1;} else{status = 0;}
+        
+        try{
+            comando = conexion.prepareStatement("UPDATE Usuario SET Nombre = (?), Password = (?), Enabled = (?) WHERE idUsuario = (?)");
+            
+            comando.setString(1, nombre);
+            comando.setString(2,clave);
+            comando.setInt(3,status);
+            comando.setInt(4, id);
+            
+            comando.execute();
+            
+        } catch(Exception ex){
+            Log.seguir(ex.getMessage());
+        }
+        
+        
+    }    
+    
 }
