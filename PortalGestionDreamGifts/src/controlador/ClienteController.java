@@ -4,10 +4,13 @@
  */
 package controlador;
 
+import bd.Log;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Vector;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import modelo.ClienteManager;
@@ -54,5 +57,113 @@ public class ClienteController {
         
         model.setRowCount(0);
     }
+    
+    public void edit(Maestro master){
+        
+        int id;
+        String rut = new String();
+        String nombre = new String();
+        String fecha = new String();
+        String celular = new String();
+        String email = new String();
+        
+        
+        JTable tabla = master.getTablaClientes();
+        DefaultTableModel model = (DefaultTableModel) tabla.getModel();
+        int i = 0;
+        int pos = tabla.getSelectedRow();
+        Object input;
+        try {
+            Vector fila = (Vector)model.getDataVector().elementAt(pos);
+    
+            
+//            input = JOptionPane.showInputDialog(null, "Nuevo ID", fila.get(0));
+//            id = Integer.valueOf((String)input);
+//            for (int j = 0; j < model.getRowCount(); j++) {
+//                int get = (int)model.getValueAt(j, 0);
+//                if(get==id && id != (int)fila.get(0)){
+//                    Log.seguir("ID Ocupado.");
+//                    JOptionPane.showMessageDialog(null, "ID Ocupado.");
+//                    return;
+//                }
+//            }
+            try {
+                    input = JOptionPane.showInputDialog(null, "Nuevo Nombre Cliente", fila.get(1));
+                nombre = (String)input;
+                if(nombre.isEmpty()){
+                    Log.seguir("Campo vacío.");
+                    JOptionPane.showMessageDialog(null, "Campo Vacio",null,JOptionPane.INFORMATION_MESSAGE);
+                    return;
+            }
+            } catch (java.lang.NullPointerException ex) {
+                JOptionPane.showMessageDialog(null, "Edición Cancelada", null, JOptionPane.INFORMATION_MESSAGE);
+                Log.seguir(ex.getMessage());
+                return;
+            }
+            
+            try {
+                input = JOptionPane.showInputDialog(null, "Nueva Fecha Nacimiento Cliente", fila.get(2));
+                fecha = (String)input;
+                if(fecha.isEmpty()){
+                    Log.seguir("Campo vacío.");
+                    JOptionPane.showMessageDialog(null, "Campo Vacio",null,JOptionPane.INFORMATION_MESSAGE);
+                    return;
+                }
+            } catch (java.lang.NullPointerException ex) {
+                JOptionPane.showMessageDialog(null, "Edición Cancelada", null, JOptionPane.INFORMATION_MESSAGE);
+                Log.seguir(ex.getMessage());
+                return;
+            }
+
+            try {
+                input = JOptionPane.showInputDialog(null, "Nuevo Celular Cliente", fila.get(3));
+                celular = (String)input;
+                if(celular.isEmpty()){
+                    Log.seguir("Campo vacío.");
+                    JOptionPane.showMessageDialog(null, "Campo Vacio",null,JOptionPane.INFORMATION_MESSAGE);
+                    return;
+                }
+            } catch (java.lang.NullPointerException ex) {
+                JOptionPane.showMessageDialog(null, "Edición Cancelada", null, JOptionPane.INFORMATION_MESSAGE);
+                Log.seguir(ex.getMessage());
+                return;
+            }
+            
+            try {
+                input = JOptionPane.showInputDialog(null, "Nuevo Email Cliente", fila.get(4));
+                email = (String)input;
+                if(email.isEmpty()){
+                    Log.seguir("Campo vacío.");
+                    JOptionPane.showMessageDialog(null, "Campo Vacio",null,JOptionPane.INFORMATION_MESSAGE);
+                    return;
+                }
+            } catch (java.lang.NullPointerException ex) {
+                JOptionPane.showMessageDialog(null, "Edición Cancelada", null, JOptionPane.INFORMATION_MESSAGE);
+                Log.seguir(ex.getMessage());
+                return;
+            }            
+//            input = JOptionPane.showConfirmDialog(null,"¿Activar este Banco? ","Estado Actual: " + status, JOptionPane.YES_NO_OPTION);
+//            if((int)input == JOptionPane.CLOSED_OPTION){
+//                JOptionPane.showMessageDialog(null, "Edición Cancelada", null, JOptionPane.INFORMATION_MESSAGE);
+//                return;
+//            }  
+//            flagStatus = (int)input == 0;
+            
+//            tabla.setValueAt(id, pos, 0);
+            tabla.setValueAt(nombre, pos, 1);
+            tabla.setValueAt(fecha, pos, 2);
+            tabla.setValueAt(celular, pos, 3);
+            tabla.setValueAt(email, pos, 4);
+//            tabla.setValueAt(flagStatus, pos, 2);
+            
+            
+                                            //cambiar por id
+            manager.update((String)fila.get(0), (String)fila.get(0), (String)nombre, (String)fecha, (String)celular, (String)email);
+            
+        } catch (Exception ex) {
+            Log.seguir(ex.getMessage());
+            JOptionPane.showMessageDialog(null, "No hay fila seleccionada");
+        }
+    }    
     
 }

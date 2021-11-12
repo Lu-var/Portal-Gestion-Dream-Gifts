@@ -50,7 +50,7 @@ public class ClienteManager {
                 
                 String RUT = resultado.getString("RUT");
                 String nombre = resultado.getString("Nombre");
-                String fecha = resultado.getString("Fecha Nacimiento");
+                String fecha = resultado.getString("FechaNacimiento");
                 String celular = resultado.getString("Celular");
                 String email = resultado.getString("Email");
                 
@@ -78,7 +78,7 @@ public class ClienteManager {
             while(cliente.next()){
                 System.out.println("RUT: " + cliente.getString("RUT"));
                 System.out.println("nombre: " + cliente.getString("Nombre"));
-                System.out.println("fechaNacimiento: " + cliente.getString("Fecha Nacimiento"));
+                System.out.println("fechaNacimiento: " + cliente.getString("FechaNacimiento"));
                 System.out.println("celular: " + cliente.getString("Celular"));
                 System.out.println("email: " + cliente.getString("Email"));
                 System.out.println("direccion: " + cliente.getString("Direccion"));
@@ -90,10 +90,25 @@ public class ClienteManager {
         }
     }
     
-//    public static void main(String[] args) {
-//        ClienteManager clientemngr = new ClienteManager();
-//        ResultSet cliente = clientemngr.SeleccionarClientes();
-//        clientemngr.InfoClientes(cliente);
-//        clientemngr.AgregarCliente("4.432.654-4", "Bernardo", "1920/10/09", "2312321", "mimail@mail.com", "Calle Nueva 1234");
-//    }
+    public void update(String idTarget, String id, String nombre, String fecha, String celular, String email){
+           
+        try{
+            PreparedStatement comando = conexion.prepareStatement("UPDATE Cliente SET RUT = (?), Nombre = (?), FechaNacimiento = (?), Celular = (?), Email = (?) WHERE RUT = (?)");
+            
+            comando.setString(1, id);
+            comando.setString(2, nombre);
+            comando.setString(3,fecha);
+            comando.setString(4, celular);
+            comando.setString(5, email);
+            comando.setString(6, idTarget);
+            
+            comando.execute();
+            
+        } catch(Exception ex){
+            Log.seguir(ex.getMessage());
+        }
+        
+        
+    }
+    
 }
