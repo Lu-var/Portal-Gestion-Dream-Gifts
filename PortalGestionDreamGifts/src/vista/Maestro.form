@@ -128,6 +128,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="MAESTRO"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMaestroActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

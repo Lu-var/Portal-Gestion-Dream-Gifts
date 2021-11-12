@@ -25,6 +25,7 @@ public class Maestro extends javax.swing.JFrame {
     ClienteController clienteCtrl = new ClienteController();
     ProveedorController provCtrl = new ProveedorController();
     ArticuloController articuloCtrl = new ArticuloController();
+    MenuController menuCtrl = new MenuController();
     
     public Maestro() {
         initComponents();
@@ -238,6 +239,11 @@ public class Maestro extends javax.swing.JFrame {
         });
 
         btnMaestro.setText("MAESTRO");
+        btnMaestro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMaestroActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -1690,7 +1696,6 @@ public class Maestro extends javax.swing.JFrame {
 
     private void btnVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasActionPerformed
         // TODO add your handling code here:
-        MenuController menuCtrl = new MenuController();
         menuCtrl.openVentas(this);
     }//GEN-LAST:event_btnVentasActionPerformed
 
@@ -1711,14 +1716,12 @@ public class Maestro extends javax.swing.JFrame {
     }//GEN-LAST:event_txtBuscarPkActionPerformed
 
     private void btnComprasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprasActionPerformed
-        // TODO add your handling code here:
-        MenuController menuCtrl = new MenuController();
+
         menuCtrl.openCompras(this);
     }//GEN-LAST:event_btnComprasActionPerformed
 
     private void btnInformesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInformesActionPerformed
-        
-        MenuController menuCtrl = new MenuController();
+
         menuCtrl.openInformes(this);
     }//GEN-LAST:event_btnInformesActionPerformed
 
@@ -1742,10 +1745,9 @@ public class Maestro extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCatArtActionPerformed
 
     private void PanelPrincipalStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_PanelPrincipalStateChanged
-      
+     
         clearAll();
         showAll();
-        
     }//GEN-LAST:event_PanelPrincipalStateChanged
 
     private void tablaCatArtComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_tablaCatArtComponentShown
@@ -1898,6 +1900,10 @@ public class Maestro extends javax.swing.JFrame {
     private void btnEditarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarUsuarioActionPerformed
         usuarioCtrl.edit(this);
     }//GEN-LAST:event_btnEditarUsuarioActionPerformed
+
+    private void btnMaestroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMaestroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMaestroActionPerformed
 
 //        BancoManager banco = new BancoManager(nombre);
 //        banco.agregar(nombre);
