@@ -868,7 +868,6 @@ public class Maestro extends javax.swing.JFrame {
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("Tabla Packs");
 
-        txtBuscarPk.setText("Dia del hoyo");
         txtBuscarPk.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtBuscarPkActionPerformed(evt);
