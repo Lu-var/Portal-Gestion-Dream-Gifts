@@ -124,20 +124,20 @@ public class Maestro extends javax.swing.JFrame {
         PanelPacks = new javax.swing.JPanel();
         jPanel15 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
-        txtNombrePack = new javax.swing.JTextField();
+        txtPacksNombre = new javax.swing.JTextField();
         scrollArticulos = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
+        tablaPacksArt = new javax.swing.JTable();
         scrollSelected = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
+        tablaPacksSelected = new javax.swing.JTable();
         jLabel14 = new javax.swing.JLabel();
-        txtPrecioPack = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        txtPacksPrecio = new javax.swing.JTextField();
+        comboPacksCatArt = new javax.swing.JComboBox<>();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable5 = new javax.swing.JTable();
+        tablaPacks = new javax.swing.JTable();
         jLabel15 = new javax.swing.JLabel();
-        txtBuscarPk = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        txtPacksBuscar = new javax.swing.JTextField();
+        btnPacksEdit = new javax.swing.JButton();
+        btnPacksEstado = new javax.swing.JButton();
         PanelCatArt = new javax.swing.JPanel();
         LCatArt = new javax.swing.JLabel();
         txtCatArt = new javax.swing.JTextField();
@@ -734,18 +734,18 @@ public class Maestro extends javax.swing.JFrame {
         jPanel15.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Packs"));
         jPanel15.setToolTipText("");
 
-        jLabel20.setText("Nombre");
+        jLabel20.setText("Nombre :");
 
-        txtNombrePack.addActionListener(new java.awt.event.ActionListener() {
+        txtPacksNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombrePackActionPerformed(evt);
+                txtPacksNombreActionPerformed(evt);
             }
         });
 
         scrollArticulos.setToolTipText("");
         scrollArticulos.setDoubleBuffered(true);
 
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        tablaPacksArt.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -768,9 +768,9 @@ public class Maestro extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        scrollArticulos.setViewportView(jTable3);
+        scrollArticulos.setViewportView(tablaPacksArt);
 
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+        tablaPacksSelected.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -786,18 +786,17 @@ public class Maestro extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        scrollSelected.setViewportView(jTable4);
-        if (jTable4.getColumnModel().getColumnCount() > 0) {
-            jTable4.getColumnModel().getColumn(0).setResizable(false);
-            jTable4.getColumnModel().getColumn(1).setResizable(false);
+        scrollSelected.setViewportView(tablaPacksSelected);
+        if (tablaPacksSelected.getColumnModel().getColumnCount() > 0) {
+            tablaPacksSelected.getColumnModel().getColumn(0).setResizable(false);
+            tablaPacksSelected.getColumnModel().getColumn(1).setResizable(false);
         }
 
-        jLabel14.setText("Precio Pack");
+        jLabel14.setText("Precio Pack :");
 
-        txtPrecioPack.setText("$100 200 lo que querai");
-        txtPrecioPack.addActionListener(new java.awt.event.ActionListener() {
+        txtPacksPrecio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPrecioPackActionPerformed(evt);
+                txtPacksPrecioActionPerformed(evt);
             }
         });
 
@@ -806,22 +805,22 @@ public class Maestro extends javax.swing.JFrame {
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
-                .addContainerGap(73, Short.MAX_VALUE)
+                .addContainerGap(70, Short.MAX_VALUE)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addComponent(jLabel20)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtNombrePack))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtPacksNombre))
                     .addComponent(scrollArticulos, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(comboPacksCatArt, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(160, 160, 160)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addComponent(jLabel14)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtPrecioPack, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtPacksPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(scrollSelected, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -829,25 +828,23 @@ public class Maestro extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
-                    .addComponent(txtNombrePack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPacksNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel14)
-                    .addComponent(txtPrecioPack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPacksPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(scrollSelected, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(37, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(comboPacksCatArt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(scrollArticulos, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                        .addComponent(scrollArticulos, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(scrollSelected, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jScrollPane3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jTable5.setModel(new javax.swing.table.DefaultTableModel(
+        tablaPacks.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -863,20 +860,25 @@ public class Maestro extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane3.setViewportView(jTable5);
+        jScrollPane3.setViewportView(tablaPacks);
 
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("Tabla Packs");
 
-        txtBuscarPk.addActionListener(new java.awt.event.ActionListener() {
+        txtPacksBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtBuscarPkActionPerformed(evt);
+                txtPacksBuscarActionPerformed(evt);
             }
         });
 
-        jButton1.setText("jButton1");
+        btnPacksEdit.setText("jButton1");
+        btnPacksEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPacksEditActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("jButton2");
+        btnPacksEstado.setText("jButton2");
 
         javax.swing.GroupLayout PanelPacksLayout = new javax.swing.GroupLayout(PanelPacks);
         PanelPacks.setLayout(PanelPacksLayout);
@@ -894,11 +896,11 @@ public class Maestro extends javax.swing.JFrame {
                     .addGroup(PanelPacksLayout.createSequentialGroup()
                         .addComponent(jLabel15)
                         .addGap(18, 18, 18)
-                        .addComponent(txtBuscarPk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtPacksBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(PanelPacksLayout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(btnPacksEdit)
                         .addGap(58, 58, 58)
-                        .addComponent(jButton2)))
+                        .addComponent(btnPacksEstado)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PanelPacksLayout.setVerticalGroup(
@@ -909,13 +911,13 @@ public class Maestro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(PanelPacksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
-                    .addComponent(txtBuscarPk, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPacksBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(PanelPacksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(btnPacksEdit)
+                    .addComponent(btnPacksEstado))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1725,17 +1727,17 @@ public class Maestro extends javax.swing.JFrame {
         clienteCtrl.edit(this);
     }//GEN-LAST:event_btnEditarClientesActionPerformed
 
-    private void txtPrecioPackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPrecioPackActionPerformed
+    private void txtPacksPrecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPacksPrecioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtPrecioPackActionPerformed
+    }//GEN-LAST:event_txtPacksPrecioActionPerformed
 
-    private void txtNombrePackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombrePackActionPerformed
+    private void txtPacksNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPacksNombreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombrePackActionPerformed
+    }//GEN-LAST:event_txtPacksNombreActionPerformed
 
-    private void txtBuscarPkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBuscarPkActionPerformed
+    private void txtPacksBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPacksBuscarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtBuscarPkActionPerformed
+    }//GEN-LAST:event_txtPacksBuscarActionPerformed
 
     private void btnComprasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprasActionPerformed
 
@@ -1927,6 +1929,10 @@ public class Maestro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnMaestroActionPerformed
 
+    private void btnPacksEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPacksEditActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPacksEditActionPerformed
+
 //        BancoManager banco = new BancoManager(nombre);
 //        banco.agregar(nombre);
 //        Log.seguir("boton");
@@ -2014,6 +2020,8 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JButton btnGuardarEstadoVenta;
     private javax.swing.JButton btnInformes;
     private javax.swing.JButton btnMaestro;
+    private javax.swing.JButton btnPacksEdit;
+    private javax.swing.JButton btnPacksEstado;
     private javax.swing.JButton btnSavComuna;
     private javax.swing.JButton btnSavRRSS;
     private javax.swing.JButton btnSavUsuario;
@@ -2024,15 +2032,13 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JButton btngGuardar;
     private javax.swing.JCheckBox checkArticulo;
     private javax.swing.JComboBox<String> comboArtCat;
+    private javax.swing.JComboBox<String> comboPacksCatArt;
     private com.toedter.calendar.JDateChooser dateFechaArt;
     private com.toedter.calendar.JDateChooser dateNacCliente;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton9;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -2070,9 +2076,6 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
-    private javax.swing.JTable jTable3;
-    private javax.swing.JTable jTable4;
-    private javax.swing.JTable jTable5;
     private javax.swing.JScrollPane scrollArticulos;
     private javax.swing.JScrollPane scrollSelected;
     private javax.swing.JTable tablaArticulos;
@@ -2082,11 +2085,13 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JTable tablaComuna;
     private javax.swing.JTable tablaEstadoDespacho;
     private javax.swing.JTable tablaEstadoVenta;
+    private javax.swing.JTable tablaPacks;
+    private javax.swing.JTable tablaPacksArt;
+    private javax.swing.JTable tablaPacksSelected;
     private javax.swing.JTable tablaProveedores;
     private javax.swing.JTable tablaRRSS;
     private javax.swing.JTable tablaUsuario;
     private javax.swing.JTextField txtBanco;
-    private javax.swing.JTextField txtBuscarPk;
     private javax.swing.JTextField txtCatArt;
     private javax.swing.JTextField txtCelularCliente;
     private javax.swing.JTextField txtComuna;
@@ -2098,10 +2103,11 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JTextField txtMailCliente;
     private javax.swing.JTextArea txtNombreArt;
     private javax.swing.JTextField txtNombreCliente;
-    private javax.swing.JTextField txtNombrePack;
     private javax.swing.JTextField txtNombreProv;
+    private javax.swing.JTextField txtPacksBuscar;
+    private javax.swing.JTextField txtPacksNombre;
+    private javax.swing.JTextField txtPacksPrecio;
     private javax.swing.JTextField txtPass;
-    private javax.swing.JTextField txtPrecioPack;
     private javax.swing.JTextField txtRRSS;
     private javax.swing.JTextField txtRazonProv;
     private javax.swing.JTextField txtRutCliente;
@@ -2120,11 +2126,11 @@ public class Maestro extends javax.swing.JFrame {
     }
 
     public JTextField getTxtBuscarPk() {
-        return txtBuscarPk;
+        return txtPacksBuscar;
     }
 
     public void setTxtBuscarPk(JTextField txtBuscarPk) {
-        this.txtBuscarPk = txtBuscarPk;
+        this.txtPacksBuscar = txtBuscarPk;
     }
 
     public JTextField getTxtCelularCliente() {
@@ -2177,11 +2183,11 @@ public class Maestro extends javax.swing.JFrame {
     }
 
     public JTextField getTxtNombrePack() {
-        return txtNombrePack;
+        return txtPacksNombre;
     }
 
     public void setTxtNombrePack(JTextField txtNombrePack) {
-        this.txtNombrePack = txtNombrePack;
+        this.txtPacksNombre = txtNombrePack;
     }
 
     public JTextField getTxtNombreProv() {
@@ -2193,11 +2199,11 @@ public class Maestro extends javax.swing.JFrame {
     }
 
     public JTextField getTxtPrecioPack() {
-        return txtPrecioPack;
+        return txtPacksPrecio;
     }
 
     public void setTxtPrecioPack(JTextField txtPrecioPack) {
-        this.txtPrecioPack = txtPrecioPack;
+        this.txtPacksPrecio = txtPrecioPack;
     }
 
     public JTextField getTxtRazonProv() {
@@ -2464,6 +2470,78 @@ public class Maestro extends javax.swing.JFrame {
 
     public void setTxtEstadoDespacho(JTextField txtEstadoDespacho) {
         this.txtEstadoDespacho = txtEstadoDespacho;
+    }
+
+    public JButton getBtnPacksEdit() {
+        return btnPacksEdit;
+    }
+
+    public void setBtnPacksEdit(JButton btnPacksEdit) {
+        this.btnPacksEdit = btnPacksEdit;
+    }
+
+    public JButton getBtnPacksEstado() {
+        return btnPacksEstado;
+    }
+
+    public void setBtnPacksEstado(JButton btnPacksEstado) {
+        this.btnPacksEstado = btnPacksEstado;
+    }
+
+    public JComboBox<String> getComboPacksCatArt() {
+        return comboPacksCatArt;
+    }
+
+    public void setComboPacksCatArt(JComboBox<String> comboPacksCatArt) {
+        this.comboPacksCatArt = comboPacksCatArt;
+    }
+
+    public JTable getTablaPacks() {
+        return tablaPacks;
+    }
+
+    public void setTablaPacks(JTable tablaPacks) {
+        this.tablaPacks = tablaPacks;
+    }
+
+    public JTable getTablaPacksArt() {
+        return tablaPacksArt;
+    }
+
+    public void setTablaPacksArt(JTable tablaPacksArt) {
+        this.tablaPacksArt = tablaPacksArt;
+    }
+
+    public JTable getTablaPacksSelected() {
+        return tablaPacksSelected;
+    }
+
+    public void setTablaPacksSelected(JTable tablaPacksSelected) {
+        this.tablaPacksSelected = tablaPacksSelected;
+    }
+
+    public JTextField getTxtPacksBuscar() {
+        return txtPacksBuscar;
+    }
+
+    public void setTxtPacksBuscar(JTextField txtPacksBuscar) {
+        this.txtPacksBuscar = txtPacksBuscar;
+    }
+
+    public JTextField getTxtPacksNombre() {
+        return txtPacksNombre;
+    }
+
+    public void setTxtPacksNombre(JTextField txtPacksNombre) {
+        this.txtPacksNombre = txtPacksNombre;
+    }
+
+    public JTextField getTxtPacksPrecio() {
+        return txtPacksPrecio;
+    }
+
+    public void setTxtPacksPrecio(JTextField txtPacksPrecio) {
+        this.txtPacksPrecio = txtPacksPrecio;
     }
     
     
