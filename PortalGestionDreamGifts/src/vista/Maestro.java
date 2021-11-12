@@ -1836,7 +1836,7 @@ public class Maestro extends javax.swing.JFrame {
     }//GEN-LAST:event_tablaEstadoVentaComponentShown
 
     private void btnEditarEstadoVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarEstadoVentaActionPerformed
-        // TODO add your handling code here:
+        estVentasCtrl.edit(this);
     }//GEN-LAST:event_btnEditarEstadoVentaActionPerformed
 
     private void PanelEstadoVentaComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_PanelEstadoVentaComponentShown
@@ -1896,7 +1896,7 @@ public class Maestro extends javax.swing.JFrame {
     }//GEN-LAST:event_tablaEstadoDespachoComponentShown
 
     private void btnEditarEstadoDespachoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarEstadoDespachoActionPerformed
-        // TODO add your handling code here:
+        estDespCtrl.edit(this);
     }//GEN-LAST:event_btnEditarEstadoDespachoActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed

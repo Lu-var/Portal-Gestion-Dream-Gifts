@@ -80,10 +80,25 @@ public class EstadoDespachoManager {
         }  
     }
     
-//    public static void main(String[] args) {
-//       CatArticuloManager catArt = new CatArticuloManager();
-//       catArt.categoriaSelectAll();
-//       catArt.agregarCategoriaSQL();
-//       catArt.categoriaSelectAll();
-//    }
+    public void update(int idTarget, int id, String nombre, boolean flag){
+        
+        int status;
+        if(flag){status = 1;} else{status = 0;}
+        
+        try{
+            comando = conexion.prepareStatement("UPDATE StatusDespacho SET idStatusDespacho = (?), DescripcionStatus = (?), Enabled = (?) WHERE idStatusDespacho = (?)");
+            
+            comando.setInt(1, id);
+            comando.setString(2, nombre);
+            comando.setInt(3,status);
+            comando.setInt(4, idTarget);
+            
+            comando.execute();
+            
+        } catch(Exception ex){
+            Log.seguir(ex.getMessage());
+        }
+        
+    }
+    
 }
