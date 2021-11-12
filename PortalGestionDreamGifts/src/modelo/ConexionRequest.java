@@ -23,7 +23,7 @@ public class ConexionRequest {
         }
         try {
 
-            connect = DriverManager.getConnection("jdbc:mysql://localhost/DreamGifts_db", "root", "Hello.World@5");
+            connect = DriverManager.getConnection("jdbc:mysql://186.104.113.169:65535/DreamGifts_db", "root", "Hello.World@5");
 
             Log.seguir("Conexion Establecida OK.");
 
