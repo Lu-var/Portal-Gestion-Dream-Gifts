@@ -17,7 +17,7 @@ public class Informes extends javax.swing.JFrame {
     public Informes() {
         initComponents();
         
-        this.setSize(910,580 );
+        this.setSize(910,620);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
     }
