@@ -57,6 +57,23 @@ public class ArticuloManager {
             Log.seguir(ex.getMessage());
         }
         return idCategoria;
+    }
+
+    public int selectArticuloSQL(String nombre){
+        int id = 0;
+        try {
+            PreparedStatement comando = conexion.prepareStatement("SELECT idArticulo FROM Articulo WHERE Nombre = ?");
+            
+            comando.setString(1,nombre);
+            
+            ResultSet resultado =  comando.executeQuery();
+            
+            resultado.next();
+            id = resultado.getInt(1);
+        } catch (Exception ex) {
+            Log.seguir(ex.getMessage());
+        }
+        return id;
     }    
     
     public void agregarArticuloSQL(String nombre, String fecha, int stock, int idCat){
@@ -126,4 +143,69 @@ public class ArticuloManager {
         
         return matriz;
     }
+        
+    public ArrayList<ArrayList<Object>> articulosEnabledSelectAll(){
+        ArrayList<ArrayList<Object>> matriz = new ArrayList<ArrayList<Object>>();
+        try{
+            PreparedStatement comando = conexion.prepareStatement("SELECT * FROM Articulo WHERE Enabled = 1");
+            ResultSet resultado = comando.executeQuery();
+
+            int id;
+            int idCat;
+            int stock;
+            String nombre;
+            String fecha;
+            
+            while(resultado.next()){
+                ArrayList<Object> fila = new ArrayList<Object>();
+
+                id = resultado.getInt("idArticulo");
+                nombre = resultado.getString("Nombre");
+                idCat = resultado.getInt("idCategoriaArticulo");
+                fecha = resultado.getString("FechaVencimiento");
+                stock = resultado.getInt("Stock");
+                
+                fila.add(id);
+                fila.add(nombre);
+                fila.add(selectCatArticuloSQL(idCat));
+                fila.add(stock);
+                fila.add(fecha);
+                
+                matriz.add(fila);
+            }
+            
+        } catch(Exception ex){
+            Log.seguir("Error: "+ex.getMessage());
+        }
+        
+        return matriz;
+    }    
+        
+//    public ArrayList<Integer> selectIDArticulo(){
+//        ArrayList<Integer> matriz = new ArrayList<>();
+//        try{
+//            PreparedStatement comando = conexion.prepareStatement("SELECT idArticulo,Enabled FROM Articulo");
+//            ResultSet resultado = comando.executeQuery();
+//
+//            int id = 0;
+//            int status;
+//            
+//            while(resultado.next()){
+//                status = resultado.getInt("Enabled");
+//                if(status==1){
+//                    id = resultado.getInt("idArticulo");
+//                }
+//                if(id == 0){
+//                   matriz.add(id); 
+//                }
+//                
+//                id = 0;
+//            }
+//            
+//        } catch(Exception ex){
+//            Log.seguir("Error: "+ex.getMessage());
+//        }
+//        
+//        return matriz;
+//    }
 }
