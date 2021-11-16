@@ -97,20 +97,20 @@ public class CatArtController {
             }
 
 
-//            input = JOptionPane.showConfirmDialog(null,"¿Activar este Banco? ","Estado Actual: " + status, JOptionPane.YES_NO_OPTION);
-//            if((int)input == JOptionPane.CLOSED_OPTION){
-//                JOptionPane.showMessageDialog(null, "Edición Cancelada", null, JOptionPane.INFORMATION_MESSAGE);
-//                return;
-//            }  
-//            flagStatus = (int)input == 0;
+            input = JOptionPane.showConfirmDialog(null,"¿Activar est Categoría? ","Estado Actual: " + status, JOptionPane.YES_NO_OPTION);
+            if((int)input == JOptionPane.CLOSED_OPTION){
+                JOptionPane.showMessageDialog(null, "Edición Cancelada", null, JOptionPane.INFORMATION_MESSAGE);
+                return;
+            }  
+            flagStatus = (int)input == 0;
             
 //            tabla.setValueAt(id, pos, 0);
             tabla.setValueAt(nombre, pos, 1);
-//            tabla.setValueAt(flagStatus, pos, 2);
+            tabla.setValueAt(flagStatus, pos, 2);
             
             
                                             //cambiar por id
-            manager.update((int)fila.get(0), (int)fila.get(0), nombre, (boolean)fila.get(2));
+            manager.update((int)fila.get(0), nombre, (boolean)fila.get(2));
             
         } catch (Exception ex) {
             Log.seguir(ex.getMessage());

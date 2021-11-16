@@ -66,6 +66,34 @@ public class CatArticuloManager {
         
         return matriz;
     }
+    
+    public ArrayList<ArrayList<Object>> categoriasEnabledSelectAll(){
+        ArrayList<ArrayList<Object>> matriz = new ArrayList<ArrayList<Object>>();
+        try{
+            comando = conexion.prepareStatement("SELECT * FROM CategoriaArticulo WHERE Enabled = 1");
+            resultadoSet = comando.executeQuery();
+
+            int id;
+            String desc;
+            while(resultadoSet.next()){
+                ArrayList<Object> fila = new ArrayList<Object>();
+
+                id = resultadoSet.getInt("idCategoriaArticulo");
+                desc = resultadoSet.getString("Descripcion");
+
+
+                fila.add(id);
+                fila.add(desc);
+                
+                matriz.add(fila);
+            }
+            
+        } catch(Exception ex){
+            JOptionPane.showMessageDialog(null,"Error: "+ex);
+        }
+        
+        return matriz;
+    }    
 
     public void agregarCategoriaSQL(String descripcion){
         PreparedStatement comando = null;
@@ -81,7 +109,8 @@ public class CatArticuloManager {
         }  
     }
     
-    public void update(int idTarget, int id, String nombre, boolean flag){
+    
+    public void update(int idTarget, String nombre, boolean flag){
         
         int status;
         if(flag){status = 1;} else{status = 0;}
@@ -89,10 +118,9 @@ public class CatArticuloManager {
         try{
             comando = conexion.prepareStatement("UPDATE CategoriaArticulo SET idCategoriaArticulo = (?), Descripcion = (?), Enabled = (?) WHERE idCategoriaArticulo = (?)");
             
-            comando.setInt(1, id);
-            comando.setString(2, nombre);
-            comando.setInt(3,status);
-            comando.setInt(4, idTarget);
+            comando.setString(1, nombre);
+            comando.setInt(2,status);
+            comando.setInt(3, idTarget);
             
             comando.execute();
             
