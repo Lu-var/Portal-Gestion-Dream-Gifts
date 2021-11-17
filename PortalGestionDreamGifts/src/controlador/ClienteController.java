@@ -88,7 +88,7 @@ public class ClienteController {
 //                }
 //            }
             try {
-                    input = JOptionPane.showInputDialog(null, "Nuevo Nombre Cliente", fila.get(1));
+                input = JOptionPane.showInputDialog(null, "Nuevo Nombre Cliente", fila.get(1));
                 nombre = (String)input;
                 if(nombre.isEmpty()){
                     Log.seguir("Campo vacío.");
@@ -157,7 +157,7 @@ public class ClienteController {
 //            tabla.setValueAt(flagStatus, pos, 2);
             
             
-                                            //cambiar por id
+                                            
             manager.update((String)fila.get(0), (String)fila.get(0), (String)nombre, (String)fecha, (String)celular, (String)email);
             
         } catch (Exception ex) {
