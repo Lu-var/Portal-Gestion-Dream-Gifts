@@ -18,7 +18,7 @@ public class PackManager {
     ConexionRequest intentoConexion = new ConexionRequest();
     Connection conexion = intentoConexion.conectar();
     
-    public void agregarPackSQL(String nombre, int precio, int stock, int idCategoria, ArrayList<ArrayList<Integer>> contenido){
+    public void agregarPackSQL(String nombre, int precio, int stock, int idCategoria){
         int idPack = 0;
         try {
             PreparedStatement comando = conexion.prepareStatement("INSERT INTO Pack (Nombre, Precio, Stock, idCategoriaPack) VALUES (?, ?, ?, ?)");
@@ -38,14 +38,15 @@ public class PackManager {
             
             if(idPack == 0){
                 return;
-            }
+            }        
             
             } catch (Exception ex) {
                 Log.seguir(ex.getCause().getMessage() +"|||||" + ex.getMessage());
             }
-            
+    }
+    
+    public void agregarContenidosSQL(ArrayList<ArrayList<Integer>> contenido){
         try {
-
             PreparedStatement comando = conexion.prepareStatement("INSERT INTO Contenidos (idPack, idArticulo, Cantidad) VALUES (?, ?, ?)");
 
             for (int i = 0; i < contenido.size(); i++) {
@@ -54,9 +55,9 @@ public class PackManager {
                 comando.setInt(3, contenido.get(i).get(1));
 
                 comando.execute();
-            }
+            }              
         } catch (Exception ex) {
-            Log.seguir(ex.getLocalizedMessage() +"|||||||||" + ex.getMessage());
+            Log.seguir(ex.getMessage());
         }
     }
     

@@ -132,8 +132,15 @@ public class PackController {
         } catch(Exception ex){
             Log.seguir(ex.toString());
         }
-        if(nombre.isEmpty()){return;}
-        if(vista.getTxtPacksPrecio().getText().isEmpty()){return;}
+        if(nombre.isEmpty()){
+            JOptionPane.showMessageDialog(null, "Introduzca un nombre.", "", JOptionPane.INFORMATION_MESSAGE);
+            return;
+        }
+        
+        if(vista.getTxtPacksPrecio().getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Introduzca un precio.", "", JOptionPane.INFORMATION_MESSAGE);
+            return;
+        }
         int stock = 0;
         
         
@@ -145,7 +152,7 @@ public class PackController {
             }
         }
         
-        if(idCategoria == 0) return;
+        if(idCategoria == 0) Log.seguir("ID Categoria desconocido.");
         
         ArrayList<ArrayList<Integer>> contenido = new ArrayList<>();
         JTable tabla = vista.getTablaPacksSelected();
@@ -155,7 +162,6 @@ public class PackController {
             temp.add((Integer)tabla.getValueAt(i, 0));
             temp.add((Integer)tabla.getValueAt(i, 1));
             contenido.add(temp);
-            temp.clear();
         }
         
         manager.agregarPackSQL(nombre, precio, stock, idCategoria, contenido);
