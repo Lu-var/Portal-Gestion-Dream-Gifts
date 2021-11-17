@@ -17,7 +17,7 @@ public class Ventas extends javax.swing.JFrame {
     public Ventas() {
         initComponents();
  
-        this.setSize(910,620);
+        this.setSize(910,650);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
     }
