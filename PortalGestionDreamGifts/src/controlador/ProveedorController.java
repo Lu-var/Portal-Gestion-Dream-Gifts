@@ -39,7 +39,6 @@ public class ProveedorController {
         
         while(i<lista.size()){
             model.addRow(lista.get(i).toArray());
-            System.out.println(i +": "+ lista.get(i).toString());
             i++;
         }
     }
