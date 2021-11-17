@@ -120,8 +120,10 @@ public class ArticuloManager {
                 switch(status){
                     case 0:
                         flag = false;
+                        break;
                     case 1:
                         flag = true;
+                        break;
 
                     default:
                         break;
@@ -179,6 +181,31 @@ public class ArticuloManager {
         }
         
         return matriz;
+    }
+
+
+    public void update(int idTarget, String nombre, int idCatArt, int stock, String fecha, boolean flag){
+        
+        int status;
+        if(flag){status = 1;} else{status = 0;}
+        
+        try{
+            PreparedStatement comando = conexion.prepareStatement("UPDATE Articulo SET Nombre = (?), FechaVencimiento = (?), Stock = (?), idCategoriaArticulo = (?), Enabled = (?) WHERE idArticulo = (?)");
+            
+            comando.setString(1, nombre);
+            comando.setString(2,fecha);
+            comando.setInt(3, stock);
+            comando.setInt(4, idCatArt);
+            comando.setInt(5,status);
+            comando.setInt(6, idTarget);
+            
+            comando.execute();
+            
+        } catch(Exception ex){
+            Log.seguir(ex.getMessage()+"holi");
+        }
+        
+        
     }    
         
 //    public ArrayList<Integer> selectIDArticulo(){
