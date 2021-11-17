@@ -4,7 +4,7 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-      <Color id="Cursor Por defecto"/>
+      <Color id="Default Cursor"/>
     </Property>
     <Property name="resizable" type="boolean" value="false"/>
     <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -904,7 +904,7 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jScrollPane13" min="-2" pref="124" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="btnCatPacktEditar" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="btnCatPackDesactivar" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -1572,6 +1572,11 @@
                       <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="btnEditarArt" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -1582,7 +1587,9 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jScrollPane6" pref="250" max="32767" attributes="0"/>
+                      <Component id="jScrollPane6" pref="213" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnEditarArt" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1627,7 +1634,7 @@
                                           <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="123" max="32767" attributes="0"/>
+                                  <EmptySpace pref="114" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="checkArticulo" min="-2" max="-2" attributes="0"/>
                                       <Component id="dateFechaArt" min="-2" pref="140" max="-2" attributes="0"/>
@@ -1796,6 +1803,14 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Articulos"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btnEditarArt">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Editar"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEditarArtActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

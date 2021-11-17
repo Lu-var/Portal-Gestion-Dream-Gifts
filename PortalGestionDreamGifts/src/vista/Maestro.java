@@ -179,6 +179,7 @@ public class Maestro extends javax.swing.JFrame {
         jScrollPane6 = new javax.swing.JScrollPane();
         tablaArticulos = new javax.swing.JTable();
         jLabel18 = new javax.swing.JLabel();
+        btnEditarArt = new javax.swing.JButton();
         PanelEstadoVenta = new javax.swing.JPanel();
         LEstadoVenta = new javax.swing.JLabel();
         txtEstadoVenta = new javax.swing.JTextField();
@@ -841,7 +842,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(PanelCatPackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(PanelCatPackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnCatPacktEditar)
                     .addComponent(btnCatPackDesactivar))
                 .addContainerGap(122, Short.MAX_VALUE))
@@ -1275,7 +1276,7 @@ public class Maestro extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(79, 79, 79)
                                 .addComponent(jLabel22)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 123, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(checkArticulo)
                             .addComponent(dateFechaArt, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -1336,6 +1337,13 @@ public class Maestro extends javax.swing.JFrame {
 
         jLabel18.setText("Articulos");
 
+        btnEditarArt.setText("Editar");
+        btnEditarArt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarArtActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout PanelArticulosLayout = new javax.swing.GroupLayout(PanelArticulos);
         PanelArticulos.setLayout(PanelArticulosLayout);
         PanelArticulosLayout.setHorizontalGroup(
@@ -1350,6 +1358,10 @@ public class Maestro extends javax.swing.JFrame {
                 .addGap(347, 347, 347)
                 .addComponent(jLabel18)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelArticulosLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnEditarArt)
+                .addGap(39, 39, 39))
         );
         PanelArticulosLayout.setVerticalGroup(
             PanelArticulosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1359,7 +1371,9 @@ public class Maestro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel18)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnEditarArt)
                 .addContainerGap())
         );
 
@@ -2145,6 +2159,10 @@ public class Maestro extends javax.swing.JFrame {
         catPackCtrl.agregarCategoria(this);
     }//GEN-LAST:event_btnCatPackGuardarActionPerformed
 
+    private void btnEditarArtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarArtActionPerformed
+        articuloCtrl.edit(this);
+    }//GEN-LAST:event_btnEditarArtActionPerformed
+
     
     /**
      * @param args the command line arguments
@@ -2226,6 +2244,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JButton btnDisableEstadoVenta;
     private javax.swing.JButton btnDisableUsuario;
     private javax.swing.JButton btnEditar;
+    private javax.swing.JButton btnEditarArt;
     private javax.swing.JButton btnEditarClientes;
     private javax.swing.JButton btnEditarComuna;
     private javax.swing.JButton btnEditarEstadoDespacho;
