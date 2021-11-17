@@ -109,6 +109,21 @@ public class CatArticuloManager {
         }  
     }
     
+    public int selectCatByStr(String categoria){
+        try {
+            PreparedStatement comando = conexion.prepareStatement("SELECT idCategoriaArticulo FROM CategoriaArticulo WHERE Descripcion = ?");
+            
+            comando.setString(1, categoria);
+            ResultSet resultado = comando.executeQuery();
+            resultado.next();
+            return resultado.getInt(1);
+            
+        } catch (Exception ex) {
+            Log.seguir(ex.getMessage());
+        }
+        return 1;
+    }
+    
     
     public void update(int idTarget, String nombre, boolean flag){
         
