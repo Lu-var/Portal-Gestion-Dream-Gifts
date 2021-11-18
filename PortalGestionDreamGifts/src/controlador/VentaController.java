@@ -4,8 +4,6 @@
  */
 package controlador;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import modelo.VentaManager;
 import vista.Ventas;
@@ -29,8 +27,6 @@ public class VentaController {
         int CodigoTransf = Integer.parseInt(vista.getTxtCodigoTransferencia().getText());
         String FechaIngreso = vista.getTxtFechaIngreso().getText();
         String FechaAprobada = vista.getTxtFechaAprobada().getText();
-        Date FechaDespacho = vista.getFechaDespacho().getDate();
-        DateFormat formato = new SimpleDateFormat("dd/MM/yyyy"); // aqui hay que corregir
         String NombreTarget = vista.getTxtNDestinatario().getText();
         String CelularTarget = vista.getTxtTelefono().getText();
         String DireccionTarget = vista.getTxtDireccion().getText();
@@ -40,6 +36,7 @@ public class VentaController {
         String HoraDespachoFin = no la tengo; // combobox pendiente de aprender
         int idStatusDespacho = no la tengo; // combobox pendiente de aprender
         
+                
         venta.agregarVenta(RUT, Status, idRRSS, idBanco, idPack, TextoPack, ValorTotal, CodigoTransf, FechaIngreso, 
                 FechaAprobada, FechaDespacho, NombreTarget,CelularTarget, DireccionTarget, idComunaTarget, FechaEntrega, HoraDespachoIni,
                 HoraDespachoFin, idStatusDespacho);
