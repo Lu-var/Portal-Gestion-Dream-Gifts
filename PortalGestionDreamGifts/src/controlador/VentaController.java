@@ -4,15 +4,9 @@
  */
 package controlador;
 
-import bd.Log;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.Vector;
-import javax.swing.JOptionPane;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
 import modelo.VentaManager;
 import vista.Ventas;
 
@@ -35,26 +29,18 @@ public class VentaController {
         int CodigoTransf = vista.getTxtCodigoTransferencia().getText();
         String FechaIngreso = vista.getTxtFechaIngreso().getText();
         String FechaAprobada = vista.getTxtFechaAprobada().getText();
-        String FechaDespacho = no la tengo;
+        Date FechaDespacho = vista.getFechaDespacho().getDate();
+        DateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         String NombreTarget = vista.getTxtNDestinatario().getText();
         String CelularTarget = vista.getTxtTelefono().getText();
         String DireccionTarget = vista.getTxtDireccion().getText();
-        int idComunaTarget = no la tengo;
-        String FechaEntrega = no la tengo;
-        String HoraDespachoIni = no la tengo;
-        String HoraDespachoFin = no la tengo;
-        int idStatusDespacho = no la tengo;
+        int idComunaTarget = no la tengo; //combobox
+        String FechaEntrega = no la tengo; //combobox
+        String HoraDespachoIni = no la tengo; // combobox
+        String HoraDespachoFin = no la tengo; // combobox
+        int idStatusDespacho = no la tengo; // combobox
         
-        String nombre = vista.getTxtNombreCliente().getText();
-        String rut = vista.getTxtRutCliente().getText();
-        String celular = vista.getTxtCelularCliente().getText();
-        String email = vista.getTxtMailCliente().getText();
-        
-        Date fecha = vista.getDateNacCliente().getDate();
-        DateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-        String fechaStr = formato.format(fecha);
-        
-        venta.agregarVenta(Rut, Status, idRRSS, idBanco, idPack, TextoPack, ValorTotal, CodigoTransf, FechaIngreso, 
+        venta.agregarVenta(RUT, Status, idRRSS, idBanco, idPack, TextoPack, ValorTotal, CodigoTransf, FechaIngreso, 
                 FechaAprobada, FechaDespacho, NombreTarget,CelularTarget, DireccionTarget, idComunaTarget, FechaEntrega, HoraDespachoIni,
                 HoraDespachoFin, idStatusDespacho);
         

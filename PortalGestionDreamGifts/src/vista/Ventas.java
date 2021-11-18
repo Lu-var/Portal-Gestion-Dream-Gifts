@@ -1026,6 +1026,14 @@ public class Ventas extends javax.swing.JFrame {
     public void setTxtVenta(JTextField txtVenta) {
         this.txtVenta = txtVenta;
     }
+
+    public JDateChooser getFechaDespacho() {
+        return fechaDespacho;
+    }
+
+    public void setFechaDespacho(JDateChooser fechaDespacho) {
+        this.fechaDespacho = fechaDespacho;
+    }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
