@@ -42,13 +42,14 @@ public class ArticuloManager {
     public int selectIDArticuloSQL(String categoria){
         int idCategoria = 0;
         try {
-            PreparedStatement comando = conexion.prepareStatement("SELECT idCategoriaArticulo FROM CategoriaArticulo WHERE Descripcion = (?)");
+            PreparedStatement comando = conexion.prepareStatement("SELECT idCategoriaArticulo FROM CategoriaArticulo WHERE Descripcion = ?");
             
             comando.setString(1, categoria);
             ResultSet resultado = comando.executeQuery();
             
-            idCategoria = resultado.getInt("idCategoriaArticulo");
-            
+            if(resultado.next()){
+                idCategoria = resultado.getInt(1);
+            }
         } catch (Exception ex) {
             Log.seguir(ex.getMessage());
         }
