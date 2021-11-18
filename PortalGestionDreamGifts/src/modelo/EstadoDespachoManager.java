@@ -42,15 +42,7 @@ public class EstadoDespachoManager {
                 status = resultadoSet.getInt("Enabled");
                 desc = resultadoSet.getString("DescripcionStatus");
                 
-                switch(status){
-                    case 0:
-                        resultadoBool = false;
-                    case 1:
-                        resultadoBool = true;
-
-                    default:
-                        break;
-                }
+                if(status==0) resultadoBool=false; else resultadoBool = true;
 
                 fila.add(id);
                 fila.add(desc);

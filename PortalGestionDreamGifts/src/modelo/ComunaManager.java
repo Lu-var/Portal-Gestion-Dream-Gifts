@@ -51,15 +51,7 @@ public class ComunaManager {
                 status = resultadoSet.getInt("Enabled");
                 nombre = resultadoSet.getString("Nombre");
 
-                switch(status){
-                    case 0:
-                        resultadoBool = false;
-                    case 1:
-                        resultadoBool = true;
-
-                    default:
-                        break;
-                }
+                if(status==0) resultadoBool=false; else resultadoBool = true;
 
                 fila.add(id);
                 fila.add(nombre);

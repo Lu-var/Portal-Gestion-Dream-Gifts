@@ -49,16 +49,8 @@ public class RedSocialManager {
                 id = resultadoSet.getInt("idRRSS");
                 status = resultadoSet.getInt("Enabled");
                 nombre = resultadoSet.getString("Nombre");
-
-                switch(status){
-                    case 0:
-                        resultadoBool = false;
-                    case 1:
-                        resultadoBool = true;
-
-                    default:
-                        break;
-                }
+                
+                if(status==0) resultadoBool=false; else resultadoBool = true;
 
                 fila.add(id);
                 fila.add(nombre);
@@ -74,18 +66,17 @@ public class RedSocialManager {
         return matriz;
     }
     
-    public void update(int idTarget, int id, String nombre, boolean flag){
+    public void update(int idTarget, String nombre, boolean flag){
         
         int status;
         if(flag){status = 1;} else{status = 0;}
         
         try{
-            comando = conexion.prepareStatement("UPDATE RRSS SET idRRSS = (?), Nombre = (?), Enabled = (?) WHERE idRRSS = (?)");
+            comando = conexion.prepareStatement("UPDATE RRSS SET Nombre = (?), Enabled = (?) WHERE idRRSS = (?)");
             
-            comando.setInt(1, id);
-            comando.setString(2, nombre);
-            comando.setInt(3,status);
-            comando.setInt(4, idTarget);
+            comando.setString(1, nombre);
+            comando.setInt(2,status);
+            comando.setInt(3, idTarget);
             
             comando.execute();
             

@@ -42,16 +42,12 @@ public class ArticuloManager {
     public int selectIDArticuloSQL(String categoria){
         int idCategoria = 0;
         try {
-            PreparedStatement comando = conexion.prepareStatement("SELECT distinct CategoriaArticulo.idCategoriaArticulo"
-                    + " FROM CategoriaArticulo "
-                    + "INNER JOIN Articulo ON CategoriaArticulo.Descripcion = (?)");
+            PreparedStatement comando = conexion.prepareStatement("SELECT idCategoriaArticulo FROM CategoriaArticulo WHERE Descripcion = (?)");
             
             comando.setString(1, categoria);
             ResultSet resultado = comando.executeQuery();
             
-            while(resultado.next()){
-                idCategoria = resultado.getInt("idCategoriaArticulo");
-            }
+            idCategoria = resultado.getInt("idCategoriaArticulo");
             
         } catch (Exception ex) {
             Log.seguir(ex.getMessage());

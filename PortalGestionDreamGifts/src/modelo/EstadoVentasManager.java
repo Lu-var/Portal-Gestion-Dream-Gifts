@@ -42,15 +42,7 @@ public class EstadoVentasManager {
                 status = resultadoSet.getInt("Enabled");
                 desc = resultadoSet.getString("DescripcionEstado");
                 
-                switch(status){
-                    case 0:
-                        resultadoBool = false;
-                    case 1:
-                        resultadoBool = true;
-
-                    default:
-                        break;
-                }
+                if(status==0) resultadoBool=false; else resultadoBool = true;
 
                 fila.add(id);
                 fila.add(desc);

@@ -125,10 +125,12 @@ public class PackController {
         String nombre = new String();
         String categoria = new String();
         int precio = -1;
+        JComboBox combo = vista.getComboPacksCatArt();
+        combo.setSelectedIndex(0);
         try{
             nombre = vista.getTxtPacksNombre().getText();
             precio = Integer.parseInt(vista.getTxtPacksPrecio().getText());
-            categoria = (String)vista.getComboPacksCatArt().getSelectedItem();
+            categoria = (String)combo.getSelectedItem();
         } catch(Exception ex){
             Log.seguir(ex.toString());
         }
@@ -136,6 +138,7 @@ public class PackController {
             JOptionPane.showMessageDialog(null, "Introduzca un nombre.", "", JOptionPane.INFORMATION_MESSAGE);
             return;
         }
+        
         
         if(vista.getTxtPacksPrecio().getText().isEmpty()){
             JOptionPane.showMessageDialog(null, "Introduzca un precio.", "", JOptionPane.INFORMATION_MESSAGE);
@@ -145,10 +148,10 @@ public class PackController {
         
         
         int idCategoria = 0;
-        ArrayList<ArrayList<Object>> lista = catPackManager.categoriasEnabledSelectAll();
-        for (int i = 0; i < lista.size(); i++) {
-            if(((String)lista.get(i).get(1)).equals(categoria)){
-                idCategoria = (Integer)lista.get(i).get(0);
+        ArrayList<ArrayList<Object>> listaCategorias = catPackManager.categoriasEnabledSelectAll();
+        for (int i = 0; i < listaCategorias.size(); i++) {
+            if(((String)listaCategorias.get(i).get(1)).equals(categoria)){
+                idCategoria = (Integer)listaCategorias.get(i).get(0);
             }
         }
         
@@ -157,6 +160,11 @@ public class PackController {
         ArrayList<ArrayList<Integer>> contenido = new ArrayList<>();
         JTable tabla = vista.getTablaPacksSelected();
         
+        if(tabla.getModel().getRowCount() == 0){
+            JOptionPane.showMessageDialog(null, "Introduzca un articulo.", "", JOptionPane.INFORMATION_MESSAGE);
+            return;
+        }        
+        
         for (int i = 0; i < tabla.getModel().getRowCount(); i++) {
             ArrayList<Integer> temp = new ArrayList<>();
             temp.add((Integer)tabla.getValueAt(i, 0));
@@ -164,7 +172,8 @@ public class PackController {
             contenido.add(temp);
         }
         
-        manager.agregarPackSQL(nombre, precio, stock, idCategoria, contenido);
+        manager.agregarPackSQL(nombre, precio, stock, idCategoria);
+        manager.agregarContenidosSQL(contenido);
     }    
     
 }

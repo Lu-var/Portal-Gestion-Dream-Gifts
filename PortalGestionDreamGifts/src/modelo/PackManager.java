@@ -26,19 +26,9 @@ public class PackManager {
             comando.setInt(2, precio);
             comando.setInt(3, stock);
             comando.setInt(4, idCategoria);
+            comando.execute();
             
-            boolean resultado = comando.execute();
             
-            ResultSet resultadoSQL;
-            
-            if(resultado){
-                resultadoSQL = comando.getResultSet();
-                idPack = resultadoSQL.getInt(0);
-            }
-            
-            if(idPack == 0){
-                return;
-            }        
             
             } catch (Exception ex) {
                 Log.seguir(ex.getCause().getMessage() +"|||||" + ex.getMessage());
@@ -46,8 +36,16 @@ public class PackManager {
     }
     
     public void agregarContenidosSQL(ArrayList<ArrayList<Integer>> contenido){
+        int idPack = -1;
         try {
-            PreparedStatement comando = conexion.prepareStatement("INSERT INTO Contenidos (idPack, idArticulo, Cantidad) VALUES (?, ?, ?)");
+            PreparedStatement comando = conexion.prepareStatement("SELECT MAX(idPack) FROM Pack");
+            ResultSet resultado = comando.executeQuery();
+            
+            while(resultado.next()){
+                idPack = resultado.getInt(1);
+            }
+            
+            comando = conexion.prepareStatement("INSERT INTO Contenidos (idPack, idArticulo, Cantidad) VALUES (?, ?, ?)");
 
             for (int i = 0; i < contenido.size(); i++) {
                 comando.setInt(1, idPack);
