@@ -66,7 +66,7 @@ public class ArticuloController {
     
     public void showAllCat(Maestro master){
         JComboBox<String> combo =  master.getComboArtCat();
-        ArrayList<ArrayList<Object>> lista = catArtManager.categoriaSelectAll();
+        ArrayList<ArrayList<Object>> lista = catArtManager.categoriasEnabledSelectAll();
         
         int i = 0;
         
