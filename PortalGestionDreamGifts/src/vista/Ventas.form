@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[811, 522]"/>
-    </Property>
     <Property name="resizable" type="boolean" value="false"/>
     <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
       <Dimension value="[1360, 768]"/>
@@ -51,8 +48,8 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" pref="35" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jPane" min="-2" pref="425" max="-2" attributes="0"/>
-              <EmptySpace pref="51" max="32767" attributes="0"/>
+              <Component id="jPane" min="-2" pref="397" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -91,7 +88,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="36" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="jPanel8" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -272,7 +269,7 @@
                               <Group type="102" attributes="0">
                                   <Component id="LNCliente" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                                  <Component id="txtNCliente" min="-2" pref="81" max="-2" attributes="0"/>
+                                  <Component id="txtRutVenta" min="-2" pref="81" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
@@ -286,30 +283,43 @@
                                       </Group>
                                   </Group>
                                   <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="txtEmail" alignment="1" min="-2" pref="81" max="-2" attributes="0"/>
-                                      <Component id="txtNPedido" min="-2" pref="81" max="-2" attributes="0"/>
+                                      <Component id="txtIdStatusVenta" alignment="1" min="-2" pref="81" max="-2" attributes="0"/>
+                                      <Component id="txtVenta" min="-2" pref="81" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace pref="162" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="LRut" min="-2" max="-2" attributes="0"/>
+                              <Component id="LTelefono" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="txtRRSS" max="32767" attributes="0"/>
+                              <Component id="txtIdBanco" max="32767" attributes="0"/>
+                              <Component id="txtIdPack" alignment="0" pref="98" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="LRut" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="txtRut" min="-2" pref="98" max="-2" attributes="0"/>
+                                  <Component id="LNCliente1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Component id="txtFechaIngreso" min="-2" pref="81" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jComboBox1" min="-2" pref="98" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="LTelefono" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="txtTelefono" min="-2" pref="98" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="LNPedido1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="LEmail1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="27" pref="27" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="TxtFechaAprobada" alignment="1" min="-2" pref="81" max="-2" attributes="0"/>
+                                      <Component id="txtCodigoTransferencia" alignment="1" min="-2" pref="81" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="btnCancelar" pref="107" max="32767" attributes="0"/>
                               <Component id="btnGuardar" max="32767" attributes="0"/>
@@ -323,53 +333,48 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="LNPedido" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="txtNPedido" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Component id="btnCancelar" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="LNPedido" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtVenta" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="LRut" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtRRSS" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="LNPedido1" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="btnGuardar" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="LNCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="txtNCliente" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="LEmail" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="txtEmail" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="LNCliente" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtRutVenta" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="LTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtIdBanco" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="LEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtIdStatusVenta" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtIdPack" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="txtCodigoTransferencia" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="txtRut" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="LRut" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="LNCliente1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtFechaIngreso" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="txtTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="LTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace pref="10" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="LEmail1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="TxtFechaAprobada" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnGuardar" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                          <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                          <Component id="jPanel7" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -377,41 +382,56 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="LNPedido">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="N&#xfa;mero Pedido :"/>
+                    <Property name="text" type="java.lang.String" value="ID Venta :"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtNPedido">
+                <Component class="javax.swing.JTextField" name="txtVenta">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNPedidoActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtVentaActionPerformed"/>
                   </Events>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="LNCliente">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Nombre Cliente :"/>
+                    <Property name="text" type="java.lang.String" value="Rut Cliente :"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtNCliente">
+                <Component class="javax.swing.JTextField" name="txtRutVenta">
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="LRut">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Rut :"/>
+                    <Property name="text" type="java.lang.String" value="Id RRSS : "/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtRut">
+                <Component class="javax.swing.JTextField" name="txtRRSS">
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="LTelefono">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Telefono :"/>
+                    <Property name="text" type="java.lang.String" value="Id Banco :"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtTelefono">
+                <Component class="javax.swing.JTextField" name="txtIdBanco">
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="LEmail">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Email :"/>
+                    <Property name="text" type="java.lang.String" value="Id Status :"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtEmail">
+                <Component class="javax.swing.JTextField" name="txtIdStatusVenta">
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnCancelar">
                   <Properties>
@@ -438,31 +458,40 @@
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel4" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="fecha" alignment="0" pref="165" max="32767" attributes="0"/>
-                                  <Component id="txtDireccion" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtNDestinatario" max="32767" attributes="0"/>
-                                  <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="txtNDestinatario" min="-2" pref="165" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel4" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel10" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="fechaDespacho" alignment="0" pref="165" max="32767" attributes="0"/>
+                                          <Component id="txtDireccion" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="txtTelefono" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel9" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel8" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jLabel5" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="ComboComuna" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
-                                  <Component id="jComboBox2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jComboBox3" min="-2" pref="98" max="-2" attributes="0"/>
+                                  <Component id="cbFinEntrega" min="-2" pref="98" max="-2" attributes="0"/>
+                                  <Component id="cbInicioEntrega" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cbComuna" min="-2" pref="98" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace pref="23" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="btnGuardar1" max="32767" attributes="0"/>
                                   <Component id="jPanel9" max="32767" attributes="0"/>
@@ -481,51 +510,50 @@
                                           <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="txtNDestinatario" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jComboBox2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="cbComuna" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
-                                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="fecha" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cbInicioEntrega" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
-                                          </Group>
-                                          <Group type="102" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
                                                   <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jComboBox3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="cbFinEntrega" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
-                                      </Group>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="ComboComuna" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                                               <Component id="btnGuardar1" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="txtDireccion" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jScrollPane1" min="-2" pref="86" max="-2" attributes="0"/>
-                                                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="fechaDespacho" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="3" attributes="0">
+                                                      <Component id="txtDireccion" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="3" attributes="0">
+                                                      <Component id="txtTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jScrollPane1" min="-2" pref="50" max="-2" attributes="0"/>
+                                                  </Group>
                                               </Group>
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <Component id="jPanel9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jPanel9" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="48" max="32767" attributes="0"/>
+                              <EmptySpace pref="66" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -546,56 +574,37 @@
                         <Property name="text" type="java.lang.String" value="Direccion :"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="jLabel5">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="Comuna :"/>
-                      </Properties>
-                    </Component>
                     <Component class="javax.swing.JLabel" name="jLabel6">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Saludo :"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtNDestinatario">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
-                    <Component class="com.toedter.calendar.JDateChooser" name="fecha">
+                    <Component class="com.toedter.calendar.JDateChooser" name="fechaDespacho">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txtDireccion">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel8">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Hora Inicio Entrega :"/>
+                        <Property name="text" type="java.lang.String" value="Comuna :"/>
                       </Properties>
-                    </Component>
-                    <Component class="javax.swing.JComboBox" name="jComboBox2">
-                      <Properties>
-                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="12">
-                            <StringItem index="0" value="08:00"/>
-                            <StringItem index="1" value="09:00"/>
-                            <StringItem index="2" value="10:00"/>
-                            <StringItem index="3" value="11:00;12:00"/>
-                            <StringItem index="4" value="13:00"/>
-                            <StringItem index="5" value="14:00"/>
-                            <StringItem index="6" value="15:00"/>
-                            <StringItem index="7" value="16:00"/>
-                            <StringItem index="8" value="17:00"/>
-                            <StringItem index="9" value="18:00"/>
-                            <StringItem index="10" value="19:00"/>
-                            <StringItem index="11" value="20:00"/>
-                          </StringArray>
-                        </Property>
-                      </Properties>
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                      </AuxValues>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel9">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Hora Fin Entrega :"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JComboBox" name="jComboBox3">
+                    <Component class="javax.swing.JComboBox" name="cbFinEntrega">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                           <StringArray count="13">
@@ -617,49 +626,7 @@
                       </Properties>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JComboBox" name="ComboComuna">
-                      <Properties>
-                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="32">
-                            <StringItem index="0" value="Santiago"/>
-                            <StringItem index="1" value="Cerrillos"/>
-                            <StringItem index="2" value="Cerro Navia"/>
-                            <StringItem index="3" value="Conchal&#xed;"/>
-                            <StringItem index="4" value="El Bosque"/>
-                            <StringItem index="5" value="Estaci&#xf3;n Central"/>
-                            <StringItem index="6" value="Huechuraba"/>
-                            <StringItem index="7" value="Independencia"/>
-                            <StringItem index="8" value="La Cisterna"/>
-                            <StringItem index="9" value="La Florida"/>
-                            <StringItem index="10" value="La Granja"/>
-                            <StringItem index="11" value="La Pintana"/>
-                            <StringItem index="12" value="La Reina"/>
-                            <StringItem index="13" value="Las Condes"/>
-                            <StringItem index="14" value="Lo Barnechea"/>
-                            <StringItem index="15" value="Lo Espejo"/>
-                            <StringItem index="16" value="Lo Prado"/>
-                            <StringItem index="17" value="Macul"/>
-                            <StringItem index="18" value="Maip&#xfa;"/>
-                            <StringItem index="19" value="&#xd1;u&#xf1;oa"/>
-                            <StringItem index="20" value="Pedro Aguirre Cerda"/>
-                            <StringItem index="21" value="Pe&#xf1;alol&#xe9;n"/>
-                            <StringItem index="22" value="Providencia"/>
-                            <StringItem index="23" value="Pudahuel"/>
-                            <StringItem index="24" value="Quilicura"/>
-                            <StringItem index="25" value="Quinta Normal"/>
-                            <StringItem index="26" value="Recoleta"/>
-                            <StringItem index="27" value="Renca"/>
-                            <StringItem index="28" value="San Joaqu&#xed;n"/>
-                            <StringItem index="29" value="San Miguel"/>
-                            <StringItem index="30" value="San Ram&#xf3;n"/>
-                            <StringItem index="31" value="Vitacura"/>
-                          </StringArray>
-                        </Property>
-                      </Properties>
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                     </Component>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -670,6 +637,9 @@
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
                         <Component class="javax.swing.JTextPane" name="txtSaludo">
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                          </AuxValues>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -686,28 +656,10 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="27" pref="27" max="-2" attributes="0"/>
-                                          <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jTextField5" pref="95" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                                  <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jTextField7" max="32767" attributes="0"/>
-                                              <Component id="jTextField10" max="32767" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                  </Group>
+                                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                  <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                  <Component id="txtValorTotal" pref="95" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -715,43 +667,17 @@
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtValorTotal" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace pref="42" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Component class="javax.swing.JLabel" name="jLabel11">
-                          <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Tahoma" size="14" style="1"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="SubTotal:"/>
-                          </Properties>
-                        </Component>
-                        <Component class="javax.swing.JLabel" name="jLabel12">
-                          <Properties>
-                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                              <Font name="Tahoma" size="14" style="1"/>
-                            </Property>
-                            <Property name="text" type="java.lang.String" value="IVA :"/>
-                          </Properties>
-                        </Component>
                         <Component class="javax.swing.JLabel" name="jLabel13">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -760,11 +686,10 @@
                             <Property name="text" type="java.lang.String" value="Total:"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField5">
-                        </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField7">
-                        </Component>
-                        <Component class="javax.swing.JTextField" name="jTextField10">
+                        <Component class="javax.swing.JTextField" name="txtValorTotal">
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                          </AuxValues>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -773,33 +698,111 @@
                         <Property name="text" type="java.lang.String" value="GUARDAR"/>
                       </Properties>
                     </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel10">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Telefono :"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="txtTelefono">
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel14">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="Hora Inicio Entrega :"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="cbInicioEntrega">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="12">
+                            <StringItem index="0" value="08:00"/>
+                            <StringItem index="1" value="09:00"/>
+                            <StringItem index="2" value="10:00"/>
+                            <StringItem index="3" value="11:00;12:00"/>
+                            <StringItem index="4" value="13:00"/>
+                            <StringItem index="5" value="14:00"/>
+                            <StringItem index="6" value="15:00"/>
+                            <StringItem index="7" value="16:00"/>
+                            <StringItem index="8" value="17:00"/>
+                            <StringItem index="9" value="18:00"/>
+                            <StringItem index="10" value="19:00"/>
+                            <StringItem index="11" value="20:00"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="cbComuna">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="11">
+                            <StringItem index="0" value="Seleccione"/>
+                            <StringItem index="1" value="Desayuno"/>
+                            <StringItem index="2" value="Desayunos Infantiles"/>
+                            <StringItem index="3" value="D&#xed;a del Ni&#xf1;o"/>
+                            <StringItem index="4" value="D&#xed;a del Profe"/>
+                            <StringItem index="5" value="Especial 18"/>
+                            <StringItem index="6" value="Halloween"/>
+                            <StringItem index="7" value="Aniversarios"/>
+                            <StringItem index="8" value="Tabla Picoteo"/>
+                            <StringItem index="9" value="Tablas Dulces"/>
+                            <StringItem index="10" value="Sorpresas"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
+                    </Component>
                   </SubComponents>
                 </Container>
                 <Component class="javax.swing.JLabel" name="jLabel7">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Pack :"/>
+                    <Property name="text" type="java.lang.String" value="Id Pack : "/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBox1">
+                <Component class="javax.swing.JLabel" name="LNPedido1">
                   <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="11">
-                        <StringItem index="0" value="Seleccione"/>
-                        <StringItem index="1" value="Desayuno"/>
-                        <StringItem index="2" value="Desayunos Infantiles"/>
-                        <StringItem index="3" value="D&#xed;a del Ni&#xf1;o"/>
-                        <StringItem index="4" value="D&#xed;a del Profe"/>
-                        <StringItem index="5" value="Especial 18"/>
-                        <StringItem index="6" value="Halloween"/>
-                        <StringItem index="7" value="Aniversarios"/>
-                        <StringItem index="8" value="Tabla Picoteo"/>
-                        <StringItem index="9" value="Tablas Dulces"/>
-                        <StringItem index="10" value="Sorpresas"/>
-                      </StringArray>
-                    </Property>
+                    <Property name="text" type="java.lang.String" value="C&#xf3;digo Transferencia : "/>
                   </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txtCodigoTransferencia">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCodigoTransferenciaActionPerformed"/>
+                  </Events>
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="LNCliente1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Fecha Ingreso :"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txtFechaIngreso">
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="LEmail1">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Fecha Aprobada :"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="TxtFechaAprobada">
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txtIdPack">
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                   </AuxValues>
                 </Component>
               </SubComponents>
@@ -1085,7 +1088,7 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="393" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="365" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>

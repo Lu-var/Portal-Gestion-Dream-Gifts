@@ -1,0 +1,139 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package modelo;
+
+import bd.Log;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author nmoli
+ */
+public class VentaManager {
+    
+    ConexionRequest intentoConexion = new ConexionRequest();
+    Connection conexion = intentoConexion.conectar();
+    
+    public void agregarVenta(String RUT, int Status, int idRRSS, int idBanco, int idPack, String TextoPack,
+            int ValorTotal, int CodigoTransf,  String FechaIngreso, String FechaAprobada, String FechaDespacho, String NombreTarget, String CelularTarget,
+            String DireccionTarget, int idComunaTarget, String FechaEntrega, String HoraDespachoIni, String HoraDespachoFin, int idStatusDespacho){
+        
+        PreparedStatement comando = null;
+        try{
+            comando = conexion.prepareStatement("INSERT INTO Venta VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+            comando.setString(1, RUT);
+            comando.setInt(2, Status);
+            comando.setInt(3, idRRSS);
+            comando.setInt(4, idBanco);
+            comando.setInt(5, idPack);
+            comando.setString(6, TextoPack);
+            comando.setInt(7,ValorTotal);
+            comando.setInt(8,CodigoTransf);
+            comando.setString(9,FechaIngreso);
+            comando.setString(10, FechaAprobada);
+            comando.setString(11, FechaDespacho);
+            comando.setString(12,NombreTarget);
+            comando.setString(13, CelularTarget);
+            comando.setString(14, DireccionTarget);
+            comando.setInt(15, idComunaTarget);
+            comando.setString(16, FechaEntrega);
+            comando.setString(17,HoraDespachoIni);
+            comando.setString(18,HoraDespachoFin);
+            comando.setInt(19, idStatusDespacho);
+            
+            comando.execute();
+            
+        } catch(Exception ex){
+            JOptionPane.showMessageDialog(null,ex);
+        }  
+        
+        
+        
+    }
+
+    
+    public ArrayList<ArrayList<Object>> clientesSelectAllSQL(){
+        
+        PreparedStatement comando = null;
+        ResultSet resultado = null;
+        ArrayList<ArrayList<Object>> matriz = new ArrayList<>();
+        
+        try{
+            comando = conexion.prepareStatement("SELECT * FROM Cliente"); 
+            resultado = comando.executeQuery();
+            
+            while(resultado.next()){
+                ArrayList<Object> lista = new ArrayList<>();
+                
+                String RUT = resultado.getString("RUT");
+                String nombre = resultado.getString("Nombre");
+                String fecha = resultado.getString("FechaNacimiento");
+                String celular = resultado.getString("Celular");
+                String email = resultado.getString("Email");
+                
+                lista.add(RUT);
+                lista.add(nombre);
+                lista.add(fecha);
+                lista.add(celular);
+                lista.add(email);
+                matriz.add(lista);
+                }
+            
+                
+            
+        } catch(Exception ex){
+                JOptionPane.showMessageDialog(null,ex);
+        }
+        
+        return matriz;
+    }
+    
+    // Funcion debug
+    public void InfoClientes(ResultSet cliente){
+        
+        try{
+            while(cliente.next()){
+                System.out.println("RUT: " + cliente.getString("RUT"));
+                System.out.println("nombre: " + cliente.getString("Nombre"));
+                System.out.println("fechaNacimiento: " + cliente.getString("FechaNacimiento"));
+                System.out.println("celular: " + cliente.getString("Celular"));
+                System.out.println("email: " + cliente.getString("Email"));
+                System.out.println("direccion: " + cliente.getString("Direccion"));
+                System.out.println("\n");
+            }
+            
+        } catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
+    }
+    
+    public void update(String idTarget, String id, String nombre, String fecha, String celular, String email){
+           
+        try{
+            PreparedStatement comando = conexion.prepareStatement("UPDATE Cliente SET RUT = (?), Nombre = (?), FechaNacimiento = (?), Celular = (?), Email = (?) WHERE RUT = (?)");
+            
+            comando.setString(1, id);
+            comando.setString(2, nombre);
+            comando.setString(3,fecha);
+            comando.setString(4, celular);
+            comando.setString(5, email);
+            comando.setString(6, idTarget);
+            
+            comando.execute();
+            
+        } catch(Exception ex){
+            Log.seguir(ex.getMessage());
+        }
+    
+        
+        
+        
+    }
+    
+}

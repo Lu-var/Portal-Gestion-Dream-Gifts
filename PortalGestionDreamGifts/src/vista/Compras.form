@@ -606,7 +606,7 @@
                                       <EmptySpace min="35" pref="35" max="-2" attributes="0"/>
                                       <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTextField7" pref="80" max="32767" attributes="0"/>
+                                      <Component id="jTextField7" pref="79" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="27" pref="27" max="-2" attributes="0"/>
@@ -661,7 +661,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Tahoma" size="12" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="IGV:"/>
+                        <Property name="text" type="java.lang.String" value="IVA:"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel13">

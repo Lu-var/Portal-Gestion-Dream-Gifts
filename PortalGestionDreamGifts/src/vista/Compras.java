@@ -349,7 +349,7 @@ public class Compras extends javax.swing.JFrame {
         jLabel11.setText("SubTotal:");
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel12.setText("IGV:");
+        jLabel12.setText("IVA:");
 
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel13.setText("Total:");
@@ -364,7 +364,7 @@ public class Compras extends javax.swing.JFrame {
                         .addGap(35, 35, 35)
                         .addComponent(jLabel12)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE))
+                        .addComponent(jTextField7, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(27, 27, 27)
                         .addComponent(jLabel13)
