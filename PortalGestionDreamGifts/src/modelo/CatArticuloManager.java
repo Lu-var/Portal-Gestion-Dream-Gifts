@@ -123,7 +123,7 @@ public class CatArticuloManager {
         if(flag){status = 1;} else{status = 0;}
         
         try{
-            comando = conexion.prepareStatement("UPDATE CategoriaArticulo SET idCategoriaArticulo = (?), Descripcion = (?), Enabled = (?) WHERE idCategoriaArticulo = (?)");
+            comando = conexion.prepareStatement("UPDATE CategoriaArticulo SET Descripcion = (?), Enabled = (?) WHERE idCategoriaArticulo = (?)");
             
             comando.setString(1, nombre);
             comando.setInt(2,status);

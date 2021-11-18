@@ -97,7 +97,7 @@ public class CatArtController {
             }
 
 
-            input = JOptionPane.showConfirmDialog(null,"¿Activar est Categoría? ","Estado Actual: " + status, JOptionPane.YES_NO_OPTION);
+            input = JOptionPane.showConfirmDialog(null,"¿Activar esta Categoría? ","Estado Actual: " + status, JOptionPane.YES_NO_OPTION);
             if((int)input == JOptionPane.CLOSED_OPTION){
                 JOptionPane.showMessageDialog(null, "Edición Cancelada", null, JOptionPane.INFORMATION_MESSAGE);
                 return;
