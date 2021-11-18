@@ -20,25 +20,25 @@ public class VentaController {
     public void agregarVenta(Ventas vista){
         
         String RUT = vista.getTxtRutVenta().getText();
-        int Status = vista.getTxtIdStatusVenta().getText();
-        int idRRSS = vista.getTxtRRSS().getText();
-        int idBanco = vista.getTxtIdBanco().getText();
-        int idPack = vista.getTxtIdPack().getText();
+        int Status = Integer.parseInt(vista.getTxtIdStatusVenta().getText());
+        int idRRSS = Integer.parseInt(vista.getTxtRRSS().getText());
+        int idBanco = Integer.parseInt(vista.getTxtIdBanco().getText());
+        int idPack = Integer.parseInt(vista.getTxtIdPack().getText());
         String TextoPack = vista.getTxtSaludo().getText();
-        int ValorTotal = vista.getTxtValorTotal().getText();
-        int CodigoTransf = vista.getTxtCodigoTransferencia().getText();
+        int ValorTotal = Integer.parseInt(vista.getTxtValorTotal().getText());
+        int CodigoTransf = Integer.parseInt(vista.getTxtCodigoTransferencia().getText());
         String FechaIngreso = vista.getTxtFechaIngreso().getText();
         String FechaAprobada = vista.getTxtFechaAprobada().getText();
         Date FechaDespacho = vista.getFechaDespacho().getDate();
-        DateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        DateFormat formato = new SimpleDateFormat("dd/MM/yyyy"); // aqui hay que corregir
         String NombreTarget = vista.getTxtNDestinatario().getText();
         String CelularTarget = vista.getTxtTelefono().getText();
         String DireccionTarget = vista.getTxtDireccion().getText();
-        int idComunaTarget = no la tengo; //combobox
-        String FechaEntrega = no la tengo; //combobox
-        String HoraDespachoIni = no la tengo; // combobox
-        String HoraDespachoFin = no la tengo; // combobox
-        int idStatusDespacho = no la tengo; // combobox
+        int idComunaTarget = no la tengo; //combobox aprender a transformar
+        String FechaEntrega = no la tengo; //combobox pendiente de aprender
+        String HoraDespachoIni = no la tengo; // combobox pendiente de aprender
+        String HoraDespachoFin = no la tengo; // combobox pendiente de aprender
+        int idStatusDespacho = no la tengo; // combobox pendiente de aprender
         
         venta.agregarVenta(RUT, Status, idRRSS, idBanco, idPack, TextoPack, ValorTotal, CodigoTransf, FechaIngreso, 
                 FechaAprobada, FechaDespacho, NombreTarget,CelularTarget, DireccionTarget, idComunaTarget, FechaEntrega, HoraDespachoIni,

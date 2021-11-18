@@ -70,7 +70,7 @@ public class Ventas extends javax.swing.JFrame {
         txtDireccion = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        cbFinEntrega = new javax.swing.JComboBox<>();
+        cbxFinEntrega = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtSaludo = new javax.swing.JTextPane();
         jPanel9 = new javax.swing.JPanel();
@@ -80,8 +80,8 @@ public class Ventas extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         txtTelefono = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        cbInicioEntrega = new javax.swing.JComboBox<>();
-        cbComuna = new javax.swing.JComboBox<>();
+        cbxInicioEntrega = new javax.swing.JComboBox<>();
+        cbxComuna = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         LNPedido1 = new javax.swing.JLabel();
         txtCodigoTransferencia = new javax.swing.JTextField();
@@ -261,7 +261,7 @@ public class Ventas extends javax.swing.JFrame {
 
         jLabel9.setText("Hora Fin Entrega :");
 
-        cbFinEntrega.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00" }));
+        cbxFinEntrega.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00" }));
 
         jScrollPane1.setViewportView(txtSaludo);
 
@@ -297,9 +297,9 @@ public class Ventas extends javax.swing.JFrame {
 
         jLabel14.setText("Hora Inicio Entrega :");
 
-        cbInicioEntrega.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "08:00", "09:00", "10:00", "11:00;12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00" }));
+        cbxInicioEntrega.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "08:00", "09:00", "10:00", "11:00;12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00" }));
 
-        cbComuna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Desayuno", "Desayunos Infantiles", "Día del Niño", "Día del Profe", "Especial 18", "Halloween", "Aniversarios", "Tabla Picoteo", "Tablas Dulces", "Sorpresas" }));
+        cbxComuna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Desayuno", "Desayunos Infantiles", "Día del Niño", "Día del Profe", "Especial 18", "Halloween", "Aniversarios", "Tabla Picoteo", "Tablas Dulces", "Sorpresas" }));
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -331,9 +331,9 @@ public class Ventas extends javax.swing.JFrame {
                     .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cbFinEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbInicioEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbComuna, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cbxFinEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbxInicioEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbxComuna, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnGuardar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -350,17 +350,17 @@ public class Ventas extends javax.swing.JFrame {
                             .addComponent(jLabel2)
                             .addComponent(txtNDestinatario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel8)
-                            .addComponent(cbComuna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(cbxComuna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel7Layout.createSequentialGroup()
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel14)
-                                    .addComponent(cbInicioEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(cbxInicioEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel9)
-                                    .addComponent(cbFinEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(cbxFinEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addComponent(btnGuardar1)
                                 .addGroup(jPanel7Layout.createSequentialGroup()
@@ -844,27 +844,27 @@ public class Ventas extends javax.swing.JFrame {
     }
 
     public JComboBox<String> getCbComuna() {
-        return cbComuna;
+        return cbxComuna;
     }
 
     public void setCbComuna(JComboBox<String> cbComuna) {
-        this.cbComuna = cbComuna;
+        this.cbxComuna = cbComuna;
     }
 
     public JComboBox<String> getCbFinEntrega() {
-        return cbFinEntrega;
+        return cbxFinEntrega;
     }
 
     public void setCbFinEntrega(JComboBox<String> cbFinEntrega) {
-        this.cbFinEntrega = cbFinEntrega;
+        this.cbxFinEntrega = cbFinEntrega;
     }
 
     public JComboBox<String> getCbInicioEntrega() {
-        return cbInicioEntrega;
+        return cbxInicioEntrega;
     }
 
     public void setCbInicioEntrega(JComboBox<String> cbInicioEntrega) {
-        this.cbInicioEntrega = cbInicioEntrega;
+        this.cbxInicioEntrega = cbInicioEntrega;
     }
 
     public JDateChooser getFecha() {
@@ -1053,9 +1053,9 @@ public class Ventas extends javax.swing.JFrame {
     private javax.swing.JButton btnInformes;
     private javax.swing.JButton btnMaestro;
     private javax.swing.JButton btnVentas;
-    public javax.swing.JComboBox<String> cbComuna;
-    public javax.swing.JComboBox<String> cbFinEntrega;
-    public javax.swing.JComboBox<String> cbInicioEntrega;
+    public javax.swing.JComboBox<String> cbxComuna;
+    public javax.swing.JComboBox<String> cbxFinEntrega;
+    public javax.swing.JComboBox<String> cbxInicioEntrega;
     public com.toedter.calendar.JDateChooser fechaDespacho;
     private javax.swing.JButton jBut_Buscar_Conf;
     private javax.swing.JButton jBut_Buscar_List_Dest;
