@@ -2508,14 +2508,6 @@ public class Maestro extends javax.swing.JFrame {
         this.txtUnidadesArt = txtUnidadesArt;
     }
 
-    public JButton getBtnDisableEstadoVenta() {
-        return btnDisableEstadoVenta;
-    }
-
-    public void setBtnDisableEstadoVenta(JButton btnDisableEstadoVenta) {
-        this.btnDisableEstadoVenta = btnDisableEstadoVenta;
-    }
-
     public JButton getBtnEditarEstadoVenta() {
         return btnEditarEstadoVenta;
     }
