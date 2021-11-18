@@ -1993,7 +1993,7 @@ public class Maestro extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSaveProvActionPerformed
 
     private void btnEditarProvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarProvActionPerformed
-        // TODO add your handling code here:
+        provCtrl.edit(this);
     }//GEN-LAST:event_btnEditarProvActionPerformed
 
     private void checkArticuloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkArticuloActionPerformed
