@@ -8,6 +8,7 @@ import bd.Log;
 import java.util.ArrayList;
 import java.util.Vector;
 import javax.swing.JComboBox;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -119,6 +120,10 @@ public class PackController {
         combo.removeAllItems();
         vista.getTxtPacksEditNombre().setText(null);
         vista.getTxtPacksEditPrecio().setText(null);
+        vista.getCantPackEditArt().setText(null);
+        vista.getTxtStockPackEdit().setText(null);
+        vista.getVentanaEdit().dispose();
+        
     }
     
     public void agregarArticulosPack(Maestro vista){
@@ -232,7 +237,10 @@ public class PackController {
             }
         }
         
-        if(idCategoria == 0) Log.seguir("ID Categoria desconocido.");
+        if(idCategoria == 0) {
+            Log.seguir("ID Categoria desconocido.");
+            return;
+        }
         
         ArrayList<ArrayList<Integer>> contenido = new ArrayList<>();
         JTable tabla = vista.getTablaPacksSelected();
@@ -254,6 +262,11 @@ public class PackController {
     }
 
     public void showEdit(Maestro vista){
+        JFrame ventana = vista.getVentanaEdit();
+        if(ventana.isVisible()){
+            System.out.println("Ya hay una edicion en curso.");
+            return;
+        }
         
         showArticulosEdit(vista);
         showCatPacksEdit(vista);
@@ -261,7 +274,12 @@ public class PackController {
         JTable tabla = vista.getTablaPacks();
         
         int pos = tabla.getSelectedRow();
-        if(pos==-1){System.out.println("index"); return;}
+        if(pos==-1){System.out.println("No hay fila seleccionada"); return;}
+        
+        ventana.setLocationRelativeTo(null);
+        ventana.setSize(900, 500);
+        ventana.setVisible(true);
+        
         
         DefaultTableModel model = (DefaultTableModel) tabla.getModel();
         Vector fila = (Vector)model.getDataVector().elementAt(pos);
@@ -290,6 +308,40 @@ public class PackController {
     }
     
     public void edit(Maestro vista){
+        JTable tablaPacks = vista.getTablaPacks();
+        int pos = vista.getTablaPacks().getSelectedRow();
+        int idPack  = (Integer)vista.getTablaPacks().getModel().getValueAt(pos, 0);
+        JTable tablaContenido = vista.getTablaPacksEditSelected();
+        String nombre = vista.getTxtPacksEditNombre().getText();
+        int precio = (Integer.parseInt(vista.getTxtPacksEditPrecio().getText()));
+        int stock = (Integer.parseInt(vista.getTxtStockPackEdit().getText()));
+        boolean enabledFlag = vista.getCheckEnabledPackEdit().isSelected();
+        int enabled;
+        
+        if(enabledFlag){
+            enabled = 1;
+        } else{enabled = 0;}
+        
+        int idCatPack = catPackManager.categoriaDescSelect((String)vista.getComboPacksEditCatArt().getSelectedItem());
+        
+        DefaultTableModel modelContenido = (DefaultTableModel) tablaContenido.getModel();
+        ArrayList<ArrayList<Integer>> contenido = new ArrayList<>();
+        
+        if(tablaContenido.getModel().getRowCount() == 0){
+            JOptionPane.showMessageDialog(null, "Introduzca un articulo.", "", JOptionPane.INFORMATION_MESSAGE);
+            return;
+        }        
+        
+        for (int i = 0; i < modelContenido.getRowCount(); i++) {
+            ArrayList<Integer> temp = new ArrayList<>();
+            temp.add((Integer)tablaContenido.getValueAt(i, 0));
+            temp.add((Integer)tablaContenido.getValueAt(i, 1));
+            contenido.add(temp);
+        }
+        
+        manager.editPack(idPack, nombre, precio, stock, idCatPack, enabled);
+        manager.editContenidos(idPack, contenido);
+        
         
     }
     

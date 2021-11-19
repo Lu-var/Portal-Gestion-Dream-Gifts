@@ -242,6 +242,7 @@ public class Maestro extends javax.swing.JFrame {
 
         ventanaEdit.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         ventanaEdit.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        ventanaEdit.setPreferredSize(new java.awt.Dimension(811, 587));
         ventanaEdit.setResizable(false);
         ventanaEdit.setSize(new java.awt.Dimension(1360, 768));
         ventanaEdit.addWindowListener(new java.awt.event.WindowAdapter() {
@@ -1162,12 +1163,12 @@ public class Maestro extends javax.swing.JFrame {
         });
         scrollSelected.setViewportView(tablaPacksSelected);
         if (tablaPacksSelected.getColumnModel().getColumnCount() > 0) {
-            tablaPacksSelected.getColumnModel().getColumn(0).setMinWidth(55);
-            tablaPacksSelected.getColumnModel().getColumn(0).setPreferredWidth(55);
-            tablaPacksSelected.getColumnModel().getColumn(0).setMaxWidth(55);
-            tablaPacksSelected.getColumnModel().getColumn(1).setMinWidth(54);
-            tablaPacksSelected.getColumnModel().getColumn(1).setPreferredWidth(54);
-            tablaPacksSelected.getColumnModel().getColumn(1).setMaxWidth(54);
+            tablaPacksSelected.getColumnModel().getColumn(0).setMinWidth(50);
+            tablaPacksSelected.getColumnModel().getColumn(0).setPreferredWidth(50);
+            tablaPacksSelected.getColumnModel().getColumn(0).setMaxWidth(50);
+            tablaPacksSelected.getColumnModel().getColumn(1).setMinWidth(60);
+            tablaPacksSelected.getColumnModel().getColumn(1).setPreferredWidth(60);
+            tablaPacksSelected.getColumnModel().getColumn(1).setMaxWidth(60);
         }
 
         jLabel14.setText("Precio Pack :");
@@ -2360,14 +2361,14 @@ public class Maestro extends javax.swing.JFrame {
     }//GEN-LAST:event_comboArtCatActionPerformed
 
     private void btnPacksEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPacksEditActionPerformed
-        packCtrl.showEdit(this);
-        this.ventanaEdit.setSize(900, 500);
-        this.ventanaEdit.setVisible(true);
-        
+            packCtrl.showEdit(this); 
     }//GEN-LAST:event_btnPacksEditActionPerformed
 
     private void btnPacksEditSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPacksEditSaveActionPerformed
-        
+        packCtrl.edit(this);
+        packCtrl.clearAll(this);
+        packCtrl.showAll(this);
+        packCtrl.clearAllEdit(this);
     }//GEN-LAST:event_btnPacksEditSaveActionPerformed
 
     private void btnDelPackEditArtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDelPackEditArtActionPerformed

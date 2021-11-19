@@ -126,4 +126,42 @@ public class PackManager {
         }
         return matriz;
     }
+    
+    public void editPack(int idPack, String nombre, int precio, int stock, int idCategoria, int enabled){
+        try {
+            PreparedStatement comando = conexion.prepareStatement("UPDATE Pack SET Nombre = ?, Precio = ?, Stock = ?, idCategoriaPack = ?, Enabled = ? WHERE idPack = ?");
+            
+            comando.setString(1, nombre);
+            comando.setInt(2, precio);
+            comando.setInt(3, stock);
+            comando.setInt(4, idCategoria);
+            comando.setInt(5, enabled);
+            comando.setInt(6, idPack);
+            
+            comando.executeUpdate();
+        } catch (Exception ex) {
+            Log.seguir(ex.getMessage());
+        }
+    }
+    
+    public void editContenidos(int idPack, ArrayList<ArrayList<Integer>> contenido){
+        try {
+            PreparedStatement comando = conexion.prepareStatement("DELETE FROM Contenidos WHERE idPack = ?");
+            comando.setInt(1, idPack);
+            comando.executeUpdate();
+            
+            comando = conexion.prepareStatement("INSERT INTO Contenidos (idPack, idArticulo, Cantidad) VALUES (?, ?, ?)");
+
+            for (int i = 0; i < contenido.size(); i++) {
+                comando.setInt(1, idPack);
+                comando.setInt(2, contenido.get(i).get(0));
+                comando.setInt(3, contenido.get(i).get(1));
+
+                comando.executeUpdate();
+            }             
+            
+        } catch (Exception ex) {
+            Log.seguir(ex.getMessage());
+        }
+    }
 }

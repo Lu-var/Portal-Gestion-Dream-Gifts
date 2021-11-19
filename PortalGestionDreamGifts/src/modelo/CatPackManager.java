@@ -78,6 +78,25 @@ public class CatPackManager {
         return nombre;
     }
     
+    public int categoriaDescSelect(String desc){
+        int idCat = 0;
+        try {
+            PreparedStatement comando = conexion.prepareStatement("SELECT idCategoriaPack FROM CategoriaPack WHERE Descripcion = ?");
+            
+            comando.setString(1, desc);
+            
+            ResultSet resultado = comando.executeQuery();
+            
+            resultado.next();
+            idCat = resultado.getInt(1);
+            
+        } catch (Exception ex) {
+            Log.seguir(ex.getMessage());
+        }
+        
+        return idCat;
+    }
+    
     public ArrayList<ArrayList<Object>> categoriasEnabledSelectAll(){
         ArrayList<ArrayList<Object>> matriz = new ArrayList<ArrayList<Object>>();
         try{
