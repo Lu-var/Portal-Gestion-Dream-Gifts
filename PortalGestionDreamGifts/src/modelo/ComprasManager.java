@@ -34,4 +34,26 @@ public class ComprasManager {
             JOptionPane.showMessageDialog(null, ex);
         }
     }
+    
+    public void registrarCompra (int idFactura, int idArticulo, int Cantidad, int Total, String FechaVencimiento){
+        
+        PreparedStatement comando = null;
+        try {
+            comando = conexion.prepareStatement("INSERT INTO DetalleFactura VALUES (?,?,?,?,?)");
+            comando.setInt(1, idFactura);
+            comando.setInt(2, idArticulo);
+            comando.setInt(3, Cantidad);
+            comando.setInt(4, Total);
+            comando.setString(5, FechaVencimiento);
+            
+            comando.execute();           
+            
+        } catch (SQLException ex){
+            JOptionPane.showMessageDialog(null, ex);
+            
+        }
+    }
+    
+    
+    
 }
