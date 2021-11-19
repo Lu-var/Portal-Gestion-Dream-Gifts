@@ -62,7 +62,7 @@ public class CatPackManager {
     public String categoriaIDSelect(int id){
         String nombre = new String();
         try {
-            PreparedStatement comando = conexion.prepareStatement("SELECT Descripcion FROM Pack WHERE idCategoriaPack = ?");
+            PreparedStatement comando = conexion.prepareStatement("SELECT Descripcion FROM CategoriaPack WHERE idCategoriaPack = ?");
             
             comando.setInt(1, id);
             
