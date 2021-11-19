@@ -118,7 +118,6 @@ public class Maestro extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         txtMailCliente = new javax.swing.JTextField();
         btnSaveCliente = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
         dateNacCliente = new com.toedter.calendar.JDateChooser();
         jScrollPane1 = new javax.swing.JScrollPane();
         tablaClientes = new javax.swing.JTable();
@@ -127,7 +126,6 @@ public class Maestro extends javax.swing.JFrame {
         LBanco = new javax.swing.JLabel();
         txtBanco = new javax.swing.JTextField();
         btngGuardar = new javax.swing.JButton();
-        btnCancelar = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         tablaBanco = new javax.swing.JTable();
         btnEditar = new javax.swing.JButton();
@@ -135,7 +133,6 @@ public class Maestro extends javax.swing.JFrame {
         btnEditarRRSS = new javax.swing.JButton();
         jScrollPane9 = new javax.swing.JScrollPane();
         tablaRRSS = new javax.swing.JTable();
-        btnCancelRRSS = new javax.swing.JButton();
         btnSavRRSS = new javax.swing.JButton();
         txtRRSS = new javax.swing.JTextField();
         LRRSS = new javax.swing.JLabel();
@@ -143,13 +140,11 @@ public class Maestro extends javax.swing.JFrame {
         LComuna = new javax.swing.JLabel();
         txtComuna = new javax.swing.JTextField();
         btnSavComuna = new javax.swing.JButton();
-        btnCancelComuna = new javax.swing.JButton();
         jScrollPane7 = new javax.swing.JScrollPane();
         tablaComuna = new javax.swing.JTable();
         btnEditarComuna = new javax.swing.JButton();
         PanelCatPack = new javax.swing.JPanel();
         btnCatPacktEditar = new javax.swing.JButton();
-        btnCatPackCancelar = new javax.swing.JButton();
         txtCatPack = new javax.swing.JTextField();
         jScrollPane13 = new javax.swing.JScrollPane();
         tablaCatPack = new javax.swing.JTable();
@@ -242,7 +237,6 @@ public class Maestro extends javax.swing.JFrame {
 
         ventanaEdit.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         ventanaEdit.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        ventanaEdit.setPreferredSize(new java.awt.Dimension(811, 587));
         ventanaEdit.setResizable(false);
         ventanaEdit.setSize(new java.awt.Dimension(1360, 768));
         ventanaEdit.addWindowListener(new java.awt.event.WindowAdapter() {
@@ -585,8 +579,6 @@ public class Maestro extends javax.swing.JFrame {
             }
         });
 
-        jButton6.setText("CANCELAR");
-
         dateNacCliente.setDateFormatString("dd/MM/yyyy");
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
@@ -608,7 +600,7 @@ public class Maestro extends javax.swing.JFrame {
                     .addComponent(txtCelularCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
                     .addComponent(txtNombreCliente, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtRutCliente))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 132, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 139, Short.MAX_VALUE)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
                         .addComponent(jLabel7)
@@ -619,39 +611,32 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(dateNacCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
                     .addComponent(txtMailCliente))
-                .addGap(36, 36, 36)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnSaveCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(100, 100, 100))
+                .addGap(72, 72, 72)
+                .addComponent(btnSaveCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(64, 64, 64))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtRutCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5)
+                    .addComponent(dateNacCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtRutCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
-                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(dateNacCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel13Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(txtNombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel4))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7)
-                            .addComponent(txtMailCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3)
-                            .addComponent(txtCelularCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                        .addComponent(btnSaveCliente)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton6)))
+                            .addComponent(txtNombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(txtMailCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3)
+                    .addComponent(txtCelularCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSaveCliente))
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
@@ -725,8 +710,6 @@ public class Maestro extends javax.swing.JFrame {
             }
         });
 
-        btnCancelar.setText("CANCELAR");
-
         tablaBanco.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -765,17 +748,13 @@ public class Maestro extends javax.swing.JFrame {
         PanelBancosLayout.setHorizontalGroup(
             PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelBancosLayout.createSequentialGroup()
-                .addGap(258, 258, 258)
-                .addGroup(PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCancelar)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBancosLayout.createSequentialGroup()
-                        .addComponent(LBanco)
-                        .addGap(13, 13, 13)))
-                .addGap(90, 90, 90)
+                .addGap(296, 296, 296)
+                .addComponent(LBanco)
+                .addGap(103, 103, 103)
                 .addGroup(PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btngGuardar)
                     .addComponent(txtBanco, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(250, Short.MAX_VALUE))
+                .addContainerGap(254, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBancosLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -793,14 +772,12 @@ public class Maestro extends javax.swing.JFrame {
                     .addComponent(LBanco)
                     .addComponent(txtBanco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btngGuardar)
-                    .addComponent(btnCancelar))
+                .addComponent(btngGuardar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(btnEditar)
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Bancos", PanelBancos);
@@ -837,8 +814,6 @@ public class Maestro extends javax.swing.JFrame {
         });
         jScrollPane9.setViewportView(tablaRRSS);
 
-        btnCancelRRSS.setText("CANCELAR");
-
         btnSavRRSS.setText("GUARDAR");
         btnSavRRSS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -859,17 +834,13 @@ public class Maestro extends javax.swing.JFrame {
         PanelRRSSLayout.setHorizontalGroup(
             PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelRRSSLayout.createSequentialGroup()
-                .addGap(258, 258, 258)
-                .addGroup(PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCancelRRSS)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRRSSLayout.createSequentialGroup()
-                        .addComponent(LRRSS)
-                        .addGap(13, 13, 13)))
-                .addGap(90, 90, 90)
+                .addGap(275, 275, 275)
+                .addComponent(LRRSS)
+                .addGap(103, 103, 103)
                 .addGroup(PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnSavRRSS)
                     .addComponent(txtRRSS, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(250, Short.MAX_VALUE))
+                .addContainerGap(254, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRRSSLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -887,14 +858,12 @@ public class Maestro extends javax.swing.JFrame {
                     .addComponent(LRRSS)
                     .addComponent(txtRRSS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSavRRSS)
-                    .addComponent(btnCancelRRSS))
+                .addComponent(btnSavRRSS)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(btnEditarRRSS)
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("RRSS", PanelRRSS);
@@ -913,8 +882,6 @@ public class Maestro extends javax.swing.JFrame {
                 btnSavComunaActionPerformed(evt);
             }
         });
-
-        btnCancelComuna.setText("CANCELAR");
 
         tablaComuna.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -953,17 +920,13 @@ public class Maestro extends javax.swing.JFrame {
         PanelComunasLayout.setHorizontalGroup(
             PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelComunasLayout.createSequentialGroup()
-                .addGap(258, 258, 258)
-                .addGroup(PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCancelComuna)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelComunasLayout.createSequentialGroup()
-                        .addComponent(LComuna)
-                        .addGap(13, 13, 13)))
-                .addGap(90, 90, 90)
+                .addGap(283, 283, 283)
+                .addComponent(LComuna)
+                .addGap(103, 103, 103)
                 .addGroup(PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnSavComuna)
                     .addComponent(txtComuna, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(250, Short.MAX_VALUE))
+                .addContainerGap(254, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelComunasLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -981,14 +944,12 @@ public class Maestro extends javax.swing.JFrame {
                     .addComponent(LComuna)
                     .addComponent(txtComuna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSavComuna)
-                    .addComponent(btnCancelComuna))
+                .addComponent(btnSavComuna)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(btnEditarComuna)
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Comunas", PanelComunas);
@@ -999,8 +960,6 @@ public class Maestro extends javax.swing.JFrame {
                 btnCatPacktEditarActionPerformed(evt);
             }
         });
-
-        btnCatPackCancelar.setText("CANCELAR");
 
         txtCatPack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1068,9 +1027,7 @@ public class Maestro extends javax.swing.JFrame {
                             .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(PanelCatPackLayout.createSequentialGroup()
                             .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(PanelCatPackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(LCatPack, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(btnCatPackCancelar, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(LCatPack)
                             .addGap(62, 62, 62)
                             .addGroup(PanelCatPackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(txtCatPack, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1088,9 +1045,7 @@ public class Maestro extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(txtCatPack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(PanelCatPackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCatPackGuardar)
-                    .addComponent(btnCatPackCancelar))
+                .addComponent(btnCatPackGuardar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -2462,12 +2417,8 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JPanel PanelUsuarios;
     private javax.swing.JButton btnAddPackArt;
     private javax.swing.JButton btnAddPackEditArt;
-    private javax.swing.JButton btnCancelComuna;
-    private javax.swing.JButton btnCancelRRSS;
-    private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnCatArtEditar;
     private javax.swing.JButton btnCatArtGuardar;
-    private javax.swing.JButton btnCatPackCancelar;
     private javax.swing.JButton btnCatPackGuardar;
     private javax.swing.JButton btnCatPacktEditar;
     private javax.swing.JButton btnCompras;
@@ -2505,7 +2456,6 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> comboPacksEditCatArt;
     private com.toedter.calendar.JDateChooser dateFechaArt;
     private com.toedter.calendar.JDateChooser dateNacCliente;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel14;
