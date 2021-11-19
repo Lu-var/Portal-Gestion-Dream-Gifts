@@ -31,7 +31,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="jPane" pref="0" max="32767" attributes="0"/>
+                      <Component id="jPane" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
                   <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
@@ -102,7 +102,7 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace pref="501" max="32767" attributes="0"/>
+                          <EmptySpace pref="543" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="jBut_Buscar_List_Dest" min="-2" max="-2" attributes="0"/>
@@ -509,7 +509,7 @@
                                   <Component id="cbxInicioEntrega" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="cbxComuna" min="-2" pref="98" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="23" max="32767" attributes="0"/>
+                              <EmptySpace pref="65" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="btnGuardar1" max="32767" attributes="0"/>
                                   <Component id="jPanel9" max="32767" attributes="0"/>
@@ -758,21 +758,49 @@
                     <Component class="javax.swing.JComboBox" name="cbxComuna">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="11">
-                            <StringItem index="0" value="Seleccione"/>
-                            <StringItem index="1" value="Desayuno"/>
-                            <StringItem index="2" value="Desayunos Infantiles"/>
-                            <StringItem index="3" value="D&#xed;a del Ni&#xf1;o"/>
-                            <StringItem index="4" value="D&#xed;a del Profe"/>
-                            <StringItem index="5" value="Especial 18"/>
-                            <StringItem index="6" value="Halloween"/>
-                            <StringItem index="7" value="Aniversarios"/>
-                            <StringItem index="8" value="Tabla Picoteo"/>
-                            <StringItem index="9" value="Tablas Dulces"/>
-                            <StringItem index="10" value="Sorpresas"/>
+                          <StringArray count="36">
+                            <StringItem index="0" value="Cerrillos"/>
+                            <StringItem index="1" value="Cerro Navia"/>
+                            <StringItem index="2" value="Conchal&#xed;"/>
+                            <StringItem index="3" value="El Bosque"/>
+                            <StringItem index="4" value="Estaci&#xf3;n Central"/>
+                            <StringItem index="5" value="Huechuraba"/>
+                            <StringItem index="6" value="Independencia"/>
+                            <StringItem index="7" value="La Cisterna"/>
+                            <StringItem index="8" value="La Florida"/>
+                            <StringItem index="9" value="La Granja"/>
+                            <StringItem index="10" value="La Pintana"/>
+                            <StringItem index="11" value="La Reina"/>
+                            <StringItem index="12" value="Las Condes"/>
+                            <StringItem index="13" value="Lo Barnechea"/>
+                            <StringItem index="14" value="Lo Espejo"/>
+                            <StringItem index="15" value="Lo Prado"/>
+                            <StringItem index="16" value="Macul"/>
+                            <StringItem index="17" value="Maip&#xfa;"/>
+                            <StringItem index="18" value="&#xd1;u&#xf1;oa"/>
+                            <StringItem index="19" value="Padre Hurtado"/>
+                            <StringItem index="20" value="Pedro Aguirre Cerda"/>
+                            <StringItem index="21" value="Pe&#xf1;alol&#xe9;n"/>
+                            <StringItem index="22" value="Pirque"/>
+                            <StringItem index="23" value="Providencia"/>
+                            <StringItem index="24" value="Pudahuel"/>
+                            <StringItem index="25" value="Puente Alto"/>
+                            <StringItem index="26" value="Quilicura"/>
+                            <StringItem index="27" value="Quinta Normal"/>
+                            <StringItem index="28" value="Recoleta"/>
+                            <StringItem index="29" value="Renca"/>
+                            <StringItem index="30" value="San Bernardo"/>
+                            <StringItem index="31" value="San Joaqu&#xed;n"/>
+                            <StringItem index="32" value="San Jos&#xe9; de Maipo"/>
+                            <StringItem index="33" value="San Miguel"/>
+                            <StringItem index="34" value="San Ram&#xf3;n"/>
+                            <StringItem index="35" value="Santiago"/>
                           </StringArray>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cbxComunaActionPerformed"/>
+                      </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -962,12 +990,9 @@
                                   </Group>
                                   <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jTxt_Cod_Banco_Cliente_Conf" min="-2" pref="137" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="jTxt_Cod_Banco_Cliente_Conf" alignment="0" min="-2" pref="137" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="40" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jBut_Buscar_Conf" alignment="1" min="-2" pref="89" max="-2" attributes="0"/>
                               <Component id="jBut_Conf" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -1096,7 +1121,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="822" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="864" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">

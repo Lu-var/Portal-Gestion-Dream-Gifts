@@ -1234,6 +1234,12 @@ public class Maestro extends javax.swing.JFrame {
         txtUnidadesArt.setColumns(20);
         txtUnidadesArt.setRows(5);
 
+        comboArtCat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboArtCatActionPerformed(evt);
+            }
+        });
+
         jLabel19.setText("Nombre :");
 
         jLabel21.setText("Stock");
@@ -2147,6 +2153,10 @@ public class Maestro extends javax.swing.JFrame {
     private void btnCatPackGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCatPackGuardarActionPerformed
         catPackCtrl.agregarCategoria(this);
     }//GEN-LAST:event_btnCatPackGuardarActionPerformed
+
+    private void comboArtCatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboArtCatActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboArtCatActionPerformed
 
     
     /**

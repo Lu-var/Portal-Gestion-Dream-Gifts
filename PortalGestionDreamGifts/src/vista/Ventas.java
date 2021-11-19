@@ -5,6 +5,8 @@
 package vista;
 import com.toedter.calendar.JDateChooser;
 import controlador.MenuController;
+import controlador.VentaController;
+import java.awt.FlowLayout;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
@@ -169,7 +171,7 @@ public class Ventas extends javax.swing.JFrame {
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addContainerGap(501, Short.MAX_VALUE)
+                .addContainerGap(543, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                         .addComponent(jBut_Buscar_List_Dest)
@@ -311,7 +313,12 @@ public class Ventas extends javax.swing.JFrame {
 
         cbxInicioEntrega.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "08:00", "09:00", "10:00", "11:00;12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00" }));
 
-        cbxComuna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Desayuno", "Desayunos Infantiles", "Día del Niño", "Día del Profe", "Especial 18", "Halloween", "Aniversarios", "Tabla Picoteo", "Tablas Dulces", "Sorpresas" }));
+        cbxComuna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cerrillos", "Cerro Navia", "Conchalí", "El Bosque", "Estación Central", "Huechuraba", "Independencia", "La Cisterna", "La Florida", "La Granja", "La Pintana", "La Reina", "Las Condes", "Lo Barnechea", "Lo Espejo", "Lo Prado", "Macul", "Maipú", "Ñuñoa", "Padre Hurtado", "Pedro Aguirre Cerda", "Peñalolén", "Pirque", "Providencia", "Pudahuel", "Puente Alto", "Quilicura", "Quinta Normal", "Recoleta", "Renca", "San Bernardo", "San Joaquín", "San José de Maipo", "San Miguel", "San Ramón", "Santiago" }));
+        cbxComuna.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbxComunaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -346,7 +353,7 @@ public class Ventas extends javax.swing.JFrame {
                     .addComponent(cbxFinEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cbxInicioEntrega, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cbxComuna, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnGuardar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -605,10 +612,8 @@ public class Ventas extends javax.swing.JFrame {
                             .addComponent(jTxt_Fec_Pago_Conf, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTxt_Nom_Cliente_Conf, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(7, 7, 7))
-                    .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addComponent(jTxt_Cod_Banco_Cliente_Conf, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                    .addComponent(jTxt_Cod_Banco_Cliente_Conf, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jBut_Buscar_Conf, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBut_Conf, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -679,7 +684,7 @@ public class Ventas extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 822, Short.MAX_VALUE)
+            .addGap(0, 864, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -757,7 +762,7 @@ public class Ventas extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPane, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addComponent(jPane)
                         .addContainerGap())
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -807,6 +812,51 @@ public class Ventas extends javax.swing.JFrame {
     private void txtCodigoTransferenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoTransferenciaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCodigoTransferenciaActionPerformed
+
+    private void cbxComunaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxComunaActionPerformed
+        JComboBox Comuna = new JComboBox();
+        FlowLayout flo = new FlowLayout();
+        
+        Comuna.addItem("Cerrillos");
+        Comuna.addItem("Cerro Navia");
+        Comuna.addItem("Conchalí");        
+        Comuna.addItem("El Bosque");
+        Comuna.addItem("Estación Central");
+        Comuna.addItem("Huechuraba");      
+        Comuna.addItem("Independencia");        
+        Comuna.addItem("La Cisterna");        
+        Comuna.addItem("La Florida");        
+        Comuna.addItem("La Granja");        
+        Comuna.addItem("La Pintana");       
+        Comuna.addItem("La Reina");        
+        Comuna.addItem("Las Condes");        
+        Comuna.addItem("Lo Barnechea");        
+        Comuna.addItem("Lo Espejo");        
+        Comuna.addItem("Lo Prado");        
+        Comuna.addItem("Macul");        
+        Comuna.addItem("Maipú");        
+        Comuna.addItem("Ñuñoa");
+        Comuna.addItem("Padre Hurtado");        
+        Comuna.addItem("Pedro Aguirre Cerda");        
+        Comuna.addItem("Peñalolén");        
+        Comuna.addItem("Pirque");        
+        Comuna.addItem("Providencia");        
+        Comuna.addItem("Pudahuel");        
+        Comuna.addItem("Puente Alto");        
+        Comuna.addItem("Quilicura");        
+        Comuna.addItem("Quinta Normal");        
+        Comuna.addItem("Recoleta");       
+        Comuna.addItem("Renca");        
+        Comuna.addItem("San Bernardo");        
+        Comuna.addItem("San Joaquín");   
+        Comuna.addItem("San José de Maipo"); 
+        Comuna.addItem("San Miguel"); 
+        Comuna.addItem("San Ramón"); 
+        Comuna.addItem("Santiago"); 
+        
+        setLayout(flo);
+        add (Comuna);// TODO add your handling code here:
+    }//GEN-LAST:event_cbxComunaActionPerformed
 
     /**
      * @param args the command line arguments

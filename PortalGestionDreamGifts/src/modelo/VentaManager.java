@@ -57,5 +57,9 @@ public class VentaManager {
         
     }
 
+    public void agregarVenta(String RUT, int Status, int idRRSS, int idBanco, int idPack, String TextoPack, int ValorTotal, int CodigoTransf, String FechaIngreso, String NombreTarget, String CelularTarget, String DireccionTarget) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
 }

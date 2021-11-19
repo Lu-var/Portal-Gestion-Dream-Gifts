@@ -4,7 +4,9 @@
  */
 package controlador;
 
+import java.awt.FlowLayout;
 import java.util.Date;
+import javax.swing.JComboBox;
 import modelo.VentaManager;
 import vista.Ventas;
 
@@ -13,6 +15,13 @@ import vista.Ventas;
  * @author nmoli
  */
 public class VentaController {
+
+    public static void cbxComuna() {
+        
+        
+         
+                
+    }
     VentaManager venta = new VentaManager();
     
     public void agregarVenta(Ventas vista){
@@ -26,20 +35,17 @@ public class VentaController {
         int ValorTotal = Integer.parseInt(vista.getTxtValorTotal().getText());
         int CodigoTransf = Integer.parseInt(vista.getTxtCodigoTransferencia().getText());
         String FechaIngreso = vista.getTxtFechaIngreso().getText();
-        String FechaAprobada = vista.getTxtFechaAprobada().getText();
         String NombreTarget = vista.getTxtNDestinatario().getText();
         String CelularTarget = vista.getTxtTelefono().getText();
         String DireccionTarget = vista.getTxtDireccion().getText();
-        int idComunaTarget = no la tengo; //combobox aprender a transformar
+        /*int idComunaTarget = no la tengo; //combobox aprender a transformar
         String FechaEntrega = no la tengo; //combobox pendiente de aprender
         String HoraDespachoIni = no la tengo; // combobox pendiente de aprender
         String HoraDespachoFin = no la tengo; // combobox pendiente de aprender
         int idStatusDespacho = no la tengo; // combobox pendiente de aprender
-        
+        */
                 
-        venta.agregarVenta(RUT, Status, idRRSS, idBanco, idPack, TextoPack, ValorTotal, CodigoTransf, FechaIngreso, 
-                FechaAprobada, FechaDespacho, NombreTarget,CelularTarget, DireccionTarget, idComunaTarget, FechaEntrega, HoraDespachoIni,
-                HoraDespachoFin, idStatusDespacho);
+        venta.agregarVenta(RUT, Status, idRRSS, idBanco, idPack, TextoPack, ValorTotal, CodigoTransf, FechaIngreso, NombreTarget,CelularTarget, DireccionTarget);
         
     }
     
