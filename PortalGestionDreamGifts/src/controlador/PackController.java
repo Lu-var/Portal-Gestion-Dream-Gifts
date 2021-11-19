@@ -86,10 +86,7 @@ public class PackController {
         lista = manager.selectAllPackSQL();
         
         for (int i = 0; i < lista.size(); i++) {
-            
-        }
-        
-        for (int i = 0; i < lista.size(); i++) {
+            lista.get(i).set(4, catPackManager.categoriaIDSelect((Integer)lista.get(i).get(4)));
             model.addRow(lista.get(i).toArray());
         }
     }
@@ -287,11 +284,11 @@ public class PackController {
         String nombre = (String)fila.get(1);
         int precio = (Integer)fila.get(2);
         int stock = (Integer)fila.get(3);
-        int idCat = (Integer)fila.get(4);
+        String categoria = (String)fila.get(4);
         boolean enabled = (boolean)fila.get(5);
         
         JComboBox combo = vista.getComboPacksEditCatArt();
-        combo.setSelectedItem(catPackManager.categoriaIDSelect(idCat));
+        combo.setSelectedItem(categoria);
         vista.getTxtPacksEditNombre().setText(nombre);
         vista.getTxtPacksEditPrecio().setText(String.valueOf(precio));
         vista.getTxtStockPackEdit().setText(String.valueOf(stock));
@@ -309,8 +306,8 @@ public class PackController {
     
     public void edit(Maestro vista){
         JTable tablaPacks = vista.getTablaPacks();
-        int pos = vista.getTablaPacks().getSelectedRow();
-        int idPack  = (Integer)vista.getTablaPacks().getModel().getValueAt(pos, 0);
+        int pos = tablaPacks.getSelectedRow();
+        int idPack  = (Integer)tablaPacks.getModel().getValueAt(pos, 0);
         JTable tablaContenido = vista.getTablaPacksEditSelected();
         String nombre = vista.getTxtPacksEditNombre().getText();
         int precio = (Integer.parseInt(vista.getTxtPacksEditPrecio().getText()));
