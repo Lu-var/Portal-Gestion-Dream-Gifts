@@ -99,11 +99,6 @@ public class PackController {
         showPacks(vista);
     }
     
-    public void showEdit(Maestro vista){
-        showArticulosEdit(vista);
-        showCatPacksEdit(vista);
-    }
-    
     public void clearAll(Maestro vista){
         JComboBox combo = vista.getComboPacksCatArt();
         DefaultTableModel modeloArt = (DefaultTableModel)vista.getTablaPacksArt().getModel();
@@ -122,6 +117,8 @@ public class PackController {
         modeloArt.setRowCount(0);
         modeloContenido.setRowCount(0);
         combo.removeAllItems();
+        vista.getTxtPacksEditNombre().setText(null);
+        vista.getTxtPacksEditPrecio().setText(null);
     }
     
     public void agregarArticulosPack(Maestro vista){
@@ -154,9 +151,48 @@ public class PackController {
         }
     }
     
+    public void agregarArticulosPackEdit(Maestro vista){
+        
+        try {
+            String articulo = "";
+            articulo = (String)vista.getTablaPacksEditArt().getModel().getValueAt(vista.getTablaPacksEditArt().getSelectedRow(),0);
+            
+            if(articulo.isEmpty()){
+                JOptionPane.showMessageDialog(null, "Seleccione un articulo.", "", JOptionPane.INFORMATION_MESSAGE);
+                return;
+            }
+            if(vista.getCantPackEditArt().getText().isEmpty()){
+                JOptionPane.showMessageDialog(null, "Ingrese una cantidad a agregar.", "", JOptionPane.INFORMATION_MESSAGE);
+                return;
+            }
+            
+            int cantidad = Integer.parseInt(vista.getCantPackEditArt().getText());
+            int idArticulo = artManager.selectArticuloSQL(articulo);
+            
+            JTable tablaPack = vista.getTablaPacksEditSelected();
+            DefaultTableModel modelo = (DefaultTableModel) tablaPack.getModel();
+            Object[] data = {idArticulo,cantidad,articulo};
+        
+            modelo.addRow(data);
+            
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Seleccione un articulo.", "", JOptionPane.INFORMATION_MESSAGE);
+            Log.seguir(ex.getMessage());
+        }
+    }
+    
     public void deleteArticulosPack(Maestro vista){
 
         JTable tablaPack = vista.getTablaPacksSelected();
+        DefaultTableModel modelo = (DefaultTableModel) tablaPack.getModel();
+
+        int index = tablaPack.getSelectedRow();
+        modelo.removeRow(index);
+    }
+    
+    public void deleteArticulosPackEdit(Maestro vista){
+
+        JTable tablaPack = vista.getTablaPacksEditSelected();
         DefaultTableModel modelo = (DefaultTableModel) tablaPack.getModel();
 
         int index = tablaPack.getSelectedRow();
@@ -217,9 +253,16 @@ public class PackController {
         manager.agregarContenidosSQL(contenido);
     }
 
-    public void edit(Maestro vista){
+    public void showEdit(Maestro vista){
+        
+        showArticulosEdit(vista);
+        showCatPacksEdit(vista);
+        
         JTable tabla = vista.getTablaPacks();
+        
         int pos = tabla.getSelectedRow();
+        if(pos==-1){System.out.println("index"); return;}
+        
         DefaultTableModel model = (DefaultTableModel) tabla.getModel();
         Vector fila = (Vector)model.getDataVector().elementAt(pos);
         int id = (Integer)fila.get(0);
@@ -233,6 +276,8 @@ public class PackController {
         combo.setSelectedItem(catPackManager.categoriaIDSelect(idCat));
         vista.getTxtPacksEditNombre().setText(nombre);
         vista.getTxtPacksEditPrecio().setText(String.valueOf(precio));
+        vista.getTxtStockPackEdit().setText(String.valueOf(stock));
+        vista.getCheckEnabledPackEdit().setSelected(enabled);
         
         JTable tablaContenido = vista.getTablaPacksEditSelected();
         DefaultTableModel modelContenido = (DefaultTableModel) tablaContenido.getModel();
@@ -242,6 +287,9 @@ public class PackController {
             modelContenido.addRow(contenido.get(i).toArray());
         }
         
+    }
+    
+    public void edit(Maestro vista){
         
     }
     

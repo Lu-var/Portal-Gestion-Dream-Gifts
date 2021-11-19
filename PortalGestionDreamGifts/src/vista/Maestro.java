@@ -96,6 +96,9 @@ public class Maestro extends javax.swing.JFrame {
         cantPackEditArt = new javax.swing.JTextField();
         btnPacksEditSave = new javax.swing.JButton();
         jLabel31 = new javax.swing.JLabel();
+        txtStockPackEdit = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        checkEnabledPackEdit = new javax.swing.JCheckBox();
         jPanel1 = new javax.swing.JPanel();
         btnVentas = new javax.swing.JButton();
         btnCompras = new javax.swing.JButton();
@@ -237,10 +240,15 @@ public class Maestro extends javax.swing.JFrame {
         tablaProveedores = new javax.swing.JTable();
         btnEditarProv = new javax.swing.JButton();
 
-        ventanaEdit.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        ventanaEdit.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         ventanaEdit.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         ventanaEdit.setResizable(false);
         ventanaEdit.setSize(new java.awt.Dimension(1360, 768));
+        ventanaEdit.addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                ventanaEditWindowClosed(evt);
+            }
+        });
 
         jPanel17.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Packs"));
         jPanel17.setToolTipText("");
@@ -351,6 +359,15 @@ public class Maestro extends javax.swing.JFrame {
 
         jLabel31.setText("Categoria Pack :");
 
+        jLabel10.setText("Stock");
+
+        checkEnabledPackEdit.setText("Activo");
+        checkEnabledPackEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkEnabledPackEditActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
         jPanel17Layout.setHorizontalGroup(
@@ -382,14 +399,20 @@ public class Maestro extends javax.swing.JFrame {
                             .addComponent(cantPackEditArt, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(10, 10, 10)))
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(scrollSelected1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addGap(57, 57, 57)
-                        .addComponent(jLabel30)
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel30)
+                            .addComponent(jLabel10))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtPacksEditPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(scrollSelected1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtPacksEditPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addComponent(txtStockPackEdit)
+                                .addGap(18, 18, 18)
+                                .addComponent(checkEnabledPackEdit)
+                                .addGap(16, 16, 16)))))
                 .addContainerGap())
         );
         jPanel17Layout.setVerticalGroup(
@@ -401,7 +424,12 @@ public class Maestro extends javax.swing.JFrame {
                     .addComponent(txtPacksEditNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel30)
                     .addComponent(txtPacksEditPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtStockPackEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10)
+                    .addComponent(checkEnabledPackEdit))
+                .addGap(1, 1, 1)
                 .addComponent(jLabel31)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(comboPacksEditCatArt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2333,23 +2361,21 @@ public class Maestro extends javax.swing.JFrame {
 
     private void btnPacksEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPacksEditActionPerformed
         packCtrl.showEdit(this);
-        packCtrl.edit(this);
         this.ventanaEdit.setSize(900, 500);
         this.ventanaEdit.setVisible(true);
         
     }//GEN-LAST:event_btnPacksEditActionPerformed
 
     private void btnPacksEditSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPacksEditSaveActionPerformed
-        this.ventanaEdit.dispose();
-        packCtrl.clearAllEdit(this);
+        
     }//GEN-LAST:event_btnPacksEditSaveActionPerformed
 
     private void btnDelPackEditArtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDelPackEditArtActionPerformed
-        // TODO add your handling code here:
+        packCtrl.deleteArticulosPackEdit(this);
     }//GEN-LAST:event_btnDelPackEditArtActionPerformed
 
     private void btnAddPackEditArtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddPackEditArtActionPerformed
-        // TODO add your handling code here:
+        packCtrl.agregarArticulosPackEdit(this);
     }//GEN-LAST:event_btnAddPackEditArtActionPerformed
 
     private void comboPacksEditCatArtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboPacksEditCatArtActionPerformed
@@ -2363,6 +2389,14 @@ public class Maestro extends javax.swing.JFrame {
     private void txtPacksEditNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPacksEditNombreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPacksEditNombreActionPerformed
+
+    private void ventanaEditWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_ventanaEditWindowClosed
+        packCtrl.clearAllEdit(this);
+    }//GEN-LAST:event_ventanaEditWindowClosed
+
+    private void checkEnabledPackEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkEnabledPackEditActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkEnabledPackEditActionPerformed
 
     
     /**
@@ -2463,6 +2497,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JButton btngGuardar;
     private javax.swing.JTextField cantPackEditArt;
     private javax.swing.JCheckBox checkArticulo;
+    private javax.swing.JCheckBox checkEnabledPackEdit;
     private javax.swing.JComboBox<String> comboArtCat;
     private javax.swing.JComboBox<String> comboPacksCatArt;
     private javax.swing.JComboBox<String> comboPacksEditCatArt;
@@ -2470,6 +2505,7 @@ public class Maestro extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser dateNacCliente;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -2558,6 +2594,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JTextField txtRazonProv;
     private javax.swing.JTextField txtRutCliente;
     private javax.swing.JTextField txtRutProv;
+    private javax.swing.JTextField txtStockPackEdit;
     private javax.swing.JTextArea txtUnidadesArt;
     private javax.swing.JTextField txtUsuario;
     private javax.swing.JFrame ventanaEdit;
@@ -3102,6 +3139,22 @@ public class Maestro extends javax.swing.JFrame {
 
     public void setTxtPacksEditPrecio(JTextField txtPacksEditPrecio) {
         this.txtPacksEditPrecio = txtPacksEditPrecio;
+    }
+
+    public JTextField getTxtStockPackEdit() {
+        return txtStockPackEdit;
+    }
+
+    public void setTxtStockPackEdit(JTextField txtStockPackEdit) {
+        this.txtStockPackEdit = txtStockPackEdit;
+    }
+
+    public JCheckBox getCheckEnabledPackEdit() {
+        return checkEnabledPackEdit;
+    }
+
+    public void setCheckEnabledPackEdit(JCheckBox checkEnabledPackEdit) {
+        this.checkEnabledPackEdit = checkEnabledPackEdit;
     }
     
     
