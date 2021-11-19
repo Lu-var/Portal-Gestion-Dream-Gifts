@@ -282,7 +282,7 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="1" attributes="0">
                                           <EmptySpace min="-2" pref="264" max="-2" attributes="0"/>
-                                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btnCancelarDest" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
@@ -315,7 +315,7 @@
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="jTextField7" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btnGuardarDest" min="-2" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -404,8 +404,8 @@
                                   <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace pref="113" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnCancelarDest" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnGuardarDest" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Component id="jScrollPane1" max="32767" attributes="0"/>
@@ -534,12 +534,12 @@
                     <Property name="text" type="java.lang.String" value="jTextField7"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton1">
+                <Component class="javax.swing.JButton" name="btnCancelarDest">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="jButton1"/>
+                    <Property name="text" type="java.lang.String" value="Cancelar"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton2">
+                <Component class="javax.swing.JButton" name="btnGuardarDest">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="jButton2"/>
                   </Properties>
@@ -621,41 +621,42 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                              <Component id="lRut" min="-2" max="-2" attributes="0"/>
+                              <Component id="lNumPedido" min="-2" max="-2" attributes="0"/>
+                              <Component id="lBanco" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="jComboBox4" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ComboBanco" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace pref="49" max="32767" attributes="0"/>
                                   <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="jTextField2" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="txtCRut" max="32767" attributes="0"/>
+                                      <Component id="txtCPedido" max="32767" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel17" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel16" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTextField3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jDateChooser1" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField4" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jDateChooser1" max="32767" attributes="0"/>
+                              <Component id="jTextField3" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jTextField4" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace pref="272" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnCancelarCon" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                          <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnGuardarCon" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -668,49 +669,49 @@
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lNumPedido" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtCPedido" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="jLabel16" alignment="1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lRut" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtCRut" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Component id="jDateChooser1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lBanco" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jComboBox4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ComboBanco" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButton3" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButton4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnGuardarCon" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnCancelarCon" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel13">
+                <Component class="javax.swing.JLabel" name="lNumPedido">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Numero Pedido :"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel14">
+                <Component class="javax.swing.JLabel" name="lRut">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="RUT :"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel15">
+                <Component class="javax.swing.JLabel" name="lBanco">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Banco :"/>
                   </Properties>
@@ -730,27 +731,21 @@
                     <Property name="text" type="java.lang.String" value="Codigo transacci&#xf3;n :"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton3">
+                <Component class="javax.swing.JButton" name="btnGuardarCon">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="jButton3"/>
+                    <Property name="text" type="java.lang.String" value="Confirmar"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton4">
+                <Component class="javax.swing.JButton" name="btnCancelarCon">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="jButton4"/>
+                    <Property name="text" type="java.lang.String" value="Cancelar"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField1">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField1"/>
-                  </Properties>
+                <Component class="javax.swing.JTextField" name="txtCPedido">
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField2">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField2"/>
-                  </Properties>
+                <Component class="javax.swing.JTextField" name="txtCRut">
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBox4">
+                <Component class="javax.swing.JComboBox" name="ComboBanco">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="4">
@@ -766,16 +761,10 @@
                   </AuxValues>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField3">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField3"/>
-                  </Properties>
                 </Component>
                 <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser1">
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField4">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="jTextField4"/>
-                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -794,7 +783,7 @@
                       <Component id="jScrollPane2" alignment="0" pref="788" max="32767" attributes="0"/>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jButton5" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnSelCon" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -805,7 +794,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jScrollPane2" min="-2" pref="129" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                          <Component id="jButton5" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnSelCon" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="58" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -833,9 +822,9 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="jButton5">
+                <Component class="javax.swing.JButton" name="btnSelCon">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="jButton5"/>
+                    <Property name="text" type="java.lang.String" value="Selecionar"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -893,9 +882,9 @@
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="jButton6" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnDescDesp" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                                  <Component id="jButton7" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnImprDesp" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -919,8 +908,8 @@
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton7" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButton6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnImprDesp" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnDescDesp" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                       </Group>
@@ -984,14 +973,14 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="jButton6">
+                <Component class="javax.swing.JButton" name="btnDescDesp">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="jButton6"/>
+                    <Property name="text" type="java.lang.String" value="Descargar"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton7">
+                <Component class="javax.swing.JButton" name="btnImprDesp">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="jButton7"/>
+                    <Property name="text" type="java.lang.String" value="Imprimir"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -1047,10 +1036,10 @@
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jButton8" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
-                          <Component id="jButton9" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                          <Component id="btnDLDesp" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                          <Component id="btnPRTDesp" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="253" max="-2" attributes="0"/>
@@ -1061,7 +1050,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jComboBox5" min="-2" pref="123" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jButton10" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnActDesp" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -1076,12 +1065,12 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jComboBox5" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButton10" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnActDesp" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton8" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButton9" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnDLDesp" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnPRTDesp" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="98" max="32767" attributes="0"/>
                       </Group>
@@ -1163,14 +1152,14 @@
                     <Property name="text" type="java.lang.String" value="Actualizaci&#xf3;n Estado Despacho"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton8">
+                <Component class="javax.swing.JButton" name="btnDLDesp">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="jButton8"/>
+                    <Property name="text" type="java.lang.String" value="Descargar"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton9">
+                <Component class="javax.swing.JButton" name="btnPRTDesp">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="jButton9"/>
+                    <Property name="text" type="java.lang.String" value="Imprimir"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="jComboBox5">
@@ -1188,9 +1177,9 @@
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton10">
+                <Component class="javax.swing.JButton" name="btnActDesp">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="jButton10"/>
+                    <Property name="text" type="java.lang.String" value="Actualizar"/>
                   </Properties>
                 </Component>
               </SubComponents>
