@@ -6,7 +6,9 @@ package modelo;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -55,5 +57,39 @@ public class ComprasManager {
     }
     
     
-    
+    public ArrayList<ArrayList<Object>> comprasSelectAll(){
+        
+        PreparedStatement comando = null;
+        ResultSet resultado = null;
+        ArrayList<ArrayList<Object>> matriz = new ArrayList<>();
+        
+        try{
+            comando = conexion.prepareStatement("SELECT * FROM DetalleFactura"); 
+            resultado = comando.executeQuery();
+            
+            while(resultado.next()){
+                ArrayList<Object> lista = new ArrayList<>();
+                
+                String idFactura = resultado.getString("Factura");
+                String idArticulo = resultado.getString("idArticulo");
+                String Cantidad = resultado.getString("Cantidad");
+                String Total = resultado.getString("Total");
+                String FechaVencimiento = resultado.getString("FechaVencimiento");
+                
+                lista.add(idFactura);
+                lista.add(idArticulo);
+                lista.add(Cantidad);
+                lista.add(Total);
+                lista.add(FechaVencimiento);
+                matriz.add(lista);
+                }
+            
+                
+            
+        } catch(SQLException ex){
+                JOptionPane.showMessageDialog(null,ex);
+        }
+        
+        return matriz;
+    }
 }

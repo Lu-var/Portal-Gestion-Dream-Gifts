@@ -9,7 +9,6 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import modelo.ComprasManager;
 import vista.Compras;
-import vista.Maestro;
 
 /**
  *
@@ -43,8 +42,8 @@ public class controladorCompras {
     }
 
     public void showAll(Compras vista) {
-        JTable tabla = vista.getTablaFactura();
-        ArrayList<ArrayList<Object>> lista = manager.clientesSelectAllSQL();
+        JTable tabla = vista.getTablaFacturas();
+        ArrayList<ArrayList<Object>> lista = manager.comprasSelectAll();
         DefaultTableModel model = (DefaultTableModel) tabla.getModel();
 
         int i = 0;
