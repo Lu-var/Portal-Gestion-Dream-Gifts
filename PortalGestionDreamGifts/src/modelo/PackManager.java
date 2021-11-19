@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Vector;
 
 /**
  *
@@ -101,6 +102,26 @@ public class PackManager {
 
             
         } catch (Exception ex) {
+            Log.seguir(ex.getMessage());
+        }
+        return matriz;
+    }
+    
+    public ArrayList<ArrayList<Object>> selectContenidos(int idPack){
+        ArrayList<ArrayList<Object>> matriz = new ArrayList<>();
+        try{
+            PreparedStatement comando = conexion.prepareStatement("SELECT Contenidos.idArticulo, Contenidos.Cantidad, Articulo.Nombre FROM Contenidos INNER JOIN Articulo ON Contenidos.idPack = ? AND Contenidos.idArticulo = Articulo.idArticulo");
+            comando.setInt(1, idPack);
+            ResultSet resultado = comando.executeQuery();
+            while(resultado.next()){
+                ArrayList<Object> lista = new ArrayList<>();
+                lista.add(resultado.getInt(1));
+                lista.add(resultado.getInt(2));
+                lista.add(resultado.getString(3));
+                matriz.add(lista);
+            }
+            
+        } catch(Exception ex){
             Log.seguir(ex.getMessage());
         }
         return matriz;

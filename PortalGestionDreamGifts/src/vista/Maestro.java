@@ -9,6 +9,7 @@ import controlador.*;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
+import javax.swing.JFrame;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -78,6 +79,23 @@ public class Maestro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        ventanaEdit = new javax.swing.JFrame();
+        panelEditPack = new javax.swing.JPanel();
+        jPanel17 = new javax.swing.JPanel();
+        jLabel29 = new javax.swing.JLabel();
+        txtPacksEditNombre = new javax.swing.JTextField();
+        scrollArticulos1 = new javax.swing.JScrollPane();
+        tablaPacksEditArt = new javax.swing.JTable();
+        scrollSelected1 = new javax.swing.JScrollPane();
+        tablaPacksEditSelected = new javax.swing.JTable();
+        jLabel30 = new javax.swing.JLabel();
+        txtPacksEditPrecio = new javax.swing.JTextField();
+        comboPacksEditCatArt = new javax.swing.JComboBox<>();
+        btnAddPackEditArt = new javax.swing.JButton();
+        btnDelPackEditArt = new javax.swing.JButton();
+        cantPackEditArt = new javax.swing.JTextField();
+        btnPacksEditSave = new javax.swing.JButton();
+        jLabel31 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         btnVentas = new javax.swing.JButton();
         btnCompras = new javax.swing.JButton();
@@ -218,6 +236,224 @@ public class Maestro extends javax.swing.JFrame {
         jScrollPane11 = new javax.swing.JScrollPane();
         tablaProveedores = new javax.swing.JTable();
         btnEditarProv = new javax.swing.JButton();
+
+        ventanaEdit.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        ventanaEdit.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        ventanaEdit.setResizable(false);
+        ventanaEdit.setSize(new java.awt.Dimension(1360, 768));
+
+        jPanel17.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Packs"));
+        jPanel17.setToolTipText("");
+
+        jLabel29.setText("Nombre :");
+
+        txtPacksEditNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPacksEditNombreActionPerformed(evt);
+            }
+        });
+
+        scrollArticulos1.setToolTipText("");
+        scrollArticulos1.setDoubleBuffered(true);
+
+        tablaPacksEditArt.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Articulos"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        scrollArticulos1.setViewportView(tablaPacksEditArt);
+
+        tablaPacksEditSelected.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Cantidad", "Articulo"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        scrollSelected1.setViewportView(tablaPacksEditSelected);
+        if (tablaPacksEditSelected.getColumnModel().getColumnCount() > 0) {
+            tablaPacksEditSelected.getColumnModel().getColumn(0).setMinWidth(55);
+            tablaPacksEditSelected.getColumnModel().getColumn(0).setPreferredWidth(55);
+            tablaPacksEditSelected.getColumnModel().getColumn(0).setMaxWidth(55);
+            tablaPacksEditSelected.getColumnModel().getColumn(1).setMinWidth(54);
+            tablaPacksEditSelected.getColumnModel().getColumn(1).setPreferredWidth(54);
+            tablaPacksEditSelected.getColumnModel().getColumn(1).setMaxWidth(54);
+        }
+
+        jLabel30.setText("Precio Pack :");
+
+        txtPacksEditPrecio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPacksEditPrecioActionPerformed(evt);
+            }
+        });
+
+        comboPacksEditCatArt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboPacksEditCatArtActionPerformed(evt);
+            }
+        });
+
+        btnAddPackEditArt.setText(">");
+        btnAddPackEditArt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddPackEditArtActionPerformed(evt);
+            }
+        });
+
+        btnDelPackEditArt.setText("<");
+        btnDelPackEditArt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDelPackEditArtActionPerformed(evt);
+            }
+        });
+
+        btnPacksEditSave.setText("Guardar");
+        btnPacksEditSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPacksEditSaveActionPerformed(evt);
+            }
+        });
+
+        jLabel31.setText("Categoria Pack :");
+
+        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
+        jPanel17.setLayout(jPanel17Layout);
+        jPanel17Layout.setHorizontalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(comboPacksEditCatArt, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addComponent(jLabel29)
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addGap(39, 39, 39)
+                                .addComponent(jLabel31))
+                            .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtPacksEditNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(scrollArticulos1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnDelPackEditArt)
+                            .addComponent(btnAddPackEditArt))
+                        .addGap(28, 28, 28))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnPacksEditSave)
+                            .addComponent(cantPackEditArt, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(10, 10, 10)))
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addGap(57, 57, 57)
+                        .addComponent(jLabel30)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtPacksEditPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(scrollSelected1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        jPanel17Layout.setVerticalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel29)
+                    .addComponent(txtPacksEditNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel30)
+                    .addComponent(txtPacksEditPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addComponent(jLabel31)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(comboPacksEditCatArt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(scrollSelected1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(scrollArticulos1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addComponent(btnPacksEditSave)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                        .addComponent(btnAddPackEditArt)
+                        .addGap(18, 18, 18)
+                        .addComponent(cantPackEditArt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnDelPackEditArt)
+                        .addGap(58, 58, 58)))
+                .addGap(12, 12, 12))
+        );
+
+        javax.swing.GroupLayout panelEditPackLayout = new javax.swing.GroupLayout(panelEditPack);
+        panelEditPack.setLayout(panelEditPackLayout);
+        panelEditPackLayout.setHorizontalGroup(
+            panelEditPackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelEditPackLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panelEditPackLayout.setVerticalGroup(
+            panelEditPackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelEditPackLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout ventanaEditLayout = new javax.swing.GroupLayout(ventanaEdit.getContentPane());
+        ventanaEdit.getContentPane().setLayout(ventanaEditLayout);
+        ventanaEditLayout.setHorizontalGroup(
+            ventanaEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ventanaEditLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(panelEditPack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        ventanaEditLayout.setVerticalGroup(
+            ventanaEditLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(ventanaEditLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(panelEditPack, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -1051,7 +1287,12 @@ public class Maestro extends javax.swing.JFrame {
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("Tabla Packs");
 
-        btnPacksEdit.setText("jButton2");
+        btnPacksEdit.setText("Editar");
+        btnPacksEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPacksEditActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PanelPacksLayout = new javax.swing.GroupLayout(PanelPacks);
         PanelPacks.setLayout(PanelPacksLayout);
@@ -2090,6 +2331,39 @@ public class Maestro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_comboArtCatActionPerformed
 
+    private void btnPacksEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPacksEditActionPerformed
+        packCtrl.showEdit(this);
+        packCtrl.edit(this);
+        this.ventanaEdit.setSize(900, 500);
+        this.ventanaEdit.setVisible(true);
+        
+    }//GEN-LAST:event_btnPacksEditActionPerformed
+
+    private void btnPacksEditSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPacksEditSaveActionPerformed
+        this.ventanaEdit.dispose();
+        packCtrl.clearAllEdit(this);
+    }//GEN-LAST:event_btnPacksEditSaveActionPerformed
+
+    private void btnDelPackEditArtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDelPackEditArtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDelPackEditArtActionPerformed
+
+    private void btnAddPackEditArtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddPackEditArtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAddPackEditArtActionPerformed
+
+    private void comboPacksEditCatArtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboPacksEditCatArtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboPacksEditCatArtActionPerformed
+
+    private void txtPacksEditPrecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPacksEditPrecioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPacksEditPrecioActionPerformed
+
+    private void txtPacksEditNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPacksEditNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPacksEditNombreActionPerformed
+
     
     /**
      * @param args the command line arguments
@@ -2151,6 +2425,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JPanel PanelRRSS;
     private javax.swing.JPanel PanelUsuarios;
     private javax.swing.JButton btnAddPackArt;
+    private javax.swing.JButton btnAddPackEditArt;
     private javax.swing.JButton btnCancelComuna;
     private javax.swing.JButton btnCancelRRSS;
     private javax.swing.JButton btnCancelar;
@@ -2161,6 +2436,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JButton btnCatPacktEditar;
     private javax.swing.JButton btnCompras;
     private javax.swing.JButton btnDelPackArt;
+    private javax.swing.JButton btnDelPackEditArt;
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnEditarArt;
     private javax.swing.JButton btnEditarClientes;
@@ -2175,6 +2451,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JButton btnInformes;
     private javax.swing.JButton btnMaestro;
     private javax.swing.JButton btnPacksEdit;
+    private javax.swing.JButton btnPacksEditSave;
     private javax.swing.JButton btnPacksSave;
     private javax.swing.JButton btnSavComuna;
     private javax.swing.JButton btnSavRRSS;
@@ -2184,9 +2461,11 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JButton btnSaveProv;
     private javax.swing.JButton btnVentas;
     private javax.swing.JButton btngGuardar;
+    private javax.swing.JTextField cantPackEditArt;
     private javax.swing.JCheckBox checkArticulo;
     private javax.swing.JComboBox<String> comboArtCat;
     private javax.swing.JComboBox<String> comboPacksCatArt;
+    private javax.swing.JComboBox<String> comboPacksEditCatArt;
     private com.toedter.calendar.JDateChooser dateFechaArt;
     private com.toedter.calendar.JDateChooser dateNacCliente;
     private javax.swing.JButton jButton6;
@@ -2205,7 +2484,10 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -2216,6 +2498,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
@@ -2230,8 +2513,11 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JPanel panelEditPack;
     private javax.swing.JScrollPane scrollArticulos;
+    private javax.swing.JScrollPane scrollArticulos1;
     private javax.swing.JScrollPane scrollSelected;
+    private javax.swing.JScrollPane scrollSelected1;
     private javax.swing.JTable tablaArticulos;
     private javax.swing.JTable tablaBanco;
     private javax.swing.JTable tablaCatArt;
@@ -2242,6 +2528,8 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JTable tablaEstadoVenta;
     private javax.swing.JTable tablaPacks;
     private javax.swing.JTable tablaPacksArt;
+    private javax.swing.JTable tablaPacksEditArt;
+    private javax.swing.JTable tablaPacksEditSelected;
     private javax.swing.JTable tablaPacksSelected;
     private javax.swing.JTable tablaProveedores;
     private javax.swing.JTable tablaRRSS;
@@ -2261,6 +2549,8 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JTextField txtNombreCliente;
     private javax.swing.JTextField txtNombreProv;
     private javax.swing.JTextField txtPacksBuscar;
+    private javax.swing.JTextField txtPacksEditNombre;
+    private javax.swing.JTextField txtPacksEditPrecio;
     private javax.swing.JTextField txtPacksNombre;
     private javax.swing.JTextField txtPacksPrecio;
     private javax.swing.JTextField txtPass;
@@ -2270,6 +2560,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JTextField txtRutProv;
     private javax.swing.JTextArea txtUnidadesArt;
     private javax.swing.JTextField txtUsuario;
+    private javax.swing.JFrame ventanaEdit;
     // End of variables declaration//GEN-END:variables
 
     
@@ -2747,6 +3038,70 @@ public class Maestro extends javax.swing.JFrame {
 
     public void setTxtCatPack(JTextField txtCatPack) {
         this.txtCatPack = txtCatPack;
+    }
+
+    public JFrame getVentanaEdit() {
+        return ventanaEdit;
+    }
+
+    public void setVentanaEdit(JFrame ventanaEdit) {
+        this.ventanaEdit = ventanaEdit;
+    }
+
+    public JButton getBtnPacksEditSave() {
+        return btnPacksEditSave;
+    }
+
+    public void setBtnPacksEditSave(JButton btnPacksEditSave) {
+        this.btnPacksEditSave = btnPacksEditSave;
+    }
+
+    public JTextField getCantPackEditArt() {
+        return cantPackEditArt;
+    }
+
+    public void setCantPackEditArt(JTextField cantPackEditArt) {
+        this.cantPackEditArt = cantPackEditArt;
+    }
+
+    public JComboBox<String> getComboPacksEditCatArt() {
+        return comboPacksEditCatArt;
+    }
+
+    public void setComboPacksEditCatArt(JComboBox<String> comboPacksEditCatArt) {
+        this.comboPacksEditCatArt = comboPacksEditCatArt;
+    }
+
+    public JTable getTablaPacksEditArt() {
+        return tablaPacksEditArt;
+    }
+
+    public void setTablaPacksEditArt(JTable tablaPacksEditArt) {
+        this.tablaPacksEditArt = tablaPacksEditArt;
+    }
+
+    public JTable getTablaPacksEditSelected() {
+        return tablaPacksEditSelected;
+    }
+
+    public void setTablaPacksEditSelected(JTable tablaPacksEditSelected) {
+        this.tablaPacksEditSelected = tablaPacksEditSelected;
+    }
+
+    public JTextField getTxtPacksEditNombre() {
+        return txtPacksEditNombre;
+    }
+
+    public void setTxtPacksEditNombre(JTextField txtPacksEditNombre) {
+        this.txtPacksEditNombre = txtPacksEditNombre;
+    }
+
+    public JTextField getTxtPacksEditPrecio() {
+        return txtPacksEditPrecio;
+    }
+
+    public void setTxtPacksEditPrecio(JTextField txtPacksEditPrecio) {
+        this.txtPacksEditPrecio = txtPacksEditPrecio;
     }
     
     
