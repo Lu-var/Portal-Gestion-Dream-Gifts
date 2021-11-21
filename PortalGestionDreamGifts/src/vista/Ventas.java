@@ -243,7 +243,7 @@ public class Ventas extends javax.swing.JFrame {
 
         btnCancelarDest.setText("Cancelar");
 
-        btnGuardarDest.setText("jButton2");
+        btnGuardarDest.setText("Guardar");
 
         ComboComuna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione" }));
 
