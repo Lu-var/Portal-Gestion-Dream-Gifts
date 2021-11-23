@@ -28,7 +28,6 @@ public class Maestro extends javax.swing.JFrame {
     MenuController menuCtrl = new MenuController();
     PackController packCtrl = new PackController();
     CatPackController catPackCtrl = new CatPackController();
-    ComprasController compraCtrl = new ComprasController();
     
     public Maestro() {
         initComponents();
@@ -52,7 +51,6 @@ public class Maestro extends javax.swing.JFrame {
         articuloCtrl.clearAll(this);
         packCtrl.clearAll(this);
         catPackCtrl.clearAll(this);
-        compraCtrl.clearAll(this);
     }
     
     public void showAll(){
@@ -69,7 +67,6 @@ public class Maestro extends javax.swing.JFrame {
         articuloCtrl.showAllCat(this);
         packCtrl.showAll(this);
         catPackCtrl.showAll(this);
-        compraCtrl.showAll(this);
     }
     /**
      * This method is called from within the constructor to initialize the form.
