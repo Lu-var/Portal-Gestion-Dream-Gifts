@@ -28,6 +28,7 @@ public class Maestro extends javax.swing.JFrame {
     MenuController menuCtrl = new MenuController();
     PackController packCtrl = new PackController();
     CatPackController catPackCtrl = new CatPackController();
+    ComprasController compraCtrl = new ComprasController();
     
     public Maestro() {
         initComponents();
@@ -51,7 +52,7 @@ public class Maestro extends javax.swing.JFrame {
         articuloCtrl.clearAll(this);
         packCtrl.clearAll(this);
         catPackCtrl.clearAll(this);
-
+        compraCtrl.clearAll(this);
     }
     
     public void showAll(){
@@ -68,6 +69,7 @@ public class Maestro extends javax.swing.JFrame {
         articuloCtrl.showAllCat(this);
         packCtrl.showAll(this);
         catPackCtrl.showAll(this);
+        compraCtrl.showAll(this);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -331,6 +333,11 @@ public class Maestro extends javax.swing.JFrame {
         });
 
         jButton6.setText("CANCELAR");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         dateNacCliente.setDateFormatString("dd/MM/yyyy");
 
@@ -397,7 +404,7 @@ public class Maestro extends javax.swing.JFrame {
                         .addComponent(btnSaveCliente)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton6)))
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         tablaClientes.setModel(new javax.swing.table.DefaultTableModel(
@@ -739,6 +746,11 @@ public class Maestro extends javax.swing.JFrame {
         PanelPrincipal.addTab("Comunas", PanelComunas);
 
         btnCatPackDesactivar.setText("DESACTIVAR");
+        btnCatPackDesactivar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCatPackDesactivarActionPerformed(evt);
+            }
+        });
 
         btnCatPacktEditar.setText("EDITAR");
         btnCatPacktEditar.addActionListener(new java.awt.event.ActionListener() {
@@ -1105,7 +1117,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnPacksEdit)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Packs", PanelPacks);
@@ -1176,6 +1188,11 @@ public class Maestro extends javax.swing.JFrame {
         });
 
         btnCatArtDesactivar.setText("DESACTIVAR");
+        btnCatArtDesactivar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCatArtDesactivarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PanelCatArtLayout = new javax.swing.GroupLayout(PanelCatArt);
         PanelCatArt.setLayout(PanelCatArtLayout);
@@ -1377,7 +1394,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel18)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
+                .addComponent(jScrollPane6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnEditarArt)
                 .addContainerGap())
@@ -1563,6 +1580,11 @@ public class Maestro extends javax.swing.JFrame {
         });
 
         btnDisableEstadoDespacho.setText("DESACTIVAR");
+        btnDisableEstadoDespacho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDisableEstadoDespachoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PanelEstadoDespachoLayout = new javax.swing.GroupLayout(PanelEstadoDespacho);
         PanelEstadoDespacho.setLayout(PanelEstadoDespachoLayout);
@@ -1659,6 +1681,11 @@ public class Maestro extends javax.swing.JFrame {
         });
 
         btnDisableUsuario.setText("DESACTIVAR");
+        btnDisableUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDisableUsuarioActionPerformed(evt);
+            }
+        });
 
         jLabel16.setText("Nuevo Usuario :");
 
@@ -1811,7 +1838,7 @@ public class Maestro extends javax.swing.JFrame {
                             .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel6)
                                 .addComponent(txtEmailProv, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         tablaProveedores.setModel(new javax.swing.table.DefaultTableModel(
@@ -2174,6 +2201,26 @@ public class Maestro extends javax.swing.JFrame {
     private void comboArtCatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboArtCatActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_comboArtCatActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void btnCatArtDesactivarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCatArtDesactivarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCatArtDesactivarActionPerformed
+
+    private void btnCatPackDesactivarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCatPackDesactivarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCatPackDesactivarActionPerformed
+
+    private void btnDisableUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisableUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDisableUsuarioActionPerformed
+
+    private void btnDisableEstadoDespachoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisableEstadoDespachoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDisableEstadoDespachoActionPerformed
 
     
     /**
@@ -2851,6 +2898,10 @@ public class Maestro extends javax.swing.JFrame {
 
     public void setTxtCatPack(JTextField txtCatPack) {
         this.txtCatPack = txtCatPack;
+    }
+
+    public JTable getjTableArtSolPed() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

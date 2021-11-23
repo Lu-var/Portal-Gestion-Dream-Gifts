@@ -95,15 +95,10 @@ public class Registro_Compras extends javax.swing.JFrame {
 
         jTable_Det_Fact_Reg_Comp.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
-                "Código", "Artículo", "Cantidad", "Valor", "Selección"
+                "Código", "Artículo", "Cantidad", "Precio Unitario", "Activo"
             }
         ) {
             Class[] types = new Class [] {
@@ -116,7 +111,7 @@ public class Registro_Compras extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable_Det_Fact_Reg_Comp);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 456, 631, 159));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 456, 631, 30));
 
         jBut_Buscar_Reg_Comp.setText("Buscar");
         getContentPane().add(jBut_Buscar_Reg_Comp, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 142, -1, -1));

@@ -1,0 +1,105 @@
+17/11/2021 22:52:16: Conexion Establecida OK.
+17/11/2021 22:55:29: Conexion Establecida OK.
+17/11/2021 22:56:42: Conexion Establecida OK.
+17/11/2021 22:57:33: Conexion Establecida OK.
+17/11/2021 22:59:02: Conexion Establecida OK.
+17/11/2021 22:59:12: Conexion Establecida OK.
+17/11/2021 23:11:05: Conexion Establecida OK.
+17/11/2021 23:11:54: Conexion Establecida OK.
+17/11/2021 23:12:10: Conexion Establecida OK.
+17/11/2021 23:13:57: Conexion Establecida OK.
+17/11/2021 23:14:34: Conexion Establecida OK.
+17/11/2021 23:15:05: Conexion Establecida OK.
+17/11/2021 23:16:27: Conexion Establecida OK.
+18/11/2021 20:06:08: Conexion Establecida OK.
+18/11/2021 20:06:09: Conexion Establecida OK.
+18/11/2021 20:06:09: Conexion Establecida OK.
+18/11/2021 20:06:09: Conexion Establecida OK.
+18/11/2021 20:06:09: Conexion Establecida OK.
+18/11/2021 20:06:09: Conexion Establecida OK.
+18/11/2021 20:06:10: Conexion Establecida OK.
+18/11/2021 20:06:10: Conexion Establecida OK.
+18/11/2021 20:06:10: Conexion Establecida OK.
+18/11/2021 20:06:10: Conexion Establecida OK.
+18/11/2021 20:06:10: Conexion Establecida OK.
+18/11/2021 20:06:10: Conexion Establecida OK.
+18/11/2021 20:06:11: Conexion Establecida OK.
+18/11/2021 20:06:11: Conexion Establecida OK.
+18/11/2021 20:06:11: Conexion Establecida OK.
+18/11/2021 20:06:11: Conexion Establecida OK.
+18/11/2021 20:15:34: null
+18/11/2021 21:11:58: No value specified for parameter 4
+18/11/2021 21:12:05: null
+18/11/2021 21:12:14: No value specified for parameter 4
+18/11/2021 21:13:18: Before start of result set
+18/11/2021 21:13:18: Cannot add or update a child row: a foreign key constraint fails (`DreamGifts_db`.`Articulo`, CONSTRAINT `fk_Articulo_CategoriaArticulo1` FOREIGN KEY (`idCategoriaArticulo`) REFERENCES `CategoriaArticulo` (`idCategoriaArticulo`))
+18/11/2021 21:13:30: -1
+18/11/2021 21:14:00: Before start of result set
+18/11/2021 21:14:00: Cannot add or update a child row: a foreign key constraint fails (`DreamGifts_db`.`Articulo`, CONSTRAINT `fk_Articulo_CategoriaArticulo1` FOREIGN KEY (`idCategoriaArticulo`) REFERENCES `CategoriaArticulo` (`idCategoriaArticulo`))
+18/11/2021 21:16:26: Conexion Establecida OK.
+18/11/2021 21:16:26: Conexion Establecida OK.
+18/11/2021 21:16:27: Conexion Establecida OK.
+18/11/2021 21:16:27: Conexion Establecida OK.
+18/11/2021 21:16:27: Conexion Establecida OK.
+18/11/2021 21:16:27: Conexion Establecida OK.
+18/11/2021 21:16:27: Conexion Establecida OK.
+18/11/2021 21:16:28: Conexion Establecida OK.
+18/11/2021 21:16:28: Conexion Establecida OK.
+18/11/2021 21:16:28: Conexion Establecida OK.
+18/11/2021 21:16:28: Conexion Establecida OK.
+18/11/2021 21:16:28: Conexion Establecida OK.
+18/11/2021 21:16:28: Conexion Establecida OK.
+18/11/2021 21:16:29: Conexion Establecida OK.
+18/11/2021 21:16:29: Conexion Establecida OK.
+19/11/2021 23:08:29: Conexion Establecida OK.
+19/11/2021 23:08:36: Conexion Establecida OK.
+19/11/2021 23:08:37: Conexion Establecida OK.
+19/11/2021 23:08:37: Conexion Establecida OK.
+19/11/2021 23:08:37: Conexion Establecida OK.
+19/11/2021 23:08:37: Conexion Establecida OK.
+19/11/2021 23:08:37: Conexion Establecida OK.
+19/11/2021 23:08:37: Conexion Establecida OK.
+19/11/2021 23:08:38: Conexion Establecida OK.
+19/11/2021 23:08:38: Conexion Establecida OK.
+19/11/2021 23:08:38: Conexion Establecida OK.
+19/11/2021 23:08:38: Conexion Establecida OK.
+19/11/2021 23:08:38: Conexion Establecida OK.
+19/11/2021 23:08:39: Conexion Establecida OK.
+19/11/2021 23:08:39: Conexion Establecida OK.
+19/11/2021 23:08:39: Conexion Establecida OK.
+19/11/2021 23:08:39: Conexion Establecida OK.
+20/11/2021 13:38:14: Conexion Establecida OK.
+20/11/2021 13:38:14: Conexion Establecida OK.
+20/11/2021 13:38:15: Conexion Establecida OK.
+20/11/2021 13:38:15: Conexion Establecida OK.
+20/11/2021 13:38:15: Conexion Establecida OK.
+20/11/2021 13:38:15: Conexion Establecida OK.
+20/11/2021 13:38:15: Conexion Establecida OK.
+20/11/2021 13:38:16: Conexion Establecida OK.
+20/11/2021 13:38:16: Conexion Establecida OK.
+20/11/2021 13:38:16: Conexion Establecida OK.
+20/11/2021 13:38:17: Conexion Establecida OK.
+20/11/2021 13:38:17: Conexion Establecida OK.
+20/11/2021 13:38:17: Conexion Establecida OK.
+20/11/2021 13:38:17: Conexion Establecida OK.
+20/11/2021 13:38:17: Conexion Establecida OK.
+20/11/2021 13:38:18: Conexion Establecida OK.
+21/11/2021 13:47:15: Conexion Establecida OK.
+21/11/2021 13:47:15: Conexion Establecida OK.
+21/11/2021 13:47:15: Conexion Establecida OK.
+21/11/2021 13:47:16: Conexion Establecida OK.
+21/11/2021 13:47:16: Conexion Establecida OK.
+21/11/2021 13:47:16: Conexion Establecida OK.
+21/11/2021 13:47:16: Conexion Establecida OK.
+21/11/2021 13:47:16: Conexion Establecida OK.
+21/11/2021 13:47:16: Conexion Establecida OK.
+21/11/2021 13:47:17: Conexion Establecida OK.
+21/11/2021 13:47:17: Conexion Establecida OK.
+21/11/2021 13:47:17: Conexion Establecida OK.
+21/11/2021 13:47:17: Conexion Establecida OK.
+21/11/2021 13:47:17: Conexion Establecida OK.
+21/11/2021 13:47:17: Conexion Establecida OK.
+21/11/2021 13:47:18: Conexion Establecida OK.
+22/11/2021 20:51:02: Error Conexion: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
