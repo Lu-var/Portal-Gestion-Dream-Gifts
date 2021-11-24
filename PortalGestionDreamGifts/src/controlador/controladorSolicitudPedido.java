@@ -54,12 +54,12 @@ public class controladorSolicitudPedido {
         Compras vista = new Compras();
         
         int Cantidad = Integer.parseInt(vista.getTxtCantidadRegistro().getText());
-        int Precio = Integer.parseInt(vista.gettxtPrecioRegistro().getText());
+        int Precio = Integer.parseInt(vista.getTxtPrecioRegistro().getText());
         Date FechaOrden = vista.getDateRegistroCompra().getDate();
         DateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         String fechaStr = formato.format(FechaOrden);
 
-        manager.agregarSolicitud(fechaStr,Precio);
+        manager.agregarRegistro(Cantidad, Precio, fechaStr);
     }
 
         }
