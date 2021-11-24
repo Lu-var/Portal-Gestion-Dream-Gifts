@@ -81,7 +81,7 @@ public class Compras extends javax.swing.JFrame {
         javax.swing.JButton BtnBuscarRevFact = new javax.swing.JButton();
         jLabel20 = new javax.swing.JLabel();
         jScrollPaneFactComp = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tablaFacturasRevision = new javax.swing.JTable();
         javax.swing.JButton BtnVerFactComp = new javax.swing.JButton();
         javax.swing.JButton BtnEditarFactComp = new javax.swing.JButton();
         jLabel21 = new javax.swing.JLabel();
@@ -117,7 +117,7 @@ public class Compras extends javax.swing.JFrame {
         javax.swing.JButton BtnEditarRegComp = new javax.swing.JButton();
         javax.swing.JButton BtnEliminarRegComp = new javax.swing.JButton();
         jScrollPaneDetFactRegComp = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tablaRegistroCompra = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -423,7 +423,7 @@ public class Compras extends javax.swing.JFrame {
         jLabel20.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
         jLabel20.setText("Detalles de Facturas");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tablaFacturasRevision.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -439,7 +439,7 @@ public class Compras extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPaneFactComp.setViewportView(jTable1);
+        jScrollPaneFactComp.setViewportView(tablaFacturasRevision);
 
         BtnVerFactComp.setText("Ver");
         BtnVerFactComp.addActionListener(new java.awt.event.ActionListener() {
@@ -595,7 +595,7 @@ public class Compras extends javax.swing.JFrame {
                                 .addComponent(jLabel17)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txtRutProvRegFact, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                .addGap(0, 110, Short.MAX_VALUE))
                             .addGroup(jPanelProvLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(BtnGuardarRegFact, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))))
@@ -725,7 +725,7 @@ public class Compras extends javax.swing.JFrame {
                     .addGroup(jPanelProv1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(BtnAgregArtRegDetFactProv)
                         .addComponent(BtnCancelarRegDetFactProv)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         jLabel18.setFont(new java.awt.Font("Ubuntu", 1, 15)); // NOI18N
@@ -745,7 +745,7 @@ public class Compras extends javax.swing.JFrame {
             }
         });
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tablaRegistroCompra.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -761,7 +761,7 @@ public class Compras extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPaneDetFactRegComp.setViewportView(jTable2);
+        jScrollPaneDetFactRegComp.setViewportView(tablaRegistroCompra);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -771,7 +771,7 @@ public class Compras extends javax.swing.JFrame {
             .addComponent(jPanelProv1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jScrollPaneDetFactRegComp)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(326, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel18)
@@ -788,7 +788,7 @@ public class Compras extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanelProv, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
-                .addComponent(jPanelProv1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanelProv1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel18)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -812,7 +812,7 @@ public class Compras extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 880, Short.MAX_VALUE)))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 884, Short.MAX_VALUE)))
             .addComponent(jTabbedPane2)
         );
         layout.setVerticalGroup(
@@ -1014,8 +1014,6 @@ public class Compras extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPaneDetPed;
     private javax.swing.JScrollPane jScrollPaneFactComp;
     private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
     private javax.swing.JTable jTableArtIDCant;
     private javax.swing.JTable jTableArtSolPed;
     private javax.swing.JTable jTableDetFat;
@@ -1027,7 +1025,238 @@ public class Compras extends javax.swing.JFrame {
     private javax.swing.JTextField jTxt_Num_Fact_Rev_Fact;
     private javax.swing.JTextField jTxt_Num_Ped_Sol_Ped;
     private javax.swing.JTextField jTxt_Prec_Reg_Det_Fact;
+    private javax.swing.JTable tablaFacturasRevision;
+    private javax.swing.JTable tablaRegistroCompra;
     private javax.swing.JTextField txtRutProvRegFact;
     private javax.swing.JTextField txtRutProvRevFact;
     // End of variables declaration//GEN-END:variables
+
+    public JButton getBtnAddSolPed() {
+        return btnAddSolPed;
+    }
+
+    public void setBtnAddSolPed(JButton btnAddSolPed) {
+        this.btnAddSolPed = btnAddSolPed;
+    }
+
+    public JButton getBtnCompras() {
+        return btnCompras;
+    }
+
+    public void setBtnCompras(JButton btnCompras) {
+        this.btnCompras = btnCompras;
+    }
+
+    public JButton getBtnDelSolPed() {
+        return btnDelSolPed;
+    }
+
+    public void setBtnDelSolPed(JButton btnDelSolPed) {
+        this.btnDelSolPed = btnDelSolPed;
+    }
+
+    public JButton getBtnInformes() {
+        return btnInformes;
+    }
+
+    public void setBtnInformes(JButton btnInformes) {
+        this.btnInformes = btnInformes;
+    }
+
+    public JButton getBtnMaestro() {
+        return btnMaestro;
+    }
+
+    public void setBtnMaestro(JButton btnMaestro) {
+        this.btnMaestro = btnMaestro;
+    }
+
+    public JButton getBtnVentas() {
+        return btnVentas;
+    }
+
+    public void setBtnVentas(JButton btnVentas) {
+        this.btnVentas = btnVentas;
+    }
+
+    public JDateChooser getDatePedSolPed() {
+        return datePedSolPed;
+    }
+
+    public void setDatePedSolPed(JDateChooser datePedSolPed) {
+        this.datePedSolPed = datePedSolPed;
+    }
+
+    public JDateChooser getDateRecRegFactProv() {
+        return dateRecRegFactProv;
+    }
+
+    public void setDateRecRegFactProv(JDateChooser dateRecRegFactProv) {
+        this.dateRecRegFactProv = dateRecRegFactProv;
+    }
+
+    public JDateChooser getDateRecepFact() {
+        return dateRecepFact;
+    }
+
+    public void setDateRecepFact(JDateChooser dateRecepFact) {
+        this.dateRecepFact = dateRecepFact;
+    }
+
+    public JDateChooser getDateVencArtRegDetFact() {
+        return dateVencArtRegDetFact;
+    }
+
+    public void setDateVencArtRegDetFact(JDateChooser dateVencArtRegDetFact) {
+        this.dateVencArtRegDetFact = dateVencArtRegDetFact;
+    }
+
+    public JComboBox<String> getjComb_Art_Reg_Det_Fact() {
+        return jComb_Art_Reg_Det_Fact;
+    }
+
+    public void setjComb_Art_Reg_Det_Fact(JComboBox<String> jComb_Art_Reg_Det_Fact) {
+        this.jComb_Art_Reg_Det_Fact = jComb_Art_Reg_Det_Fact;
+    }
+
+    public JComboBox<String> getjComb_Prov_R_Z_Reg_Fact() {
+        return jComb_Prov_R_Z_Reg_Fact;
+    }
+
+    public void setjComb_Prov_R_Z_Reg_Fact(JComboBox<String> jComb_Prov_R_Z_Reg_Fact) {
+        this.jComb_Prov_R_Z_Reg_Fact = jComb_Prov_R_Z_Reg_Fact;
+    }
+
+    public JComboBox<String> getjComb_Prov_R_Z_Rev_Fact() {
+        return jComb_Prov_R_Z_Rev_Fact;
+    }
+
+    public void setjComb_Prov_R_Z_Rev_Fact(JComboBox<String> jComb_Prov_R_Z_Rev_Fact) {
+        this.jComb_Prov_R_Z_Rev_Fact = jComb_Prov_R_Z_Rev_Fact;
+    }
+
+    public JTable getjTableArtIDCant() {
+        return jTableArtIDCant;
+    }
+
+    public void setjTableArtIDCant(JTable jTableArtIDCant) {
+        this.jTableArtIDCant = jTableArtIDCant;
+    }
+
+    public JTable getjTableArtSolPed() {
+        return jTableArtSolPed;
+    }
+
+    public void setjTableArtSolPed(JTable jTableArtSolPed) {
+        this.jTableArtSolPed = jTableArtSolPed;
+    }
+
+    public JTable getjTableDetFat() {
+        return jTableDetFat;
+    }
+
+    public void setjTableDetFat(JTable jTableDetFat) {
+        this.jTableDetFat = jTableDetFat;
+    }
+
+    public JTable getjTableDetPed() {
+        return jTableDetPed;
+    }
+
+    public void setjTableDetPed(JTable jTableDetPed) {
+        this.jTableDetPed = jTableDetPed;
+    }
+
+    public JTextField getjTxt_Cant_Art_Sol_Ped() {
+        return jTxt_Cant_Art_Sol_Ped;
+    }
+
+    public void setjTxt_Cant_Art_Sol_Ped(JTextField jTxt_Cant_Art_Sol_Ped) {
+        this.jTxt_Cant_Art_Sol_Ped = jTxt_Cant_Art_Sol_Ped;
+    }
+
+    public JTextField getjTxt_Cant_Reg_Det_Fact() {
+        return jTxt_Cant_Reg_Det_Fact;
+    }
+
+    public void setjTxt_Cant_Reg_Det_Fact(JTextField jTxt_Cant_Reg_Det_Fact) {
+        this.jTxt_Cant_Reg_Det_Fact = jTxt_Cant_Reg_Det_Fact;
+    }
+
+    public JTextField getjTxt_Cod_Reg_Det_Fact() {
+        return jTxt_Cod_Reg_Det_Fact;
+    }
+
+    public void setjTxt_Cod_Reg_Det_Fact(JTextField jTxt_Cod_Reg_Det_Fact) {
+        this.jTxt_Cod_Reg_Det_Fact = jTxt_Cod_Reg_Det_Fact;
+    }
+
+    public JTextField getjTxt_Num_Fact_Reg_Fact() {
+        return jTxt_Num_Fact_Reg_Fact;
+    }
+
+    public void setjTxt_Num_Fact_Reg_Fact(JTextField jTxt_Num_Fact_Reg_Fact) {
+        this.jTxt_Num_Fact_Reg_Fact = jTxt_Num_Fact_Reg_Fact;
+    }
+
+    public JTextField getjTxt_Num_Fact_Rev_Fact() {
+        return jTxt_Num_Fact_Rev_Fact;
+    }
+
+    public void setjTxt_Num_Fact_Rev_Fact(JTextField jTxt_Num_Fact_Rev_Fact) {
+        this.jTxt_Num_Fact_Rev_Fact = jTxt_Num_Fact_Rev_Fact;
+    }
+
+    public JTextField getjTxt_Num_Ped_Sol_Ped() {
+        return jTxt_Num_Ped_Sol_Ped;
+    }
+
+    public void setjTxt_Num_Ped_Sol_Ped(JTextField jTxt_Num_Ped_Sol_Ped) {
+        this.jTxt_Num_Ped_Sol_Ped = jTxt_Num_Ped_Sol_Ped;
+    }
+
+    public JTextField getjTxt_Prec_Reg_Det_Fact() {
+        return jTxt_Prec_Reg_Det_Fact;
+    }
+
+    public void setjTxt_Prec_Reg_Det_Fact(JTextField jTxt_Prec_Reg_Det_Fact) {
+        this.jTxt_Prec_Reg_Det_Fact = jTxt_Prec_Reg_Det_Fact;
+    }
+
+    public JTextField getTxtRutProvRegFact() {
+        return txtRutProvRegFact;
+    }
+
+    public void setTxtRutProvRegFact(JTextField txtRutProvRegFact) {
+        this.txtRutProvRegFact = txtRutProvRegFact;
+    }
+
+    public JTextField getTxtRutProvRevFact() {
+        return txtRutProvRevFact;
+    }
+
+    public void setTxtRutProvRevFact(JTextField txtRutProvRevFact) {
+        this.txtRutProvRevFact = txtRutProvRevFact;
+    }
+
+    public JTable getTablaFacturasRevision() {
+        return tablaFacturasRevision;
+    }
+
+    public void setTablaFacturasRevision(JTable tablaFacturasRevision) {
+        this.tablaFacturasRevision = tablaFacturasRevision;
+    }
+
+    public JTable getTablaRegistroCompra() {
+        return tablaRegistroCompra;
+    }
+
+    public void setTablaRegistroCompra(JTable tablaRegistroCompra) {
+        this.tablaRegistroCompra = tablaRegistroCompra;
+    }
+    
+    
+
+
+    
 }
