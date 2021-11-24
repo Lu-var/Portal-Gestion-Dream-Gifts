@@ -6,25 +6,24 @@ package controlador;
 
 import bd.Log;
 import java.util.ArrayList;
+import java.util.Date;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import modelo.ArticuloManager;
-import modelo.ComprasManager;
-import vista.Maestro;
+import deprecated.modelos.ComprasManager;
 import vista.Compras;
 /**
  *
- * @author Longares
+ * @author longares
  */
-public class ComprasController {
-    
+public class SolicitudPedController {
     ArticuloManager artManager = new ArticuloManager();
     ComprasManager compManager = new ComprasManager();
     private Object manager;
     
-    public void showArticulos(Maestro vista){
+    public void showArticulos(Compras vista){
         
         ArrayList<ArrayList<Object>> lista = artManager.articulosEnabledSelectAll();
         JTable tabla = vista.getjTableArtSolPed();
@@ -39,8 +38,8 @@ public class ComprasController {
         }
             
     }
-
-    public void agregarArticulos(Maestro vista){
+    
+    public void agregarArticulos(Compras vista){
         
         try {
             String articulo = "";
@@ -70,7 +69,7 @@ public class ComprasController {
         }
     }
     
-    public void deleteArticulos(Maestro vista){
+    public void deleteArticulos(Compras vista){
 
         JTable tablaPedido = vista.getjTableArtIDCant();
         DefaultTableModel modelo = (DefaultTableModel) tablaPedido.getModel();
@@ -78,27 +77,17 @@ public class ComprasController {
         int index = tablaPedido.getSelectedRow();
         modelo.removeRow(index);
     }
-
-    public void agregarPedido(Maestro vista){
-        
-        String Fpedido=datePedSolPed.getDate().toString();
-        datePedSolPed.setText(Fpedido);
-
-        try{
-
-            Fpedido = vista.getdatePedSolPed().getText();
-        } catch(Exception ex){
-            Log.seguir(ex.toString());
-        }
+    
+    public void agregarPedido(Compras vista){
+        Date datePedSolPed = vista.getDatePedSolPed().getDate();
+        String fPedido = datePedSolPed.toString();
              
-        if(Fpedido.isEmpty()){
+        if(fPedido.isEmpty()){
             JOptionPane.showMessageDialog(null, "Introduzca fecha de pedido: dd/mm/aaaa.", "", JOptionPane.INFORMATION_MESSAGE);
             return;
         }
-        int stock = 0;
-        
-        
-        int idPedido = 0;
+        int cantidad = 0;
+
         ArrayList<ArrayList<Object>> listaPedido = ComprasManager.PedidosEnabledSelectAll();
         for (int i = 0; i < listaPedido.size(); i++) {
             if(((String)listaPedido.get(i).get(1)).equals(pedido)){
@@ -123,11 +112,11 @@ public class ComprasController {
             DetalleP.add(temp);
         }
         
-        manager.agregarPedidoSQL(Pedido, Fpedido, articulo, stock, activo);
+        manager.agregarPedidoSQL(pedido, fPedido, articulo, stock, activo);
         manager.agregarDetallePSQL(DetalleP);
     }
-
-    public void ShowPedido(Maestro vista){
+    
+    public void ShowPedido(Compras vista){
         
         ArrayList<ArrayList<Object>> lista = ComprasManager.PedidosEnabledSelectAll();
         JTable tabla = vista.getjTableArtSolPed();
@@ -141,17 +130,17 @@ public class ComprasController {
             modelo.addRow(lista.get(i).toArray());
         }
 
-        manager.BuscarPedidoSQL(Pedido);
-        manager.BuscarDetallePSQL(DetalleP);            
+        manager.BuscarPedidoSQL(pedido);
+        manager.BuscarDetallePSQL(detalleP);            
     }
 
    
-    public void showAll(Maestro vista){
+    public void showAll(Compras vista){
         showArticulos(vista);
         showPedido(vista);
     }
     
-    public void clearAll(Maestro vista){
+    public void clearAll(Compras vista){
         DefaultTableModel modeloArt = (DefaultTableModel)vista.getTablaPacksArt().getModel();
         DefaultTableModel modelo = (DefaultTableModel)vista.getTablaPacks().getModel();
         
@@ -159,24 +148,4 @@ public class ComprasController {
         modelo.setRowCount(0);
 
     }
-    
-    public void ShowFactura(Maestro vista){
-        
-        ArrayList<ArrayList<Object>> lista = ComprasManager.FacturasEnabledSelectAll();
-        JTable tabla = vista.getjTable1();
-        DefaultTableModel modelo = (DefaultTableModel)tabla.getModel();
-        
-        for (int i = 0; i < lista.size(); i++) {
-            lista.get(i).remove(0);
-            lista.get(i).remove(1);
-            lista.get(i).remove(1);
-            lista.get(i).remove(1);
-            modelo.addRow(lista.get(i).toArray());
-        }
-
-        manager.BuscarFacturaSQL(Pedido);
-        manager.BuscarDetalleFSQL(DetalleP);            
-    }
-    
-
 }
