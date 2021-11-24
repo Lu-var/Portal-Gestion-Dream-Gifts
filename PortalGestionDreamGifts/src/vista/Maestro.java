@@ -2896,12 +2896,6 @@ public class Maestro extends javax.swing.JFrame {
     public void setTxtCatPack(JTextField txtCatPack) {
         this.txtCatPack = txtCatPack;
     }
-
-    public JTable getjTableArtSolPed() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    
      
 }
 
