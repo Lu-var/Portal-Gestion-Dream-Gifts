@@ -12,10 +12,10 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Longares
+ * @author luvar
  */
-public class ComprasManager {
-
+public class SolicitudPedManager {
+    
     public static ArrayList<ArrayList<Object>> PedidosEnabledSelectAll() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -26,7 +26,7 @@ public class ComprasManager {
 
         try {
             PreparedStatement comando = conexion.prepareStatement("INSERT INTO OrdenCompra (FechaOrden) VALUES (?)");
-            comando.setInt(1, FPedido);
+            comando.setInt(1, fPedido);
             comando.execute();
             
             
@@ -48,10 +48,10 @@ public class ComprasManager {
             
             comando = conexion.prepareStatement("INSERT INTO DetalleOrden (idArticulo, Cantidad) VALUES (?, ?)");
 
-            for (int i = 0; i < DetalleP.size(); i++) {
+            for (int i = 0; i < detalleP.size(); i++) {
                 comando.setInt(1, id);
-                comando.setInt(2, DetalleP.get(i).get(0));
-                comando.setInt(3, DetalleP.get(i).get(1));
+                comando.setInt(2, detalleP.get(i).get(0));
+                comando.setInt(3, detalleP.get(i).get(1));
 
                 comando.execute();
             }              
@@ -136,89 +136,5 @@ public class ComprasManager {
         }
         return matriz;
     }
-
-    public ArrayList<ArrayList<Object>> BuscarFacturaSQL(){
-        ArrayList<ArrayList<Object>> matriz = new ArrayList<>();
-
-        try {
-            PreparedStatement comando = conexion.prepareStatement("SELECT (idFactura, Fecha) FROM Facturas");       
-            ResultSet resultado = comando.executeQuery();
-
-            int id;
-            String Fecha;
-
-            
-            while(resultado.next()){
-                ArrayList<Object> lista = new ArrayList<>();
-                
-                id = resultado.getInt(1);
-                Fecha = resultado.getString(2);
-
-                
-                                
-                boolean flag = true;
-                if(status==0){
-                    flag = false;
-                }
-                
-                lista.add(id);
-                lista.add(Fecha);
-                lista.add(flag);
-                
-                matriz.add(lista);
-            }
-
-            
-        } catch (Exception ex) {
-            Log.seguir(ex.getMessage());
-        }
-        return matriz;
-    }
-
-    public ArrayList<ArrayList<Object>> BuscarDetalleFSQL(){
-        ArrayList<ArrayList<Object>> matriz = new ArrayList<>();
-
-        try {
-            PreparedStatement comando = conexion.prepareStatement("SELECT DetalleFactura.idFactura, Facturas.Fecha, Proveedor.RazonSocial, DetalleFactura.Total FROM (((DetalleFactura INNER JOIN Facturas ON DetalleFactura.idFactura = Facturas.idOrdenCompra) INNER JOIN OrdenCompra ON Facturas.idOrdenCompra = OrdenCompra.idOrdenCompra) INNER JOIN Proveedor ON OrdenCompra.RutProveedor = Proveedor.RUT)");    
-            ResultSet resultado = comando.executeQuery();
-                                                                  
-                                                                                
-
-
-
-
-            int total;
-
-            int status = 1;
-            
-            while(resultado.next()){
-                ArrayList<Object> lista = new ArrayList<>();
-                
-                id = resultado.getInt(2);
-                stock = resultado.getInt(4);
-                status = resultado.getInt(5);
-                
-                                
-                boolean flag = true;
-                if(status==0){
-                    flag = false;
-                }
-                
-                lista.add(id);
-                lista.add(stock);
-                lista.add(flag);
-                
-                matriz.add(lista);
-            }
-
-            
-        } catch (Exception ex) {
-            Log.seguir(ex.getMessage());
-        }
-        return matriz;
-    }
-
-
-
-
+    
 }
