@@ -67,6 +67,38 @@ public class ComunaManager {
         return matriz;
     }
     
+    public ArrayList<ArrayList<Object>> comunaSelectAllEnabled(){
+        ArrayList<ArrayList<Object>> matriz = new ArrayList<ArrayList<Object>>();
+        try{
+            comando = conexion.prepareStatement("SELECT * FROM Comuna WHERE Enabled = 1");
+            resultadoSet = comando.executeQuery();
+
+            int id;
+            int status;
+            String nombre;
+            while(resultadoSet.next()){
+                ArrayList<Object> fila = new ArrayList<Object>();
+
+                id = resultadoSet.getInt("idComuna");
+                status = resultadoSet.getInt("Enabled");
+                nombre = resultadoSet.getString("Nombre");
+
+                if(status==0) resultadoBool=false; else resultadoBool = true;
+
+                fila.add(id);
+                fila.add(nombre);
+                fila.add(resultadoBool);
+                
+                matriz.add(fila);
+            }
+            
+        } catch(Exception ex){
+            JOptionPane.showMessageDialog(null,"Error: "+ex);
+        }
+        
+        return matriz;
+    }
+    
     public void update(int idTarget, int id, String nombre, boolean flag){
         
         int status;
