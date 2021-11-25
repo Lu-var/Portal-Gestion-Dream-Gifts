@@ -3,20 +3,32 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package vista;
+import com.toedter.calendar.JDateChooser;
 import controlador.MenuController;
+import controlador.VentaController;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
 
 /**
  *
  * @author PC
  */
 public class Ventas extends javax.swing.JFrame {
-
+    
+    VentaController ventaCtrl = new VentaController();
+    
+    public void showAll(){
+        ventaCtrl.showPacks(this);
+    }
+    
     /**
      * Creates new form Ventas
      */
     public Ventas() {
         initComponents();
- 
+        showAll();
         this.setSize(910,650);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
@@ -205,6 +217,8 @@ public class Ventas extends javax.swing.JFrame {
         jLabel5.setText("Comuna :");
 
         jLabel6.setText("Saludo :");
+
+        txtFechaEntrega.setDateFormatString("dd/MM/ yyyy");
 
         jLabel8.setText("Hora Inicio Entrega :");
 
@@ -917,4 +931,287 @@ public class Ventas extends javax.swing.JFrame {
     private javax.swing.JTextField txtTelefonoCliente;
     private javax.swing.JTextField txtTotal;
     // End of variables declaration//GEN-END:variables
+
+    public JComboBox<String> getComboBanco() {
+        return ComboBanco;
+    }
+
+    public void setComboBanco(JComboBox<String> ComboBanco) {
+        this.ComboBanco = ComboBanco;
+    }
+
+    public JButton getBtnActDesp() {
+        return btnActDesp;
+    }
+
+    public void setBtnActDesp(JButton btnActDesp) {
+        this.btnActDesp = btnActDesp;
+    }
+
+    public JButton getBtnCancelarCon() {
+        return btnCancelarCon;
+    }
+
+    public void setBtnCancelarCon(JButton btnCancelarCon) {
+        this.btnCancelarCon = btnCancelarCon;
+    }
+
+    public JButton getBtnCancelarVenta() {
+        return btnCancelarVenta;
+    }
+
+    public void setBtnCancelarVenta(JButton btnCancelarVenta) {
+        this.btnCancelarVenta = btnCancelarVenta;
+    }
+
+    public JButton getBtnCompras() {
+        return btnCompras;
+    }
+
+    public void setBtnCompras(JButton btnCompras) {
+        this.btnCompras = btnCompras;
+    }
+
+    public JButton getBtnDLDesp() {
+        return btnDLDesp;
+    }
+
+    public void setBtnDLDesp(JButton btnDLDesp) {
+        this.btnDLDesp = btnDLDesp;
+    }
+
+    public JButton getBtnDescDesp() {
+        return btnDescDesp;
+    }
+
+    public void setBtnDescDesp(JButton btnDescDesp) {
+        this.btnDescDesp = btnDescDesp;
+    }
+
+    public JButton getBtnGuardarCon() {
+        return btnGuardarCon;
+    }
+
+    public void setBtnGuardarCon(JButton btnGuardarCon) {
+        this.btnGuardarCon = btnGuardarCon;
+    }
+
+    public JButton getBtnGuardarVenta() {
+        return btnGuardarVenta;
+    }
+
+    public void setBtnGuardarVenta(JButton btnGuardarVenta) {
+        this.btnGuardarVenta = btnGuardarVenta;
+    }
+
+    public JButton getBtnImprDesp() {
+        return btnImprDesp;
+    }
+
+    public void setBtnImprDesp(JButton btnImprDesp) {
+        this.btnImprDesp = btnImprDesp;
+    }
+
+    public JButton getBtnInformes() {
+        return btnInformes;
+    }
+
+    public void setBtnInformes(JButton btnInformes) {
+        this.btnInformes = btnInformes;
+    }
+
+    public JButton getBtnMaestro() {
+        return btnMaestro;
+    }
+
+    public void setBtnMaestro(JButton btnMaestro) {
+        this.btnMaestro = btnMaestro;
+    }
+
+    public JButton getBtnPRTDesp() {
+        return btnPRTDesp;
+    }
+
+    public void setBtnPRTDesp(JButton btnPRTDesp) {
+        this.btnPRTDesp = btnPRTDesp;
+    }
+
+    public JButton getBtnSelCon() {
+        return btnSelCon;
+    }
+
+    public void setBtnSelCon(JButton btnSelCon) {
+        this.btnSelCon = btnSelCon;
+    }
+
+    public JButton getBtnVentas() {
+        return btnVentas;
+    }
+
+    public void setBtnVentas(JButton btnVentas) {
+        this.btnVentas = btnVentas;
+    }
+
+    public JComboBox<String> getComboComuna() {
+        return comboComuna;
+    }
+
+    public void setComboComuna(JComboBox<String> comboComuna) {
+        this.comboComuna = comboComuna;
+    }
+
+    public JComboBox<String> getComboFinEntrega() {
+        return comboFinEntrega;
+    }
+
+    public void setComboFinEntrega(JComboBox<String> comboFinEntrega) {
+        this.comboFinEntrega = comboFinEntrega;
+    }
+
+    public JComboBox<String> getComboIniEntrega() {
+        return comboIniEntrega;
+    }
+
+    public void setComboIniEntrega(JComboBox<String> comboIniEntrega) {
+        this.comboIniEntrega = comboIniEntrega;
+    }
+
+    public JComboBox<String> getComboPack() {
+        return comboPack;
+    }
+
+    public void setComboPack(JComboBox<String> comboPack) {
+        this.comboPack = comboPack;
+    }
+
+    public JComboBox<String> getjComboBox5() {
+        return jComboBox5;
+    }
+
+    public void setjComboBox5(JComboBox<String> jComboBox5) {
+        this.jComboBox5 = jComboBox5;
+    }
+
+    public JTextField getjTextField3() {
+        return jTextField3;
+    }
+
+    public void setjTextField3(JTextField jTextField3) {
+        this.jTextField3 = jTextField3;
+    }
+
+    public JTextField getjTextField4() {
+        return jTextField4;
+    }
+
+    public void setjTextField4(JTextField jTextField4) {
+        this.jTextField4 = jTextField4;
+    }
+
+    public JTextField getTxtCPedido() {
+        return txtCPedido;
+    }
+
+    public void setTxtCPedido(JTextField txtCPedido) {
+        this.txtCPedido = txtCPedido;
+    }
+
+    public JTextField getTxtCRut() {
+        return txtCRut;
+    }
+
+    public void setTxtCRut(JTextField txtCRut) {
+        this.txtCRut = txtCRut;
+    }
+
+    public JTextField getTxtDireccion() {
+        return txtDireccion;
+    }
+
+    public void setTxtDireccion(JTextField txtDireccion) {
+        this.txtDireccion = txtDireccion;
+    }
+
+    public JTextField getTxtEmailCliente() {
+        return txtEmailCliente;
+    }
+
+    public void setTxtEmailCliente(JTextField txtEmailCliente) {
+        this.txtEmailCliente = txtEmailCliente;
+    }
+
+    public JTextField getTxtEnvio() {
+        return txtEnvio;
+    }
+
+    public void setTxtEnvio(JTextField txtEnvio) {
+        this.txtEnvio = txtEnvio;
+    }
+
+    public JDateChooser getTxtFechaEntrega() {
+        return txtFechaEntrega;
+    }
+
+    public void setTxtFechaEntrega(JDateChooser txtFechaEntrega) {
+        this.txtFechaEntrega = txtFechaEntrega;
+    }
+
+    public JTextField getTxtNDestinatario() {
+        return txtNDestinatario;
+    }
+
+    public void setTxtNDestinatario(JTextField txtNDestinatario) {
+        this.txtNDestinatario = txtNDestinatario;
+    }
+
+    public JTextField getTxtNombreCliente() {
+        return txtNombreCliente;
+    }
+
+    public void setTxtNombreCliente(JTextField txtNombreCliente) {
+        this.txtNombreCliente = txtNombreCliente;
+    }
+
+    public JTextField getTxtRUTcliente() {
+        return txtRUTcliente;
+    }
+
+    public void setTxtRUTcliente(JTextField txtRUTcliente) {
+        this.txtRUTcliente = txtRUTcliente;
+    }
+
+    public JTextPane getTxtSaludo() {
+        return txtSaludo;
+    }
+
+    public void setTxtSaludo(JTextPane txtSaludo) {
+        this.txtSaludo = txtSaludo;
+    }
+
+    public JTextField getTxtSubtotal() {
+        return txtSubtotal;
+    }
+
+    public void setTxtSubtotal(JTextField txtSubtotal) {
+        this.txtSubtotal = txtSubtotal;
+    }
+
+    public JTextField getTxtTelefonoCliente() {
+        return txtTelefonoCliente;
+    }
+
+    public void setTxtTelefonoCliente(JTextField txtTelefonoCliente) {
+        this.txtTelefonoCliente = txtTelefonoCliente;
+    }
+
+    public JTextField getTxtTotal() {
+        return txtTotal;
+    }
+
+    public void setTxtTotal(JTextField txtTotal) {
+        this.txtTotal = txtTotal;
+    }
+
+
+    
 }

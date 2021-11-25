@@ -416,6 +416,9 @@
                 <Component class="javax.swing.JTextField" name="txtNDestinatario">
                 </Component>
                 <Component class="com.toedter.calendar.JDateChooser" name="txtFechaEntrega">
+                  <Properties>
+                    <Property name="dateFormatString" type="java.lang.String" value="dd/MM/ yyyy"/>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtDireccion">
                 </Component>
