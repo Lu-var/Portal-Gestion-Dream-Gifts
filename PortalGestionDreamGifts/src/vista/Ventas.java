@@ -21,6 +21,8 @@ public class Ventas extends javax.swing.JFrame {
     
     public void showAll(){
         ventaCtrl.showPacks(this);
+        ventaCtrl.showComunas(this);
+        ventaCtrl.showPrecioPack(this);
     }
     
     /**
@@ -222,13 +224,37 @@ public class Ventas extends javax.swing.JFrame {
 
         jLabel8.setText("Hora Inicio Entrega :");
 
+        comboIniEntrega.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30" }));
+        comboIniEntrega.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboIniEntregaActionPerformed(evt);
+            }
+        });
+
         jLabel9.setText("Hora Fin Entrega :");
+
+        comboFinEntrega.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30", "22:00" }));
 
         jLabel10.setText("SubTotal :");
 
+        txtSubtotal.setEditable(false);
+
         jLabel11.setText("Envios :");
 
+        txtEnvio.addCaretListener(new javax.swing.event.CaretListener() {
+            public void caretUpdate(javax.swing.event.CaretEvent evt) {
+                txtEnvioCaretUpdate(evt);
+            }
+        });
+        txtEnvio.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtEnvioKeyReleased(evt);
+            }
+        });
+
         jLabel12.setText("Total :");
+
+        txtTotal.setEditable(false);
 
         btnCancelarVenta.setText("Cancelar");
 
@@ -813,6 +839,18 @@ public class Ventas extends javax.swing.JFrame {
     private void txtRUTclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRUTclienteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtRUTclienteActionPerformed
+
+    private void comboIniEntregaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboIniEntregaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboIniEntregaActionPerformed
+
+    private void txtEnvioKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEnvioKeyReleased
+        
+    }//GEN-LAST:event_txtEnvioKeyReleased
+
+    private void txtEnvioCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_txtEnvioCaretUpdate
+        ventaCtrl.calcularPrecio(this);
+    }//GEN-LAST:event_txtEnvioCaretUpdate
 
     /**
      * @param args the command line arguments
