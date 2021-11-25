@@ -107,6 +107,53 @@ public class PackManager {
         return matriz;
     }
     
+    public ArrayList<ArrayList<Object>> selectAllPackEnabled(){
+        ArrayList<ArrayList<Object>> matriz = new ArrayList<>();
+
+        try {
+            PreparedStatement comando = conexion.prepareStatement("SELECT * FROM Pack WHERE Enabled = 1");       
+            ResultSet resultado = comando.executeQuery();
+
+            int id;
+            String nombre;
+            int precio;
+            int stock;
+            int idCat;
+            int status = 1;
+            
+            while(resultado.next()){
+                ArrayList<Object> lista = new ArrayList<>();
+                
+                id = resultado.getInt(1);
+                nombre = resultado.getString(2);
+                precio = resultado.getInt(3);
+                stock = resultado.getInt(4);
+                idCat = resultado.getInt(5);
+                status = resultado.getInt(6);
+                
+                                
+                boolean flag = true;
+                if(status==0){
+                    flag = false;
+                }
+                
+                lista.add(id);
+                lista.add(nombre);
+                lista.add(precio);
+                lista.add(stock);
+                lista.add(idCat);
+                lista.add(flag);
+                
+                matriz.add(lista);
+            }
+
+            
+        } catch (Exception ex) {
+            Log.seguir(ex.getMessage());
+        }
+        return matriz;
+    }
+    
     public ArrayList<ArrayList<Object>> selectContenidos(int idPack){
         ArrayList<ArrayList<Object>> matriz = new ArrayList<>();
         try{
