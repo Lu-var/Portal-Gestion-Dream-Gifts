@@ -10,20 +10,21 @@ import javax.swing.table.DefaultTableModel;
 import modelo.ArticuloManager;
 import deprecated.modelos.ComprasManager;
 import vista.Compras;
+import modelo.RevFacturaManager;
 
 /**
  *
- * @author luvar
+ * @author longares
  */
 public class RevFacturaController {
     ArticuloManager artManager = new ArticuloManager();
-    ComprasManager compManager = new ComprasManager();
+    RevFacturaManager revFactManager = new RevFacturaManager();
     private Object manager;
 
     
     public void ShowFactura(Compras vista){
         
-        ArrayList<ArrayList<Object>> lista = ComprasManager.FacturasEnabledSelectAll();
+        ArrayList<ArrayList<Object>> lista = revFactManager.facturasEnabledSelectAll();
         JTable tabla = vista.getTablaFacturasRevision();
         DefaultTableModel modelo = (DefaultTableModel)tabla.getModel();
         

@@ -416,26 +416,14 @@
                 <Component class="javax.swing.JTable" name="jTableDetPed">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="5" rowCount="0">
+                      <Table columnCount="3" rowCount="0">
                         <Column editable="true" title="Numero Pedido" type="java.lang.Integer"/>
-                        <Column editable="true" title="Articulo" type="java.lang.String"/>
                         <Column editable="true" title="Fecha Pedido" type="java.lang.String"/>
                         <Column editable="true" title="Cantidad Pedido" type="java.lang.Integer"/>
-                        <Column editable="true" title="Activo" type="java.lang.Boolean"/>
                       </Table>
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                       <TableColumnModel selectionModel="0">
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
                         <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                           <Title/>
                           <Editor/>
@@ -515,7 +503,7 @@
                       <Component id="jPanelProv2" min="-2" pref="139" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                       <Component id="jScrollPaneFactComp" min="-2" pref="27" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="153" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="BtnVerFactComp" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="BtnEditarFactComp" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -524,7 +512,7 @@
                       <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                       <Component id="jScrollPaneDetFact" min="-2" pref="139" max="-2" attributes="0"/>
-                      <EmptySpace pref="63" max="32767" attributes="0"/>
+                      <EmptySpace pref="69" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
@@ -725,21 +713,15 @@
                 <Component class="javax.swing.JTable" name="tablaFacturasRevision">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="5" rowCount="0">
+                      <Table columnCount="4" rowCount="0">
                         <Column editable="true" title="Numero Factura" type="java.lang.Integer"/>
                         <Column editable="true" title="Fecha Recepcion" type="java.lang.String"/>
                         <Column editable="true" title="Razon Social" type="java.lang.String"/>
                         <Column editable="true" title="Total" type="java.lang.Integer"/>
-                        <Column editable="true" title="Activo" type="java.lang.Boolean"/>
                       </Table>
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                       <TableColumnModel selectionModel="0">
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
                         <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                           <Title/>
                           <Editor/>
@@ -808,21 +790,15 @@
                 <Component class="javax.swing.JTable" name="jTableDetFat">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="5" rowCount="0">
+                      <Table columnCount="4" rowCount="0">
                         <Column editable="true" title="Codigo" type="java.lang.Integer"/>
                         <Column editable="true" title="Articulo" type="java.lang.String"/>
                         <Column editable="true" title="Cantidad" type="java.lang.Integer"/>
                         <Column editable="true" title="Total" type="java.lang.Integer"/>
-                        <Column editable="true" title="Activo" type="java.lang.Boolean"/>
                       </Table>
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                       <TableColumnModel selectionModel="0">
-                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                          <Title/>
-                          <Editor/>
-                          <Renderer/>
-                        </Column>
                         <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                           <Title/>
                           <Editor/>

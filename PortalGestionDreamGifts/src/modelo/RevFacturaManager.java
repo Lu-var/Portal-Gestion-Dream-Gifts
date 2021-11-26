@@ -13,7 +13,7 @@ import modelo.ConexionRequest;
 
 /**
  *
- * @author luvar
+ * @author longares
  */
 public class RevFacturaManager {
     
@@ -24,7 +24,7 @@ public class RevFacturaManager {
         ArrayList<ArrayList<Object>> matriz = new ArrayList<>();
 
         try {
-            PreparedStatement comando = conexion.prepareStatement("SELECT (idFactura, Fecha) FROM Facturas");       
+            PreparedStatement comando = conexion.prepareStatement("SELECT DetalleFactura.idFactura, Facturas.Fecha, Proveedor.RazonSocial, DetalleFactura.Total FROM (((DetalleFactura INNER JOIN Facturas ON DetalleFactura.idFactura = Facturas.idOrdenCompra) INNER JOIN OrdenCompra ON Facturas.idOrdenCompra = OrdenCompra.idOrdenCompra) INNER JOIN Proveedor ON OrdenCompra.RutProveedor = Proveedor.RUT)");       
             ResultSet resultado = comando.executeQuery();
 
             int id;
@@ -62,7 +62,7 @@ public class RevFacturaManager {
         ArrayList<ArrayList<Object>> matriz = new ArrayList<>();
 
         try {
-            PreparedStatement comando = conexion.prepareStatement("SELECT DetalleFactura.idFactura, Facturas.Fecha, Proveedor.RazonSocial, DetalleFactura.Total FROM (((DetalleFactura INNER JOIN Facturas ON DetalleFactura.idFactura = Facturas.idOrdenCompra) INNER JOIN OrdenCompra ON Facturas.idOrdenCompra = OrdenCompra.idOrdenCompra) INNER JOIN Proveedor ON OrdenCompra.RutProveedor = Proveedor.RUT)");    
+            PreparedStatement comando = conexion.prepareStatement("SELECT DetalleFactura.idArticulo, Articulo.Nombre, DetalleFactura.Cantidad, DetalleFactura.Total FROM (DetalleFactura INNER JOIN Articulo ON DetalleFactura.idFactura = Articulo.idArticulo)");    
             ResultSet resultado = comando.executeQuery();
                                                                   
                                                                                 

@@ -18,6 +18,18 @@ import javax.swing.JTextField;
  */
 public class Compras extends javax.swing.JFrame {
 
+    SolicitudPedController solPedCtrl = new SolicitudPedController();
+    
+    public void clearAll(){
+        
+        solPedCtrl.clearAll(this);
+
+    }
+    
+    public void showAll(){
+
+        solPedCtrl.showAll(this);
+}
     /**
      * Creates new form Ventas
      */
@@ -305,11 +317,11 @@ public class Compras extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Numero Pedido", "Articulo", "Fecha Pedido", "Cantidad Pedido", "Activo"
+                "Numero Pedido", "Fecha Pedido", "Cantidad Pedido"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Boolean.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -428,11 +440,11 @@ public class Compras extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Numero Factura", "Fecha Recepcion", "Razon Social", "Total", "Activo"
+                "Numero Factura", "Fecha Recepcion", "Razon Social", "Total"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Boolean.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -463,11 +475,11 @@ public class Compras extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Codigo", "Articulo", "Cantidad", "Total", "Activo"
+                "Codigo", "Articulo", "Cantidad", "Total"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Boolean.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -512,7 +524,7 @@ public class Compras extends javax.swing.JFrame {
                 .addComponent(jPanelProv2, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(54, 54, 54)
                 .addComponent(jScrollPaneFactComp, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(153, 153, 153)
+                .addGap(147, 147, 147)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnVerFactComp)
                     .addComponent(BtnEditarFactComp))
@@ -520,7 +532,7 @@ public class Compras extends javax.swing.JFrame {
                 .addComponent(jLabel20)
                 .addGap(24, 24, 24)
                 .addComponent(jScrollPaneDetFact, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(69, Short.MAX_VALUE))
             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel4Layout.createSequentialGroup()
                     .addGap(167, 167, 167)
@@ -902,7 +914,7 @@ public class Compras extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnCancelarSolPedActionPerformed
 
     private void BtnBuscarSolPedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarSolPedActionPerformed
-        compraCtrl.showAll(this);
+        solPedCtrl.ShowPedido(this);
     }//GEN-LAST:event_BtnBuscarSolPedActionPerformed
 
     private void btnAddSolPedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddSolPedActionPerformed
@@ -914,13 +926,13 @@ public class Compras extends javax.swing.JFrame {
     }//GEN-LAST:event_btnDelSolPedActionPerformed
 
     private void BtnEditarDetPedRealActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEditarDetPedRealActionPerformed
-        compraCtrl.edit(this);
+        solPedCtrl.edit(this);
     }//GEN-LAST:event_BtnEditarDetPedRealActionPerformed
 
     private void BtnGenOCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGenOCActionPerformed
-        compraCtrl.agregarPedido(this);
-        compraCtrl.clearAll(this);
-        compraCtrl.showAll(this);
+        solPedCtrl.agregarPedido(this);
+        solPedCtrl.clearAll(this);
+        solPedCtrl.showAll(this);
     }//GEN-LAST:event_BtnGenOCActionPerformed
 
     private void BtnDesactDetPedRealActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDesactDetPedRealActionPerformed
@@ -1079,35 +1091,35 @@ public class Compras extends javax.swing.JFrame {
         this.btnVentas = btnVentas;
     }
 
-    public JDateChooser getDatePedSolPed() {
+    public JDateChooser getdatePedSolPed() {
         return datePedSolPed;
     }
 
-    public void setDatePedSolPed(JDateChooser datePedSolPed) {
+    public void setdatePedSolPed(JDateChooser datePedSolPed) {
         this.datePedSolPed = datePedSolPed;
     }
 
-    public JDateChooser getDateRecRegFactProv() {
+    public JDateChooser getdateRecRegFactProv() {
         return dateRecRegFactProv;
     }
 
-    public void setDateRecRegFactProv(JDateChooser dateRecRegFactProv) {
+    public void setdateRecRegFactProv(JDateChooser dateRecRegFactProv) {
         this.dateRecRegFactProv = dateRecRegFactProv;
     }
 
-    public JDateChooser getDateRecepFact() {
+    public JDateChooser getdateRecepFact() {
         return dateRecepFact;
     }
 
-    public void setDateRecepFact(JDateChooser dateRecepFact) {
+    public void setdateRecepFact(JDateChooser dateRecepFact) {
         this.dateRecepFact = dateRecepFact;
     }
 
-    public JDateChooser getDateVencArtRegDetFact() {
+    public JDateChooser getdateVencArtRegDetFact() {
         return dateVencArtRegDetFact;
     }
 
-    public void setDateVencArtRegDetFact(JDateChooser dateVencArtRegDetFact) {
+    public void setdateVencArtRegDetFact(JDateChooser dateVencArtRegDetFact) {
         this.dateVencArtRegDetFact = dateVencArtRegDetFact;
     }
 
