@@ -99,6 +99,62 @@ public class ComunaManager {
         return matriz;
     }
     
+    public ArrayList<Object> comunaSelectByName(String nombre){
+        ArrayList<Object> fila = new ArrayList<Object>();
+        try{
+            comando = conexion.prepareStatement("SELECT * FROM Comuna WHERE Nombre = ?");
+            comando.setString(1, nombre);
+            resultadoSet = comando.executeQuery();
+
+            int idComuna;
+            int status;
+            while(resultadoSet.next()){
+
+                idComuna = resultadoSet.getInt("idComuna");
+                status = resultadoSet.getInt("Enabled");
+
+                if(status==0) resultadoBool=false; else resultadoBool = true;
+
+                fila.add(idComuna);
+                fila.add(nombre);
+                fila.add(resultadoBool);
+            }
+            
+        } catch(Exception ex){
+            Log.seguir(ex.getMessage());
+        }
+        
+        return fila;
+    }
+    
+    public ArrayList<Object> comunaSelectByID(int idComuna){
+        ArrayList<Object> fila = new ArrayList<Object>();
+        try{
+            comando = conexion.prepareStatement("SELECT * FROM Comuna WHERE idComuna = ?");
+            comando.setInt(1, idComuna);
+            resultadoSet = comando.executeQuery();
+
+            String nombre;
+            int status;
+            while(resultadoSet.next()){
+
+                status = resultadoSet.getInt("Enabled");
+                nombre = resultadoSet.getString("Nombre");
+
+                if(status==0) resultadoBool=false; else resultadoBool = true;
+
+                fila.add(idComuna);
+                fila.add(nombre);
+                fila.add(resultadoBool);
+            }
+            
+        } catch(Exception ex){
+            Log.seguir(ex.getMessage());
+        }
+        
+        return fila;
+    }
+    
     public void update(int idTarget, int id, String nombre, boolean flag){
         
         int status;

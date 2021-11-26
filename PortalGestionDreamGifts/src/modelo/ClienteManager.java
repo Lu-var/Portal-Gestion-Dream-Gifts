@@ -30,7 +30,7 @@ public class ClienteManager {
             comando.execute();
             
         } catch(Exception ex){
-            JOptionPane.showMessageDialog(null,ex);
+            Log.seguir(ex.getMessage());
         }  
     }
 
@@ -69,6 +69,38 @@ public class ClienteManager {
         }
         
         return matriz;
+    }
+    
+    public ArrayList<Object> clientesSelectByRUT(String RUT){
+        
+        PreparedStatement comando = null;
+        ResultSet resultado = null;
+        ArrayList<Object> lista = new ArrayList<>();
+        
+        try{
+            comando = conexion.prepareStatement("SELECT * FROM Cliente WHERE RUT = ?");
+            comando.setString(1, RUT);
+            resultado = comando.executeQuery();
+            
+            while(resultado.next()){
+                
+                String nombre = resultado.getString("Nombre");
+                String fecha = resultado.getString("FechaNacimiento");
+                String celular = resultado.getString("Celular");
+                String email = resultado.getString("Email");
+                
+                lista.add(RUT);
+                lista.add(nombre);
+                lista.add(fecha);
+                lista.add(celular);
+                lista.add(email);    
+            }
+            
+        } catch(Exception ex){
+                Log.seguir(ex.getMessage());
+        }
+        
+        return lista;
     }
     
     // Funcion debug

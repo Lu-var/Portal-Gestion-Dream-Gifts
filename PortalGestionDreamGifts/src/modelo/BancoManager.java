@@ -66,6 +66,66 @@ public class BancoManager {
         return matriz;
     }
     
+    public ArrayList<ArrayList<Object>> bancoSelectAllEnabled(){
+        ArrayList<ArrayList<Object>> matriz = new ArrayList<ArrayList<Object>>();
+        try{
+            comando = conexion.prepareStatement("SELECT * FROM Banco WHERE Enabled = 1");
+            resultadoSet = comando.executeQuery();
+
+            int id;
+            int status;
+            String nombre;
+            while(resultadoSet.next()){
+                ArrayList<Object> fila = new ArrayList<Object>();
+
+                id = resultadoSet.getInt("idBanco");
+                status = resultadoSet.getInt("Enabled");
+                nombre = resultadoSet.getString("Nombre");
+
+                if(status==0) resultadoBool = false; else resultadoBool = true;
+
+                fila.add(id);
+                fila.add(nombre);
+                fila.add(resultadoBool);
+                
+                matriz.add(fila);
+            }
+            
+        } catch(Exception ex){
+            JOptionPane.showMessageDialog(null,"Error: "+ex);
+        }
+        
+        return matriz;
+    }
+    
+    public ArrayList<Object> bancoSelectByName(String nombre){
+        ArrayList<Object> fila = new ArrayList<Object>();
+        try{
+            comando = conexion.prepareStatement("SELECT * FROM Banco WHERE Nombre = ?");
+            comando.setString(1, nombre);
+            resultadoSet = comando.executeQuery();
+
+            int id;
+            int status;
+            while(resultadoSet.next()){
+
+                id = resultadoSet.getInt("idBanco");
+                status = resultadoSet.getInt("Enabled");
+
+                if(status==0) resultadoBool = false; else resultadoBool = true;
+
+                fila.add(id);
+                fila.add(nombre);
+                fila.add(resultadoBool);
+            }
+            
+        } catch(Exception ex){
+            Log.seguir(ex.getMessage());
+        }
+        
+        return fila;
+    }
+    
     public void update(int idTarget, int id, String nombre, boolean flag){
         
         int status;

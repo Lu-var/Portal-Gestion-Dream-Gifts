@@ -22,8 +22,8 @@ public class ConexionRequest {
             Log.seguir("Error: " + e.getMessage());
         }
         try {
-
-            connect = DriverManager.getConnection("jdbc:mysql://190.22.58.152:65535/DreamGifts_db", "root", "Hello.World@5");
+          
+            connect = DriverManager.getConnection("jdbc:mysql://190.22.57.210:65535/DreamGifts_db", "root", "Hello.World@5");
 
             Log.seguir("Conexion Establecida OK.");
 
