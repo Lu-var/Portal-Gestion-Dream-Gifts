@@ -98,6 +98,34 @@ public class BancoManager {
         return matriz;
     }
     
+    public ArrayList<Object> bancoSelectByName(String nombre){
+        ArrayList<Object> fila = new ArrayList<Object>();
+        try{
+            comando = conexion.prepareStatement("SELECT * FROM Banco WHERE Nombre = ?");
+            comando.setString(1, nombre);
+            resultadoSet = comando.executeQuery();
+
+            int id;
+            int status;
+            while(resultadoSet.next()){
+
+                id = resultadoSet.getInt("idBanco");
+                status = resultadoSet.getInt("Enabled");
+
+                if(status==0) resultadoBool = false; else resultadoBool = true;
+
+                fila.add(id);
+                fila.add(nombre);
+                fila.add(resultadoBool);
+            }
+            
+        } catch(Exception ex){
+            Log.seguir(ex.getMessage());
+        }
+        
+        return fila;
+    }
+    
     public void update(int idTarget, int id, String nombre, boolean flag){
         
         int status;
