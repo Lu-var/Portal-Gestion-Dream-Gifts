@@ -95,4 +95,23 @@ public class ProveedorManager {
         return matriz;
     }
     
+    public void update(String rut, String razon, String nombre, String telefono, String direccion, String email, boolean enabled){
+        try { 
+            PreparedStatement comando = conexion.prepareStatement("UPDATE Proveedor SET RazonSocial = ?, Nombre = ?, Telefono = ?, Direccion = ?, Email = ?, Enabled = ? WHERE RUT = ?");
+
+            comando.setString(1, razon);
+            comando.setString(2, nombre);
+            comando.setString(3, telefono);
+            comando.setString(4, direccion);
+            comando.setString(5, email);
+            comando.setBoolean(6, enabled);
+            comando.setString(7, rut);
+            
+            comando.executeUpdate();
+        
+        } catch (Exception ex) {
+            Log.seguir(ex.getMessage());
+        }
+    }
+    
 }

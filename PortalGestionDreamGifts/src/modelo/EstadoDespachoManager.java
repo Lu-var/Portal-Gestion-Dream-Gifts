@@ -72,18 +72,17 @@ public class EstadoDespachoManager {
         }  
     }
     
-    public void update(int idTarget, int id, String nombre, boolean flag){
+    public void update(int idTarget, String nombre, boolean flag){
         
         int status;
         if(flag){status = 1;} else{status = 0;}
         
         try{
-            comando = conexion.prepareStatement("UPDATE StatusDespacho SET idStatusDespacho = (?), DescripcionStatus = (?), Enabled = (?) WHERE idStatusDespacho = (?)");
+            comando = conexion.prepareStatement("UPDATE StatusDespacho SET DescripcionStatus = (?), Enabled = (?) WHERE idStatusDespacho = (?)");
             
-            comando.setInt(1, id);
-            comando.setString(2, nombre);
-            comando.setInt(3,status);
-            comando.setInt(4, idTarget);
+            comando.setString(1, nombre);
+            comando.setInt(2,status);
+            comando.setInt(3, idTarget);
             
             comando.execute();
             

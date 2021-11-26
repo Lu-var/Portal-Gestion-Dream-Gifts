@@ -4,6 +4,14 @@
  */
 package vista;
 import controlador.MenuController;
+import java.sql.Connection;
+import modelo.ConexionRequest;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
@@ -39,9 +47,13 @@ public class Informes extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
+        btnReporte = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
+        generarReporteInventario = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
+        generarReporte = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
+        generarReporteDev = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -106,54 +118,106 @@ public class Informes extends javax.swing.JFrame {
 
         jTabbedPane2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        btnReporte.setText("Generar Reporte");
+        btnReporte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReporteActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 795, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(254, 254, 254)
+                .addComponent(btnReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(307, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 444, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(162, 162, 162)
+                .addComponent(btnReporte)
+                .addContainerGap(257, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Informe Ventas", jPanel2);
+
+        generarReporteInventario.setText("Generar Reporte");
+        generarReporteInventario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                generarReporteInventarioActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 795, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(286, 286, 286)
+                .addComponent(generarReporteInventario, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(317, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 444, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(160, 160, 160)
+                .addComponent(generarReporteInventario)
+                .addContainerGap(259, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Informe Inventario", jPanel3);
+
+        generarReporte.setText("Generar Reporte");
+        generarReporte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                generarReporteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 795, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(268, 268, 268)
+                .addComponent(generarReporte, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(340, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 444, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(164, 164, 164)
+                .addComponent(generarReporte)
+                .addContainerGap(255, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Informe Clientes", jPanel4);
+
+        generarReporteDev.setText("Generar Reporte");
+        generarReporteDev.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                generarReporteDevActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 795, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(233, 233, 233)
+                .addComponent(generarReporteDev, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(360, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 444, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(135, 135, 135)
+                .addComponent(generarReporteDev)
+                .addContainerGap(284, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Informe Dev y Cambios", jPanel5);
@@ -169,14 +233,14 @@ public class Informes extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTabbedPane2)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 799, Short.MAX_VALUE))
+                            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 802, Short.MAX_VALUE))
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -205,6 +269,71 @@ public class Informes extends javax.swing.JFrame {
         MenuController maestro = new MenuController();
         maestro.openCompras(this);
     }//GEN-LAST:event_btnComprasActionPerformed
+
+    private void btnReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteActionPerformed
+        ConexionRequest intentoConexion = new ConexionRequest();
+        Connection conexion = intentoConexion.conectar();
+        try {
+            String rutaReporte = System.getProperty("user.dir")+"/src/Reportes/reporteVentas.jasper";
+            JasperReport jasperReport = (JasperReport)JRLoader.loadObjectFromFile(rutaReporte);
+            JasperPrint print = JasperFillManager.fillReport(jasperReport, null, conexion);
+            JasperViewer view = new JasperViewer(print, false);
+            view.setVisible(true);
+                            
+            } catch (JRException ex) {
+                System.out.println("Error al generar el reporte"+ ex.getMessage());
+                
+            }
+        
+    }//GEN-LAST:event_btnReporteActionPerformed
+
+    private void generarReporteInventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarReporteInventarioActionPerformed
+        ConexionRequest intentoConexion = new ConexionRequest();
+        Connection conexion = intentoConexion.conectar();
+        try {
+            String rutaReporte = System.getProperty("user.dir")+"/src/Reportes/reporteInventario.jasper";
+            JasperReport jasperReport = (JasperReport)JRLoader.loadObjectFromFile(rutaReporte);
+            JasperPrint print = JasperFillManager.fillReport(jasperReport, null, conexion);
+            JasperViewer view = new JasperViewer(print, false);
+            view.setVisible(true);
+                            
+            } catch (JRException ex) {
+                System.out.println("Error al generar el reporte"+ ex.getMessage());
+                
+            }
+    }//GEN-LAST:event_generarReporteInventarioActionPerformed
+
+    private void generarReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarReporteActionPerformed
+          ConexionRequest intentoConexion = new ConexionRequest();
+        Connection conexion = intentoConexion.conectar();
+        try {
+            String rutaReporte = System.getProperty("user.dir")+"/src/Reportes/reporteClientes.jasper";
+            JasperReport jasperReport = (JasperReport)JRLoader.loadObjectFromFile(rutaReporte);
+            JasperPrint print = JasperFillManager.fillReport(jasperReport, null, conexion);
+            JasperViewer view = new JasperViewer(print, false);
+            view.setVisible(true);
+                            
+            } catch (JRException ex) {
+                System.out.println("Error al generar el reporte"+ ex.getMessage());
+                
+            }
+    }//GEN-LAST:event_generarReporteActionPerformed
+
+    private void generarReporteDevActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarReporteDevActionPerformed
+         ConexionRequest intentoConexion = new ConexionRequest();
+        Connection conexion = intentoConexion.conectar();
+        try {
+            String rutaReporte = System.getProperty("user.dir")+"/src/Reportes/report1.jasper";
+            JasperReport jasperReport = (JasperReport)JRLoader.loadObjectFromFile(rutaReporte);
+            JasperPrint print = JasperFillManager.fillReport(jasperReport, null, conexion);
+            JasperViewer view = new JasperViewer(print, false);
+            view.setVisible(true);
+                            
+            } catch (JRException ex) {
+                System.out.println("Error al generar el reporte"+ ex.getMessage());
+                
+            }
+    }//GEN-LAST:event_generarReporteDevActionPerformed
 
     /**
      * @param args the command line arguments
@@ -252,7 +381,11 @@ public class Informes extends javax.swing.JFrame {
     private javax.swing.JButton btnCompras;
     private javax.swing.JButton btnInformes;
     private javax.swing.JButton btnMaestro;
+    private javax.swing.JButton btnReporte;
     private javax.swing.JButton btnVentas;
+    private javax.swing.JButton generarReporte;
+    private javax.swing.JButton generarReporteDev;
+    private javax.swing.JButton generarReporteInventario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
