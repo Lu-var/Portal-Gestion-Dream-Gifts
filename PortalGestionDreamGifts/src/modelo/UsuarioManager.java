@@ -30,7 +30,7 @@ public class UsuarioManager {
             resultadoSet = comando.executeQuery();
             
             if(!resultadoSet.isBeforeFirst()){
-                JOptionPane.showMessageDialog(null, "Whoops! Credenciales incorrectas.");
+                JOptionPane.showMessageDialog(null,resultadoSet + "JaJaJa! Credenciales incorrectas.");
                 
             } else{return true;}
             

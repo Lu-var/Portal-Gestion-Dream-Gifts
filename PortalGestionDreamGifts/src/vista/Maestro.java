@@ -52,7 +52,6 @@ public class Maestro extends javax.swing.JFrame {
         articuloCtrl.clearAll(this);
         packCtrl.clearAll(this);
         catPackCtrl.clearAll(this);
-
     }
     
     public void showAll(){
@@ -578,7 +577,6 @@ public class Maestro extends javax.swing.JFrame {
                 btnSaveClienteActionPerformed(evt);
             }
         });
-
         dateNacCliente.setDateFormatString("dd/MM/yyyy");
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
@@ -953,7 +951,6 @@ public class Maestro extends javax.swing.JFrame {
         );
 
         PanelPrincipal.addTab("Comunas", PanelComunas);
-
         btnCatPacktEditar.setText("EDITAR");
         btnCatPacktEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1315,7 +1312,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnPacksEdit)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         PanelPrincipal.addTab("Packs", PanelPacks);
@@ -1576,7 +1573,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel18)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 213, Short.MAX_VALUE)
+                .addComponent(jScrollPane6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnEditarArt)
                 .addContainerGap())
@@ -1747,7 +1744,6 @@ public class Maestro extends javax.swing.JFrame {
                 btnEditarEstadoDespachoActionPerformed(evt);
             }
         });
-
         javax.swing.GroupLayout PanelEstadoDespachoLayout = new javax.swing.GroupLayout(PanelEstadoDespacho);
         PanelEstadoDespacho.setLayout(PanelEstadoDespachoLayout);
         PanelEstadoDespachoLayout.setHorizontalGroup(
@@ -3108,8 +3104,6 @@ public class Maestro extends javax.swing.JFrame {
     public void setCheckEnabledPackEdit(JCheckBox checkEnabledPackEdit) {
         this.checkEnabledPackEdit = checkEnabledPackEdit;
     }
-    
-    
      
 }
 
