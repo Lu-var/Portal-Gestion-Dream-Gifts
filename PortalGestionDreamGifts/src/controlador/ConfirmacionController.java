@@ -11,7 +11,9 @@ import javax.swing.JComboBox;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import modelo.BancoManager;
+import modelo.ClienteManager;
 import modelo.ConfirmacionManager;
+import modelo.PackManager;
 import vista.Ventas;
 
 /**
@@ -22,6 +24,8 @@ public class ConfirmacionController {
     
     ConfirmacionManager conManager = new ConfirmacionManager();
     BancoManager bancoManager = new BancoManager();
+    ClienteManager clienteManager = new ClienteManager();
+    PackManager packManager = new PackManager();
     
     public void confirmarVenta(Ventas vista){
         
@@ -48,8 +52,21 @@ public class ConfirmacionController {
         });
     }
     
+    public void showVentasPendientes(Ventas vista){
+        ArrayList<ArrayList<Object>> listaVentas = conManager.selectVentasPendientes();
+        
+        JTable tabla = vista.getTablaPendientes();
+        DefaultTableModel modelo = (DefaultTableModel) tabla.getModel();
+        listaVentas.forEach(columna -> {
+            Object[] temp = {columna.get(0),columna.get(9),clienteManager.clientesSelectByRUT((String)columna.get(1)).get(1),clienteManager.clientesSelectByRUT((String)columna.get(1)).get(3), columna.get(7),packManager.selectPackByID((Integer)columna.get(5)).get(1)};
+            modelo.addRow(temp);
+        });
+    }
+    
+    
     public void showAll(Ventas vista){
         showBancos(vista);
+        showVentasPendientes(vista);
     }
     
     public void clearAll(Ventas vista){

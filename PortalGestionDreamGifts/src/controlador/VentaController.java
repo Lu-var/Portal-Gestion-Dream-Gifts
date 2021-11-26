@@ -71,23 +71,12 @@ public class VentaController {
         });
     }
     
-    public void showVentasPendientes(Ventas vista){
-        ArrayList<ArrayList<Object>> listaVentas = ventaManager.selectVentasPendientes();
-        
-        JTable tabla = vista.getTablaPendientes();
-        DefaultTableModel modelo = (DefaultTableModel) tabla.getModel();
-        listaVentas.forEach(columna -> {
-            Object[] temp = {columna.get(0),columna.get(9),clienteManager.clientesSelectByRUT((String)columna.get(1)).get(1),clienteManager.clientesSelectByRUT((String)columna.get(1)).get(3), columna.get(7),packManager.selectPackByID((Integer)columna.get(5)).get(1)};
-            modelo.addRow(temp);
-        });
-    }
-    
     public void showAll(Ventas vista){
         showComunas(vista);
         showPacks(vista);
         showRRSS(vista);
         showPrecioPack(vista);
-        showVentasPendientes(vista);
+        
     }
     
     public void clearAll(Ventas vista){
