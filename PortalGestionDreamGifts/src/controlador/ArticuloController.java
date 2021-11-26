@@ -209,5 +209,8 @@ public class ArticuloController {
         model.setRowCount(0);
         
         master.getComboArtCat().removeAllItems();
+        master.getTxtNombreArt().setText("");
+        master.getTxtUnidadesArt().setText("");
+        master.getDateFechaArt().setDate(null);
     }
 }
