@@ -280,6 +280,11 @@ public class Ventas extends javax.swing.JFrame {
         txtTotal.setEditable(false);
 
         btnCancelarVenta.setText("Cancelar");
+        btnCancelarVenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarVentaActionPerformed(evt);
+            }
+        });
 
         btnGuardarVenta.setText("Guardar");
         btnGuardarVenta.addActionListener(new java.awt.event.ActionListener() {
@@ -431,7 +436,7 @@ public class Ventas extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 341, Short.MAX_VALUE)
+                .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 241, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -453,6 +458,11 @@ public class Ventas extends javax.swing.JFrame {
         });
 
         btnCancelarCon.setText("Cancelar");
+        btnCancelarCon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarConActionPerformed(evt);
+            }
+        });
 
         fechaPago.setDateFormatString("dd/MM/yyyy");
 
@@ -515,9 +525,16 @@ public class Ventas extends javax.swing.JFrame {
             Class[] types = new Class [] {
                 java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class
             };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false
+            };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
         jScrollPane2.setViewportView(tablaPendientes);
@@ -533,7 +550,7 @@ public class Ventas extends javax.swing.JFrame {
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(115, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -569,9 +586,24 @@ public class Ventas extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID Venta", "Pack", "Destinatario", "Fecha Entrega", "Comuna", "Dirección", "Hora Entrega"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, true, false, false, true
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane3.setViewportView(jTable2);
 
         btnDescDesp.setText("Descargar");
@@ -873,6 +905,16 @@ public class Ventas extends javax.swing.JFrame {
         clearAll();
         showAll();
     }//GEN-LAST:event_jPaneStateChanged
+
+    private void btnCancelarConActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarConActionPerformed
+        conCtrl.clearAll(this);
+        conCtrl.showAll(this);
+    }//GEN-LAST:event_btnCancelarConActionPerformed
+
+    private void btnCancelarVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarVentaActionPerformed
+        ventaCtrl.clearAll(this);
+        ventaCtrl.showAll(this);
+    }//GEN-LAST:event_btnCancelarVentaActionPerformed
 
     /**
      * @param args the command line arguments
