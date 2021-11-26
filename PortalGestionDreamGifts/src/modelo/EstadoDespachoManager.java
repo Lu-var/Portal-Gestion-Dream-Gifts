@@ -57,6 +57,97 @@ public class EstadoDespachoManager {
         
         return matriz;
     }
+    
+    public ArrayList<ArrayList<Object>> estadoSelectAllEnabled(){
+        ArrayList<ArrayList<Object>> matriz = new ArrayList<ArrayList<Object>>();
+        try{
+            comando = conexion.prepareStatement("SELECT * FROM StatusDespacho WHERE Enabled = 1");
+            resultadoSet = comando.executeQuery();
+
+            int id;
+            int status;
+            String desc;
+            while(resultadoSet.next()){
+                ArrayList<Object> fila = new ArrayList<Object>();
+
+                id = resultadoSet.getInt("idStatusDespacho");
+                status = resultadoSet.getInt("Enabled");
+                desc = resultadoSet.getString("DescripcionStatus");
+                
+                if(status==0) resultadoBool=false; else resultadoBool = true;
+
+                fila.add(id);
+                fila.add(desc);
+                fila.add(resultadoBool);
+                
+                matriz.add(fila);
+            }
+            
+        } catch(Exception ex){
+            Log.seguir(ex.getMessage());
+        }
+        
+        return matriz;
+    }
+    
+    public ArrayList<Object> estadoSelectByID(int idStatus){
+        ArrayList<Object> fila = new ArrayList<Object>();
+        try{
+            comando = conexion.prepareStatement("SELECT * FROM StatusDespacho WHERE idStatusDespacho = ?");
+            comando.setInt(1, idStatus);
+            resultadoSet = comando.executeQuery();
+
+            int status;
+            String desc;
+            while(resultadoSet.next()){
+
+                status = resultadoSet.getInt("Enabled");
+                desc = resultadoSet.getString("DescripcionStatus");
+                
+                if(status==0) resultadoBool=false; else resultadoBool = true;
+
+                fila.add(idStatus);
+                fila.add(desc);
+                fila.add(resultadoBool);
+                
+            }
+            
+        } catch(Exception ex){
+            Log.seguir(ex.getMessage());
+        }
+        
+        return fila;
+    }
+    
+    public ArrayList<Object> estadoSelectByName(String nombre){
+        ArrayList<Object> fila = new ArrayList<Object>();
+        try{
+            comando = conexion.prepareStatement("SELECT * FROM StatusDespacho WHERE DescripcionStatus = ?");
+            comando.setString(1, nombre);
+            
+            resultadoSet = comando.executeQuery();
+            
+            int idStatus;
+            int status;
+            
+            while(resultadoSet.next()){
+                idStatus = resultadoSet.getInt(0);
+                status = resultadoSet.getInt(2);
+                
+                if(status==0) resultadoBool=false; else resultadoBool = true;
+
+                fila.add(idStatus);
+                fila.add(nombre);
+                fila.add(resultadoBool);
+                
+            }
+            
+        } catch(Exception ex){
+            Log.seguir(ex.getMessage());
+        }
+        
+        return fila;
+    }
 
     public void agregarEstadoSQL(String descripcion){
         PreparedStatement comando = null;
