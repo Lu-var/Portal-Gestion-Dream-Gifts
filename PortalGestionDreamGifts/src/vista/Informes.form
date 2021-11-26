@@ -34,7 +34,7 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jTabbedPane2" max="32767" attributes="0"/>
-                          <Component id="jPanel1" alignment="1" pref="799" max="32767" attributes="0"/>
+                          <Component id="jPanel1" alignment="1" pref="802" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -46,7 +46,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel1" max="32767" attributes="0"/>
+              <Component id="jPanel1" pref="68" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" pref="35" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -166,15 +166,33 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="795" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="254" max="-2" attributes="0"/>
+                      <Component id="btnReporte" min="-2" pref="234" max="-2" attributes="0"/>
+                      <EmptySpace pref="307" max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="444" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
+                      <Component id="btnReporte" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="257" max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
           </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JButton" name="btnReporte">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Generar Reporte"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnReporteActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel3">
           <Constraints>
@@ -188,15 +206,33 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="795" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="286" max="-2" attributes="0"/>
+                      <Component id="generarReporteInventario" min="-2" pref="192" max="-2" attributes="0"/>
+                      <EmptySpace pref="317" max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="444" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="160" max="-2" attributes="0"/>
+                      <Component id="generarReporteInventario" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="259" max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
           </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JButton" name="generarReporteInventario">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Generar Reporte"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="generarReporteInventarioActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel4">
           <Constraints>
@@ -210,15 +246,33 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="795" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="268" max="-2" attributes="0"/>
+                      <Component id="generarReporte" min="-2" pref="187" max="-2" attributes="0"/>
+                      <EmptySpace pref="340" max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="444" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="164" max="-2" attributes="0"/>
+                      <Component id="generarReporte" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="255" max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
           </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JButton" name="generarReporte">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Generar Reporte"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="generarReporteActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel5">
           <Constraints>
@@ -232,15 +286,33 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="795" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="233" max="-2" attributes="0"/>
+                      <Component id="generarReporteDev" min="-2" pref="202" max="-2" attributes="0"/>
+                      <EmptySpace pref="360" max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="444" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
+                      <Component id="generarReporteDev" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="284" max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
           </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JButton" name="generarReporteDev">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Generar Reporte"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="generarReporteDevActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
         </Container>
       </SubComponents>
     </Container>
