@@ -170,7 +170,6 @@ public class Maestro extends javax.swing.JFrame {
         tablaPacks = new javax.swing.JTable();
         jLabel15 = new javax.swing.JLabel();
         btnPacksEdit = new javax.swing.JButton();
-        txtPacksBuscar = new javax.swing.JTextField();
         PanelCatArt = new javax.swing.JPanel();
         LCatArt = new javax.swing.JLabel();
         txtCatArt = new javax.swing.JTextField();
@@ -1293,9 +1292,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelPacksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PanelPacksLayout.createSequentialGroup()
                         .addGap(348, 348, 348)
-                        .addComponent(jLabel15)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtPacksBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel15))
                     .addGroup(PanelPacksLayout.createSequentialGroup()
                         .addGap(342, 342, 342)
                         .addComponent(btnPacksEdit)))
@@ -1305,12 +1302,9 @@ public class Maestro extends javax.swing.JFrame {
             PanelPacksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelPacksLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(PanelPacksLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(PanelPacksLayout.createSequentialGroup()
-                        .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel15))
-                    .addComponent(txtPacksBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel15)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -2536,7 +2530,6 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JTextArea txtNombreArt;
     private javax.swing.JTextField txtNombreCliente;
     private javax.swing.JTextField txtNombreProv;
-    private javax.swing.JTextField txtPacksBuscar;
     private javax.swing.JTextField txtPacksEditNombre;
     private javax.swing.JTextField txtPacksEditPrecio;
     private javax.swing.JTextField txtPacksNombre;
