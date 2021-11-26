@@ -26,7 +26,7 @@ public class ProveedorController {
         String rut = vista.getTxtRutProv().getText();
         String nombre = vista.getTxtNombreProv().getText();
         String celular = vista.getTxtFonoProv().getText();
-        String email = vista.getTxtMailProv().getText();
+        String email = vista.getTxtEmailProv().getText();
         String direccion = vista.getTxtDireccionProv().getText();
         
         manager.agregarProvSQL(rut, razon, nombre, celular, direccion, email);
@@ -123,7 +123,21 @@ public class ProveedorController {
             }
             
             try {
-                input = JOptionPane.showInputDialog(null, "Nuevo Email proveedor", fila.get(4));
+                input = JOptionPane.showInputDialog(null, "Nueva Direccion proveedor", fila.get(4));
+                direccion = (String)input;
+                if(direccion.isEmpty()){
+                    Log.seguir("Campo vacío.");
+                    JOptionPane.showMessageDialog(null, "Campo Vacio",null,JOptionPane.INFORMATION_MESSAGE);
+                    return;
+                }
+            } catch (java.lang.NullPointerException ex) {
+                JOptionPane.showMessageDialog(null, "Edición Cancelada", null, JOptionPane.INFORMATION_MESSAGE);
+                Log.seguir(ex.getMessage());
+                return;
+            }
+            
+            try {
+                input = JOptionPane.showInputDialog(null, "Nuevo Email proveedor", fila.get(5));
                 email = (String)input;
                 if(email.isEmpty()){
                     Log.seguir("Campo vacío.");
@@ -135,20 +149,7 @@ public class ProveedorController {
                 Log.seguir(ex.getMessage());
                 return;
             }                 
-            
-            try {
-                input = JOptionPane.showInputDialog(null, "Nueva Direccion proveedor", fila.get(5));
-                direccion = (String)input;
-                if(direccion.isEmpty()){
-                    Log.seguir("Campo vacío.");
-                    JOptionPane.showMessageDialog(null, "Campo Vacio",null,JOptionPane.INFORMATION_MESSAGE);
-                    return;
-                }
-            } catch (java.lang.NullPointerException ex) {
-                JOptionPane.showMessageDialog(null, "Edición Cancelada", null, JOptionPane.INFORMATION_MESSAGE);
-                Log.seguir(ex.getMessage());
-                return;
-            }            
+                        
             input = JOptionPane.showConfirmDialog(null,"¿Activar este Proveedor? ","Estado Actual: " + status, JOptionPane.YES_NO_OPTION);
             if((int)input == JOptionPane.CLOSED_OPTION){
                 JOptionPane.showMessageDialog(null, "Edición Cancelada", null, JOptionPane.INFORMATION_MESSAGE);
@@ -159,8 +160,8 @@ public class ProveedorController {
             tabla.setValueAt(razon, pos, 1);
             tabla.setValueAt(nombre, pos, 2);
             tabla.setValueAt(telefono, pos, 3);
-            tabla.setValueAt(email, pos, 4);
-            tabla.setValueAt(direccion, pos, 5);
+            tabla.setValueAt(direccion, pos, 4);            
+            tabla.setValueAt(email, pos, 5);
             tabla.setValueAt(flagStatus, pos, 6);
                                             
             manager.update((String)fila.get(0), (String)razon, (String)nombre, (String)telefono, (String)direccion, (String)email,(boolean)flagStatus);

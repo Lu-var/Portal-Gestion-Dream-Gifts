@@ -1975,7 +1975,7 @@ public class Maestro extends javax.swing.JFrame {
 
             },
             new String [] {
-                "RUT", "Razón Social", "Nombre", "Telefono", "Email", "Dirección", "Activo"
+                "RUT", "Razón Social", "Nombre", "Telefono", "Dirección", "Email", "Activo"
             }
         ) {
             Class[] types = new Class [] {

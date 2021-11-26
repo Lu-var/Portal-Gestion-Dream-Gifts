@@ -2680,8 +2680,8 @@
                         <Column editable="false" title="Raz&#xf3;n Social" type="java.lang.String"/>
                         <Column editable="false" title="Nombre" type="java.lang.String"/>
                         <Column editable="false" title="Telefono" type="java.lang.String"/>
-                        <Column editable="false" title="Email" type="java.lang.String"/>
                         <Column editable="false" title="Direcci&#xf3;n" type="java.lang.String"/>
+                        <Column editable="false" title="Email" type="java.lang.String"/>
                         <Column editable="false" title="Activo" type="java.lang.Boolean"/>
                       </Table>
                     </Property>
