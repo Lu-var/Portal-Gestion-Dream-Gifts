@@ -123,15 +123,11 @@ public class Ventas extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         tablaDespachos = new javax.swing.JTable();
-        btnDescDesp = new javax.swing.JButton();
-        btnImprDesp = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         tablaEstadoDespacho = new javax.swing.JTable();
         jLabel20 = new javax.swing.JLabel();
-        btnDLDesp = new javax.swing.JButton();
-        btnPRTDesp = new javax.swing.JButton();
         comboEstadoDespacho = new javax.swing.JComboBox<>();
         btnActDesp = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
@@ -626,23 +622,13 @@ public class Ventas extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(tablaDespachos);
 
-        btnDescDesp.setText("Descargar");
-
-        btnImprDesp.setText("Imprimir");
-
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 772, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnDescDesp)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnImprDesp)))
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 772, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGap(320, 320, 320)
@@ -656,12 +642,6 @@ public class Ventas extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnImprDesp)
-                    .addComponent(btnDescDesp))
-                .addContainerGap())
         );
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -706,10 +686,6 @@ public class Ventas extends javax.swing.JFrame {
         jLabel20.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel20.setText("Actualización Estado Despacho");
 
-        btnDLDesp.setText("Descargar");
-
-        btnPRTDesp.setText("Imprimir");
-
         btnActDesp.setText("Actualizar");
         btnActDesp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -736,13 +712,7 @@ public class Ventas extends javax.swing.JFrame {
                         .addGap(0, 251, Short.MAX_VALUE))
                     .addGroup(jPanel11Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane4)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(btnDLDesp)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnPRTDesp)))))
+                        .addComponent(jScrollPane4)))
                 .addContainerGap())
         );
         jPanel11Layout.setVerticalGroup(
@@ -755,11 +725,7 @@ public class Ventas extends javax.swing.JFrame {
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(comboEstadoDespacho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnActDesp))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnDLDesp)
-                    .addComponent(btnPRTDesp))
-                .addContainerGap())
+                .addContainerGap(59, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -991,14 +957,10 @@ public class Ventas extends javax.swing.JFrame {
     private javax.swing.JButton btnCancelarCon;
     private javax.swing.JButton btnCancelarVenta;
     private javax.swing.JButton btnCompras;
-    private javax.swing.JButton btnDLDesp;
-    private javax.swing.JButton btnDescDesp;
     private javax.swing.JButton btnGuardarCon;
     private javax.swing.JButton btnGuardarVenta;
-    private javax.swing.JButton btnImprDesp;
     private javax.swing.JButton btnInformes;
     private javax.swing.JButton btnMaestro;
-    private javax.swing.JButton btnPRTDesp;
     private javax.swing.JButton btnVentas;
     private javax.swing.JComboBox<String> comboBanco;
     private javax.swing.JComboBox<String> comboComuna;
@@ -1103,22 +1065,6 @@ public class Ventas extends javax.swing.JFrame {
         this.btnCompras = btnCompras;
     }
 
-    public JButton getBtnDLDesp() {
-        return btnDLDesp;
-    }
-
-    public void setBtnDLDesp(JButton btnDLDesp) {
-        this.btnDLDesp = btnDLDesp;
-    }
-
-    public JButton getBtnDescDesp() {
-        return btnDescDesp;
-    }
-
-    public void setBtnDescDesp(JButton btnDescDesp) {
-        this.btnDescDesp = btnDescDesp;
-    }
-
     public JButton getBtnGuardarCon() {
         return btnGuardarCon;
     }
@@ -1135,14 +1081,6 @@ public class Ventas extends javax.swing.JFrame {
         this.btnGuardarVenta = btnGuardarVenta;
     }
 
-    public JButton getBtnImprDesp() {
-        return btnImprDesp;
-    }
-
-    public void setBtnImprDesp(JButton btnImprDesp) {
-        this.btnImprDesp = btnImprDesp;
-    }
-
     public JButton getBtnInformes() {
         return btnInformes;
     }
@@ -1157,14 +1095,6 @@ public class Ventas extends javax.swing.JFrame {
 
     public void setBtnMaestro(JButton btnMaestro) {
         this.btnMaestro = btnMaestro;
-    }
-
-    public JButton getBtnPRTDesp() {
-        return btnPRTDesp;
-    }
-
-    public void setBtnPRTDesp(JButton btnPRTDesp) {
-        this.btnPRTDesp = btnPRTDesp;
     }
 
     public JButton getBtnVentas() {
