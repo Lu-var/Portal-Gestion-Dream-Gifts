@@ -5,6 +5,7 @@
 package vista;
 import com.toedter.calendar.JDateChooser;
 import controlador.ConfirmacionController;
+import controlador.DespachoController;
 import controlador.MenuController;
 import controlador.VentaController;
 import javax.swing.JButton;
@@ -21,16 +22,19 @@ public class Ventas extends javax.swing.JFrame {
     
     VentaController ventaCtrl = new VentaController();
     ConfirmacionController conCtrl = new ConfirmacionController();
+    DespachoController despCtrl = new DespachoController();
     
     public void showAll(){
         ventaCtrl.showAll(this);
         conCtrl.showAll(this);
+        despCtrl.showAll(this);
         
     }
     
     public void clearAll(){
         ventaCtrl.clearAll(this);
         conCtrl.clearAll(this);
+        despCtrl.clearAll(this);
     }
     
     /**
@@ -38,6 +42,7 @@ public class Ventas extends javax.swing.JFrame {
      */
     public Ventas() {
         initComponents();
+        clearAll();
         showAll();
         this.setSize(910,650);
         this.setLocationRelativeTo(null);
@@ -113,7 +118,7 @@ public class Ventas extends javax.swing.JFrame {
         jPanel10 = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tablaDespachos = new javax.swing.JTable();
         btnDescDesp = new javax.swing.JButton();
         btnImprDesp = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
@@ -436,7 +441,7 @@ public class Ventas extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 241, Short.MAX_VALUE)
+                .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 302, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -519,7 +524,7 @@ public class Ventas extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Numero Pedido", "Fecha Pedido", "Nombre Cliente", "Celular", "Valor", "Pack"
+                "ID Venta", "Fecha Pedido", "Nombre Cliente", "Celular", "Valor", "Pack"
             }
         ) {
             Class[] types = new Class [] {
@@ -550,7 +555,7 @@ public class Ventas extends javax.swing.JFrame {
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -581,7 +586,7 @@ public class Ventas extends javax.swing.JFrame {
         jLabel19.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel19.setText("Despacho Diario");
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tablaDespachos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -604,7 +609,7 @@ public class Ventas extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane3.setViewportView(jTable2);
+        jScrollPane3.setViewportView(tablaDespachos);
 
         btnDescDesp.setText("Descargar");
 
@@ -843,7 +848,7 @@ public class Ventas extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jPane, javax.swing.GroupLayout.PREFERRED_SIZE, 400, Short.MAX_VALUE)
+                .addComponent(jPane, javax.swing.GroupLayout.PREFERRED_SIZE, 462, Short.MAX_VALUE)
                 .addGap(4, 4, 4))
         );
 
@@ -1014,9 +1019,9 @@ public class Ventas extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JLabel lBanco;
+    private javax.swing.JTable tablaDespachos;
     private javax.swing.JTable tablaPendientes;
     private javax.swing.JTextField txtCelTarget;
     private javax.swing.JTextField txtCodigo;
@@ -1327,6 +1332,14 @@ public class Ventas extends javax.swing.JFrame {
 
     public void setTxtCodigo(JTextField txtCodigo) {
         this.txtCodigo = txtCodigo;
+    }
+
+    public JTable getTablaDespachos() {
+        return tablaDespachos;
+    }
+
+    public void setTablaDespachos(JTable tablaDespachos) {
+        this.tablaDespachos = tablaDespachos;
     }
 
     
