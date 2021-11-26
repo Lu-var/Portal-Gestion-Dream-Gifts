@@ -131,8 +131,8 @@ public class EstadoDespachoManager {
             int status;
             
             while(resultadoSet.next()){
-                idStatus = resultadoSet.getInt(0);
-                status = resultadoSet.getInt(2);
+                idStatus = resultadoSet.getInt("idStatusDespacho");
+                status = resultadoSet.getInt("Enabled");
                 
                 if(status==0) resultadoBool=false; else resultadoBool = true;
 
