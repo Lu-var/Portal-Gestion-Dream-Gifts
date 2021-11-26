@@ -170,8 +170,50 @@ public class PackManager {
             
             while(resultado.next()){
                 
-                id = resultado.getInt(1);
                 nombre = resultado.getString(2);
+                precio = resultado.getInt(3);
+                stock = resultado.getInt(4);
+                idCat = resultado.getInt(5);
+                status = resultado.getInt(6);
+                
+                                
+                boolean flag = true;
+                if(status==0){
+                    flag = false;
+                }
+                
+                lista.add(id);
+                lista.add(nombre);
+                lista.add(precio);
+                lista.add(stock);
+                lista.add(idCat);
+                lista.add(flag);
+            }
+
+            
+        } catch (Exception ex) {
+            Log.seguir(ex.getMessage());
+        }
+        return lista;
+    }
+    
+    public ArrayList<Object> selectPackByName(String nombre){
+        ArrayList<Object> lista = new ArrayList<>();
+
+        try {
+            PreparedStatement comando = conexion.prepareStatement("SELECT * FROM Pack WHERE Nombre = ?"); 
+            comando.setString(1, nombre);
+            ResultSet resultado = comando.executeQuery();
+
+            int id;
+            int precio;
+            int stock;
+            int idCat;
+            int status = 1;
+            
+            while(resultado.next()){
+                
+                id = resultado.getInt(1);
                 precio = resultado.getInt(3);
                 stock = resultado.getInt(4);
                 idCat = resultado.getInt(5);
