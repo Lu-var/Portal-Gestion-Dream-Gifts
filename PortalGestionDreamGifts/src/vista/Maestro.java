@@ -2554,14 +2554,6 @@ public class Maestro extends javax.swing.JFrame {
         this.dateNacCliente = dateNacCliente;
     }
 
-    public JTextField getTxtBuscarPk() {
-        return txtPacksBuscar;
-    }
-
-    public void setTxtBuscarPk(JTextField txtBuscarPk) {
-        this.txtPacksBuscar = txtBuscarPk;
-    }
-
     public JTextField getTxtCelularCliente() {
         return txtCelularCliente;
     }
@@ -2939,14 +2931,6 @@ public class Maestro extends javax.swing.JFrame {
 
     public void setTablaPacksSelected(JTable tablaPacksSelected) {
         this.tablaPacksSelected = tablaPacksSelected;
-    }
-
-    public JTextField getTxtPacksBuscar() {
-        return txtPacksBuscar;
-    }
-
-    public void setTxtPacksBuscar(JTextField txtPacksBuscar) {
-        this.txtPacksBuscar = txtPacksBuscar;
     }
 
     public JTextField getTxtPacksNombre() {
