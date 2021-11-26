@@ -98,6 +98,34 @@ public class RedSocialManager {
         return matriz;
     }
     
+    public ArrayList<Object> rrssSelectByName(String nombre){
+        ArrayList<Object> fila = new ArrayList<Object>();
+        try{
+            comando = conexion.prepareStatement("SELECT * FROM RRSS WHERE Enabled = 1");
+            resultadoSet = comando.executeQuery();
+
+            int id;
+            int status;
+            while(resultadoSet.next()){
+
+                id = resultadoSet.getInt("idRRSS");
+                status = resultadoSet.getInt("Enabled");
+                nombre = resultadoSet.getString("Nombre");
+                
+                if(status==0) resultadoBool=false; else resultadoBool = true;
+
+                fila.add(id);
+                fila.add(nombre);
+                fila.add(resultadoBool);
+            }
+            
+        } catch(Exception ex){
+            Log.seguir(ex.getMessage());
+        }
+        
+        return fila;
+    }
+    
     public void update(int idTarget, String nombre, boolean flag){
         
         int status;
