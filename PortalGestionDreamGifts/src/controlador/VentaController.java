@@ -104,8 +104,8 @@ public class VentaController {
         vista.getTxtTelefonoCliente().setText(null);
         vista.getTxtTotal().setText(null);
         vista.getComboComuna().removeAllItems();
-        vista.getComboFinEntrega().removeAllItems();
-        vista.getComboIniEntrega().removeAllItems();
+        vista.getComboFinEntrega().setSelectedIndex(0);
+        vista.getComboIniEntrega().setSelectedIndex(0);
         vista.getComboPack().removeAllItems();
         vista.getComboRRSS().removeAllItems();
     }
