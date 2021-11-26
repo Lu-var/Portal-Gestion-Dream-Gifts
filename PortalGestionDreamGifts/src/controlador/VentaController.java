@@ -3,14 +3,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package controlador;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JComboBox;
+import javax.swing.JTable;
 import javax.swing.JTextField;
-import javax.swing.text.AbstractDocument;
+import javax.swing.table.DefaultTableModel;
+import modelo.BancoManager;
+import modelo.ClienteManager;
 import modelo.ComunaManager;
 import modelo.PackManager;
+import modelo.RedSocialManager;
+import modelo.VentaManager;
 import vista.Ventas;
 /**
  *
@@ -20,6 +29,10 @@ public class VentaController {
     
     PackManager packManager = new PackManager();
     ComunaManager comunaManager = new ComunaManager();
+    ClienteManager clienteManager = new ClienteManager();
+    VentaManager ventaManager = new VentaManager();
+    RedSocialManager rrssManager = new RedSocialManager();
+    BancoManager bancoManager = new BancoManager();
     
     public void showPacks(Ventas vista){
         JComboBox combo = vista.getComboPack();
@@ -50,6 +63,42 @@ public class VentaController {
         }
     }
     
+    public void showRRSS(Ventas vista){
+        JComboBox combo = vista.getComboRRSS();
+        ArrayList<ArrayList<Object>> lista = rrssManager.rrssSelectAllEnabled();
+        lista.forEach(columna -> {
+            combo.addItem(columna.get(1));
+        });
+    }
+    
+    public void showBancos(Ventas vista){
+        JComboBox combo = vista.getComboBanco();
+        ArrayList<ArrayList<Object>> lista = bancoManager.bancoSelectAllEnabled();
+        lista.forEach(columna -> {
+            combo.addItem(columna.get(1));
+        });
+    }
+    
+    public void showVentasPendientes(Ventas vista){
+        ArrayList<ArrayList<Object>> listaVentas = ventaManager.selectVentasPendientes();
+        
+        JTable tabla = vista.getTablaPendientes();
+        DefaultTableModel modelo = (DefaultTableModel) tabla.getModel();
+        listaVentas.forEach(columna -> {
+            Object[] temp = {columna.get(0),columna.get(9),clienteManager.clientesSelectByRUT((String)columna.get(1)).get(1),clienteManager.clientesSelectByRUT((String)columna.get(1)).get(3), columna.get(7),packManager.selectPackByID((Integer)columna.get(5)).get(1)};
+            modelo.addRow(temp);
+        });
+    }
+    
+    public void showAll(Ventas vista){
+        showComunas(vista);
+        showPacks(vista);
+        showRRSS(vista);
+        showPrecioPack(vista);
+        showBancos(vista);
+        showVentasPendientes(vista);
+    }
+    
     public void calcularPrecio(Ventas vista){
         
         JTextField subtotal = vista.getTxtSubtotal();
@@ -77,5 +126,35 @@ public class VentaController {
         total.setText(String.valueOf(suma));            
 
     }
+    
+    public void agregarVenta(Ventas vista){
+        String RUT = vista.getTxtRUTcliente().getText();
+        String nombre = vista.getTxtNombreCliente().getText();
+        String celular = vista.getTxtTelefonoCliente().getText();
+        String email = vista.getTxtEmailCliente().getText();
+        int status = 1;
+        int idRRSS = vista.getComboRRSS().getSelectedIndex() + 1;
+        int idPack = vista.getComboPack().getSelectedIndex() + 1;
+        String msg = vista.getTxtSaludo().getText();
+        int valor = Integer.parseInt(vista.getTxtTotal().getText());
+        Date dateStart = Date.from(Instant.now());
+        DateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        String fechaStart = formato.format(dateStart);
+        String fechaEntrega = formato.format(vista.getTxtFechaEntrega().getDate());
+        String fechaNacimiento = formato.format(vista.getDateNacimiento().getDate());
+        String despachoIni = (String)vista.getComboIniEntrega().getSelectedItem();
+        String despachoFin = (String)vista.getComboFinEntrega().getSelectedItem();
+        String nombreTarget = vista.getTxtNDestinatario().getText();
+        String celularTarget = vista.getTxtCelTarget().getText();
+        String direccionTarget = vista.getTxtDireccion().getText();
+        int idComuna = vista.getComboComuna().getSelectedIndex() + 1;
+        
+        ventaManager.agregarVentaSQL(RUT, nombre, fechaNacimiento, celular, email, status, idRRSS, idPack, msg, valor, fechaStart, fechaEntrega, despachoIni, despachoFin, nombreTarget, celularTarget, direccionTarget, idComuna);
+        
+    }
+    
+    
+    
+    
     
 }
