@@ -4,6 +4,7 @@
  */
 package vista;
 import com.toedter.calendar.JDateChooser;
+import controlador.ConfirmacionController;
 import controlador.MenuController;
 import controlador.VentaController;
 import javax.swing.JButton;
@@ -19,9 +20,17 @@ import javax.swing.JTextPane;
 public class Ventas extends javax.swing.JFrame {
     
     VentaController ventaCtrl = new VentaController();
+    ConfirmacionController conCtrl = new ConfirmacionController();
     
     public void showAll(){
         ventaCtrl.showAll(this);
+        conCtrl.showAll(this);
+        
+    }
+    
+    public void clearAll(){
+        ventaCtrl.clearAll(this);
+        conCtrl.clearAll(this);
     }
     
     /**
@@ -129,6 +138,11 @@ public class Ventas extends javax.swing.JFrame {
 
         jPane.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPane.setPreferredSize(new java.awt.Dimension(804, 100));
+        jPane.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jPaneStateChanged(evt);
+            }
+        });
 
         jPanel2.setPreferredSize(new java.awt.Dimension(780, 300));
 
@@ -417,7 +431,7 @@ public class Ventas extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 241, Short.MAX_VALUE)
+                .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 341, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -432,8 +446,15 @@ public class Ventas extends javax.swing.JFrame {
         jLabel18.setText("Codigo transacción :");
 
         btnGuardarCon.setText("Confirmar");
+        btnGuardarCon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarConActionPerformed(evt);
+            }
+        });
 
         btnCancelarCon.setText("Cancelar");
+
+        fechaPago.setDateFormatString("dd/MM/yyyy");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -512,7 +533,7 @@ public class Ventas extends javax.swing.JFrame {
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(115, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -545,17 +566,7 @@ public class Ventas extends javax.swing.JFrame {
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
@@ -853,6 +864,15 @@ public class Ventas extends javax.swing.JFrame {
     private void btnGuardarVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarVentaActionPerformed
         ventaCtrl.agregarVenta(this);
     }//GEN-LAST:event_btnGuardarVentaActionPerformed
+
+    private void btnGuardarConActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarConActionPerformed
+        conCtrl.confirmarVenta(this);
+    }//GEN-LAST:event_btnGuardarConActionPerformed
+
+    private void jPaneStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jPaneStateChanged
+        clearAll();
+        showAll();
+    }//GEN-LAST:event_jPaneStateChanged
 
     /**
      * @param args the command line arguments
