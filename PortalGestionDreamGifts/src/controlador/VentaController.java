@@ -54,7 +54,7 @@ public class VentaController {
         JTextField subtotal = vista.getTxtSubtotal();
         JComboBox combo = vista.getComboPack();
         String pack = (String)combo.getSelectedItem();
-        int idPack = (Integer)combo.getSelectedIndex() + 1;
+        int idPack = (Integer)packManager.selectPackByName(pack).get(0);
         ArrayList<ArrayList<Object>> lista = packManager.selectAllPackEnabled();
         for (int i = 0; i < lista.size(); i++) {
             if(idPack == (Integer)lista.get(i).get(0) && ((String)lista.get(i).get(1)).equals(pack)){
@@ -66,14 +66,6 @@ public class VentaController {
     public void showRRSS(Ventas vista){
         JComboBox combo = vista.getComboRRSS();
         ArrayList<ArrayList<Object>> lista = rrssManager.rrssSelectAllEnabled();
-        lista.forEach(columna -> {
-            combo.addItem(columna.get(1));
-        });
-    }
-    
-    public void showBancos(Ventas vista){
-        JComboBox combo = vista.getComboBanco();
-        ArrayList<ArrayList<Object>> lista = bancoManager.bancoSelectAllEnabled();
         lista.forEach(columna -> {
             combo.addItem(columna.get(1));
         });
@@ -95,8 +87,27 @@ public class VentaController {
         showPacks(vista);
         showRRSS(vista);
         showPrecioPack(vista);
-        showBancos(vista);
         showVentasPendientes(vista);
+    }
+    
+    public void clearAll(Ventas vista){
+        vista.getTxtCelTarget().setText(null);
+        vista.getTxtDireccion().setText(null);
+        vista.getTxtEmailCliente().setText(null);
+        vista.getTxtEnvio().setText(null);
+        vista.getTxtFechaEntrega().setDate(null);
+        vista.getTxtNDestinatario().setText(null);
+        vista.getTxtNombreCliente().setText(null);
+        vista.getTxtRUTcliente().setText(null);
+        vista.getTxtSaludo().setText(null);
+        vista.getTxtSubtotal().setText(null);
+        vista.getTxtTelefonoCliente().setText(null);
+        vista.getTxtTotal().setText(null);
+        vista.getComboComuna().removeAllItems();
+        vista.getComboFinEntrega().removeAllItems();
+        vista.getComboIniEntrega().removeAllItems();
+        vista.getComboPack().removeAllItems();
+        vista.getComboRRSS().removeAllItems();
     }
     
     public void calcularPrecio(Ventas vista){
@@ -133,8 +144,8 @@ public class VentaController {
         String celular = vista.getTxtTelefonoCliente().getText();
         String email = vista.getTxtEmailCliente().getText();
         int status = 1;
-        int idRRSS = vista.getComboRRSS().getSelectedIndex() + 1;
-        int idPack = vista.getComboPack().getSelectedIndex() + 1;
+        int idRRSS = (Integer)rrssManager.rrssSelectByName((String)vista.getComboRRSS().getSelectedItem()).get(0);
+        int idPack = (Integer)packManager.selectPackByName((String)vista.getComboPack().getSelectedItem()).get(0);
         String msg = vista.getTxtSaludo().getText();
         int valor = Integer.parseInt(vista.getTxtTotal().getText());
         Date dateStart = Date.from(Instant.now());
@@ -147,7 +158,7 @@ public class VentaController {
         String nombreTarget = vista.getTxtNDestinatario().getText();
         String celularTarget = vista.getTxtCelTarget().getText();
         String direccionTarget = vista.getTxtDireccion().getText();
-        int idComuna = vista.getComboComuna().getSelectedIndex() + 1;
+        int idComuna = (Integer)comunaManager.comunaSelectByName((String)vista.getComboComuna().getSelectedItem()).get(0);
         
         ventaManager.agregarVentaSQL(RUT, nombre, fechaNacimiento, celular, email, status, idRRSS, idPack, msg, valor, fechaStart, fechaEntrega, despachoIni, despachoFin, nombreTarget, celularTarget, direccionTarget, idComuna);
         
