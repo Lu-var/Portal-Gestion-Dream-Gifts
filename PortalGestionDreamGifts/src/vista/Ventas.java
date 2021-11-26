@@ -5,6 +5,7 @@
 package vista;
 import com.toedter.calendar.JDateChooser;
 import controlador.ConfirmacionController;
+import controlador.ConfirmadasController;
 import controlador.DespachoController;
 import controlador.MenuController;
 import controlador.VentaController;
@@ -22,11 +23,13 @@ public class Ventas extends javax.swing.JFrame {
     
     VentaController ventaCtrl = new VentaController();
     ConfirmacionController conCtrl = new ConfirmacionController();
+    ConfirmadasController doneCtrl = new ConfirmadasController();
     DespachoController despCtrl = new DespachoController();
     
     public void showAll(){
         ventaCtrl.showAll(this);
         conCtrl.showAll(this);
+        doneCtrl.showAll(this);
         despCtrl.showAll(this);
         
     }
@@ -34,6 +37,7 @@ public class Ventas extends javax.swing.JFrame {
     public void clearAll(){
         ventaCtrl.clearAll(this);
         conCtrl.clearAll(this);
+        doneCtrl.clearAll(this);
         despCtrl.clearAll(this);
     }
     
@@ -124,11 +128,11 @@ public class Ventas extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
+        tablaEstadoDespacho = new javax.swing.JTable();
         jLabel20 = new javax.swing.JLabel();
         btnDLDesp = new javax.swing.JButton();
         btnPRTDesp = new javax.swing.JButton();
-        jComboBox5 = new javax.swing.JComboBox<>();
+        comboEstadoDespacho = new javax.swing.JComboBox<>();
         btnActDesp = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         btnVentas = new javax.swing.JButton();
@@ -681,7 +685,7 @@ public class Ventas extends javax.swing.JFrame {
 
         jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder("Actualización Despacho"));
 
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        tablaEstadoDespacho.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -697,7 +701,7 @@ public class Ventas extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane4.setViewportView(jTable3);
+        jScrollPane4.setViewportView(tablaEstadoDespacho);
 
         jLabel20.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel20.setText("Actualización Estado Despacho");
@@ -707,6 +711,11 @@ public class Ventas extends javax.swing.JFrame {
         btnPRTDesp.setText("Imprimir");
 
         btnActDesp.setText("Actualizar");
+        btnActDesp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnActDespActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -721,7 +730,7 @@ public class Ventas extends javax.swing.JFrame {
                                 .addComponent(jLabel20))
                             .addGroup(jPanel11Layout.createSequentialGroup()
                                 .addGap(96, 96, 96)
-                                .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(comboEstadoDespacho, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(btnActDesp)))
                         .addGap(0, 251, Short.MAX_VALUE))
@@ -744,7 +753,7 @@ public class Ventas extends javax.swing.JFrame {
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboEstadoDespacho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnActDesp))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -930,8 +939,12 @@ public class Ventas extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelarVentaActionPerformed
 
     private void comboBancoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBancoActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_comboBancoActionPerformed
+
+    private void btnActDespActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActDespActionPerformed
+        despCtrl.actualizarDespacho(this);
+    }//GEN-LAST:event_btnActDespActionPerformed
 
     /**
      * @param args the command line arguments
@@ -989,13 +1002,13 @@ public class Ventas extends javax.swing.JFrame {
     private javax.swing.JButton btnVentas;
     private javax.swing.JComboBox<String> comboBanco;
     private javax.swing.JComboBox<String> comboComuna;
+    private javax.swing.JComboBox<String> comboEstadoDespacho;
     private javax.swing.JComboBox<String> comboFinEntrega;
     private javax.swing.JComboBox<String> comboIniEntrega;
     private javax.swing.JComboBox<String> comboPack;
     private javax.swing.JComboBox<String> comboRRSS;
     private com.toedter.calendar.JDateChooser dateNacimiento;
     private com.toedter.calendar.JDateChooser fechaPago;
-    private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1031,9 +1044,9 @@ public class Ventas extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JTable jTable3;
     private javax.swing.JLabel lBanco;
     private javax.swing.JTable tablaDespachos;
+    private javax.swing.JTable tablaEstadoDespacho;
     private javax.swing.JTable tablaPendientes;
     private javax.swing.JTextField txtCelTarget;
     private javax.swing.JTextField txtCodigo;
@@ -1195,11 +1208,11 @@ public class Ventas extends javax.swing.JFrame {
     }
 
     public JComboBox<String> getjComboBox5() {
-        return jComboBox5;
+        return comboEstadoDespacho;
     }
 
     public void setjComboBox5(JComboBox<String> jComboBox5) {
-        this.jComboBox5 = jComboBox5;
+        this.comboEstadoDespacho = jComboBox5;
     }
 
     public JTextField getjTextField3() {
@@ -1352,6 +1365,22 @@ public class Ventas extends javax.swing.JFrame {
 
     public void setTablaDespachos(JTable tablaDespachos) {
         this.tablaDespachos = tablaDespachos;
+    }
+
+    public JComboBox<String> getComboEstadoDespacho() {
+        return comboEstadoDespacho;
+    }
+
+    public void setComboEstadoDespacho(JComboBox<String> comboEstadoDespacho) {
+        this.comboEstadoDespacho = comboEstadoDespacho;
+    }
+
+    public JTable getTablaEstadoDespacho() {
+        return tablaEstadoDespacho;
+    }
+
+    public void setTablaEstadoDespacho(JTable tablaEstadoDespacho) {
+        this.tablaEstadoDespacho = tablaEstadoDespacho;
     }
 
     
