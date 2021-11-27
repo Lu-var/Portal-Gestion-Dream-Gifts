@@ -131,6 +131,10 @@ public class VentaController {
     public void agregarVenta(Ventas vista){
         
         String RUT = vista.getTxtRUTcliente().getText();
+        boolean flagClienteExists = false; 
+        if(clienteManager.clientesFindByRUT(RUT)){
+            flagClienteExists = true;
+        }
         String nombre = vista.getTxtNombreCliente().getText();
         String celular = vista.getTxtTelefonoCliente().getText();
         String email = vista.getTxtEmailCliente().getText();
@@ -156,7 +160,9 @@ public class VentaController {
         String celularTarget = vista.getTxtCelTarget().getText();
         String direccionTarget = vista.getTxtDireccion().getText();
         int idComuna = (Integer)comunaManager.comunaSelectByName((String)vista.getComboComuna().getSelectedItem()).get(0);
-        
+        if(!flagClienteExists){
+            clienteManager.agregarClienteSQL(RUT, nombre, fechaNacimiento, celular, email);
+        }
         ventaManager.agregarVentaSQL(RUT, nombre, fechaNacimiento, celular, email, status, idRRSS, idPack, msg, valor, fechaStart, fechaEntrega, despachoIni, despachoFin, nombreTarget, celularTarget, direccionTarget, idComuna);
         
     }

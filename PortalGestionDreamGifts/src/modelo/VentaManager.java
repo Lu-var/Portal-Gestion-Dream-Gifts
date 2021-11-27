@@ -21,12 +21,6 @@ public class VentaManager {
     ClienteManager clienteManager = new ClienteManager();
     
     public void agregarVentaSQL(String RUT, String nombre, String fechaNacimiento, String celular, String email, int status, int idRRSS, int idPack, String msg, int valor, String fechaStart, String fechaEntrega, String despachoIni, String despachoFin, String nombreTarget, String celularTarget, String direccionTarget, int idComuna){
-        try {
-            clienteManager.agregarClienteSQL(RUT, nombre, fechaNacimiento, celular, email);
-        } catch (Exception ex) {
-            Log.seguir(ex.getMessage());
-            return;
-        }
 
         try {
             PreparedStatement comando = conexion.prepareStatement("INSERT INTO Venta (rutCliente,idStatus,idRRSS,idPack,TextoPack,ValorTotal,FechaIngreso,FechaDespacho,NombreTarget,CelularTarget,DireccionTarget,idComunaTarget,HoraDespachoIni,HoraDespachoFin,idStatusDespacho,idBanco) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");

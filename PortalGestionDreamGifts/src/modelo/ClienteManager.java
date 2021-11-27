@@ -103,6 +103,25 @@ public class ClienteManager {
         return lista;
     }
     
+    public boolean clientesFindByRUT(String RUT){
+        
+        PreparedStatement comando = null;
+        ResultSet resultado = null;
+        
+        try{
+            comando = conexion.prepareStatement("SELECT * FROM Cliente WHERE RUT = ?");
+            comando.setString(1, RUT);
+            resultado = comando.executeQuery();
+            
+            return resultado.next();
+            
+        } catch(Exception ex){
+                Log.seguir(ex.getMessage());
+        }
+        
+        return true;
+    }
+    
     // Funcion debug
     public void InfoClientes(ResultSet cliente){
         
