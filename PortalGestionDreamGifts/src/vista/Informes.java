@@ -208,16 +208,16 @@ public class Informes extends javax.swing.JFrame {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(233, 233, 233)
+                .addGap(275, 275, 275)
                 .addComponent(generarReporteDev, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(360, Short.MAX_VALUE))
+                .addContainerGap(321, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(135, 135, 135)
+                .addGap(201, 201, 201)
                 .addComponent(generarReporteDev)
-                .addContainerGap(284, Short.MAX_VALUE))
+                .addContainerGap(218, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Informe Dev y Cambios", jPanel5);
@@ -320,7 +320,7 @@ public class Informes extends javax.swing.JFrame {
     }//GEN-LAST:event_generarReporteActionPerformed
 
     private void generarReporteDevActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarReporteDevActionPerformed
-         ConexionRequest intentoConexion = new ConexionRequest();
+        ConexionRequest intentoConexion = new ConexionRequest();
         Connection conexion = intentoConexion.conectar();
         try {
             String rutaReporte = System.getProperty("user.dir")+"/src/Reportes/report1.jasper";

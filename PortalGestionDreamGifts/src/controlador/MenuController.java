@@ -9,6 +9,7 @@ import vista.Compras;
 import vista.Informes;
 import vista.Maestro;
 import vista.Ventas;
+import vista.Login;
 
 /**
  *
@@ -40,5 +41,9 @@ public class MenuController {
         maestro.setVisible(true);
     }
     
-    
+    public void openSesion(JFrame vista){
+        Login login = new Login();
+        vista.dispose();
+        login.setVisible(true);
+    }
 }
