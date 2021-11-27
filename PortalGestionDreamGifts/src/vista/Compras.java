@@ -55,6 +55,7 @@ public class Compras extends javax.swing.JFrame {
         btnCompras = new javax.swing.JButton();
         btnInformes = new javax.swing.JButton();
         btnMaestro = new javax.swing.JButton();
+        btnSesion = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
@@ -161,19 +162,28 @@ public class Compras extends javax.swing.JFrame {
             }
         });
 
+        btnSesion.setText("CERRAR SESION");
+        btnSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSesionActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(140, 140, 140)
+                .addGap(101, 101, 101)
                 .addComponent(btnVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53)
+                .addGap(45, 45, 45)
                 .addComponent(btnCompras, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53)
+                .addGap(66, 66, 66)
                 .addComponent(btnInformes, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60)
+                .addGap(53, 53, 53)
                 .addComponent(btnMaestro, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60)
+                .addComponent(btnSesion)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -184,7 +194,8 @@ public class Compras extends javax.swing.JFrame {
                     .addComponent(btnCompras, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnInformes, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnMaestro, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnMaestro, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSesion))
                 .addContainerGap())
         );
 
@@ -513,7 +524,7 @@ public class Compras extends javax.swing.JFrame {
                 .addGap(351, 351, 351))
             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                    .addContainerGap(319, Short.MAX_VALUE)
+                    .addContainerGap(349, Short.MAX_VALUE)
                     .addComponent(jLabel21)
                     .addGap(319, 319, 319)))
         );
@@ -593,7 +604,7 @@ public class Compras extends javax.swing.JFrame {
                         .addGap(235, 235, 235)
                         .addComponent(jLab_F_R_Reg_Comp)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(dateRecRegFactProv, javax.swing.GroupLayout.DEFAULT_SIZE, 162, Short.MAX_VALUE))
+                        .addComponent(dateRecRegFactProv, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE))
                     .addGroup(jPanelProvLayout.createSequentialGroup()
                         .addGroup(jPanelProvLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(BtnCancelarRegFact, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -607,7 +618,7 @@ public class Compras extends javax.swing.JFrame {
                                 .addComponent(jLabel17)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txtRutProvRegFact, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 110, Short.MAX_VALUE))
+                                .addGap(0, 122, Short.MAX_VALUE))
                             .addGroup(jPanelProvLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(BtnGuardarRegFact, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))))
@@ -687,7 +698,7 @@ public class Compras extends javax.swing.JFrame {
                         .addGap(21, 21, 21)
                         .addComponent(jLab_Cod_Art_Reg_Comp)
                         .addGap(18, 18, 18)
-                        .addComponent(jComb_Art_Reg_Det_Fact, 0, 179, Short.MAX_VALUE)
+                        .addComponent(jComb_Art_Reg_Det_Fact, 0, 282, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLab_Cant_Reg_Comp)
                         .addGap(18, 18, 18)
@@ -783,7 +794,7 @@ public class Compras extends javax.swing.JFrame {
             .addComponent(jPanelProv1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jScrollPaneDetFactRegComp)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(326, Short.MAX_VALUE)
+                .addContainerGap(359, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel18)
@@ -824,7 +835,7 @@ public class Compras extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 884, Short.MAX_VALUE)))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 916, Short.MAX_VALUE)))
             .addComponent(jTabbedPane2)
         );
         layout.setVerticalGroup(
@@ -939,6 +950,11 @@ public class Compras extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_BtnDesactDetPedRealActionPerformed
 
+    private void btnSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSesionActionPerformed
+        MenuController maestro = new MenuController();
+        maestro.openSesion(this);
+    }//GEN-LAST:event_btnSesionActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -983,6 +999,7 @@ public class Compras extends javax.swing.JFrame {
     private javax.swing.JButton btnDelSolPed;
     private javax.swing.JButton btnInformes;
     private javax.swing.JButton btnMaestro;
+    private javax.swing.JButton btnSesion;
     private javax.swing.JButton btnVentas;
     private com.toedter.calendar.JDateChooser datePedSolPed;
     private com.toedter.calendar.JDateChooser dateRecRegFactProv;

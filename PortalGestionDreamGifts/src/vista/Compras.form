@@ -31,7 +31,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jPanel1" pref="884" max="32767" attributes="0"/>
+                  <Component id="jPanel1" pref="916" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Component id="jTabbedPane2" alignment="0" max="32767" attributes="0"/>
@@ -68,14 +68,16 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
                   <Component id="btnVentas" min="-2" pref="115" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                   <Component id="btnCompras" min="-2" pref="115" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                   <Component id="btnInformes" min="-2" pref="115" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                   <Component id="btnMaestro" min="-2" pref="115" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                  <Component id="btnSesion" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -89,6 +91,7 @@
                       <Component id="btnVentas" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="btnInformes" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="btnMaestro" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="btnSesion" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -123,6 +126,14 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMaestroActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnSesion">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="CERRAR SESION"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSesionActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -489,7 +500,7 @@
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="319" max="32767" attributes="0"/>
+                          <EmptySpace pref="349" max="32767" attributes="0"/>
                           <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="319" max="-2" attributes="0"/>
                       </Group>
@@ -855,7 +866,7 @@
                   <Component id="jPanelProv1" alignment="0" max="32767" attributes="0"/>
                   <Component id="jScrollPaneDetFactRegComp" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="326" max="32767" attributes="0"/>
+                      <EmptySpace pref="359" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
@@ -921,7 +932,7 @@
                                   <EmptySpace min="-2" pref="235" max="-2" attributes="0"/>
                                   <Component id="jLab_F_R_Reg_Comp" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="dateRecRegFactProv" pref="162" max="32767" attributes="0"/>
+                                  <Component id="dateRecRegFactProv" pref="258" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
@@ -938,7 +949,7 @@
                                           <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="txtRutProvRegFact" min="-2" pref="140" max="-2" attributes="0"/>
-                                          <EmptySpace min="0" pref="110" max="32767" attributes="0"/>
+                                          <EmptySpace min="0" pref="122" max="32767" attributes="0"/>
                                       </Group>
                                       <Group type="102" attributes="0">
                                           <EmptySpace max="32767" attributes="0"/>
@@ -1094,7 +1105,7 @@
                                   <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                                   <Component id="jLab_Cod_Art_Reg_Comp" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                  <Component id="jComb_Art_Reg_Det_Fact" pref="179" max="32767" attributes="0"/>
+                                  <Component id="jComb_Art_Reg_Det_Fact" pref="282" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLab_Cant_Reg_Comp" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
