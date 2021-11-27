@@ -10,6 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Vector;
+import java.util.function.Consumer;
 
 /**
  *
@@ -297,4 +298,41 @@ public class PackManager {
             Log.seguir(ex.getMessage());
         }
     }
+    
+    public boolean checkStock(int idPack){
+        
+        ArrayList<ArrayList<Object>> lista = new ArrayList<>();
+        lista = selectContenidos(idPack);
+        boolean stockFlag = true;
+
+        for (int i = 0; i < lista.size(); i++) {
+            if((Integer)lista.get(i).get(2) == 0){
+                stockFlag = false;
+                return stockFlag;
+            }
+        }
+        
+        try {
+            PreparedStatement comando = conexion.prepareStatement("SELECT Stock FROM Pack WHERE = ?");
+            comando.setInt(1, idPack);
+            
+            ResultSet resultado = comando.executeQuery();
+            if(!resultado.next()){
+                stockFlag = false;
+                return stockFlag;
+            }
+            
+            resultado.next();
+            if(resultado.getInt("Stock") == 0){
+                stockFlag = false;
+                return stockFlag;
+            }
+            
+        } catch (Exception ex) {
+            Log.seguir(ex.getMessage());
+        }
+        
+        return stockFlag;
+    }
+    
 }

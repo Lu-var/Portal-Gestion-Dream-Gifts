@@ -11,6 +11,7 @@ import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
@@ -128,6 +129,7 @@ public class VentaController {
     }
     
     public void agregarVenta(Ventas vista){
+        
         String RUT = vista.getTxtRUTcliente().getText();
         String nombre = vista.getTxtNombreCliente().getText();
         String celular = vista.getTxtTelefonoCliente().getText();
@@ -135,6 +137,12 @@ public class VentaController {
         int status = 1;
         int idRRSS = (Integer)rrssManager.rrssSelectByName((String)vista.getComboRRSS().getSelectedItem()).get(0);
         int idPack = (Integer)packManager.selectPackByName((String)vista.getComboPack().getSelectedItem()).get(0);
+        
+        if(packManager.checkStock(idPack)){
+            JOptionPane.showMessageDialog(null, "No existen packs o articulos en stock para completar la solicitud");
+            return;
+        }
+        
         String msg = vista.getTxtSaludo().getText();
         int valor = Integer.parseInt(vista.getTxtTotal().getText());
         Date dateStart = Date.from(Instant.now());
