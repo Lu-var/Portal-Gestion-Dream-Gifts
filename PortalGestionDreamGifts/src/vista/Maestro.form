@@ -6,7 +6,7 @@
       <Properties>
         <Property name="defaultCloseOperation" type="int" value="2"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Default Cursor"/>
+          <Color id="Cursor Por defecto"/>
         </Property>
         <Property name="resizable" type="boolean" value="false"/>
         <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -339,7 +339,7 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-      <Color id="Default Cursor"/>
+      <Color id="Cursor Por defecto"/>
     </Property>
     <Property name="resizable" type="boolean" value="false"/>
     <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -369,7 +369,7 @@
               <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanel1" pref="799" max="32767" attributes="0"/>
+                      <Component id="jPanel1" pref="819" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
@@ -414,15 +414,17 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Component id="btnVentas" min="-2" pref="115" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                   <Component id="btnCompras" min="-2" pref="115" max="-2" attributes="0"/>
-                  <EmptySpace pref="118" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
                   <Component id="btnInformes" min="-2" pref="115" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                   <Component id="btnMaestro" min="-2" pref="115" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                  <EmptySpace pref="31" max="32767" attributes="0"/>
+                  <Component id="btnSesion" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -435,6 +437,7 @@
                       <Component id="btnVentas" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="btnInformes" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="btnMaestro" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
+                      <Component id="btnSesion" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -472,6 +475,14 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMaestroActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnSesion">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="CERRAR SESION"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSesionActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -528,7 +539,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="613" max="32767" attributes="0"/>
+                      <EmptySpace pref="633" max="32767" attributes="0"/>
                       <Component id="btnEditarClientes" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
                   </Group>
@@ -585,7 +596,7 @@
                               <Component id="txtNombreCliente" alignment="1" max="32767" attributes="0"/>
                               <Component id="txtRutCliente" alignment="0" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="139" max="32767" attributes="0"/>
+                          <EmptySpace pref="154" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
@@ -768,7 +779,7 @@
                           <Component id="btngGuardar" min="-2" max="-2" attributes="0"/>
                           <Component id="txtBanco" min="-2" pref="105" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="254" max="32767" attributes="0"/>
+                      <EmptySpace pref="269" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
@@ -889,7 +900,7 @@
                           <Component id="btnSavRRSS" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="txtRRSS" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="254" max="32767" attributes="0"/>
+                      <EmptySpace pref="266" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
@@ -1013,7 +1024,7 @@
                           <Component id="btnSavComuna" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="txtComuna" alignment="0" min="-2" pref="105" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="254" max="32767" attributes="0"/>
+                      <EmptySpace pref="271" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
@@ -1132,7 +1143,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace pref="377" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Component id="btnCatPacktEditar" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
                           </Group>
@@ -1152,7 +1163,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="209" max="32767" attributes="0"/>
+                      <EmptySpace pref="228" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1662,7 +1673,7 @@
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="265" max="-2" attributes="0"/>
                               <Component id="LCatArt" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="60" max="32767" attributes="0"/>
+                              <EmptySpace pref="66" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="txtCatArt" min="-2" pref="180" max="-2" attributes="0"/>
                                   <Component id="btnCatArtGuardar" min="-2" max="-2" attributes="0"/>
@@ -1680,7 +1691,7 @@
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="0" pref="193" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="199" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1865,7 +1876,7 @@
                                           <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="114" max="32767" attributes="0"/>
+                                  <EmptySpace pref="143" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="checkArticulo" min="-2" max="-2" attributes="0"/>
                                       <Component id="dateFechaArt" min="-2" pref="140" max="-2" attributes="0"/>
@@ -2212,7 +2223,7 @@
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
-                              <EmptySpace pref="153" max="32767" attributes="0"/>
+                              <EmptySpace pref="171" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
                                   <Group type="102" attributes="0">
                                       <Component id="btnEditarEstadoDespacho" min="-2" max="-2" attributes="0"/>
@@ -2354,7 +2365,7 @@
                           <Component id="txtPass" alignment="0" pref="105" max="32767" attributes="0"/>
                           <Component id="txtUsuario" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="247" max="32767" attributes="0"/>
+                      <EmptySpace pref="261" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2544,7 +2555,7 @@
                               <Component id="txtRazonProv" alignment="1" max="32767" attributes="0"/>
                               <Component id="txtRutProv" alignment="0" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="153" max="32767" attributes="0"/>
+                          <EmptySpace pref="160" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel25" alignment="1" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel26" alignment="1" min="-2" max="-2" attributes="0"/>

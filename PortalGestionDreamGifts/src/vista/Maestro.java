@@ -104,6 +104,7 @@ public class Maestro extends javax.swing.JFrame {
         btnCompras = new javax.swing.JButton();
         btnInformes = new javax.swing.JButton();
         btnMaestro = new javax.swing.JButton();
+        btnSesion = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         PanelPrincipal = new javax.swing.JTabbedPane();
         PanelClientes = new javax.swing.JPanel();
@@ -514,20 +515,29 @@ public class Maestro extends javax.swing.JFrame {
             }
         });
 
+        btnSesion.setText("CERRAR SESION");
+        btnSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSesionActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addGap(27, 27, 27)
                 .addComponent(btnVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(62, 62, 62)
+                .addGap(36, 36, 36)
                 .addComponent(btnCompras, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 118, Short.MAX_VALUE)
+                .addGap(74, 74, 74)
                 .addComponent(btnInformes, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(65, 65, 65)
+                .addGap(50, 50, 50)
                 .addComponent(btnMaestro, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addComponent(btnSesion)
+                .addGap(16, 16, 16))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -537,7 +547,8 @@ public class Maestro extends javax.swing.JFrame {
                     .addComponent(btnCompras, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnInformes, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnMaestro, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnMaestro, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSesion))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -599,7 +610,7 @@ public class Maestro extends javax.swing.JFrame {
                     .addComponent(txtCelularCliente, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
                     .addComponent(txtNombreCliente, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtRutCliente))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 139, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 154, Short.MAX_VALUE)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
                         .addComponent(jLabel7)
@@ -682,7 +693,7 @@ public class Maestro extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelClientesLayout.createSequentialGroup()
-                .addContainerGap(613, Short.MAX_VALUE)
+                .addContainerGap(633, Short.MAX_VALUE)
                 .addComponent(btnEditarClientes)
                 .addGap(119, 119, 119))
         );
@@ -753,7 +764,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelBancosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btngGuardar)
                     .addComponent(txtBanco, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(254, Short.MAX_VALUE))
+                .addContainerGap(269, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelBancosLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -839,7 +850,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelRRSSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnSavRRSS)
                     .addComponent(txtRRSS, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(254, Short.MAX_VALUE))
+                .addContainerGap(266, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelRRSSLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -925,7 +936,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(PanelComunasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnSavComuna)
                     .addComponent(txtComuna, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(254, Short.MAX_VALUE))
+                .addContainerGap(271, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelComunasLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1017,7 +1028,7 @@ public class Maestro extends javax.swing.JFrame {
             .addGroup(PanelCatPackLayout.createSequentialGroup()
                 .addGroup(PanelCatPackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(PanelCatPackLayout.createSequentialGroup()
-                        .addContainerGap(377, Short.MAX_VALUE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnCatPacktEditar)
                         .addGap(139, 139, 139))
                     .addGroup(PanelCatPackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -1031,7 +1042,7 @@ public class Maestro extends javax.swing.JFrame {
                             .addGroup(PanelCatPackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(txtCatPack, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(btnCatPackGuardar)))))
-                .addContainerGap(209, Short.MAX_VALUE))
+                .addContainerGap(228, Short.MAX_VALUE))
         );
         PanelCatPackLayout.setVerticalGroup(
             PanelCatPackLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1386,7 +1397,7 @@ public class Maestro extends javax.swing.JFrame {
                     .addGroup(PanelCatArtLayout.createSequentialGroup()
                         .addGap(265, 265, 265)
                         .addComponent(LCatArt)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
                         .addGroup(PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtCatArt, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnCatArtGuardar)))
@@ -1398,7 +1409,7 @@ public class Maestro extends javax.swing.JFrame {
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PanelCatArtLayout.createSequentialGroup()
                             .addGap(142, 142, 142)
                             .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 461, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 193, Short.MAX_VALUE))
+                .addGap(0, 199, Short.MAX_VALUE))
         );
         PanelCatArtLayout.setVerticalGroup(
             PanelCatArtLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1475,7 +1486,7 @@ public class Maestro extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(79, 79, 79)
                                 .addComponent(jLabel22)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(checkArticulo)
                             .addComponent(dateFechaArt, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -1756,7 +1767,7 @@ public class Maestro extends javax.swing.JFrame {
                             .addComponent(btnGuardarEstadoDespacho)
                             .addComponent(txtEstadoDespacho, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(PanelEstadoDespachoLayout.createSequentialGroup()
-                        .addContainerGap(153, Short.MAX_VALUE)
+                        .addContainerGap(171, Short.MAX_VALUE)
                         .addGroup(PanelEstadoDespachoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(PanelEstadoDespachoLayout.createSequentialGroup()
                                 .addComponent(btnEditarEstadoDespacho)
@@ -1853,7 +1864,7 @@ public class Maestro extends javax.swing.JFrame {
                     .addComponent(btnSavUsuario)
                     .addComponent(txtPass, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)
                     .addComponent(txtUsuario))
-                .addContainerGap(247, Short.MAX_VALUE))
+                .addContainerGap(261, Short.MAX_VALUE))
         );
         PanelUsuariosLayout.setVerticalGroup(
             PanelUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1917,7 +1928,7 @@ public class Maestro extends javax.swing.JFrame {
                     .addComponent(txtNombreProv, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
                     .addComponent(txtRazonProv, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtRutProv))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 153, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 160, Short.MAX_VALUE)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel26, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -2033,7 +2044,7 @@ public class Maestro extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 799, Short.MAX_VALUE))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 819, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2349,6 +2360,10 @@ public class Maestro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_checkEnabledPackEditActionPerformed
 
+    private void btnSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSesionActionPerformed
+        menuCtrl.openSesion(this);
+    }//GEN-LAST:event_btnSesionActionPerformed
+
     
     /**
      * @param args the command line arguments
@@ -2440,6 +2455,7 @@ public class Maestro extends javax.swing.JFrame {
     private javax.swing.JButton btnSaveArt;
     private javax.swing.JButton btnSaveCliente;
     private javax.swing.JButton btnSaveProv;
+    private javax.swing.JButton btnSesion;
     private javax.swing.JButton btnVentas;
     private javax.swing.JButton btngGuardar;
     private javax.swing.JTextField cantPackEditArt;
