@@ -306,7 +306,7 @@ public class PackManager {
         boolean stockFlag = true;
 
         for (int i = 0; i < lista.size(); i++) {
-            if((Integer)lista.get(i).get(2) == 0){
+            if((Integer)lista.get(i).get(1) == 0){
                 stockFlag = false;
                 return stockFlag;
             }
