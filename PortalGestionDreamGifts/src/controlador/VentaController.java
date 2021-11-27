@@ -142,10 +142,10 @@ public class VentaController {
         int idRRSS = (Integer)rrssManager.rrssSelectByName((String)vista.getComboRRSS().getSelectedItem()).get(0);
         int idPack = (Integer)packManager.selectPackByName((String)vista.getComboPack().getSelectedItem()).get(0);
         
-        if(packManager.checkStock(idPack)){
-            JOptionPane.showMessageDialog(null, "No existen packs o articulos en stock para completar la solicitud");
-            return;
-        }
+//        if(packManager.checkStock(idPack)){
+//            JOptionPane.showMessageDialog(null, "No existen packs o articulos en stock para completar la solicitud");
+//            return;
+//        }
         
         String msg = vista.getTxtSaludo().getText();
         int valor = Integer.parseInt(vista.getTxtTotal().getText());
